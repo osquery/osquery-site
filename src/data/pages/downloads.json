@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "hero": {
+      "sectionHeading": "Downloading & Installing Osquery"
+    },
+    "packages": {
+      "sectionHeading": "Packages and tarballs",
+      "sectionSubheading": "These packages are built and signed by the osquery development team. They are mostly universal and use a minimal number of run-time library dependencies. This means the binaries are abnormally big (~20MB)."
+    },
+    "alternativeInstallationOptions": {
+      "sectionHeading": "Alternative Installation Options",
+      "subSection1Heading": "Install apt repository",
+      "subSection1Paragraph1": "We publish osquery to an apt repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems."
+    }
+  }
+}

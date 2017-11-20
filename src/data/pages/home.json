@@ -1,7 +1,7 @@
 {
   "sections": {
     "hero": {
-      "sectionLeader": "facebook/osquery",
+      "sectionSuperHeading": "facebook/osquery",
       "sectionHeading": "Performant endpoint visibility"
     },
     "howItWorks": {
