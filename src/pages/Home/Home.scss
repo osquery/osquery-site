@@ -1,5 +1,19 @@
 .home {
+  &__icon-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
   &__intro {
     font-size: large;
+  }
+
+  &__platform-icon {
+    margin-right: 18px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
