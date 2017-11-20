@@ -11,7 +11,7 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
-"start-js": "react-scripts start",
+    "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
@@ -22,6 +22,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "@storybook/react": "^3.2.16",
     "babel-eslint": "^8.0.2",
     "eslint": "4.11.0",
     "eslint-config-prettier": "^2.8.0",
