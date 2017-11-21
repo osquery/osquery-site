@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Slack extends Component {
   static defaultProps = {
     height: 135,
     width: 157,
-  };
+  }
 
   render() {
-    const { className, height, width } = this.props;
+    const { className, height, width } = this.props
 
     return (
       <svg
@@ -19,36 +19,17 @@ class Slack extends Component {
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>slack-logo-svg</title>
-        <g
-          id="Page-1"
-          stroke="none"
-          strokeWidth="1"
-          fill="none"
-          fillRule="evenodd"
-        >
+        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g
             id="osquery-io-again-again"
             transform="translate(-377.000000, -3722.000000)"
             fillRule="nonzero"
           >
-            <g
-              id="additional-resources"
-              transform="translate(305.000000, 3492.000000)"
-            >
-              <g
-                id="join-osquery-slack"
-                transform="translate(0.000000, 149.000000)"
-              >
-                <g
-                  id="slack-logo-svg"
-                  transform="translate(72.000000, 81.000000)"
-                >
+            <g id="additional-resources" transform="translate(305.000000, 3492.000000)">
+              <g id="join-osquery-slack" transform="translate(0.000000, 149.000000)">
+                <g id="slack-logo-svg" transform="translate(72.000000, 81.000000)">
                   <g id="Group-73">
-                    <g
-                      id="slack-bw"
-                      transform="translate(0.000000, 80.000000)"
-                      fill="#202532"
-                    >
+                    <g id="slack-bw" transform="translate(0.000000, 80.000000)" fill="#202532">
                       <path
                         d="M27.6181818,18.7296256 C29.6909091,19.6445785 29.8545455,20.2904277 28.2181818,23.3582112 C26.5272727,26.4798154 26.1454545,26.6950985 24.0727273,25.887787 C21.5090909,24.8113718 18.1818182,24.0040603 16.0545455,24.0040603 C12.5636364,24.0040603 10.2727273,25.2419379 10.2727273,27.1256646 C10.2727273,33.3150523 30.2363636,29.978165 30.2363636,43.1104312 C30.2363636,49.7303851 24.4545455,54.1436877 15.8363636,54.1436877 C11.3090909,54.1436877 5.69090909,52.6367063 1.81818182,50.6991588 C-0.0909090909,49.7303851 -0.254545455,49.1921775 1.43636364,46.0167524 C2.85454545,43.2718935 3.34545455,42.9489689 5.41818182,43.8101011 C8.69090909,45.209441 12.8909091,46.339677 15.6727273,46.339677 C18.8363636,46.339677 20.9636364,45.0479787 20.9636364,43.2180727 C20.9636364,37.243968 0.618181818,40.0964685 0.618181818,27.3409476 C0.618181818,20.5595315 6.34545455,16.0385874 14.9090909,16.0385874 C19.0545455,15.9847666 24.1272727,17.1688234 27.6181818,18.7296256 Z"
                         id="Shape"
@@ -121,8 +102,8 @@ class Slack extends Component {
           </g>
         </g>
       </svg>
-    );
+    )
   }
 }
 
-export default Slack;
+export default Slack

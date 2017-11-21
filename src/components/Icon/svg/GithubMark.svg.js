@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class GithubMark extends Component {
   static defaultProps = {
     fillColor: '#00125F',
     height: 24,
     width: 24,
-  };
+  }
 
   render() {
-    const { className, fillColor, height, width } = this.props;
+    const { className, fillColor, height, width } = this.props
 
     return (
       <svg
@@ -46,8 +46,8 @@ class GithubMark extends Component {
           </g>
         </g>
       </svg>
-    );
+    )
   }
 }
 
-export default GithubMark;
+export default GithubMark

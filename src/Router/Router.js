@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-import App from 'components/App';
-import Home from 'pages/Home';
+import App from 'components/App'
+import Home from 'pages/Home'
 
 class Router extends Component {
   render() {
@@ -14,8 +14,8 @@ class Router extends Component {
           </Switch>
         </App>
       </BrowserRouter>
-    );
+    )
   }
 }
 
-export default Router;
+export default Router

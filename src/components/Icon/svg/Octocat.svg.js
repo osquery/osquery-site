@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Octocat extends Component {
   static defaultProps = {
     height: 160,
     width: 182,
-  };
+  }
 
   render() {
-    const { className, height, width } = this.props;
+    const { className, height, width } = this.props
 
     return (
       <svg
@@ -19,37 +19,21 @@ class Octocat extends Component {
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>octocat-svg</title>
-        <g
-          id="Page-1"
-          stroke="none"
-          strokeWidth="1"
-          fill="none"
-          fillRule="evenodd"
-        >
+        <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g
             id="osquery-io-again-again"
             transform="translate(-1053.000000, -3708.000000)"
             fillRule="nonzero"
           >
-            <g
-              id="additional-resources"
-              transform="translate(305.000000, 3492.000000)"
-            >
-              <g
-                id="view-github-project"
-                transform="translate(690.000000, 149.000000)"
-              >
+            <g id="additional-resources" transform="translate(305.000000, 3492.000000)">
+              <g id="view-github-project" transform="translate(690.000000, 149.000000)">
                 <g id="octocat-svg" transform="translate(58.000000, 67.000000)">
                   <path
                     d="M143,142.000968 C143,151.94217 120.165827,160 92.0024006,160 C63.8341727,160 41,151.94217 41,142.000968 C41,132.059767 63.8332125,124 92.0024006,124 C120.165827,124 143,132.061219 143,142.000968 Z"
                     id="puddle"
                     fill="#9CDAF1"
                   />
-                  <g
-                    id="shadow-legs"
-                    transform="translate(62.000000, 136.000000)"
-                    fill="#7DBBE6"
-                  >
+                  <g id="shadow-legs" transform="translate(62.000000, 136.000000)" fill="#7DBBE6">
                     <path
                       d="M15.8775,23.1456 L15.8775,10.4256 C15.8775,8.78304 15.5783167,7.40928 15.07855,6.24912 C18.3908333,8.80368 18.6146167,15.22272 18.6146167,15.22272 L18.6146167,23.38464 C21.59485,23.61552 24.6727167,23.75568 27.8235667,23.79792 L27.7404333,15.67632 C27.2841667,4.57392 17.7020833,3.21504 17.7020833,3.21504 C14.2003333,2.42544 14.2525333,4.17072 14.6044,5.29824 C11.1688667,-0.52032 1.96136667,0.23136 1.96136667,0.23136 C-1.23395,1.36272 1.73178333,3.40272 1.73178333,3.40272 C6.75216667,5.21472 7.20795,10.65312 7.20795,10.65312 L7.20795,21.99168 C9.97261667,22.46208 12.8677833,22.85088 15.87895,23.14368 L15.8775,23.1456 Z"
                       id="Shape"
@@ -74,11 +58,7 @@ class Octocat extends Component {
                     id="eyes"
                     fill="#FFFFFF"
                   />
-                  <g
-                    id="Group"
-                    transform="translate(62.000000, 53.000000)"
-                    fill="#AD5C51"
-                  >
+                  <g id="Group" transform="translate(62.000000, 53.000000)" fill="#AD5C51">
                     <path
                       d="M11.7161345,8.39034483 C11.7161345,12.8935172 9.19663866,16.5426897 6.09564706,16.5426897 C2.99465546,16.5426897 0.475638655,12.8935172 0.475638655,8.39034483 C0.475638655,3.88572414 2.9927395,0.23462069 6.09564706,0.23462069 C9.19472269,0.23462069 11.7142185,3.88427586 11.7142185,8.38841379 L11.7161345,8.39034483 Z M56.942521,8.39034483 C56.942521,12.8935172 54.4230252,16.5426897 51.3220336,16.5426897 C48.221042,16.5426897 45.7020252,12.8935172 45.7020252,8.39034483 C45.7020252,3.88572414 48.2191261,0.23462069 51.3220336,0.23462069 C54.4211092,0.23462069 56.940605,3.88427586 56.940605,8.38841379 L56.942521,8.39034483 Z"
                       id="pupils"
@@ -111,8 +91,8 @@ class Octocat extends Component {
           </g>
         </g>
       </svg>
-    );
+    )
   }
 }
 
-export default Octocat;
+export default Octocat
