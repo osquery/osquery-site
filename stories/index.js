@@ -48,14 +48,35 @@ const IconWrapper = (Component) => {
 const WrappedIcon = IconWrapper(Icon)
 
 storiesOf('Icon', module)
-  .add('platform icons', () => (
-    <WrappedIcon />
+  .add('cpu', () => (
+    <Icon name="cpu" />
+  ))
+  .add('facebookOpenSource', () => (
+    <Icon name="facebookOpenSource" />
+  ))
+  .add('frameOverlay', () => (
+    <Icon name="frameOverlay" />
   ))
   .add('githubMark', () => (
     <Icon name="githubMark" />
   ))
+  .add('imac', () => (
+    <Icon name="imac" />
+  ))
+  .add('imacLg', () => (
+    <Icon name="imacLg" />
+  ))
+  .add('macFinder', () => (
+    <Icon name="macFinder" />
+  ))
   .add('octocat', () => (
     <Icon name="octocat" />
+  ))
+  .add('platform icons', () => (
+    <WrappedIcon />
+  ))
+  .add('shellHistory', () => (
+    <Icon name="shellHistory" />
   ))
   .add('slack', () => (
     <Icon name="slack" />
