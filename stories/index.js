@@ -1,7 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Link } from 'react-router-dom'
 import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions';
 
+import Button from '../src/components/Button'
 import H1SuperHeading from '../src/components/text/H1SuperHeading'
 import Heading1 from '../src/components/text/Heading1'
 import Heading2 from '../src/components/text/Heading2'
@@ -112,5 +114,12 @@ storiesOf('Text', module)
     <div>
       <Paragraph>This is a multi-line paragraph. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</Paragraph>
       <Paragraph>This is a one line paragraph.</Paragraph>
+    </div>
+  ))
+
+storiesOf('Button', module)
+  .add('Button', () => (
+    <div style={{ width: '260px' }}>
+      <Button onClick={action('button-click')}>Yolo</Button>
     </div>
   ))
