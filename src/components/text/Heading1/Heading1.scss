@@ -1,0 +1,11 @@
+@import '../../../styles/variables.scss';
+
+.heading1 {
+  color: $midnight-blue;
+  font-family: $primary-font;
+  font-size: 46px;
+  font-weight: 900;
+  height: 58px;
+  line-height: 58px;
+  margin: 0;
+}

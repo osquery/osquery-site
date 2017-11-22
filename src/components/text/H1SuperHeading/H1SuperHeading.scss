@@ -1,0 +1,11 @@
+@import '../../../styles/variables.scss';
+
+.h1-super-heading {
+  color: $accent-color;
+  font-family: $primary-font;
+  font-size: 24px;
+  font-weight: 900;
+  height: 38px;
+  line-height: 38px;
+  margin: 0 0 25px 0;
+}

@@ -1,0 +1,12 @@
+@import '../../../styles/variables.scss';
+
+.heading2 {
+  color: $accent-color;
+  font-family: $primary-font;
+  font-size: 32px;
+  font-weight: 900;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
