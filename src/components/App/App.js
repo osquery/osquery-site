@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
 
-import logo from 'logo.svg'
 import './App.css'
+import GlobalNav from 'components/GlobalNav'
+import Logo from 'components/Logo'
+
+const baseClass = 'app'
 
 class App extends Component {
   render() {
     const { children } = this.props
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+      <div className={baseClass}>
+        <header className={`${baseClass}__header`}>
+          <Logo className={`${baseClass}__logo`} />
 
-          <h1 className="App-title">Welcome to React</h1>
+          <GlobalNav className={`${baseClass}__nav`} />
         </header>
 
         {children}

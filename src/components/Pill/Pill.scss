@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+
+.pill {
+  align-items: center;
+  border-radius: 4px;
+  color: rgba(0,9,76,0.56);
+  display: flex;
+  font-family: $primary-font;
+  font-size: 14px;
+  font-weight: 900;
+  justify-content: space-around;
+  padding: 17px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.pill--active {
+  background-color: rgba(0,18,95,0.06);
+  color: $midnight-blue;
+}

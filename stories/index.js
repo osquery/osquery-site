@@ -1,7 +1,9 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
+import React from 'react'
+import { BrowserRouter, Link } from 'react-router-dom'
+import { storiesOf } from '@storybook/react'
 
-import Icon from '../src/components/Icon';
+import Icon from '../src/components/Icon'
+import Pill from '../src/components/Pill'
 
 const IconWrapper = (Component) => {
   class IconWrapperComponent extends React.Component {
@@ -11,11 +13,11 @@ const IconWrapper = (Component) => {
       'linux',
       'ubuntu',
       'windows'
-    ];
+    ]
 
     state = {
       name: 'apple',
-    };
+    }
 
     render() {
       return (
@@ -30,17 +32,17 @@ const IconWrapper = (Component) => {
                 >
                   {platform}
                 </button>
-              );
+              )
             })}
           </div>
           <br />
           <Component {...this.props} name={this.state.name} />
         </div>
-      );
+      )
     }
   }
 
-  return IconWrapperComponent;
+  return IconWrapperComponent
 }
 
 const WrappedIcon = IconWrapper(Icon)
@@ -57,4 +59,16 @@ storiesOf('Icon', module)
   ))
   .add('slack', () => (
     <Icon name="slack" />
-  ));
+  ))
+
+storiesOf('Pill', module)
+  .add('inactive', () => (
+    <BrowserRouter>
+      <Pill to="/nowhere">Inactive</Pill>
+    </BrowserRouter>
+  ))
+  .add('active', () => (
+    <BrowserRouter>
+      <Pill active to="/nowhere">Active</Pill>
+    </BrowserRouter>
+  ))

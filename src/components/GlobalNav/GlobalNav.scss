@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+
+.global-nav {
+  align-items: center;
+  display: flex;
+  font-family: $primary-font;
+  justify-content: flex-end;
+  height: 80px;
+  width: 635px;
+}
+
+.global-nav__link {
+  margin: 0 10px;
+}
+
+.global-nav__github-mark {
+  margin-right: 5px;
+}
