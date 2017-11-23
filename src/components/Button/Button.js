@@ -4,8 +4,12 @@ import { func, node, string } from 'prop-types'
 
 import './Button.css'
 
-const Button = ({ children, className, onClick }) => {
+const Button = ({ children, className, href, onClick }) => {
   const buttonClassName = classnames('button', className)
+
+  if (!!href) {
+    return <a className={buttonClassName} href={href}>{children}</a>
+  }
 
   return <button className={buttonClassName} onClick={onClick}>{children}</button>
 }
@@ -13,7 +17,8 @@ const Button = ({ children, className, onClick }) => {
 Button.propTypes = {
   children: node,
   className: string,
-  onClick: func.isRequired,
+  href: string,
+  onClick: func,
 }
 
 export default Button

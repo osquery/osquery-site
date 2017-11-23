@@ -1,0 +1,8 @@
+@import '../../styles/variables.scss';
+
+.card-header {
+  background-color: $pale-grey;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 15px;
+}

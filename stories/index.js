@@ -4,6 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions';
 
 import Button from '../src/components/Button'
+import GithubCard from '../src/components/GithubCard'
 import H1SuperHeading from '../src/components/text/H1SuperHeading'
 import Heading1 from '../src/components/text/Heading1'
 import Heading2 from '../src/components/text/Heading2'
@@ -133,5 +134,17 @@ storiesOf('Button', module)
   .add('Button', () => (
     <div style={{ width: '260px' }}>
       <Button onClick={action('button-click')}>Yolo</Button>
+    </div>
+  ))
+
+storiesOf('Card', module)
+  .add('GithubCard', () => (
+    <div style={{ width: '270px' }}>
+      <GithubCard
+        description="A flexible control server for osquery fleets."
+        name="kolide/fleet"
+        starCount={153}
+        url="https://github.com/kolide/fleet"
+      />
     </div>
   ))

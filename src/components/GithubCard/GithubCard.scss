@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.github-card {
+  &__button {
+    display: block;
+  }
+
+  &__footer {
+    text-align: center;
+  }
+
+  &__name {
+    color: $midnight-blue;
+    font-size: 16px;
+    font-weight: $font-bold;
+    margin: 0;
+  }
+
+  &__star-count {
+    color: $midnight-blue;
+    font-size: 16px;
+    font-weight: $font-bold;
+    margin: 0;
+  }
+}

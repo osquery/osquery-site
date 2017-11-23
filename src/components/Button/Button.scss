@@ -3,6 +3,7 @@
 .button {
   background-color: $duck-egg-blue;
   border: 1px solid $dodger-blue-60;
+  border-radius: 3px;
   color: $dark-sky-blue;
   cursor: pointer;
   font-size: 16px;
@@ -10,6 +11,7 @@
   outline: none;
   padding: 9px 12px 12px;
   text-align: center;
+  text-decoration: none;
 
   &:hover {
     background-color: $accent-color;
