@@ -15,6 +15,7 @@ import Osquery from 'components/Icon/svg/Osquery.svg.js'
 import ShellHistory from 'components/Icon/svg/ShellHistory.svg.js'
 import Slack from 'components/Icon/svg/Slack.svg.js'
 import SlackText from 'components/Icon/svg/SlackText.svg.js'
+import Star from 'components/Icon/svg/Star.svg.js'
 import Ubuntu from 'components/Icon/svg/Ubuntu.svg.js'
 import Windows from 'components/Icon/svg/Windows.svg.js'
 
@@ -35,6 +36,7 @@ class Icon extends Component {
     shellHistory: ShellHistory,
     slack: Slack,
     slackText: SlackText,
+    star: Star,
     ubuntu: Ubuntu,
     windows: Windows,
   }

@@ -92,6 +92,9 @@ storiesOf('Icon', module)
   .add('slack', () => (
     <Icon name="slack" />
   ))
+  .add('star', () => (
+    <Icon name="star" />
+  ))
 
 storiesOf('Pill', module)
   .add('inactive', () => (
