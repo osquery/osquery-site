@@ -15,6 +15,7 @@ import Icon from '../src/components/Icon'
 import Monospace from '../src/components/text/Monospace'
 import Paragraph from '../src/components/text/Paragraph'
 import Pill from '../src/components/Pill'
+import ProminentCta from '../src/components/ProminentCta'
 import Tab from '../src/components/Tab'
 
 const IconWrapper = (Component) => {
@@ -84,6 +85,12 @@ storiesOf('Icon', module)
   .add('octocat', () => (
     <Icon name="octocat" />
   ))
+  .add('osquery', () => (
+    <Icon name="osquery" />
+  ))
+  .add('osqueryDocs', () => (
+    <Icon name="osqueryDocs" />
+  ))
   .add('platform icons', () => (
     <WrappedIcon />
   ))
@@ -147,4 +154,21 @@ storiesOf('Card', module)
         url="https://github.com/kolide/fleet"
       />
     </div>
+  ))
+
+storiesOf('ProminentCta', module)
+  .add('Slack', () => (
+    <ProminentCta icon={<Icon name="slack" />}>
+      <a href="#">Join the Osquery Slack</a>
+    </ProminentCta>
+  ))
+  .add('Osquery Docs', () => (
+    <ProminentCta icon={<Icon name="osqueryDocs" />}>
+      <a href="#">Read the Osquery Docs</a>
+    </ProminentCta>
+  ))
+  .add('Github', () => (
+    <ProminentCta icon={<Icon name="octocat" />}>
+      <a href="#">View the Github Project</a>
+    </ProminentCta>
   ))

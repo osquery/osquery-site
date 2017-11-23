@@ -12,6 +12,7 @@ import Linux from 'components/Icon/svg/Linux.svg.js'
 import MacFinder from 'components/Icon/svg/MacFinder.svg.js'
 import Octocat from 'components/Icon/svg/Octocat.svg.js'
 import Osquery from 'components/Icon/svg/Osquery.svg.js'
+import OsqueryDocs from 'components/Icon/svg/OsqueryDocs.svg.js'
 import ShellHistory from 'components/Icon/svg/ShellHistory.svg.js'
 import Slack from 'components/Icon/svg/Slack.svg.js'
 import SlackText from 'components/Icon/svg/SlackText.svg.js'
@@ -33,6 +34,7 @@ class Icon extends Component {
     macFinder: MacFinder,
     octocat: Octocat,
     osquery: Osquery,
+    osqueryDocs: OsqueryDocs,
     shellHistory: ShellHistory,
     slack: Slack,
     slackText: SlackText,

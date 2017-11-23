@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.prominent-cta {
+  display: inline-block;
+  text-align: center;
+}
+
+.prominent-cta__circle {
+  align-items: center;
+  background-color: #f4f7fb;
+  border-radius: 300px;
+  display: inline-flex;
+  height: 300px;
+  justify-content: center;
+  margin-bottom: 36px;
+  width: 300px;
+}
+
+.prominent-cta > a {
+  color: $accent-color;
+  display: block;
+  font-size: 20px;
+  font-weight: $font-extra-bold;
+  text-decoration: none;
+}
