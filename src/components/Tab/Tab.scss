@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.tab {
+  background-color: $pale-gray;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: $light-gray;
+  font-family: $primary-font;
+  font-weight: 700;
+  height: 50px;
+  outline: none;
+  padding: 0 16px;
+}
+
+.tab:hover {
+  background-color: $accent-color;
+  border-color: $accent-color;
+  color: $white;
+  cursor: pointer;
+}
+
+.tab--active {
+  background-color: $white;
+  border-color: $accent-color;
+  color: $accent-color;
+}
+
+.tab--small {
+  font-size: 18px;
+}
+
+.tab--large {
+  font-size: 24px;
+  height: 70px;
+  line-height: 70px;
+}

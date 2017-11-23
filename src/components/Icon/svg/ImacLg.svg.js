@@ -116,12 +116,7 @@ class ImacLg extends Component {
                 </g>
                 <g id="imac-stand" transform="translate(145.088062, 293.161351)">
                   <g id="Shape">
-                    <use
-                      fill="black"
-                      fillOpacity="1"
-                      filter="url(#filter-4)"
-                      xlinkHref="#path-3"
-                    />
+                    <use fill="black" fillOpacity="1" filter="url(#filter-4)" xlinkHref="#path-3" />
                     <use fill="#C4CBD5" fillRule="evenodd" xlinkHref="#path-3" />
                   </g>
                   <path

@@ -10,9 +10,7 @@ const baseClass = 'home'
 
 class Home extends Component {
   render() {
-    const {
-      hero,
-    } = content.sections
+    const { hero } = content.sections
 
     return (
       <div>

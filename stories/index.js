@@ -11,8 +11,10 @@ import Heading3 from '../src/components/text/Heading3'
 import Heading4 from '../src/components/text/Heading4'
 import Heading5 from '../src/components/text/Heading5'
 import Icon from '../src/components/Icon'
+import Monospace from '../src/components/text/Monospace'
 import Paragraph from '../src/components/text/Paragraph'
 import Pill from '../src/components/Pill'
+import Tab from '../src/components/Tab'
 
 const IconWrapper = (Component) => {
   class IconWrapperComponent extends React.Component {
@@ -103,6 +105,12 @@ storiesOf('Pill', module)
     </BrowserRouter>
   ))
 
+storiesOf('Tab', module)
+  .add('small inactive', () => <Tab onClick={() => false} text="Small Tab" />)
+  .add('small active', () => <Tab active onClick={() => false} text="Small Tab" />)
+  .add('large inactive', () => <Tab onClick={() => false} size="large" text="Large Tab" />)
+  .add('large active', () => <Tab active onClick={() => false} size="large" text="Large Tab" />)
+
 storiesOf('Text', module)
   .add('H1SuperHeading', () => <H1SuperHeading>h1 superheading</H1SuperHeading>)
   .add('Heading1', () => <Heading1>Heading 1</Heading1>)
@@ -116,6 +124,7 @@ storiesOf('Text', module)
       <Paragraph>This is a one line paragraph.</Paragraph>
     </div>
   ))
+  .add('Monospace', () => <Monospace>brew install npm install yarn</Monospace>)
 
 storiesOf('Button', module)
   .add('Button', () => (
