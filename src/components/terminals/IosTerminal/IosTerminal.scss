@@ -1,0 +1,26 @@
+@import '../../../styles/variables.scss';
+
+.ios-terminal__header {
+  align-items: center;
+  background-color: $pale-grey;
+  display: flex;
+}
+
+.ios-terminal__dot {
+  border-radius: 50%;
+  height: 12px;
+  margin-left: 8px;
+  width: 12px;
+}
+
+.ios-terminal__dot--error {
+  background-color: $error;
+}
+
+.ios-terminal__dot--warning {
+  background-color: $warning;
+}
+
+.ios-terminal__dot--success {
+  background-color: $success;
+}
