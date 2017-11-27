@@ -11,9 +11,8 @@ const ProminentCta = ({ children, className, icon }) => {
 
   return (
     <div className={wrapperClassname}>
-      <div className={`${baseClass}__circle`}>
-        {icon}
-      </div>
+      <div className={`${baseClass}__circle`}>{icon}</div>
+
       {children}
     </div>
   )
@@ -25,4 +24,4 @@ ProminentCta.propTypes = {
   icon: node.isRequired,
 }
 
-export default ProminentCta;
+export default ProminentCta

@@ -7,7 +7,7 @@
 
 .prominent-cta__circle {
   align-items: center;
-  background-color: #f4f7fb;
+  background-color: $pale-gray;
   border-radius: 300px;
   display: inline-flex;
   height: 300px;
@@ -20,6 +20,6 @@
   color: $accent-color;
   display: block;
   font-size: 20px;
-  font-weight: $font-extra-bold;
+  font-weight: $font-bold;
   text-decoration: none;
 }

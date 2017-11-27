@@ -8,10 +8,18 @@ const Button = ({ children, className, href, onClick }) => {
   const buttonClassName = classnames('button', className)
 
   if (!!href) {
-    return <a className={buttonClassName} href={href}>{children}</a>
+    return (
+      <a className={buttonClassName} href={href}>
+        {children}
+      </a>
+    )
   }
 
-  return <button className={buttonClassName} onClick={onClick}>{children}</button>
+  return (
+    <button className={buttonClassName} onClick={onClick}>
+      {children}
+    </button>
+  )
 }
 
 Button.propTypes = {

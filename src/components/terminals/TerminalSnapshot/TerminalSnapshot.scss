@@ -1,0 +1,45 @@
+@import '../../../styles/variables.scss';
+
+.terminal-snapshot {
+  &__body {
+    color: $dusk;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 13px;
+    padding-bottom: 13px;
+    padding-left: 12px;
+    padding-right: 29px;
+    padding-top: 7px;
+    text-align: left;
+  }
+
+  &__header {
+    align-items: center;
+    background-color: $dusk-16;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: $dark-blue;
+    display: flex;
+    font-size: 16px;
+    font-weight: $font-extra-bold;
+    padding-right: 29px;
+  }
+
+  &__oval {
+    background-color: #a596ff;
+    border: solid 2px $dark-blue;
+    border-radius: 6px;
+    bottom: 7px;
+    height: 6px;
+    position: absolute;
+    right: 7px;
+    width: 6px;
+  }
+
+  &__wrapper {
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px 0 rgba(0, 18, 95, 0.16);
+    display: inline-block;
+    position: relative;
+  }
+}

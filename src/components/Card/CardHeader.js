@@ -7,11 +7,7 @@ import './CardHeader.css'
 const CardHeader = ({ children, className }) => {
   const cardHeaderClassName = classnames('card-header', className)
 
-  return (
-    <div className={cardHeaderClassName}>
-      {children}
-    </div>
-  )
+  return <div className={cardHeaderClassName}>{children}</div>
 }
 
 CardHeader.propTypes = {

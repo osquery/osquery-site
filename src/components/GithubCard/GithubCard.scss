@@ -1,25 +1,28 @@
 @import '../../styles/variables.scss';
 
-.github-card {
-  &__button {
-    display: block;
-  }
+.github-card__button {
+  display: block;
+}
 
-  &__footer {
-    text-align: center;
-  }
+.github-card__description {
+  height: 68px;
+  overflow: hidden;
+}
 
-  &__name {
-    color: $midnight-blue;
-    font-size: 16px;
-    font-weight: $font-bold;
-    margin: 0;
-  }
+.github-card__footer {
+  text-align: center;
+}
 
-  &__star-count {
-    color: $midnight-blue;
-    font-size: 16px;
-    font-weight: $font-bold;
-    margin: 0;
-  }
+.github-card__name {
+  color: $midnight-blue;
+  font-size: 16px;
+  font-weight: $font-bold;
+  margin: 0;
+}
+
+.github-card__star-count {
+  color: $midnight-blue;
+  font-size: 16px;
+  font-weight: $font-bold;
+  margin: 0;
 }

@@ -1,0 +1,62 @@
+[
+  {
+    "description": "Zentral is a framework to gather, process, and monitor system events and link them to an inventory.",
+    "name": "zentralopensource / zentral",
+    "star_count": 224,
+    "url": "https://github.com/zentralopensource/zentral"
+  },
+  {
+    "description": "A flexible control server for osquery fleets",
+    "name": "kolide / fleet",
+    "star_count": 124,
+    "url": "https://github.com/kolide/fleet"
+  },
+  {
+    "description": "Go app that dispatches osquery to multi-machines",
+    "name": "emirozer / exposq",
+    "star_count": 89,
+    "url": "https://github.com/emirozer/exposq"
+  },
+  {
+    "description": "A repository for using osquery for incident detection and response",
+    "name": "palantir / osquery-configuration",
+    "star_count": 89,
+    "url": "https://github.com/palantir/osquery-configuration"
+  },
+  {
+    "description": "A lightweight osquery execution environment",
+    "name": "kolide / launcher",
+    "star_count": 57,
+    "url": "https://github.com/kolide/launcher"
+  },
+  {
+    "description": "Go bindings for Osquery",
+    "name": "kolide / osquery-go",
+    "star_count": 55,
+    "url": "https://github.com/kolide/osquery-go"
+  },
+  {
+    "description": "A quickstart demo for Kolide tools",
+    "name": "kolide / kolide-quickstart",
+    "star_count": 30,
+    "url": "https://github.com/kolide/kolide-quickstart"
+  },
+  {
+    "description": "Scripts to return inventory information for use in the JamfPro, heavily leveraging osquery",
+    "name": "arubdesu / EAs",
+    "star_count": 24,
+    "url": "https://github.com/arubdesu/EAs"
+  },
+  {
+    "description": "node.js client for osquery",
+    "name": "sidorares / osquery-node",
+    "star_count": 19,
+    "url": "https://github.com/sidorares/osquery-node"
+  },
+  {
+    "description": "A simple threat hunter based on osquery, Salt Open and Cymon API",
+    "name": "0x4D31 / sqhunter",
+    "star_count": 18,
+    "url": "https://github.com/0x4D31/sqhunter"
+  }
+]

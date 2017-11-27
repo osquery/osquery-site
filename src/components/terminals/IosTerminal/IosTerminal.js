@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { node, string } from 'prop-types'
 
 import Terminal from 'components/terminals/Terminal'
@@ -10,7 +10,7 @@ const IosTerminal = ({ children, className }) => {
   const dotClass = `${baseClass}__dot`
 
   return (
-    <Terminal.Wrapper>
+    <Terminal.Wrapper className={className}>
       <Terminal.Header className={`${baseClass}__header`}>
         <div className={`${dotClass} ${dotClass}--error`} />
 

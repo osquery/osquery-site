@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+
+.section-break {
+  background-color: $accent-color;
+  height: 2px;
+  margin: 0 auto;
+  opacity: .2;
+  width: 300px;
+}

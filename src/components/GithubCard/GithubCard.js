@@ -13,17 +13,21 @@ const GithubCard = ({ description, name, starCount, url }) => {
     <Card.Wrapper>
       <Card.Header>
         <p className={`${baseClass}__name`}>{name}</p>
-        <p className={`${baseClass}__star-count`}>
-          <Icon name="star" /> {starCount}
-        </p>
+        {starCount && (
+          <p className={`${baseClass}__star-count`}>
+            <Icon name="star" /> {starCount}
+          </p>
+        )}
       </Card.Header>
 
-      <Card.Body>
+      <Card.Body className={`${baseClass}__description`}>
         <span>{description}</span>
       </Card.Body>
 
       <Card.Footer className={`${baseClass}__footer`}>
-        <Button className={`${baseClass}__button`} href={url}>View on GitHub</Button>
+        <Button className={`${baseClass}__button`} href={url}>
+          View on GitHub
+        </Button>
       </Card.Footer>
     </Card.Wrapper>
   )
@@ -32,7 +36,7 @@ const GithubCard = ({ description, name, starCount, url }) => {
 GithubCard.propTypes = {
   description: string.isRequired,
   name: string.isRequired,
-  starCount: number.isRequired,
+  starCount: number,
   url: string.isRequired,
 }
 

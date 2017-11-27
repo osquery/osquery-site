@@ -1,0 +1,52 @@
+[
+  {
+    "iconName": "shellHistory",
+    "title": "shell_history",
+    "snapshot_rows": [
+      { "property": "10:03AM", "value": "sudo adduser gust" },
+      { "property": "10:04AM", "value": "sudo visudo" }
+    ]
+  },
+  {
+    "iconName": "macFinder",
+    "title": "os_version",
+    "snapshot_rows": [
+      { "property": "Build", "value": "17A362" },
+      { "property": "Version", "value": "10.1.13" },
+      { "property": "Patch", "value": "6" }
+    ]
+  },
+  {
+    "iconName": "imac",
+    "title": "brew_version",
+    "snapshot_rows": [
+      { "property": "origin", "value": "Ethiopia" },
+      { "property": "variety", "value": "yergachiffe" }
+    ]
+  },
+  {
+    "iconName": "shellHistory",
+    "title": "shell_history",
+    "snapshot_rows": [
+      { "property": "10:03AM", "value": "sudo adduser gust" },
+      { "property": "10:04AM", "value": "sudo visudo" }
+    ]
+  },
+  {
+    "iconName": "macFinder",
+    "title": "os_version",
+    "snapshot_rows": [
+      { "property": "Build", "value": "17A362" },
+      { "property": "Version", "value": "10.1.13" },
+      { "property": "Patch", "value": "6" }
+    ]
+  },
+  {
+    "iconName": "imac",
+    "title": "brew_version",
+    "snapshot_rows": [
+      { "property": "origin", "value": "Ethiopia" },
+      { "property": "variety", "value": "yergachiffe" }
+    ]
+  }
+]

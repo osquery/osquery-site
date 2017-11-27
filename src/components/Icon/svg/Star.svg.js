@@ -31,7 +31,7 @@ class Star extends Component {
           <g
             id="osqueryio-home-copy"
             transform="translate(-369.000000, -3130.000000)"
-            fill="#00125F"
+            fill={fillColor}
           >
             <g id="featured-community-projects" transform="translate(352.000000, 2673.000000)">
               <g id="bottom-left" transform="translate(0.000000, 417.000000)">

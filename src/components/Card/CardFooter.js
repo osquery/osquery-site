@@ -7,11 +7,7 @@ import './CardFooter.css'
 const CardFooter = ({ children, className }) => {
   const cardFooterClassName = classnames('card-footer', className)
 
-  return (
-    <div className={cardFooterClassName}>
-      {children}
-    </div>
-  )
+  return <div className={cardFooterClassName}>{children}</div>
 }
 
 CardFooter.propTypes = {

@@ -14,6 +14,8 @@ import Heading5 from '../src/components/text/Heading5'
 import Icon from '../src/components/Icon'
 import IosTerminal from '../src/components/terminals/IosTerminal'
 import Monospace from '../src/components/text/Monospace'
+import OsqueryTableSnapshot from '../src/components/terminals/OsqueryTableSnapshot'
+import osqueryTableSnapshots from '../src/data/osquery_table_snapshots.json'
 import Paragraph from '../src/components/text/Paragraph'
 import Pill from '../src/components/Pill'
 import ProminentCta from '../src/components/ProminentCta'
@@ -146,12 +148,21 @@ storiesOf('Button', module)
   ))
 
 storiesOf('Card', module)
-  .add('GithubCard', () => (
+  .add('GithubCard star count', () => (
     <div style={{ width: '270px' }}>
       <GithubCard
         description="A flexible control server for osquery fleets."
         name="kolide/fleet"
         starCount={153}
+        url="https://github.com/kolide/fleet"
+      />
+    </div>
+  ))
+  .add('GithubCard no star count', () => (
+    <div style={{ width: '270px' }}>
+      <GithubCard
+        description="A flexible control server for osquery fleets."
+        name="kolide/fleet"
         url="https://github.com/kolide/fleet"
       />
     </div>
@@ -185,4 +196,16 @@ storiesOf('Terminal', module)
       <Monospace>path = /Users/jim/bin/dropage</Monospace>
       <Monospace>pid = 561</Monospace>
     </IosTerminal>
+  ))
+  .add('OsqueryTableSnapshots', () => (
+    <div>
+      {osqueryTableSnapshots.map((snapshot, idx) => {
+        return (
+          <OsqueryTableSnapshot
+            key={`${snapshot.title}-${idx}`}
+            data={snapshot}
+          />
+        )
+      })}
+    </div>
   ))
