@@ -1,0 +1,33 @@
+@import '../../../../styles/variables.scss';
+
+.platform-dropdown {
+  display: inline-block;
+}
+
+.platform-dropdown__circle {
+  border-radius: 50%;
+  background-color: $accent-color;
+  display: inline-block;
+  height: 20px;
+  margin-left: 6px;
+  width: 20px;
+}
+
+.platform-dropdown__form {
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 0 7px 15px 0 rgba(0,0,0,.07), 0 21px 33px 0 rgba(48,48,91,.11);
+  box-sizing: border-box;
+  padding: 20px;
+  width: 300px;
+}
+
+.platform-dropdown__text {
+  border: 0;
+  color: $accent-color;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: $font-bold;
+  line-height: 18px;
+  outline: none;
+}

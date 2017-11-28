@@ -3,9 +3,11 @@ import React, { Component } from 'react'
 import Apple from 'components/Icon/svg/Apple.svg.js'
 import Centos from 'components/Icon/svg/Centos.svg.js'
 import Cpu from 'components/Icon/svg/Cpu.svg.js'
+import DownCarat from 'components/Icon/svg/DownCarat.svg.js'
 import GithubMark from 'components/Icon/svg/GithubMark.svg.js'
 import FacebookOpenSource from 'components/Icon/svg/FacebookOpenSource.svg.js'
 import FrameOverlay from 'components/Icon/svg/FrameOverlay.svg.js'
+import FreeBSD from 'components/Icon/svg/FreeBSD.svg.js'
 import Imac from 'components/Icon/svg/Imac.svg.js'
 import ImacLg from 'components/Icon/svg/ImacLg.svg.js'
 import Linux from 'components/Icon/svg/Linux.svg.js'
@@ -25,9 +27,11 @@ class Icon extends Component {
     apple: Apple,
     centos: Centos,
     cpu: Cpu,
+    downCarat: DownCarat,
     githubMark: GithubMark,
     facebookOpenSource: FacebookOpenSource,
     frameOverlay: FrameOverlay,
+    freeBSD: FreeBSD,
     imac: Imac,
     imacLg: ImacLg,
     linux: Linux,

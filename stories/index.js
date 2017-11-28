@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Link } from 'react-router-dom'
 import { storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions'
 
 import Button from '../src/components/Button'
+import CheckboxHelper from './helpers/CheckboxHelper'
 import GithubCard from '../src/components/GithubCard'
 import H1SuperHeading from '../src/components/text/H1SuperHeading'
 import Heading1 from '../src/components/text/Heading1'
@@ -18,6 +19,8 @@ import OsqueryTableSnapshot from '../src/components/terminals/OsqueryTableSnapsh
 import osqueryTableSnapshots from '../src/data/osquery_table_snapshots.json'
 import Paragraph from '../src/components/text/Paragraph'
 import Pill from '../src/components/Pill'
+import PlatformDropdown from '../src/components/forms/fields/PlatformDropdown'
+import PlatformForm from '../src/components/forms/PlatformForm'
 import ProminentCta from '../src/components/ProminentCta'
 import Tab from '../src/components/Tab'
 
@@ -26,6 +29,7 @@ const IconWrapper = (Component) => {
     static icons = [
       'apple',
       'centos',
+      'freeBSD',
       'linux',
       'ubuntu',
       'windows'
@@ -66,6 +70,9 @@ const WrappedIcon = IconWrapper(Icon)
 storiesOf('Icon', module)
   .add('cpu', () => (
     <Icon name="cpu" />
+  ))
+  .add('downCarat', () => (
+    <Icon fillColor="#000" name="downCarat" />
   ))
   .add('facebookOpenSource', () => (
     <Icon name="facebookOpenSource" />
@@ -208,4 +215,19 @@ storiesOf('Terminal', module)
         )
       })}
     </div>
+  ))
+
+storiesOf('Form Fields', module)
+  .add('Checkbox', () => (
+    <CheckboxHelper />
+  ))
+  .add('PlatformDropdown', () => (
+    <PlatformDropdown onChange={action('platform-dropdown')}>
+      Platform Dropdown
+    </PlatformDropdown>
+  ))
+
+storiesOf('Forms', module)
+  .add('PlatformForm', () => (
+    <PlatformForm onChange={action('platform-form')} />
   ))
