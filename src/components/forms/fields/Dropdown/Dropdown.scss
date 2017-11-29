@@ -7,7 +7,7 @@
 
 .Select {
   .Select-control {
-    background-color: $accent-color;
+    background-color: $pale-gray;
     border: 1px solid rgba(74,157,255,0.6);
     border-radius: 2px;
     height: 40px;
@@ -22,7 +22,7 @@
   .Select-value {
     border-radius: 2px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12), 0 2px 0 0 #b8c2e3;
-    color: $white;
+    color: $accent-color;
 
     .Select-value-icon {
       border: 0;
@@ -55,15 +55,14 @@
 
     .Select-value-label {
       font-size: 16px;
-      color: $gray;
-      line-height: 28px;
+      color: $accent-color !important;
+      line-height: 38px;
     }
   }
 
-  &--single {
+  &--single.is-open {
     > .Select-control {
       .Select-value {
-        line-height: 38px;
 
         .Select-value-label {
           color: $white !important;
@@ -73,7 +72,7 @@
   }
 
   .Select-arrow {
-    border-top-color: $white;
+    border-top-color: $accent-color;
   }
 
   &.is-focused {
@@ -92,11 +91,11 @@
   &.has-value {
     > .Select-control,
     &.is-pseudo-focused > .Select-control {
-      background-color: $accent-color;
+      background-color: $pale-gray;
 
       .Select-value {
         .Select-value-label {
-          color: $gray;
+          color: $accent-color !important;
           font-size: 16px;
         }
       }
@@ -152,7 +151,7 @@
   }
 
   .Select-placeholder {
-    color: $white;
+    color: $accent-color;
     font-size: 16px;
     line-height: 40px;
     padding: 0 12px;
