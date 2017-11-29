@@ -3,12 +3,30 @@
 .home__computer-wrapper {
   display: inline-block;
   position: relative;
+
+  @media(max-width: $mobile-width) {
+    width: 268px;
+  }
 }
 
 .home__frame-overlay {
   left: 23px;
   position: absolute;
   z-index: 2;
+
+  @media(max-width: $mobile-width) {
+    width: 297px;
+    left: -14px;
+    top: 24px;
+  }
+}
+
+.home__hero-computer {
+  @media(max-width: $mobile-width) {
+    left: -30px;
+    position: relative;
+    width: 330px;
+  }
 }
 
 .home__heading-wrapper {
@@ -19,6 +37,11 @@
 .home__heading-content-wrapper {
   max-width: 700px;
   margin: 188px auto 0 auto;
+
+  @media(max-width: $mobile-width) {
+    margin-top: 80px;
+    max-width: 100%;
+  }
 }
 
 .home__section {
@@ -40,14 +63,22 @@
 }
 
 .home__icon-wrapper {
-  margin-bottom: 122px;
+  margin-bottom: 80px;
   margin-top: 28px;
   text-align: center;
+
+  @media(max-width: $mobile-width) {
+    margin-top: 10px;
+  }
 }
 
 .home__ios-terminal {
-  height: 310px;
+  height: 200px;
   margin: 0 auto 56px auto;
+
+  @media(max-width: $mobile-width) {
+    width: 90%;
+  }
 }
 
 .home__paragraph {
@@ -80,6 +111,10 @@
   position: absolute;
   top: 62px;
   width: 100%;
+
+  @media(max-width: $mobile-width) {
+    top: 83px;
+  }
 }
 
 .home__tab {
@@ -88,11 +123,28 @@
   &:last-child {
     margin-right: 0;
   }
+
+  @media(max-width: $mobile-width) {
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    margin: 10px auto;
+    width: 136px;
+
+    &:last-child {
+      margin-right: auto;
+    }
+  }
 }
 
 .home__tab-wrapper {
   margin-bottom: 43px;
   text-align: center;
+
+  @media(max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .home__cta-button {
@@ -109,6 +161,10 @@
   justify-content: space-around;
   margin: 0 auto;
   max-width: 900px;
+
+  @media(max-width: $mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .home__thing-to-know {
@@ -116,19 +172,36 @@
   flex-direction: column;
   justify-content: space-between;
   width: 260px;
+
+  @media(max-width: $mobile-width) {
+    width: 100%;
+  }
 }
 
 .home__thing-to-know-heading {
   text-align: left;
+
+  @media(max-width: $mobile-width) {
+    text-align: center;
+  }
 }
 
 .home__thing-to-know-p {
   font-size: 16px;
   text-align: left;
+
+  @media(max-width: $mobile-width) {
+    text-align: center;
+  }
 }
 
 .home__thing-to-know-button {
   width: 100%;
+
+  @media(max-width: $mobile-width) {
+    margin: 0 auto 30px;
+    width: 85%;
+  }
 }
 
 .home__project-cards {
@@ -142,6 +215,13 @@
 .home__project-card-wrapper {
   margin-top: 50px;
   width: 270px;
+
+  @media(max-width: $mobile-width) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 95%;
+  }
 }
 
 .home__additional-resources {
@@ -149,6 +229,14 @@
   justify-content: space-around;
   margin: 50px auto 0;
   max-width: 1000px;
+
+  @media(max-width: $mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.home__prominent-cta {
+  margin-bottom: 30px;
 }
 
 .home__footer {
@@ -157,6 +245,10 @@
   justify-content: space-between;
   margin-top: 80px;
   padding: 58px;
+
+  @media(max-width: $mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .home__meta {
@@ -166,6 +258,10 @@
 .home__facebook-open-source {
   align-items: center;
   display: flex;
+
+  @media(max-width: $mobile-width) {
+    margin-top: 50px;
+  }
 }
 
 .home__facebook-open-source > span {
@@ -179,6 +275,11 @@
   font-size: 18px;
   font-weight: $font-bold;
   margin-top: 95px;
+
+  @media(max-width: $mobile-width) {
+    font-size: 14px;
+    margin-top: 10px;
+  }
 }
 
 .home__heart-text {

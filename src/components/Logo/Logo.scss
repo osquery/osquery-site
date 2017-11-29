@@ -1,6 +1,14 @@
+@import '../../styles/variables.scss';
+
 .logo {
   align-items: center;
   display: flex;
+}
+
+.logo__icon {
+  @media(max-width: $mobile-width) {
+    height: 25px;
+  }
 }
 
 .logo__text {
@@ -8,4 +16,9 @@
   font-weight: 900;
   margin-bottom: 5px;
   margin-left: 11px;
+
+  @media(max-width: $mobile-width) {
+    font-size: 18px;
+    margin-left: 0;
+  }
 }

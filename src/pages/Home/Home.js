@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MediaQuery from 'react-responsive'
 import { Link } from 'react-router-dom'
 
 import Button from 'components/Button'
@@ -22,6 +23,7 @@ import Tab from 'components/Tab'
 import './Home.css'
 
 const baseClass = 'home'
+const mobileWidth = 800
 const {
   additionalResources,
   communityProjects,
@@ -48,6 +50,26 @@ class Home extends Component {
     }
   }
 
+  renderMeta = () => {
+    return (
+      <section className={`${baseClass}__meta`}>
+        <div className={`${baseClass}__facebook-open-source`}>
+          <Icon name="facebookOpenSource" />
+
+          <span>Facebook Open Source</span>
+        </div>
+
+        <p className={`${baseClass}__copyright`}>&copy; 2017 Project License</p>
+
+        <p className={`${baseClass}__made-by-kolide`}>
+          Site made with
+          <span className={`${baseClass}__heart-text`}> &#10084; </span>
+          by Kolide in memory of Parse
+        </p>
+      </section>
+    )
+  }
+
   renderOsqueryTableSnapshots = () => {
     return (
       <div className={`${baseClass}__snapshot-wrapper`}>
@@ -66,7 +88,7 @@ class Home extends Component {
 
   render() {
     const { howItWorksActiveTab } = this.state
-    const { featuredProjects, onHowItWorksTabClick, renderOsqueryTableSnapshots } = this
+    const { featuredProjects, onHowItWorksTabClick, renderMeta, renderOsqueryTableSnapshots } = this
 
     return (
       <div>
@@ -133,24 +155,64 @@ class Home extends Component {
             />
           </div>
 
-          <IosTerminal className={`${baseClass}__ios-terminal`}>
-            <Monospace>
-              <strong>osquery> </strong>
-              SELECT name, path, pid FROM processes WHERE on_disk = 0;\n
-            </Monospace>
+          {this.state.howItWorksActiveTab === 'security' && (
+            <div>
+              <IosTerminal className={`${baseClass}__ios-terminal`}>
+                <Monospace>
+                  <strong>osquery> </strong>
+                  SELECT name, path, pid FROM processes WHERE on_disk = 0;
+                </Monospace>
+                <Monospace>name = Drop_Agent</Monospace>
+                <Monospace>path = /Users/jim/bin/dropage</Monospace>
+                <Monospace>pid = 561</Monospace>
+              </IosTerminal>
 
-            <Monospace>name = Drop_Agent</Monospace>
+              <Heading3>{howItWorks.subSection1Heading}</Heading3>
 
-            <Monospace>path = /Users/jim/bin/dropage</Monospace>
+              <Paragraph className={`${baseClass}__paragraph`}>
+                {howItWorks.subSection1Paragraph1}
+              </Paragraph>
+            </div>
+          )}
 
-            <Monospace>pid = 561</Monospace>
-          </IosTerminal>
+          {this.state.howItWorksActiveTab === 'compliance' && (
+            <div>
+              <IosTerminal className={`${baseClass}__ios-terminal`}>
+                <Monospace>
+                  <strong>osquery> </strong>
+                  SELECT * FROM mounts m, disk_encryption d
+                </Monospace>
+                <Monospace>WHERE m.device_alias = d.name</Monospace>
+                <Monospace>AND m.path = "/"</Monospace>
+                <Monospace>AND d.encrypted = 0;</Monospace>
+              </IosTerminal>
 
-          <Heading3>{howItWorks.subSection1Heading}</Heading3>
+              <Heading3>{howItWorks.subSection2Heading}</Heading3>
 
-          <Paragraph className={`${baseClass}__paragraph`}>
-            {howItWorks.subSection1Paragraph1}
-          </Paragraph>
+              <Paragraph className={`${baseClass}__paragraph`}>
+                {howItWorks.subSection2Paragraph1}
+              </Paragraph>
+            </div>
+          )}
+
+          {this.state.howItWorksActiveTab === 'devops' && (
+            <div>
+              <IosTerminal className={`${baseClass}__ios-terminal`}>
+                <Monospace>
+                  <strong>osquery> </strong>
+                  SELECT * FROM last
+                </Monospace>
+                <Monospace>WHERE username = "root"</Monospace>
+                <Monospace>AND time > (( SELECT unix_time FROM time ) - 3600 );</Monospace>
+              </IosTerminal>
+
+              <Heading3>{howItWorks.subSection3Heading}</Heading3>
+
+              <Paragraph className={`${baseClass}__paragraph`}>
+                {howItWorks.subSection3Paragraph1}
+              </Paragraph>
+            </div>
+          )}
 
           <Button
             className={`${baseClass}__cta-button ${baseClass}__available-tables-button`}
@@ -247,36 +309,25 @@ class Home extends Component {
           <Paragraph>{additionalResources.sectionSubHeading}</Paragraph>
 
           <div className={`${baseClass}__additional-resources`}>
-            <ProminentCta icon={<Icon name="slack" />}>
+            <ProminentCta className={`${baseClass}__prominent-cta`} icon={<Icon name="slack" />}>
               <a href="https://osquery-slack.herokuapp.com/">Join the Osquery Slack</a>
             </ProminentCta>
 
-            <ProminentCta icon={<Icon name="osqueryDocs" />}>
+            <ProminentCta
+              className={`${baseClass}__prominent-cta`}
+              icon={<Icon name="osqueryDocs" />}
+            >
               <a href="https://osquery.readthedocs.io/en/stable/">Read the Osquery Docs</a>
             </ProminentCta>
 
-            <ProminentCta icon={<Icon name="octocat" />}>
+            <ProminentCta className={`${baseClass}__prominent-cta`} icon={<Icon name="octocat" />}>
               <a href="https://github.com/facebook/osquery">View the Github Project</a>
             </ProminentCta>
           </div>
         </section>
 
         <footer className={`${baseClass}__footer`}>
-          <section className={`${baseClass}__meta`}>
-            <div className={`${baseClass}__facebook-open-source`}>
-              <Icon name="facebookOpenSource" />
-
-              <span>Facebook Open Source</span>
-            </div>
-
-            <p className={`${baseClass}__copyright`}>&copy; 2017 Project License</p>
-
-            <p className={`${baseClass}__made-by-kolide`}>
-              Site made with
-              <span className={`${baseClass}__heart-text`}> &#10084; </span>
-              by Kolide in memory of Parse
-            </p>
-          </section>
+          <MediaQuery minWidth={mobileWidth + 1}>{renderMeta()}</MediaQuery>
 
           <section className={`${baseClass}__open-source-links`}>
             <Heading5>Open Source</Heading5>
@@ -301,10 +352,6 @@ class Home extends Component {
               </li>
 
               <li className={`${baseClass}__footer-li`}>
-                <Link to="#">Queries</Link>
-              </li>
-
-              <li className={`${baseClass}__footer-li`}>
                 <a href="https://osquery.readthedocs.io/en/stable/">Docs</a>
               </li>
 
@@ -313,6 +360,8 @@ class Home extends Component {
               </li>
             </ul>
           </section>
+
+          <MediaQuery maxWidth={mobileWidth}>{renderMeta()}</MediaQuery>
         </footer>
       </div>
     )

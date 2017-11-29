@@ -5,8 +5,12 @@
   font-family: $primary-font;
   font-size: 32px;
   font-weight: 900;
-  height: 40px;
   line-height: 40px;
   margin: 0 0 16px 0;
   text-align: center;
+
+  @media(max-width: $mobile-width) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }

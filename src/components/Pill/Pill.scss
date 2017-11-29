@@ -2,8 +2,10 @@
 
 .pill {
   align-items: center;
+  background-color: transparent;
+  border: none;
   border-radius: 4px;
-  color: rgba(0,9,76,0.56);
+  color: $blue-gray;
   display: flex;
   font-family: $primary-font;
   font-size: 14px;
@@ -12,9 +14,15 @@
   padding: 17px;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: darken($pale-gray, 2);
+    color: rgba(0,9,76,0.56);
+    color: $dark-gray;
+  }
 }
 
 .pill--active {
-  background-color: rgba(0,18,95,0.06);
-  color: $midnight-blue;
+  background-color: darken($pale-gray, 2);
+  color: $blue-gray;
 }

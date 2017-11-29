@@ -8,4 +8,11 @@
   height: 38px;
   line-height: 38px;
   margin: 0;
+
+  @media(max-width: $mobile-width) {
+    font-size: 18px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+  }
 }

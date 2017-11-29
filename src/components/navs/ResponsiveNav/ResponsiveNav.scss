@@ -1,0 +1,38 @@
+@import '../../../styles/variables.scss';
+
+.responsive-nav__wrapper {
+  display: inline-block;
+}
+
+.responsive-nav {
+  align-items: center;
+  display: flex;
+  font-family: $primary-font;
+  justify-content: flex-end;
+  height: 80px;
+
+  @media(max-width: $mobile-width) {
+    align-items: flex-end;
+    background-color: $white;
+    border-radius: 3px;
+    box-shadow: $heavy-box-shadow;
+    flex-direction: column;
+    height: 250px;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 140px;
+  }
+}
+
+.responsive-nav__link {
+  margin-right: 3px;
+
+  @media(max-width: $mobile-width) {
+    margin: 0;
+    padding: 12px;
+  }
+}
+
+.responsive-nav__github-mark {
+  margin-right: 5px;
+}

@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import './App.css'
-import GlobalNav from 'components/GlobalNav'
 import Logo from 'components/Logo'
+import ResponsiveNav from 'components/navs/ResponsiveNav'
 
 const baseClass = 'app'
 
@@ -13,9 +14,11 @@ class App extends Component {
     return (
       <div className={baseClass}>
         <header className={`${baseClass}__header`}>
-          <Logo className={`${baseClass}__logo`} />
+          <Link className={`${baseClass}__home-link`} to="/">
+            <Logo className={`${baseClass}__logo`} />
+          </Link>
 
-          <GlobalNav className={`${baseClass}__nav`} />
+          <ResponsiveNav className={`${baseClass}__nav`} />
         </header>
 
         {children}

@@ -17,7 +17,7 @@ class Logo extends Component {
 
     return (
       <div className={classNames(baseClass, className)}>
-        <Icon name="osquery" />
+        <Icon className={`${baseClass}__icon`} name="osquery" />
 
         <span className={`${baseClass}__text`}>osquery</span>
       </div>

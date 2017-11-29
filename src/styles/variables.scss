@@ -1,7 +1,10 @@
+$mobile-width: 800px;
+
 $primary-font: 'Lato', sans-serif;
 $code-font: 'Source Code Pro', monospace;
 
 $accent-color: #4a9dff;
+$blue-gray: rgba(0, 9, 76, 0.56);
 $dark-blue: #00125f;
 $dark-gray: rgba(24, 27, 38, .84);
 $dark-sky-blue: #2b84ec;
@@ -22,3 +25,5 @@ $white: #fff;
 
 $font-bold: 700;
 $font-extra-bold: 900;
+
+$heavy-box-shadow: 0 2px 3px 0 rgba(32,37,50,0.05), 0 5px 15px 0 rgba(32,37,50,0.14), 0 21px 33px 0 rgba(48,48,91,0.11);
