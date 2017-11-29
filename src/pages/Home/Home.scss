@@ -94,26 +94,55 @@
   }
 }
 
-.home__snapshot {
-  margin-right: 25px;
-
-  &:last_child {
-    margin-right: 0;
-  }
-}
-
 .home__snapshot-wrapper {
-  //animation: marquee 10s linear infinite;
   align-items: center;
   display: flex;
   justify-content: space-around;
-  overflow: hidden;
   position: absolute;
   top: 62px;
   width: 100%;
 
   @media(max-width: $mobile-width) {
     top: 83px;
+  }
+}
+
+.home__snapshot-wrapper-1 {
+  @extend .home__snapshot-wrapper;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-name: marquee-1;
+  animation-timing-function: linear;
+}
+
+.home__snapshot-wrapper-2 {
+  @extend .home__snapshot-wrapper-1;
+  animation-name: marquee-2;
+}
+
+.home__snapshot-wrapper-3 {
+  @extend .home__snapshot-wrapper-1;
+  animation-name: marquee-3;
+}
+
+@keyframes marquee-1 {
+  0% { transform: translateX(%0); }
+  100% { transform: translateX(-200%); }
+}
+
+@keyframes marquee-2 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee-3 {
+  0% { transform: translateX(200%); }
+  100% { transform: translateX(0%); }
+}
+
+.home__snapshot {
+  @media(max-width: $min-marquee-width) {
+    margin-right: 20px;
   }
 }
 
@@ -309,9 +338,4 @@
   color: $gray;
   font-size: 18px;
   text-decoration: none;
-}
-
-@keyframes marquee {
-  0% { left: 0; }
-  100% { left: -100%; }
 }

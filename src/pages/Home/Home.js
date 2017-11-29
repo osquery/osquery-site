@@ -24,6 +24,7 @@ import './Home.css'
 
 const baseClass = 'home'
 const mobileWidth = 800
+const minMarqueeWidth = 1000
 const {
   additionalResources,
   communityProjects,
@@ -71,19 +72,35 @@ class Home extends Component {
   }
 
   renderOsqueryTableSnapshots = () => {
+    const { renderSnapshotSet } = this
+
     return (
-      <div className={`${baseClass}__snapshot-wrapper`}>
-        {osqueryTableSnapshots.map((snapshot, idx) => {
-          return (
-            <OsqueryTableSnapshot
-              className={`${baseClass}__snapshot`}
-              data={snapshot}
-              key={`${snapshot.title}-${idx}`}
-            />
-          )
-        })}
+      <div>
+        <MediaQuery minWidth={minMarqueeWidth}>
+          <div className={`${baseClass}__snapshot-wrapper-1`}>{renderSnapshotSet()}</div>
+
+          <div className={`${baseClass}__snapshot-wrapper-2`}>{renderSnapshotSet()}</div>
+
+          <div className={`${baseClass}__snapshot-wrapper-3`}>{renderSnapshotSet()}</div>
+        </MediaQuery>
+
+        <MediaQuery maxWidth={minMarqueeWidth - 1}>
+          <div className={`${baseClass}__snapshot-wrapper`}>{renderSnapshotSet()}</div>
+        </MediaQuery>
       </div>
     )
+  }
+
+  renderSnapshotSet = () => {
+    return osqueryTableSnapshots.map((snapshot, idx) => {
+      return (
+        <OsqueryTableSnapshot
+          className={`${baseClass}__snapshot`}
+          data={snapshot}
+          key={`${snapshot.title}-${idx}`}
+        />
+      )
+    })
   }
 
   render() {
