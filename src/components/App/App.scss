@@ -15,10 +15,6 @@
 .app__home-link {
   color: $midnight-blue;
   text-decoration: none;
-
-  @media(min-width: $mobile-width + 1px) {
-    flex: 1;
-  }
 }
 
 .app__logo {
@@ -27,8 +23,6 @@
 }
 
 .app__nav {
-  flex: 3;
-
   @media(max-width: $mobile-width) {
     position: absolute;
     right: 20px;
