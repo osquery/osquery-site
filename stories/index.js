@@ -5,6 +5,7 @@ import { action } from '@storybook/addon-actions'
 
 import Button from '../src/components/Button'
 import CheckboxHelper from './helpers/CheckboxHelper'
+import DropdownHelper from './helpers/DropdownHelper'
 import GithubCard from '../src/components/GithubCard'
 import HamburgerMenu from '../src/components/HamburgerMenu'
 import H1SuperHeading from '../src/components/text/H1SuperHeading'
@@ -230,6 +231,9 @@ storiesOf('Form Fields', module)
     <PlatformDropdown onChange={action('platform-dropdown')}>
       Platform Dropdown
     </PlatformDropdown>
+  ))
+  .add('Dropdown', () => (
+    <DropdownHelper onChange={action('dropdown')} />
   ))
 
 storiesOf('Forms', module)
