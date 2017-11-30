@@ -3,7 +3,7 @@ all: serve
 deps:
 	yarn install
 
-build-docker:
+build-docker: deps
 	docker build -t site .
 
 serve: build-docker
