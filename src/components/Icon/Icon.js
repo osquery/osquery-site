@@ -24,14 +24,14 @@ import Windows from 'components/Icon/svg/Windows.svg.js'
 
 class Icon extends Component {
   static iconNames = {
-    apple: Apple,
     centos: Centos,
     cpu: Cpu,
+    darwin: Apple,
     downCarat: DownCarat,
     githubMark: GithubMark,
     facebookOpenSource: FacebookOpenSource,
     frameOverlay: FrameOverlay,
-    freeBSD: FreeBSD,
+    freebsd: FreeBSD,
     imac: Imac,
     imacLg: ImacLg,
     linux: Linux,
@@ -51,7 +51,11 @@ class Icon extends Component {
     const { name } = this.props
     const IconComponent = Icon.iconNames[name]
 
-    return <IconComponent {...this.props} />
+    if (IconComponent) {
+      return <IconComponent {...this.props} />
+    }
+
+    throw `Unknown Icon: ${name}`
   }
 }
 

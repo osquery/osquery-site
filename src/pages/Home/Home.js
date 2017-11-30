@@ -116,7 +116,7 @@ class Home extends Component {
             <Heading1>{hero.sectionHeading}</Heading1>
 
             <div className={`${baseClass}__icon-wrapper`}>
-              <Icon className={`${baseClass}__platform-icon`} name="apple" />
+              <Icon className={`${baseClass}__platform-icon`} name="darwin" />
 
               <Icon className={`${baseClass}__platform-icon`} name="centos" />
 

@@ -17,6 +17,7 @@ import Heading5 from '../src/components/text/Heading5'
 import Icon from '../src/components/Icon'
 import IosTerminal from '../src/components/terminals/IosTerminal'
 import Monospace from '../src/components/text/Monospace'
+import OsqueryTable from '../src/components/OsqueryTable'
 import OsqueryTableSnapshot from '../src/components/terminals/OsqueryTableSnapshot'
 import osqueryTableSnapshots from '../src/data/osquery_table_snapshots.json'
 import Paragraph from '../src/components/text/Paragraph'
@@ -27,19 +28,39 @@ import ProminentCta from '../src/components/ProminentCta'
 import ResponsiveNav from '../src/components/navs/ResponsiveNav'
 import Tab from '../src/components/Tab'
 
+const tableData = {
+  name: 'etc_hosts',
+  description: 'Line-parsed /etc/hosts.',
+  url: 'https://github.com/facebook/osquery/blob/master/specs/etc_hosts.table',
+  platforms: ['all'],
+  evented: true,
+  columns: [
+    {
+      type: 'text',
+      name: 'address',
+      description: 'IP address mapping'
+    },
+    {
+      type: 'text',
+      name: 'hostnames',
+      description: 'Raw hosts mapping'
+    }
+  ]
+}
+
 const IconWrapper = (Component) => {
   class IconWrapperComponent extends React.Component {
     static icons = [
-      'apple',
+      'darwin',
       'centos',
-      'freeBSD',
+      'freebsd',
       'linux',
       'ubuntu',
       'windows'
     ]
 
     state = {
-      name: 'apple',
+      name: 'darwin',
     }
 
     render() {
@@ -178,6 +199,11 @@ storiesOf('Card', module)
         name="kolide/fleet"
         url="https://github.com/kolide/fleet"
       />
+    </div>
+  ))
+  .add('Osquery Table', () => (
+    <div style={{ width: '600px' }}>
+      <OsqueryTable tableData={tableData} />
     </div>
   ))
 

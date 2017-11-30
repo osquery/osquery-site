@@ -17,7 +17,7 @@ class PlatformForm extends Component {
   state = {
     centos: true,
     darwin: true,
-    freeBsd: true,
+    freebsd: true,
     ubuntu: true,
     windows: true,
   }
@@ -33,7 +33,7 @@ class PlatformForm extends Component {
         newState = {
           centos: nextValue,
           darwin: nextValue,
-          freeBsd: nextValue,
+          freebsd: nextValue,
           ubuntu: nextValue,
           windows: nextValue,
         }
@@ -46,15 +46,15 @@ class PlatformForm extends Component {
   }
 
   allChecked = () => {
-    const { centos, darwin, freeBsd, ubuntu, windows } = this.state
+    const { centos, darwin, freebsd, ubuntu, windows } = this.state
 
-    return !!(centos && darwin && freeBsd && ubuntu && windows)
+    return !!(centos && darwin && freebsd && ubuntu && windows)
   }
 
   anyChecked = () => {
-    const { centos, darwin, freeBsd, ubuntu, windows } = this.state
+    const { centos, darwin, freebsd, ubuntu, windows } = this.state
 
-    return !!(centos || darwin || freeBsd || ubuntu || windows)
+    return !!(centos || darwin || freebsd || ubuntu || windows)
   }
 
   render() {
@@ -84,7 +84,7 @@ class PlatformForm extends Component {
             MacOS
           </Checkbox>
 
-          <Icon fillColor={this.state.darwin ? darkBlue : lightGray} name="apple" />
+          <Icon fillColor={this.state.darwin ? darkBlue : lightGray} name="darwin" />
         </div>
 
         <div className={`${baseClass}__input-wrapper`}>
@@ -115,15 +115,15 @@ class PlatformForm extends Component {
 
         <div className={`${baseClass}__input-wrapper`}>
           <Checkbox
-            checked={this.state.freeBsd}
+            checked={this.state.freebsd}
             className={`${baseClass}__input`}
             name="free-bsd"
-            onChange={onChange('freeBsd')}
+            onChange={onChange('freebsd')}
           >
             Free BSD
           </Checkbox>
 
-          <Icon fillColor={this.state.freeBsd ? darkBlue : lightGray} name="freeBSD" />
+          <Icon fillColor={this.state.freebsd ? darkBlue : lightGray} name="freebsd" />
         </div>
 
         <div className={`${baseClass}__input-wrapper`}>
