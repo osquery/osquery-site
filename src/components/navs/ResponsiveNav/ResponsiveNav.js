@@ -36,6 +36,13 @@ class ResponsiveNav extends Component {
 
     return () => {
       closeNav()
+
+      if (path.startsWith('https://')) {
+        global.window.location = path
+
+        return false
+      }
+
       history.push(path)
     }
   }
