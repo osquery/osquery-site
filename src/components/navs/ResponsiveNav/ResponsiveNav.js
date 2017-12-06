@@ -67,14 +67,14 @@ class ResponsiveNav extends Component {
         </Pill>
 
         <Pill
-          active={pathname === '/schema'}
+          active={pathname.startsWith('/schema')}
           className={pillClass}
           onClick={handleClick('/schema')}
         >
           Schema
         </Pill>
 
-        <Pill active={pathname === '/blog'} className={pillClass} onClick={handleClick('/blog')}>
+        <Pill active={pathname.startsWith('/blog')} className={pillClass} onClick={handleClick('/blog')}>
           Blog
         </Pill>
 
@@ -91,7 +91,7 @@ class ResponsiveNav extends Component {
         </Pill>
 
         <Pill
-          active={pathname === '/downloads'}
+          active={pathname.startsWith('/downloads')}
           className={pillClass}
           onClick={handleClick('/downloads')}
         >
