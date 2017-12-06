@@ -2,10 +2,10 @@
 
 .button {
   background-color: $duck-egg-blue;
-  border: 1px solid $dodger-blue-60;
+  border: 1px solid rgba($accent-color, .6);
   border-radius: 3px;
   box-sizing: border-box;
-  color: $dark-sky-blue;
+  color: $accent-color;
   cursor: pointer;
   font-size: 16px;
   outline: none;
@@ -16,5 +16,18 @@
   &:hover {
     background-color: $accent-color;
     color: $white;
+  }
+}
+
+.button__link {
+  background: transparent;
+  border: 0;
+  font-family: $primary-font;
+  padding: 0;
+
+  &:hover {
+    background: transparent;
+    color: $dark-sky-blue;
+    text-decoration: underline;
   }
 }

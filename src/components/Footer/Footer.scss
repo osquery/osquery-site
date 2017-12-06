@@ -1,0 +1,73 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  background-color: $pale-gray;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+  padding: 58px;
+
+  @media(max-width: $mobile-width) {
+    flex-direction: column;
+  }
+
+  &__li {
+    list-style: none;
+    margin-bottom: 8px;
+
+    > a {
+      color: rgba($gray, .54);
+      font-size: 18px;
+      text-decoration: none;
+    }
+  }
+}
+
+.footer__facebook-open-source {
+  align-items: center;
+  display: flex;
+
+  @media(max-width: $mobile-width) {
+    margin-top: 50px;
+  }
+}
+
+.footer__facebook-open-source > span {
+  color: $purple;
+  font-size: 18px;
+  margin-left: 8px;
+}
+
+.footer__made-by-kolide {
+  color: rgba($dusk, .3);
+  font-size: 18px;
+  font-weight: $font-bold;
+  margin-top: 95px;
+
+  @media(max-width: $mobile-width) {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+.footer__heart-text {
+  color: $error;
+}
+
+.footer__copyright {
+  color: $accent-color;
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.footer__open-source-links {
+  flex: 2;
+}
+
+.footer__resource-links {
+  flex: 1;
+}
+
+.footer__meta {
+  flex: 4;
+}

@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { bool, func, node, string } from 'prop-types'
+import { func, node, string } from 'prop-types'
 import classnames from 'classnames'
 
 import ClickOutside from 'components/ClickOutside'
 import Icon from 'components/Icon'
 import PlatformForm from 'components/forms/PlatformForm'
+import platformsInterface from 'interfaces/platforms_interface'
 import './PlatformDropdown.css'
 
 const baseClass = 'platform-dropdown'
@@ -14,6 +15,7 @@ class PlatformDropdown extends Component {
     children: node,
     className: string,
     onChange: func,
+    platforms: platformsInterface,
   }
 
   state = {
@@ -30,13 +32,13 @@ class PlatformDropdown extends Component {
 
   renderForm = () => {
     const { isOpen } = this.state
-    const { onChange } = this.props
+    const { onChange, platforms } = this.props
 
     if (!isOpen) return false
 
     return (
       <div className={`${baseClass}__form`}>
-        <PlatformForm onChange={onChange} />
+        <PlatformForm onChange={onChange} platforms={platforms} />
       </div>
     )
   }

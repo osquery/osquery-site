@@ -5,14 +5,10 @@
   font-family: $primary-font;
   font-size: 46px;
   font-weight: 900;
-  height: 58px;
-  line-height: 58px;
   margin: 0;
 
   @media(max-width: $mobile-width) {
     font-size: 24px;
-    height: 40px;
-    line-height: 40px;
     text-align: center;
   }
 }

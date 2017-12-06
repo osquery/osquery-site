@@ -9,8 +9,28 @@
     },
     "alternativeInstallationOptions": {
       "sectionHeading": "Alternative Installation Options",
-      "subSection1Heading": "Install apt repository",
-      "subSection1Paragraph1": "We publish osquery to an apt repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems."
+      "subheadings": {
+        "darwin": {
+          "subSection1Heading": "Install darwin repository",
+          "subSection1Paragraph1": "We publish osquery to a darwin repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems."
+        },
+        "ubuntu": {
+          "subSection1Heading": "Install apt repository",
+          "subSection1Paragraph1": "We publish osquery to an apt repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems."
+        },
+        "centos": {
+          "subSection1Heading": "Install yum repository",
+          "subSection1Paragraph1": "We publish osquery to a yum repository. The RPMs have extremely few dependencies and should work on *most* x86_64 Linux operating systems. You may install the \"auto-repo-add\" RPM or add the repository target."
+        },
+        "freebsd": {
+          "subSection1Heading": "Install freebsd repository",
+          "subSection1Paragraph1": "We publish osquery to a freebsd repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems."
+        },
+        "windows": {
+          "subSection1Heading": "Install windows repository",
+          "subSection1Paragraph1": "We recommend installing and deploying Windows support using chocolatey. Please let us know if your enterprise could make use of other package formats."
+        }
+      }
     }
   }
 }

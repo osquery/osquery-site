@@ -1,5 +1,6 @@
 import React from 'react'
-import { number, string } from 'prop-types'
+import classnames from 'classnames'
+import { node, number, oneOfType, string } from 'prop-types'
 
 import Button from 'components/Button'
 import Card from 'components/Card'
@@ -8,11 +9,13 @@ import './GithubCard.css'
 
 const baseClass = 'github-card'
 
-const GithubCard = ({ description, name, starCount, url }) => {
+const GithubCard = ({ className, description, name, starCount, url, urlText }) => {
+  const wrapperClassName = classnames(baseClass, className)
+
   return (
-    <Card.Wrapper>
+    <Card.Wrapper className={wrapperClassName}>
       <Card.Header>
-        <p className={`${baseClass}__name`}>{name}</p>
+        <span className={`${baseClass}__name`}>{name}</span>
         {starCount && (
           <p className={`${baseClass}__star-count`}>
             <Icon name="star" /> {starCount}
@@ -26,7 +29,7 @@ const GithubCard = ({ description, name, starCount, url }) => {
 
       <Card.Footer className={`${baseClass}__footer`}>
         <Button className={`${baseClass}__button`} href={url}>
-          View on GitHub
+          {urlText}
         </Button>
       </Card.Footer>
     </Card.Wrapper>
@@ -35,9 +38,14 @@ const GithubCard = ({ description, name, starCount, url }) => {
 
 GithubCard.propTypes = {
   description: string.isRequired,
-  name: string.isRequired,
+  name: oneOfType([string, node]).isRequired,
   starCount: number,
   url: string.isRequired,
+  urlText: string,
+}
+
+GithubCard.defaultProps = {
+  urlText: 'View on GitHub',
 }
 
 export default GithubCard

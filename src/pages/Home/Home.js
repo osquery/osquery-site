@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import MediaQuery from 'react-responsive'
-import { Link } from 'react-router-dom'
 
 import Button from 'components/Button'
 import content from 'data/pages/home'
@@ -10,7 +9,6 @@ import H1SuperHeading from 'components/text/H1SuperHeading'
 import Heading1 from 'components/text/Heading1'
 import Heading2 from 'components/text/Heading2'
 import Heading3 from 'components/text/Heading3'
-import Heading5 from 'components/text/Heading5'
 import Icon from 'components/Icon'
 import IosTerminal from 'components/terminals/IosTerminal'
 import Monospace from 'components/text/Monospace'
@@ -23,7 +21,6 @@ import Tab from 'components/Tab'
 import './Home.css'
 
 const baseClass = 'home'
-const mobileWidth = 800
 const minMarqueeWidth = 1000
 const {
   additionalResources,
@@ -49,26 +46,6 @@ class Home extends Component {
         howItWorksActiveTab: tabName,
       })
     }
-  }
-
-  renderMeta = () => {
-    return (
-      <section className={`${baseClass}__meta`}>
-        <div className={`${baseClass}__facebook-open-source`}>
-          <Icon name="facebookOpenSource" />
-
-          <span>Facebook Open Source</span>
-        </div>
-
-        <p className={`${baseClass}__copyright`}>&copy; 2017 Project License</p>
-
-        <p className={`${baseClass}__made-by-kolide`}>
-          Site made with
-          <span className={`${baseClass}__heart-text`}> &#10084; </span>
-          by Kolide in memory of Parse
-        </p>
-      </section>
-    )
   }
 
   renderOsqueryTableSnapshots = () => {
@@ -105,7 +82,7 @@ class Home extends Component {
 
   render() {
     const { howItWorksActiveTab } = this.state
-    const { featuredProjects, onHowItWorksTabClick, renderMeta, renderOsqueryTableSnapshots } = this
+    const { featuredProjects, onHowItWorksTabClick, renderOsqueryTableSnapshots } = this
 
     return (
       <div>
@@ -342,44 +319,6 @@ class Home extends Component {
             </ProminentCta>
           </div>
         </section>
-
-        <footer className={`${baseClass}__footer`}>
-          <MediaQuery minWidth={mobileWidth + 1}>{renderMeta()}</MediaQuery>
-
-          <section className={`${baseClass}__open-source-links`}>
-            <Heading5>Open Source</Heading5>
-
-            <ul>
-              <li className={`${baseClass}__footer-li`}>
-                <a href="https://github.com/facebook/osquery">View the code on Github</a>
-              </li>
-            </ul>
-          </section>
-
-          <section className={`${baseClass}__resource-links`}>
-            <Heading5>Resources</Heading5>
-
-            <ul>
-              <li className={`${baseClass}__footer-li`}>
-                <Link to="/blog">Blog</Link>
-              </li>
-
-              <li className={`${baseClass}__footer-li`}>
-                <Link to="/schema">Schema</Link>
-              </li>
-
-              <li className={`${baseClass}__footer-li`}>
-                <a href="https://osquery.readthedocs.io/en/stable/">Docs</a>
-              </li>
-
-              <li className={`${baseClass}__footer-li`}>
-                <Link to="/downloads">Downloads</Link>
-              </li>
-            </ul>
-          </section>
-
-          <MediaQuery maxWidth={mobileWidth}>{renderMeta()}</MediaQuery>
-        </footer>
       </div>
     )
   }

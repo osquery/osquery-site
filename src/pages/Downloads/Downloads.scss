@@ -1,0 +1,88 @@
+@import '../../styles/variables.scss';
+
+.downloads-page {
+  &__dropdown {
+    margin: 0 auto;
+    text-align: left;
+    width: 260px;
+  }
+
+  &__download-card {
+    margin-bottom: 36px;
+    width: 270px;
+
+    &:nth-child(odd) {
+      margin-right: 35px;
+    }
+
+    &:nth-last-child(-n+2) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__downloads-wrapper {
+    display: inline-block;
+    width: 579px;
+  }
+
+  &__page-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__pill-wrapper {
+    margin-top: 32px;
+  }
+
+  &__osquery-version {
+    margin: 24px 0 12px 0;
+  }
+
+  &__alternative-install-section {
+    text-align: center;
+  }
+
+  &__install-icon {
+    height: 60px;
+    margin-top: 39px;
+    margin-bottom: 30px;
+    width: 60px;
+  }
+
+  &__install-pill {
+    margin-right: 19px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__terminal {
+    background-color: $pale-gray;
+    box-shadow: none;
+    text-align: left;
+    width: 789px;
+
+    .monospace {
+      color: $gray;
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  &__packages-section {
+    text-align: center;
+  }
+
+  &__title-section {
+    margin-top: 107px;
+    max-width: 600px;
+    text-align: center;
+  }
+}
+
+div.downloads-page__section-break {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}

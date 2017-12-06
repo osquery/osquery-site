@@ -1,8 +1,14 @@
-.platform-form__input {
-  margin-bottom: 25px;
-}
+@import '../../../styles/variables.scss';
 
 .platform-form__input-wrapper {
   display: flex;
   justify-content: space-between;
+  margin: 25px 20px;
+  white-space: nowrap;
+}
+
+.platform-form__input-wrapper--distinct {
+  border-bottom: 2px solid $pale-gray;
+  margin: 0;
+  padding: 15px 20px;
 }

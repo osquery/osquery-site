@@ -18,7 +18,8 @@
   border-radius: 4px;
   box-shadow: 0 7px 15px 0 rgba(0,0,0,.07), 0 21px 33px 0 rgba(48,48,91,.11);
   box-sizing: border-box;
-  padding: 20px;
+  padding: 0;
+  position: absolute;
   width: 300px;
 }
 
@@ -26,8 +27,9 @@
   border: 0;
   color: $accent-color;
   cursor: pointer;
-  font-size: 15px;
+  font-family: $primary-font;
   font-weight: $font-bold;
+  font-size: 15px;
   line-height: 18px;
   outline: none;
 }

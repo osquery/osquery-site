@@ -4,8 +4,11 @@ import { func, node, string } from 'prop-types'
 
 import './Button.css'
 
-const Button = ({ children, className, href, onClick }) => {
-  const buttonClassName = classnames('button', className)
+const baseClass = 'button'
+const Button = ({ children, className, href, onClick, variant }) => {
+  const buttonClassName = classnames(baseClass, className, {
+    [`${baseClass}__${variant}`]: variant,
+  })
 
   if (!!href) {
     return (
@@ -27,6 +30,7 @@ Button.propTypes = {
   className: string,
   href: string,
   onClick: func,
+  variant: string,
 }
 
 export default Button

@@ -3,6 +3,7 @@ import { func } from 'prop-types'
 
 import Checkbox from 'components/forms/fields/Checkbox'
 import Icon from 'components/Icon'
+import platformsInterface from 'interfaces/platforms_interface'
 import './PlatformForm.css'
 
 const baseClass = 'platform-form'
@@ -12,14 +13,20 @@ const lightGray = 'rgba(0, 18, 95, .4)'
 class PlatformForm extends Component {
   static propTypes = {
     onChange: func.isRequired,
+    platforms: platformsInterface,
   }
 
   state = {
-    centos: true,
     darwin: true,
     freebsd: true,
-    ubuntu: true,
+    linux: true,
     windows: true,
+  }
+
+  componentDidMount() {
+    const { platforms } = this.props
+
+    if (platforms) this.setState(platforms)
   }
 
   onChange = os => {
@@ -31,10 +38,9 @@ class PlatformForm extends Component {
         const nextValue = !this.allChecked()
 
         newState = {
-          centos: nextValue,
           darwin: nextValue,
           freebsd: nextValue,
-          ubuntu: nextValue,
+          linux: nextValue,
           windows: nextValue,
         }
       } else {
@@ -46,15 +52,15 @@ class PlatformForm extends Component {
   }
 
   allChecked = () => {
-    const { centos, darwin, freebsd, ubuntu, windows } = this.state
+    const { darwin, freebsd, linux, windows } = this.state
 
-    return !!(centos && darwin && freebsd && ubuntu && windows)
+    return !!(darwin && freebsd && linux && windows)
   }
 
   anyChecked = () => {
-    const { centos, darwin, freebsd, ubuntu, windows } = this.state
+    const { darwin, freebsd, linux, windows } = this.state
 
-    return !!(centos || darwin || freebsd || ubuntu || windows)
+    return !!(darwin || freebsd || linux || windows)
   }
 
   render() {
@@ -62,7 +68,7 @@ class PlatformForm extends Component {
 
     return (
       <form>
-        <div className={`${baseClass}__input-wrapper`}>
+        <div className={`${baseClass}__input-wrapper ${baseClass}__input-wrapper--distinct`}>
           <Checkbox
             checked={anyChecked()}
             className={`${baseClass}__input`}
@@ -70,7 +76,7 @@ class PlatformForm extends Component {
             semi={!allChecked() && anyChecked()}
             onChange={onChange('all')}
           >
-            Select All
+            Compatible with All Platforms
           </Checkbox>
         </div>
 
@@ -89,41 +95,28 @@ class PlatformForm extends Component {
 
         <div className={`${baseClass}__input-wrapper`}>
           <Checkbox
-            checked={this.state.ubuntu}
-            className={`${baseClass}__input`}
-            name="ubuntu"
-            onChange={onChange('ubuntu')}
-          >
-            Ubuntu
-          </Checkbox>
-
-          <Icon fillColor={this.state.ubuntu ? darkBlue : lightGray} name="ubuntu" />
-        </div>
-
-        <div className={`${baseClass}__input-wrapper`}>
-          <Checkbox
-            checked={this.state.centos}
-            className={`${baseClass}__input`}
-            name="centos"
-            onChange={onChange('centos')}
-          >
-            centOS
-          </Checkbox>
-
-          <Icon fillColor={this.state.centos ? darkBlue : lightGray} name="centos" />
-        </div>
-
-        <div className={`${baseClass}__input-wrapper`}>
-          <Checkbox
             checked={this.state.freebsd}
             className={`${baseClass}__input`}
             name="free-bsd"
             onChange={onChange('freebsd')}
           >
-            Free BSD
+            FreeBSD
           </Checkbox>
 
           <Icon fillColor={this.state.freebsd ? darkBlue : lightGray} name="freebsd" />
+        </div>
+
+        <div className={`${baseClass}__input-wrapper`}>
+          <Checkbox
+            checked={this.state.linux}
+            className={`${baseClass}__input`}
+            name="linux"
+            onChange={onChange('linux')}
+          >
+            Linux
+          </Checkbox>
+
+          <Icon fillColor={this.state.linux ? darkBlue : lightGray} name="linux" />
         </div>
 
         <div className={`${baseClass}__input-wrapper`}>

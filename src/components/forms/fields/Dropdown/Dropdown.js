@@ -1,15 +1,18 @@
 import React from 'react'
 import { arrayOf, func, node, oneOfType, shape, string } from 'prop-types'
+import classnames from 'classnames'
 import Select from 'react-select'
 
 import './Dropdown.css'
 
 const baseClass = 'dropdown'
 
-const Dropdown = ({ name, onChange, options, value }) => {
+const Dropdown = ({ className, name, onChange, options, value }) => {
+  const selectClassName = classnames(baseClass, className)
+
   return (
     <Select
-      className={baseClass}
+      className={selectClassName}
       clearable={false}
       name={name}
       options={options}
@@ -20,6 +23,7 @@ const Dropdown = ({ name, onChange, options, value }) => {
 }
 
 Dropdown.propTypes = {
+  className: string,
   name: string.isRequired,
   onChange: func.isRequired,
   options: arrayOf(

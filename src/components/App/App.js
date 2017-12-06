@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 import './App.css'
+import Footer from 'components/Footer'
 import Logo from 'components/Logo'
 import ResponsiveNav from 'components/navs/ResponsiveNav'
 
@@ -22,6 +23,8 @@ class App extends Component {
         </header>
 
         {children}
+
+        <Footer />
       </div>
     )
   }

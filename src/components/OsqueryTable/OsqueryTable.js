@@ -1,4 +1,6 @@
 import React from 'react'
+import classnames from 'classnames'
+import { string, object } from 'prop-types'
 
 import Card from 'components/Card'
 import Heading5 from 'components/text/Heading5'
@@ -20,9 +22,9 @@ const PlatformIcons = ({ platforms }) => {
   })
 }
 
-const OsqueryTable = ({ tableData }) => {
+const OsqueryTable = ({ className, tableData }) => {
   return (
-    <Card.Wrapper className={baseClass}>
+    <Card.Wrapper className={classnames(baseClass, className)} id={tableData.name}>
       <Card.Header className={`${baseClass}__header`}>
         <div className={`${baseClass}__header--left`}>
           <Heading5 className={`${baseClass}__table-name`}>
@@ -64,6 +66,11 @@ const OsqueryTable = ({ tableData }) => {
       </table>
     </Card.Wrapper>
   )
+}
+
+OsqueryTable.propTypes = {
+  className: string,
+  tableData: object,
 }
 
 export default OsqueryTable

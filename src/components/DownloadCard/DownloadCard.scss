@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+
+.download-card {
+  display: inline-block;
+  text-align: left;
+  word-wrap: break-word;
+
+  &__name-wrapper {
+    align-items: center;
+    display: flex;
+  }
+
+  &__download-type {
+    margin-left: 8px;
+  }
+
+  &__package-name {
+    color: $accent-color;
+    font-size: 14px;
+  }
+}

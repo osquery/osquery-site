@@ -55,7 +55,7 @@ class Icon extends Component {
       return <IconComponent {...this.props} />
     }
 
-    throw `Unknown Icon: ${name}`
+    throw new Error(`Unknown Icon: ${name}`)
   }
 }
 

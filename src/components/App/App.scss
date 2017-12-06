@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: $max-viewport-width;
   padding: 0 10px;
 
   @media(max-width: $mobile-width) {

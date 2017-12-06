@@ -1,0 +1,82 @@
+[
+  {
+    "name": "arp_cache_2.10.2",
+    "description": "macos linux freebsd windows Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+    "url": "https://github.com/facebook/osquery/blob/master/specs/etc_hosts.table",
+    "platforms": ["darwin", "linux", "freebsd", "windows"],
+    "evented": false,
+    "columns": [
+      {
+        "type": "text",
+        "name": "address",
+        "description": "IP address mapping",
+        "required": true
+      },
+      {
+        "type": "text",
+        "name": "hostnames",
+        "description": "Raw hosts mapping"
+      }
+    ]
+  },
+  {
+    "name": "carbon_black_info_2.10.2",
+    "description": "macos linux freebsd | sit amet, consectetur adipiscing elit.",
+    "url": "https://github.com/facebook/osquery/blob/master/specs/etc_hosts.table",
+    "platforms": ["darwin", "linux", "freebsd"],
+    "evented": false,
+    "columns": [
+      {
+        "type": "text",
+        "name": "address",
+        "description": "IP address mapping",
+        "required": true
+      },
+      {
+        "type": "text",
+        "name": "hostnames",
+        "description": "Raw hosts mapping"
+      }
+    ]
+  },
+  {
+    "name": "etc_hosts_2.10.2",
+    "description": "macos linux | sit amet, consectetur adipiscing elit.",
+    "url": "https://github.com/facebook/osquery/blob/master/specs/etc_hosts.table",
+    "platforms": ["darwin", "linux"],
+    "evented": false,
+    "columns": [
+      {
+        "type": "text",
+        "name": "address",
+        "description": "IP address mapping",
+        "required": true
+      },
+      {
+        "type": "text",
+        "name": "hostnames",
+        "description": "Raw hosts mapping"
+      }
+    ]
+  },
+  {
+    "name": "interface_addresses_2.10.2",
+    "description": "macos | sit amet, consectetur adipiscing elit.",
+    "url": "https://github.com/facebook/osquery/blob/master/specs/etc_hosts.table",
+    "platforms": ["darwin"],
+    "evented": false,
+    "columns": [
+      {
+        "type": "text",
+        "name": "address",
+        "description": "IP address mapping",
+        "required": true
+      },
+      {
+        "type": "text",
+        "name": "hostnames",
+        "description": "Raw hosts mapping"
+      }
+    ]
+  }
+]
