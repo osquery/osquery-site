@@ -45,77 +45,9 @@ class Downloads extends Component {
     }
   }
 
-  renderTerminalBody = () => {
-    const { selectedInstallOption } = this.state
-
-    if (selectedInstallOption === 'ubuntu') {
-      return (
-        <Terminal.Body>
-          <Monospace>$ export OSQUERY_KEY=1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B</Monospace>
-
-          <Monospace>
-            $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $OSQUERY_KEY
-          </Monospace>
-
-          <Monospace>
-            $ sudo add-apt-repository {'deb [arch=amd64] https://pkg.osquery.io/deb deb main'}
-          </Monospace>
-
-          <Monospace>$ sudo apt-get update</Monospace>
-
-          <Monospace>$ sudo apt-get install osquery</Monospace>
-        </Terminal.Body>
-      )
-    }
-
-    if (selectedInstallOption === 'centos') {
-      return (
-        <Terminal.Body>
-          <Monospace>
-            $ curl -L https://pkg.osquery.io/rpm/GPG | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-osquery
-          </Monospace>
-
-          <Monospace>
-            $ sudo yum-config-manager --add-repo https://pkg.osquery.io/rpm/osquery-s3-rpm.repo
-          </Monospace>
-
-          <Monospace>$ sudo yum-config-manager --enable osquery-s3-rpm</Monospace>
-
-          <Monospace>$ sudo yum install osquery</Monospace>
-        </Terminal.Body>
-      )
-    }
-
-    if (selectedInstallOption === 'windows') {
-      return (
-        <Terminal.Body>
-          <Monospace>$ choco install osquery</Monospace>
-        </Terminal.Body>
-      )
-    }
-
-    return (
-      <Terminal.Body>
-        <Monospace>$ export OSQUERY_KEY=1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B</Monospace>
-
-        <Monospace>
-          $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $OSQUERY_KEY
-        </Monospace>
-
-        <Monospace>
-          $ sudo add-apt-repository {'deb [arch=amd64] https://pkg.osquery.io/deb deb main'}
-        </Monospace>
-
-        <Monospace>$ sudo apt-get update</Monospace>
-
-        <Monospace>$ sudo apt-get install osquery</Monospace>
-      </Terminal.Body>
-    )
-  }
-
   render() {
     const { match } = this.props
-    const { onInstallOptionChange, onOsqueryVersionChange, renderTerminalBody } = this
+    const { onInstallOptionChange, onOsqueryVersionChange } = this
     const { selectedInstallOption } = this.state
     const alternativeInstallOptionContent =
       content.sections.alternativeInstallationOptions.subheadings[selectedInstallOption]
@@ -190,7 +122,11 @@ class Downloads extends Component {
           </div>
 
           <Terminal.Wrapper className={`${baseClass}__terminal`}>
-            {renderTerminalBody()}
+            <Terminal.Body>
+              {alternativeInstallOptionContent.terminalCommands.map((terminalCommand, idx) => {
+                return <Monospace key={`terminal-command-${idx}`}>$ {terminalCommand}</Monospace>
+              })}
+            </Terminal.Body>
           </Terminal.Wrapper>
         </section>
       </div>

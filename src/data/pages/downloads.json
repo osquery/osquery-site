@@ -12,23 +12,49 @@
       "subheadings": {
         "darwin": {
           "subSection1Heading": "Install darwin repository",
-          "subSection1Paragraph1": "We publish osquery to a darwin repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems."
+          "subSection1Paragraph1": "We publish a stable osquery into OS X homebrew every other week. Installing using brew has several advantages: most current stable release (with additional performance guarantees). You should update brew often.",
+          "terminalCommands": [
+            "brew update",
+            "brew install osquery",
+            "/usr/local/bin/osqueryi"
+          ]
         },
         "ubuntu": {
           "subSection1Heading": "Install apt repository",
-          "subSection1Paragraph1": "We publish osquery to an apt repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems."
+          "subSection1Paragraph1": "We publish osquery to an apt repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems.",
+          "terminalCommands": [
+            "export OSQUERY_KEY=1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B",
+            "sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $OSQUERY_KEY",
+            "sudo add-apt-repository 'deb [arch=amd64] https://pkg.osquery.io/deb deb main'",
+            "sudo apt-get update",
+            "sudo apt-get install osquery"
+          ]
         },
         "centos": {
           "subSection1Heading": "Install yum repository",
-          "subSection1Paragraph1": "We publish osquery to a yum repository. The RPMs have extremely few dependencies and should work on *most* x86_64 Linux operating systems. You may install the \"auto-repo-add\" RPM or add the repository target."
+          "subSection1Paragraph1": "We publish osquery to a yum repository. The RPMs have extremely few dependencies and should work on *most* x86_64 Linux operating systems. You may install the \"auto-repo-add\" RPM or add the repository target.",
+          "terminalCommands": [
+            "curl -L https://pkg.osquery.io/rpm/GPG | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-osquery",
+            "sudo yum-config-manager --add-repo https://pkg.osquery.io/rpm/osquery-s3-rpm.repo",
+            "sudo yum-config-manager --enable osquery-s3-rpm",
+            "sudo yum install osquery"
+          ]
         },
         "freebsd": {
           "subSection1Heading": "Install freebsd repository",
-          "subSection1Paragraph1": "We publish osquery to a freebsd repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems."
+          "subSection1Paragraph1": "The easiest way to install osquery on FreeBSD is via the ports tree. Check FreshPorts for the latest version information.",
+          "terminalCommands": [
+            "cd /usr/ports/sysutils/osquery && make install clean",
+            "pkg install osquery",
+            "portmaster sysutils/osquery"
+          ]
         },
         "windows": {
           "subSection1Heading": "Install windows repository",
-          "subSection1Paragraph1": "We recommend installing and deploying Windows support using chocolatey. Please let us know if your enterprise could make use of other package formats."
+          "subSection1Paragraph1": "We recommend installing and deploying Windows support using chocolatey. Please let us know if your enterprise could make use of other package formats.",
+          "terminalCommands": [
+            "choco install osquery"
+          ]
         }
       }
     }
