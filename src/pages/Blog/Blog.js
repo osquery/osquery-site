@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import moment from 'moment'
 import showdown from 'showdown'
 
 import blogPosts from 'data/blog/'
@@ -18,6 +17,8 @@ class Blog extends Component {
   }
 
   render() {
+    const { converter } = this
+
     return (
       <div className={baseClass}>
         <div className={`${baseClass}__header`}>
@@ -25,16 +26,17 @@ class Blog extends Component {
           <Heading1>The Osquery Blog</Heading1>
         </div>
         {blogPosts.map((blogPost, idx) => {
+          const { attributes, body } = blogPost
+          const html = converter.makeHtml(body)
           const isLastPost = idx === blogPosts.length - 1
-          const html = this.converter.makeHtml(blogPost.body)
 
           return (
             <div className={`${baseClass}__post`} key={`blog-${idx}`}>
-              <h1>{blogPost.attributes.title}</h1>
+              <h1>{attributes.title}</h1>
 
-              <p className={`${baseClass}__author`}>{blogPost.attributes.author}</p>
+              <p className={`${baseClass}__author`}>{attributes.author}</p>
 
-              <p className={`${baseClass}__date`}>{moment(blogPost.attributes.date).fromNow()}</p>
+              <p className={`${baseClass}__date`}>{attributes.date.fromNow()}</p>
 
               <SectionBreak />
 
