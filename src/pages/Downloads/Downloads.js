@@ -20,7 +20,7 @@ const installOptionNames = {
   darwin: 'macOS',
   ubuntu: 'Debian Linux',
   centos: 'RPM Linux',
-  freebsd: 'Free BSD',
+  freebsd: 'FreeBSD',
   windows: 'Windows',
 }
 const installOptionNamesKeys = Object.keys(installOptionNames)
