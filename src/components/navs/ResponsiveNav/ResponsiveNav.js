@@ -74,7 +74,11 @@ class ResponsiveNav extends Component {
           Schema
         </Pill>
 
-        <Pill active={pathname.startsWith('/blog')} className={pillClass} onClick={handleClick('/blog')}>
+        <Pill
+          active={pathname.startsWith('/blog')}
+          className={pillClass}
+          onClick={handleClick('/blog')}
+        >
           Blog
         </Pill>
 
