@@ -4,6 +4,7 @@ import MediaQuery from 'react-responsive'
 
 import Heading5 from 'components/text/Heading5'
 import Icon from 'components/Icon'
+import scrollTop from 'helpers/scroll_top'
 import './Footer.css'
 
 const baseClass = 'footer'
@@ -49,11 +50,15 @@ const Footer = () => {
 
         <ul>
           <li className={`${baseClass}__li`}>
-            <Link to="/blog">Blog</Link>
+            <Link onClick={scrollTop} to="/blog">
+              Blog
+            </Link>
           </li>
 
           <li className={`${baseClass}__li`}>
-            <Link to="/schema">Schema</Link>
+            <Link onClick={scrollTop} to="/schema">
+              Schema
+            </Link>
           </li>
 
           <li className={`${baseClass}__li`}>
@@ -61,7 +66,9 @@ const Footer = () => {
           </li>
 
           <li className={`${baseClass}__li`}>
-            <Link to="/downloads">Downloads</Link>
+            <Link onClick={scrollTop} to="/downloads">
+              Downloads
+            </Link>
           </li>
         </ul>
       </section>
