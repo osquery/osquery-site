@@ -3,13 +3,14 @@ import { func, shape, string } from 'prop-types'
 import { withRouter } from 'react-router'
 
 import Button from 'components/Button'
-import OsqueryVersionDropdown from 'components/forms/fields/OsqueryVersionDropdown'
 import LabelText from 'components/text/LabelText'
 import OsqueryTable from 'components/OsqueryTable'
+import OsqueryVersionDropdown from 'components/forms/fields/OsqueryVersionDropdown'
+import osqueryVersionsData from 'data/osquery_versions.json'
 import PlatformDropdown from 'components/forms/fields/PlatformDropdown'
 import SchemaTOC from 'components/SchemaTOC'
+import throttle from 'helpers/throttle'
 import './Schema.css'
-import osqueryVersionsData from 'data/osquery_versions.json'
 
 const baseClass = 'schema'
 const currentOsqueryVersion = osqueryVersionsData.find(osqueryVersion => osqueryVersion.isCurrent)
@@ -30,6 +31,8 @@ class Schema extends Component {
   }
 
   static initialState = {
+    mappedTables: [],
+    overrideScroll: false,
     platforms: {
       darwin: false,
       freebsd: false,
@@ -39,6 +42,27 @@ class Schema extends Component {
   }
 
   state = Schema.initialState
+
+  componentDidMount() {
+    const { mapTables, scrollActiveTable } = this
+
+    mapTables()
+    window.addEventListener('scroll', scrollActiveTable)
+  }
+
+  componentWillUnmount() {
+    const { scrollActiveTable } = this
+
+    window.removeEventListener('scroll', scrollActiveTable)
+  }
+
+  componentDidUpdate(prevProps) {
+    const { mapTables } = this
+    const { schemaVersion } = this.props.match.params
+    const oldSchemaVersion = prevProps.match.params.schemaVersion
+
+    if (oldSchemaVersion !== schemaVersion) mapTables()
+  }
 
   humanFriendlyPlatforms = () => {
     const { selectedPlatforms } = this
@@ -54,8 +78,24 @@ class Schema extends Component {
       .replace('windows', 'Windows')
   }
 
+  mapTables = () => {
+    const { scrollActiveTable, tableNames } = this
+    const mappedTables = tableNames().map(tableName => {
+      const domTable = document.getElementById(tableName)
+
+      return {
+        id: tableName,
+        offset: domTable.offsetTop + 40,
+      }
+    })
+
+    this.setState({ mappedTables }, () => scrollActiveTable())
+  }
+
   onPlatformChange = platforms => {
-    this.setState({ platforms })
+    const { mapTables } = this
+
+    this.setState({ platforms }, () => mapTables())
   }
 
   onSchemaChange = ({ value }) => {
@@ -65,9 +105,13 @@ class Schema extends Component {
   }
 
   restoreDefaultView = () => {
+    const { mapTables } = this
     const { push } = this.props.history
 
-    this.setState(Schema.initialState, () => push(`/schema/${currentOsqueryVersion.version}`))
+    this.setState(Schema.initialState, () => {
+      push(`/schema/${currentOsqueryVersion.version}`)
+      mapTables()
+    })
   }
 
   schema = () => {
@@ -82,6 +126,33 @@ class Schema extends Component {
     return Object.entries(platforms)
       .filter(platform => platform[1])
       .map(platform => platform[0])
+  }
+
+  setActiveTable = tableName => {
+    return this.setState({ activeTable: tableName, overrideScroll: true })
+  }
+
+  scrollActiveTable = throttle(() => {
+    const { mappedTables, overrideScroll } = this.state
+    const windowScroll = global.window.scrollY
+
+    const activeTable =
+      mappedTables.find(table => {
+        return table.offset > windowScroll
+      }) || mappedTables[mappedTables.length - 1]
+
+    if (!overrideScroll) {
+      this.setState({ activeTable: activeTable.id, overrideScroll: false })
+
+      return false
+    }
+
+    this.setState({ overrideScroll: false })
+  })
+
+  tableNames = () => {
+    const { tables } = this
+    return tables().map(table => table.name)
   }
 
   tables = () => {
@@ -103,10 +174,9 @@ class Schema extends Component {
   }
 
   renderTOC = () => {
-    const { tables } = this
-    const { location } = this.props
-    const entries = tables().map(table => table.name)
-    const activeEntry = location.hash.replace('#', '')
+    const { setActiveTable, tableNames } = this
+    const entries = tableNames()
+    const activeEntry = this.state.activeTable || entries[0]
 
     return (
       <div className={`${baseClass}__toc-wrapper`}>
@@ -115,7 +185,7 @@ class Schema extends Component {
           {`Table${entries.length > 1 ? 's' : ''}`}
         </h2>
 
-        <SchemaTOC activeEntry={activeEntry} entries={entries} />
+        <SchemaTOC activeEntry={activeEntry} entries={entries} onEntryClick={setActiveTable} />
       </div>
     )
   }
