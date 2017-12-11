@@ -17,10 +17,12 @@
     background-color: rgba($dusk, .16);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    box-sizing: border-box;
     color: $dark-blue;
     display: flex;
     font-size: 16px;
     font-weight: $font-extra-bold;
+    height: 40px;
     padding-right: 29px;
   }
 

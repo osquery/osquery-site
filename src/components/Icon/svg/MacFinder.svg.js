@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class MacFinder extends Component {
   static defaultProps = {
     fillColor: '#00125F',
-    height: 46,
+    height: 32,
     width: 48,
   }
 

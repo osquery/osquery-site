@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 class ShellHistory extends Component {
   static defaultProps = {
     fillColor: '#00125F',
-    height: 46,
-    width: 46,
+    height: 32,
+    width: 40,
   }
 
   render() {

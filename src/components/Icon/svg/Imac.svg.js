@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class Imac extends Component {
   static defaultProps = {
     fillColor: '#00125F',
-    height: 48,
+    height: 34,
     width: 50,
   }
 

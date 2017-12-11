@@ -249,7 +249,12 @@ storiesOf('Terminal', module)
   .add('OsqueryTableSnapshots', () => (
     <div>
       {osqueryTableSnapshots.map((snapshot, idx) => {
-        return <OsqueryTableSnapshot key={`${snapshot.title}-${idx}`} data={snapshot} />
+        return (
+          <div>
+            <OsqueryTableSnapshot key={`${snapshot.title}-${idx}`} data={snapshot} />
+            <br /><br />
+          </div>
+        )
       })}
     </div>
   ))
