@@ -2,6 +2,10 @@
 
 .platform-dropdown {
   display: inline-block;
+
+  @media(max-width: $mobile-width) {
+    display: block;
+  }
 }
 
 .platform-dropdown__circle {
@@ -21,6 +25,10 @@
   padding: 0;
   position: absolute;
   width: 300px;
+
+  @media(max-width: $mobile-width) {
+    right: -62px;
+  }
 }
 
 .platform-dropdown__text {
@@ -32,4 +40,9 @@
   font-size: 15px;
   line-height: 18px;
   outline: none;
+
+  @media(max-width: $mobile-width) {
+    background-color: transparent;
+    padding-left: 0;
+  }
 }
