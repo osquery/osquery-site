@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import classnames from 'classnames'
 import { func, shape, string } from 'prop-types'
 import { withRouter } from 'react-router'
 
@@ -14,6 +15,7 @@ import './Schema.css'
 
 const baseClass = 'schema'
 const currentOsqueryVersion = osqueryVersionsData.find(osqueryVersion => osqueryVersion.isCurrent)
+let tocOffset
 
 class Schema extends Component {
   static propTypes = {
@@ -44,16 +46,20 @@ class Schema extends Component {
   state = Schema.initialState
 
   componentDidMount() {
-    const { mapTables, scrollActiveTable } = this
+    const { mapTables, scrollActiveTable, stickyTOC } = this
 
     mapTables()
+
+    tocOffset = document.getElementById(`${baseClass}-toc`).offsetTop
     window.addEventListener('scroll', scrollActiveTable)
+    window.addEventListener('scroll', stickyTOC)
   }
 
   componentWillUnmount() {
-    const { scrollActiveTable } = this
+    const { scrollActiveTable, stickyTOC } = this
 
     window.removeEventListener('scroll', scrollActiveTable)
+    window.removeEventListener('scroll', stickyTOC)
   }
 
   componentDidUpdate(prevProps) {
@@ -150,6 +156,12 @@ class Schema extends Component {
     this.setState({ overrideScroll: false })
   })
 
+  stickyTOC = throttle(() => {
+    const windowScroll = global.window.scrollY
+    if (tocOffset >= windowScroll && this.state.fixedTOC) this.setState({ fixedTOC: false })
+    if (tocOffset < windowScroll && !this.state.fixedTOC) this.setState({ fixedTOC: true })
+  }, 10)
+
   tableNames = () => {
     const { tables } = this
     return tables().map(table => table.name)
@@ -177,9 +189,12 @@ class Schema extends Component {
     const { setActiveTable, tableNames } = this
     const entries = tableNames()
     const activeEntry = this.state.activeTable || entries[0]
+    const classes = classnames(`${baseClass}__toc-wrapper`, {
+      [`${baseClass}__toc-wrapper--fixed`]: this.state.fixedTOC,
+    })
 
     return (
-      <div className={`${baseClass}__toc-wrapper`}>
+      <div className={classes} id={`${baseClass}-toc`}>
         <h2 className={`${baseClass}__toc-header`}>
           <span className={`${baseClass}__tables-count`}>{entries.length}</span>
           {`Table${entries.length > 1 ? 's' : ''}`}

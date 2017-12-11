@@ -8,12 +8,16 @@
 
 .schema__toc-wrapper {
   flex: 1;
-  position: fixed;
   min-width: 188px;
 
   @media(max-width: $mobile-width) {
     display: none;
   }
+}
+
+.schema__toc-wrapper--fixed {
+  position: fixed;
+  top: 0px;
 }
 
 .schema__toc-header {
