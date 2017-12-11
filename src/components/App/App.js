@@ -22,7 +22,7 @@ class App extends Component {
           <ResponsiveNav className={`${baseClass}__nav`} />
         </header>
 
-        {children}
+        <div className={`${baseClass}__main`}>{children}</div>
 
         <Footer />
       </div>

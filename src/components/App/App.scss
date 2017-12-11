@@ -1,11 +1,18 @@
 @import '../../styles/variables.scss';
 
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .app__header {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
   max-width: $max-viewport-width;
   padding: 0 10px;
+  width: 100%;
 
   @media(max-width: $mobile-width) {
     padding: 20px 10px;
@@ -29,4 +36,8 @@
     top: 20px;
     z-index: 1;
   }
+}
+
+.app__main {
+  flex: 1;
 }

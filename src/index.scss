@@ -1,9 +1,14 @@
 @import 'styles/variables.scss';
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: $primary-font;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 ul, ol {
