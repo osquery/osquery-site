@@ -122,7 +122,7 @@ class Downloads extends Component {
           </div>
 
           <Terminal.Wrapper className={`${baseClass}__terminal`}>
-            <Terminal.Body>
+            <Terminal.Body className={`${baseClass}__terminal-body`}>
               {alternativeInstallOptionContent.terminalCommands.map((terminalCommand, idx) => {
                 return <Monospace key={`terminal-command-${idx}`}>$ {terminalCommand}</Monospace>
               })}
