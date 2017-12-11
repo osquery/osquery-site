@@ -10,22 +10,23 @@
   @media(max-width: $mobile-width) {
     flex-direction: column;
   }
+}
 
-  &__li {
-    list-style: none;
-    margin-bottom: 8px;
+.footer__li {
+  list-style: none;
+  margin-bottom: 8px;
 
-    > a {
-      color: rgba($gray, .54);
-      font-size: 18px;
-      text-decoration: none;
-    }
+  > a {
+    color: rgba($gray, .54);
+    font-size: 18px;
+    text-decoration: none;
   }
 }
 
 .footer__facebook-open-source {
   align-items: center;
   display: flex;
+  text-decoration: none;
 
   @media(max-width: $mobile-width) {
     margin-top: 50px;
@@ -38,11 +39,23 @@
   margin-left: 8px;
 }
 
+.footer__copyright {
+  color: $accent-color;
+  display: block;
+  font-size: 18px;
+  margin: 8px 0;
+  text-decoration: none;
+}
+
 .footer__made-by-kolide {
   color: rgba($dusk, .3);
   font-size: 18px;
   font-weight: $font-bold;
   margin-top: 95px;
+
+  > a {
+    color: rgba($dusk, .3);
+  }
 
   @media(max-width: $mobile-width) {
     font-size: 14px;
@@ -52,12 +65,6 @@
 
 .footer__heart-text {
   color: $error;
-}
-
-.footer__copyright {
-  color: $accent-color;
-  font-size: 18px;
-  margin: 8px 0;
 }
 
 .footer__open-source-links {

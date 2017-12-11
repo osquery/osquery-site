@@ -13,18 +13,31 @@ const mobileWidth = 800
 const Meta = () => {
   return (
     <section className={`${baseClass}__meta`}>
-      <div className={`${baseClass}__facebook-open-source`}>
+      <a
+        className={`${baseClass}__facebook-open-source`}
+        href="https://code.facebook.com/projects/"
+        target="_blank"
+      >
         <Icon name="facebookOpenSource" />
 
         <span>Facebook Open Source</span>
-      </div>
+      </a>
 
-      <p className={`${baseClass}__copyright`}>&copy; 2017 Project License</p>
+      <a
+        className={`${baseClass}__copyright`}
+        href="https://github.com/facebook/osquery/blob/master/LICENSE"
+        target="_blank"
+      >
+        &copy; 2017 Project License
+      </a>
 
       <p className={`${baseClass}__made-by-kolide`}>
         Site made with
         <span className={`${baseClass}__heart-text`}> &#10084; </span>
-        by Kolide in memory of Parse
+        <span>by </span>
+        <a href="https://kolide.com" target="_blank">
+          Kolide
+        </a>
       </p>
     </section>
   )
