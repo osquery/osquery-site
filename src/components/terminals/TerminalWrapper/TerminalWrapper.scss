@@ -4,5 +4,8 @@
   background-color: $white;
   border-radius: 3px;
   box-shadow: $heavy-box-shadow;
-  width: 700px;
+
+  @media(min-width: $mobile-width + 1px) {
+    width: 700px;
+  }
 }

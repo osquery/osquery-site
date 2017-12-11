@@ -1,85 +1,114 @@
 @import '../../styles/variables.scss';
 
-.downloads-page {
-  &__dropdown {
-    margin: 0 auto;
-    text-align: left;
-    width: 260px;
+.downloads-page__page-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  @media(max-width: $mobile-width) {
+    margin: 0 15px;
+  }
+}
+
+.downloads-page__dropdown {
+  margin: 0 auto;
+  text-align: left;
+  width: 260px;
+}
+
+.downloads-page__download-card {
+  margin-bottom: 36px;
+  width: 270px;
+
+  &:nth-child(odd) {
+    margin-right: 35px;
   }
 
-  &__download-card {
-    margin-bottom: 36px;
-    width: 270px;
+  &:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+
+  @media(max-width: $mobile-width) {
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 
     &:nth-child(odd) {
-      margin-right: 35px;
+      margin-right: 10px
     }
 
     &:nth-last-child(-n+2) {
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
   }
+}
 
-  &__downloads-wrapper {
-    display: inline-block;
-    width: 579px;
+.downloads-page__downloads-wrapper {
+  display: inline-block;
+  width: 579px;
+
+  @media(max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.downloads-page__pill-wrapper {
+  margin-top: 32px;
+}
+
+.downloads-page__osquery-version {
+  margin: 24px 0 12px 0;
+}
+
+.downloads-page__alternative-install-section {
+  text-align: center;
+}
+
+.downloads-page__install-icon {
+  height: 60px;
+  margin-top: 39px;
+  margin-bottom: 30px;
+  width: 60px;
+}
+
+.downloads-page__install-pill {
+  margin-right: 19px;
+
+  &:last-child {
+    margin-right: 0;
   }
 
-  &__page-wrapper {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  @media(max-width: $mobile-width) {
+    margin: 5px;
+    width: 140px;
+  }
+}
+
+.downloads-page__terminal {
+  background-color: $pale-gray;
+  box-shadow: none;
+  text-align: left;
+  width: 789px;
+
+  @media(max-width: $mobile-width) {
+    width: 100%;
   }
 
-  &__pill-wrapper {
-    margin-top: 32px;
+  .monospace {
+    color: $gray;
+    font-size: 14px;
+    font-weight: 600;
   }
+}
 
-  &__osquery-version {
-    margin: 24px 0 12px 0;
-  }
+.downloads-page__packages-section {
+  text-align: center;
+}
 
-  &__alternative-install-section {
-    text-align: center;
-  }
-
-  &__install-icon {
-    height: 60px;
-    margin-top: 39px;
-    margin-bottom: 30px;
-    width: 60px;
-  }
-
-  &__install-pill {
-    margin-right: 19px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__terminal {
-    background-color: $pale-gray;
-    box-shadow: none;
-    text-align: left;
-    width: 789px;
-
-    .monospace {
-      color: $gray;
-      font-size: 14px;
-      font-weight: 600;
-    }
-  }
-
-  &__packages-section {
-    text-align: center;
-  }
-
-  &__title-section {
-    margin-top: 107px;
-    max-width: 600px;
-    text-align: center;
-  }
+.downloads-page__title-section {
+  margin-top: 107px;
+  max-width: 600px;
+  text-align: center;
 }
 
 div.downloads-page__section-break {

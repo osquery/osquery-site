@@ -239,9 +239,10 @@ storiesOf('Terminal', module)
     <IosTerminal>
       <Monospace>
         <strong>osquery> </strong>
-        SELECT name, path, pid FROM processes WHERE on_disk = 0;\n
+        SELECT name, path, pid FROM processes WHERE on_disk = 0
       </Monospace>
       <Monospace>name = Drop_Agent</Monospace>
+      <Monospace>key = 1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B</Monospace>
       <Monospace>path = /Users/jim/bin/dropage</Monospace>
       <Monospace>pid = 561</Monospace>
     </IosTerminal>

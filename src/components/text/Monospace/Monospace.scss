@@ -7,4 +7,8 @@
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
+
+  @media(max-width: $mobile-width) {
+    word-break: break-all;
+  }
 }
