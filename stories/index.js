@@ -5,6 +5,7 @@ import { action } from '@storybook/addon-actions'
 
 import Button from '../src/components/Button'
 import CheckboxHelper from './helpers/CheckboxHelper'
+import DownloadCard from '../src/components/DownloadCard'
 import Dropdown from '../src/components/forms/fields/Dropdown'
 import DropdownHelper from './helpers/DropdownHelper'
 import GithubCard from '../src/components/GithubCard'
@@ -22,6 +23,7 @@ import OsqueryTable from '../src/components/OsqueryTable'
 import OsqueryTableSnapshot from '../src/components/terminals/OsqueryTableSnapshot'
 import osqueryTableSnapshots from '../src/data/osquery_table_snapshots.json'
 import OsqueryVersionDropdown from '../src/components/forms/fields/OsqueryVersionDropdown'
+import osqueryVersionsData from '../src/data/osquery_versions.json'
 import Paragraph from '../src/components/text/Paragraph'
 import Pill from '../src/components/Pill'
 import PlatformDropdown from '../src/components/forms/fields/PlatformDropdown'
@@ -124,6 +126,11 @@ storiesOf('Card', module)
       />
     </div>
   ))
+  .add('Download card', () => (
+    <div style={{ width: '270px' }}>
+      <DownloadCard downloadData={osqueryVersionsData[0].downloads[0]} />
+    </div>
+  ))
   .add('Osquery Table', () => (
     <div style={{ width: '600px' }}>
       <OsqueryTable tableData={tableData} />
@@ -131,13 +138,9 @@ storiesOf('Card', module)
   ))
 
 storiesOf('Form Fields', module)
-  .add('Checkbox', () => (
-    <CheckboxHelper />
-  ))
+  .add('Checkbox', () => <CheckboxHelper />)
   .add('PlatformDropdown', () => (
-    <PlatformDropdown onChange={action('platform-dropdown')}>
-      Platform Dropdown
-    </PlatformDropdown>
+    <PlatformDropdown onChange={action('platform-dropdown')}>Platform Dropdown</PlatformDropdown>
   ))
   .add('Dropdown', () => (
     <WrappedDropdown
@@ -155,15 +158,13 @@ storiesOf('Form Fields', module)
     <WrappedOsqueryDropdown onChange={action('osquery-version-dropdown')} />
   ))
 
-storiesOf('Forms', module)
-  .add('PlatformForm', () => (
-    <PlatformForm onChange={action('platform-form')} />
-  ))
+storiesOf('Forms', module).add('PlatformForm', () => (
+  <PlatformForm onChange={action('platform-form')} />
+))
 
-storiesOf('HamburgerMenu', module)
-  .add('HamburgerMenu', () => (
-    <HamburgerMenu onClick={action('button-click')} />
-  ))
+storiesOf('HamburgerMenu', module).add('HamburgerMenu', () => (
+  <HamburgerMenu onClick={action('button-click')} />
+))
 
 storiesOf('Icon', module)
   .add('cpu', () => <Icon name="cpu" />)
@@ -182,12 +183,11 @@ storiesOf('Icon', module)
   .add('slack', () => <Icon name="slack" />)
   .add('star', () => <Icon name="star" />)
 
-storiesOf('Nav', module)
-  .add('ResponsiveNav', () => (
-    <BrowserRouter>
-      <ResponsiveNav />
-    </BrowserRouter>
-  ))
+storiesOf('Nav', module).add('ResponsiveNav', () => (
+  <BrowserRouter>
+    <ResponsiveNav />
+  </BrowserRouter>
+))
 
 storiesOf('Pill', module)
   .add('inactive', () => (
@@ -220,13 +220,12 @@ storiesOf('ProminentCta', module)
     </ProminentCta>
   ))
 
-storiesOf('SchemaTOC', module)
-  .add('SchemaTOC', () => (
-    <SchemaTOC
-      activeEntry="carbon_black_info"
-      entries={['carbon_black_info', 'disk_events', 'file_events']}
-    />
-  ))
+storiesOf('SchemaTOC', module).add('SchemaTOC', () => (
+  <SchemaTOC
+    activeEntry="carbon_black_info"
+    entries={['carbon_black_info', 'disk_events', 'file_events']}
+  />
+))
 
 storiesOf('Tab', module)
   .add('small inactive', () => <Tab onClick={() => false} text="Small Tab" />)
@@ -253,7 +252,8 @@ storiesOf('Terminal', module)
         return (
           <div>
             <OsqueryTableSnapshot key={`${snapshot.title}-${idx}`} data={snapshot} />
-            <br /><br />
+            <br />
+            <br />
           </div>
         )
       })}
@@ -280,11 +280,7 @@ storiesOf('Text', module)
   .add('Monospace', () => <Monospace>brew install npm install yarn</Monospace>)
 
 storiesOf('TOCEntry', module)
-  .add('TOCEntry inactive', () => (
-    <TOCEntry entry="carbon_black_info">
-      carbon_black_info
-    </TOCEntry>
-  ))
+  .add('TOCEntry inactive', () => <TOCEntry entry="carbon_black_info">carbon_black_info</TOCEntry>)
   .add('TOCEntry active', () => (
     <TOCEntry active entry="carbon_black_info">
       carbon_black_info

@@ -13,14 +13,15 @@ const iconName = {
   Debian: 'ubuntu',
 }
 
-const NameSection = ({ packageName, type }) => {
+const NameSection = ({ packageName, type, url }) => {
   return (
     <div>
       <div className={`${baseClass}__name-wrapper`}>
         <Icon name={iconName[type]} />
         <span className={`${baseClass}__download-type`}>{type}</span>
       </div>
-      <span className={`${baseClass}__package-name`}>{packageName}</span>
+
+      <a className={`${baseClass}__package-name`} href={url}>{packageName}</a>
     </div>
   )
 }
@@ -32,7 +33,13 @@ const DownloadCard = ({ className, downloadData }) => {
     <GithubCard
       className={wrapperClassName}
       description={downloadData.content}
-      name={<NameSection packageName={downloadData.package} type={downloadData.type} />}
+      name={
+        <NameSection
+          packageName={downloadData.package}
+          type={downloadData.type}
+          url={downloadData.url}
+        />
+      }
       url={downloadData.url}
       urlText={`Download for ${downloadData.type}`}
     />

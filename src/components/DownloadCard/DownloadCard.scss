@@ -4,18 +4,27 @@
   display: inline-block;
   text-align: left;
   word-wrap: break-word;
+}
 
-  &__name-wrapper {
-    align-items: center;
-    display: flex;
-  }
+.download-card__name-wrapper {
+  align-items: center;
+  display: flex;
+}
 
-  &__download-type {
-    margin-left: 8px;
-  }
+.download-card__download-type {
+  margin-left: 8px;
+}
 
-  &__package-name {
-    color: $accent-color;
-    font-size: 14px;
-  }
+.download-card__package-name {
+  color: $accent-color;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.download-card .card-body {
+  color: rgba($gray, .4);
+  display: block;
+  font-family: $code-font;
+  font-size: 14px;
+  word-break: break-all;
 }
