@@ -16,6 +16,7 @@ const Meta = () => {
       <a
         className={`${baseClass}__facebook-open-source`}
         href="https://code.facebook.com/projects/"
+        rel="noopener noreferrer"
         target="_blank"
       >
         <Icon name="facebookOpenSource" />
@@ -26,6 +27,7 @@ const Meta = () => {
       <a
         className={`${baseClass}__copyright`}
         href="https://github.com/facebook/osquery/blob/master/LICENSE"
+        rel="noopener noreferrer"
         target="_blank"
       >
         &copy; 2017 Project License
@@ -35,7 +37,7 @@ const Meta = () => {
         Site made with
         <span className={`${baseClass}__heart-text`}> &#10084; </span>
         <span>by </span>
-        <a href="https://kolide.com" target="_blank">
+        <a href="https://kolide.com" rel="noopener noreferrer" target="_blank">
           Kolide
         </a>
       </p>
