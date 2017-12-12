@@ -8,12 +8,17 @@ import Heading2 from 'components/text/Heading2'
 import Heading5 from 'components/text/Heading5'
 import Icon from 'components/Icon'
 import Monospace from 'components/text/Monospace'
+import NotFound from 'pages/NotFound'
 import osqueryVersionsData from 'data/osquery_versions.json'
 import OsqueryVersionDropdown from 'components/forms/fields/OsqueryVersionDropdown'
 import Paragraph from 'components/text/Paragraph'
+import schemaVersionExists from 'helpers/schema_version_exists'
 import Tab from 'components/Tab'
 import Terminal from 'components/terminals/Terminal'
 import './Downloads.css'
+
+const DEBUG = 'debug'
+const OFFICIAL = 'official'
 
 const baseClass = 'downloads-page'
 const installOptionNames = {
@@ -64,6 +69,10 @@ class Downloads extends Component {
       data => data.version === osqueryVersion
     )
 
+    if (!schemaVersionExists(osqueryVersion) || ![DEBUG, OFFICIAL].includes(releaseType)) {
+      return <NotFound />
+    }
+
     return (
       <div className={`${baseClass}__page-wrapper`}>
         <section className={`${baseClass}__title-section`}>
@@ -89,16 +98,16 @@ class Downloads extends Component {
           <Heading5 className={`${baseClass}__osquery-version`}>Release Type</Heading5>
 
           <Tab
-            active={releaseType === 'official'}
+            active={releaseType === OFFICIAL}
             className={`${baseClass}__tab ${baseClass}__tab--official`}
-            onClick={onReleaseTypeChange('official')}
+            onClick={onReleaseTypeChange(OFFICIAL)}
             text="Official"
           />
 
           <Tab
-            active={releaseType === 'debug'}
+            active={releaseType === DEBUG}
             className={`${baseClass}__tab`}
-            onClick={onReleaseTypeChange('debug')}
+            onClick={onReleaseTypeChange(DEBUG)}
             text="Debug"
           />
 

@@ -4,6 +4,7 @@ import { withRouter } from 'react-router'
 
 import BlogPost from 'components/BlogPost'
 import blogPosts from 'data/blog/'
+import NotFound from 'pages/NotFound'
 import './BlogShow.css'
 
 const baseClass = 'blog-show'
@@ -31,7 +32,7 @@ class BlogShow extends Component {
   render() {
     const { blogPost } = this.state
 
-    if (!blogPost) return false
+    if (!blogPost) return <NotFound />
 
     const { attributes, body } = blogPost
     const { converter } = this

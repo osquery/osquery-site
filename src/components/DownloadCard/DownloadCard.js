@@ -21,7 +21,9 @@ const NameSection = ({ packageName, type, url }) => {
         <span className={`${baseClass}__download-type`}>{type}</span>
       </div>
 
-      <a className={`${baseClass}__package-name`} href={url}>{packageName}</a>
+      <a className={`${baseClass}__package-name`} href={url}>
+        {packageName}
+      </a>
     </div>
   )
 }

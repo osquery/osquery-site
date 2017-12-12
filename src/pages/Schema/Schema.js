@@ -5,11 +5,13 @@ import { withRouter } from 'react-router'
 
 import Button from 'components/Button'
 import LabelText from 'components/text/LabelText'
+import NotFound from 'pages/NotFound'
 import OsqueryTable from 'components/OsqueryTable'
 import OsqueryVersionDropdown from 'components/forms/fields/OsqueryVersionDropdown'
-import osqueryVersionsData from 'data/osquery_versions.json'
+import osqueryVersionsData from 'data/osquery_versions'
 import PlatformDropdown from 'components/forms/fields/PlatformDropdown'
 import SchemaTOC from 'components/SchemaTOC'
+import schemaVersionExists from 'helpers/schema_version_exists'
 import throttle from 'helpers/throttle'
 import './Schema.css'
 
@@ -50,16 +52,10 @@ class Schema extends Component {
 
     mapTables()
 
-    tocOffset = document.getElementById(`${baseClass}-toc`).offsetTop
+    const tocElement = document.getElementById(`${baseClass}-toc`)
+    tocOffset = tocElement ? tocElement.offsetTop : 0
     window.addEventListener('scroll', scrollActiveTable)
     window.addEventListener('scroll', stickyTOC)
-  }
-
-  componentWillUnmount() {
-    const { scrollActiveTable, stickyTOC } = this
-
-    window.removeEventListener('scroll', scrollActiveTable)
-    window.removeEventListener('scroll', stickyTOC)
   }
 
   componentDidUpdate(prevProps) {
@@ -68,6 +64,13 @@ class Schema extends Component {
     const oldSchemaVersion = prevProps.match.params.schemaVersion
 
     if (oldSchemaVersion !== schemaVersion) mapTables()
+  }
+
+  componentWillUnmount() {
+    const { scrollActiveTable, stickyTOC } = this
+
+    window.removeEventListener('scroll', scrollActiveTable)
+    window.removeEventListener('scroll', stickyTOC)
   }
 
   humanFriendlyPlatforms = () => {
@@ -86,6 +89,9 @@ class Schema extends Component {
 
   mapTables = () => {
     const { scrollActiveTable, tableNames } = this
+
+    if (!tableNames()) return false
+
     const mappedTables = tableNames().map(tableName => {
       const domTable = document.getElementById(tableName)
 
@@ -121,10 +127,32 @@ class Schema extends Component {
   }
 
   schema = () => {
-    const { match } = this.props
+    const { schemaVersion } = this.props.match.params
 
-    return require(`data/osquery_schema_versions/${match.params.schemaVersion}`)
+    if (!schemaVersionExists(schemaVersion)) return false
+
+    return require(`data/osquery_schema_versions/${schemaVersion}`)
   }
+
+  scrollActiveTable = throttle(() => {
+    const { mappedTables, overrideScroll } = this.state
+    const windowScroll = global.window.scrollY
+
+    const activeTable =
+      mappedTables.find(table => {
+        return table.offset > windowScroll
+      }) || mappedTables[mappedTables.length - 1]
+
+    if (!overrideScroll) {
+      if (activeTable) {
+        this.setState({ activeTable: activeTable.id, overrideScroll: false })
+      }
+
+      return false
+    }
+
+    this.setState({ overrideScroll: false })
+  })
 
   selectedPlatforms = () => {
     const { platforms } = this.state
@@ -138,24 +166,6 @@ class Schema extends Component {
     return this.setState({ activeTable: tableName, overrideScroll: true })
   }
 
-  scrollActiveTable = throttle(() => {
-    const { mappedTables, overrideScroll } = this.state
-    const windowScroll = global.window.scrollY
-
-    const activeTable =
-      mappedTables.find(table => {
-        return table.offset > windowScroll
-      }) || mappedTables[mappedTables.length - 1]
-
-    if (!overrideScroll) {
-      this.setState({ activeTable: activeTable.id, overrideScroll: false })
-
-      return false
-    }
-
-    this.setState({ overrideScroll: false })
-  })
-
   stickyTOC = throttle(() => {
     const windowScroll = global.window.scrollY
     if (tocOffset >= windowScroll && this.state.fixedTOC) this.setState({ fixedTOC: false })
@@ -164,11 +174,15 @@ class Schema extends Component {
 
   tableNames = () => {
     const { tables } = this
+
+    if (!tables()) return false
     return tables().map(table => table.name)
   }
 
   tables = () => {
     const { schema, selectedPlatforms } = this
+
+    if (!schema()) return false
 
     return schema().filter(table => {
       return selectedPlatforms().every(selectedPlatform => {
@@ -216,6 +230,8 @@ class Schema extends Component {
     } = this
     const { match } = this.props
     const { platforms } = this.state
+
+    if (!schemaVersionExists(match.params.schemaVersion)) return <NotFound />
 
     return (
       <div className={baseClass}>

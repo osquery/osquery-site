@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+
+.not-found__heading-1 {
+  margin-top: 140px;
+  text-align: center;
+
+  @media(max-width: $mobile-width) {
+    margin-top: 80px;
+  }
+}
+
+.not-found__ios-terminal {
+  margin: 90px auto 52px;
+
+  @media(max-width: $mobile-width) {
+    margin: 50px auto 30px;
+    width: 90%;
+  }
+}
+
+.not-found__ios-terminal .ios-terminal__body {
+  padding-bottom: 20px;
+}
+
+.not-found__monospace-dark {
+  color: $midnight-blue;
+  font-weight: $font-extra-bold;
+
+  @media(max-width: $mobile-width) {
+    font-size: 6px;
+    line-height: 1em;
+  }
+}
+
+.not-found__take-me-back {
+  align-items: center;
+  color: $accent-color;
+  display: flex;
+  font-family: $primary-font;
+  font-size: 20px;
+  font-weight: $font-extra-bold;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-decoration: none;
+  width: 335px;
+}

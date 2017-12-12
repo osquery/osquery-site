@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import Apple from 'components/Icon/svg/Apple.svg.js'
+import BackArrow from 'components/Icon/svg/BackArrow.svg.js'
 import Centos from 'components/Icon/svg/Centos.svg.js'
 import Cpu from 'components/Icon/svg/Cpu.svg.js'
 import DownCarat from 'components/Icon/svg/DownCarat.svg.js'
@@ -24,6 +25,7 @@ import Windows from 'components/Icon/svg/Windows.svg.js'
 
 class Icon extends Component {
   static iconNames = {
+    backArrow: BackArrow,
     centos: Centos,
     cpu: Cpu,
     darwin: Apple,

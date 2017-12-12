@@ -1,6 +1,6 @@
 [
   {
-    "name": "arp_cache_2.8.3",
+    "name": "arp_cache_2.10.0",
     "description": "macos linux freebsd windows Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     "url": "https://github.com/facebook/osquery/blob/master/specs/etc_hosts.table",
     "platforms": ["darwin", "linux", "freebsd", "windows"],
@@ -20,7 +20,7 @@
     ]
   },
   {
-    "name": "carbon_black_info_2.8.3",
+    "name": "carbon_black_info_2.10.0",
     "description": "macos linux freebsd | sit amet, consectetur adipiscing elit.",
     "url": "https://github.com/facebook/osquery/blob/master/specs/etc_hosts.table",
     "platforms": ["darwin", "linux", "freebsd"],
@@ -40,7 +40,7 @@
     ]
   },
   {
-    "name": "etc_hosts_2.8.3",
+    "name": "etc_hosts_2.10.0",
     "description": "macos linux | sit amet, consectetur adipiscing elit.",
     "url": "https://github.com/facebook/osquery/blob/master/specs/etc_hosts.table",
     "platforms": ["darwin", "linux"],
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "name": "interface_addresses_2.8.3",
+    "name": "interface_addresses_2.10.0",
     "description": "macos | sit amet, consectetur adipiscing elit.",
     "url": "https://github.com/facebook/osquery/blob/master/specs/etc_hosts.table",
     "platforms": ["darwin"],
