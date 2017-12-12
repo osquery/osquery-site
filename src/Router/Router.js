@@ -19,8 +19,11 @@ class Router extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/blog" component={Blog} />
 
-            <Route path="/downloads/:osquery_version" component={Downloads} />
-            <Redirect from="/downloads" to={`/downloads/${currentOsqueryVersion.version}`} />
+            <Route path="/downloads/:release_type/:osquery_version" component={Downloads} />
+            <Redirect
+              from="/downloads"
+              to={`/downloads/official/${currentOsqueryVersion.version}`}
+            />
 
             <Route exact path="/schema/:schemaVersion" component={Schema} />
             <Redirect from="/schema" to={`/schema/${currentOsqueryVersion.version}`} />

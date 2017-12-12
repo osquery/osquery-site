@@ -17,39 +17,32 @@
 }
 
 .downloads-page__download-card {
-  margin-bottom: 36px;
+  margin-top: 36px;
   width: 270px;
-
-  &:nth-child(odd) {
-    margin-right: 35px;
-  }
-
-  &:nth-last-child(-n+2) {
-    margin-bottom: 0;
-  }
-
-  @media(max-width: $mobile-width) {
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-
-    &:nth-child(odd) {
-      margin-right: 10px
-    }
-
-    &:nth-last-child(-n+2) {
-      margin-bottom: 10px;
-    }
-  }
 }
 
 .downloads-page__downloads-wrapper {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 579px;
 
   @media(max-width: $mobile-width) {
+    justify-content: space-around;
     width: 100%;
   }
+
+  @media(max-width: 574px) {
+    justify-content: center;
+  }
+}
+
+.downloads-page__tab {
+  padding: 14px 30px;
+}
+
+.downloads-page__tab--official {
+  margin-right: 24px;
 }
 
 .downloads-page__pill-wrapper {

@@ -39,21 +39,29 @@ class Downloads extends Component {
 
   onOsqueryVersionChange = option => {
     if (option) {
-      const { history } = this.props
+      const { history, match } = this.props
 
-      history.push(`/downloads/${option.value}`)
+      history.push(`/downloads/${match.params.release_type}/${option.value}`)
+    }
+  }
+
+  onReleaseTypeChange = releaseType => {
+    return () => {
+      const { history, match } = this.props
+
+      history.push(`/downloads/${releaseType}/${match.params.osquery_version}`)
     }
   }
 
   render() {
     const { match } = this.props
-    const { onInstallOptionChange, onOsqueryVersionChange } = this
+    const { onInstallOptionChange, onOsqueryVersionChange, onReleaseTypeChange } = this
+    const { osquery_version: osqueryVersion, release_type: releaseType } = match.params
     const { selectedInstallOption } = this.state
     const alternativeInstallOptionContent =
       content.sections.alternativeInstallationOptions.subheadings[selectedInstallOption]
-    const selectedOsqueryVersion = match.params.osquery_version
     const downloadsDataForOsqueryVersion = osqueryVersionsData.find(
-      data => data.version === selectedOsqueryVersion
+      data => data.version === osqueryVersion
     )
 
     return (
@@ -66,19 +74,38 @@ class Downloads extends Component {
 
         <section className={`${baseClass}__packages-section`}>
           <Heading2>{content.sections.packages.sectionHeading}</Heading2>
+
           <Paragraph>{content.sections.packages.sectionSubheading}</Paragraph>
+
           <Heading5 className={`${baseClass}__osquery-version`}>Osquery Version</Heading5>
+
           <OsqueryVersionDropdown
             className={`${baseClass}__dropdown`}
             name="dropdown"
             onChange={onOsqueryVersionChange}
-            value={selectedOsqueryVersion}
+            value={osqueryVersion}
+          />
+
+          <Heading5 className={`${baseClass}__osquery-version`}>Release Type</Heading5>
+
+          <Tab
+            active={releaseType === 'official'}
+            className={`${baseClass}__tab ${baseClass}__tab--official`}
+            onClick={onReleaseTypeChange('official')}
+            text="Official"
+          />
+
+          <Tab
+            active={releaseType === 'debug'}
+            className={`${baseClass}__tab`}
+            onClick={onReleaseTypeChange('debug')}
+            text="Debug"
           />
 
           <div className={`section-break ${baseClass}__section-break`} />
 
           <div className={`${baseClass}__downloads-wrapper`}>
-            {downloadsDataForOsqueryVersion.downloads.map((data, idx) => {
+            {downloadsDataForOsqueryVersion.downloads[releaseType].map((data, idx) => {
               return (
                 <DownloadCard
                   className={`${baseClass}__download-card`}
@@ -89,6 +116,7 @@ class Downloads extends Component {
             })}
           </div>
         </section>
+
         <div className={`section-break ${baseClass}__section-break`} />
 
         <section className={`${baseClass}__alternative-install-section`}>
@@ -118,6 +146,7 @@ class Downloads extends Component {
 
           <div>
             <Heading5>{alternativeInstallOptionContent.subSection1Heading}</Heading5>
+
             <Paragraph>{alternativeInstallOptionContent.subSection1Paragraph1}</Paragraph>
           </div>
 
