@@ -1,7 +1,21 @@
 @import '../../styles/variables.scss';
 
 .blog-post {
+  box-sizing: border-box;
   width: 700px;
+
+  @media(max-width: $mobile-width) {
+    width: 600px;
+  }
+
+  @media(max-width: 620px) {
+    width: 400px;
+  }
+
+  @media(max-width: 480px) {
+    padding: 0 15px;
+    width: 100%;
+  }
 
   article {
     margin-top: 5px;
@@ -28,6 +42,7 @@
 
       code {
         background-color: $pale-gray;
+        box-sizing: border-box;
         color: $pink;
         font-family: $code-font;
         padding: 2px 4px;
@@ -36,7 +51,10 @@
 
     pre {
       background-color: $pale-gray;
+      box-sizing: border-box;
       padding: 14px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
 
       code {
         color: rgba($gray, .8);

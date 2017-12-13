@@ -12,16 +12,34 @@
 }
 
 .blog-index__tab {
+  margin: 19px 0;
   padding: 9px 23px;
 
+  @media(max-width: 480px) {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   &:first-child {
-    margin-right: 16px;
+
+    @media(min-width: 480px) {
+      margin-right: 16px;
+    }
+
+    @media(max-width: $mobile-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
 .blog-index__tab-wrapper {
   border-bottom: 1px solid $pale-gray;
   border-top: 1px solid $pale-gray;
-  padding: 19px 0;
   width: 700px;
+
+  @media(max-width: $mobile-width) {
+    text-align: center;
+    width: 100%;
+  }
 }
