@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.blog-index {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-index__header {
+  padding-bottom: 212px;
+  padding-top: 188px;
+}
+
+.blog-index__tab {
+  padding: 9px 23px;
+
+  &:first-child {
+    margin-right: 16px;
+  }
+}
+
+.blog-index__tab-wrapper {
+  border-bottom: 1px solid $pale-gray;
+  border-top: 1px solid $pale-gray;
+  padding: 19px 0;
+  width: 700px;
+}

@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'
 
 import App from 'components/App'
-import Blog from 'pages/Blog'
+import BlogIndex from 'pages/BlogIndex'
+import BlogShow from 'pages/BlogShow'
 import Downloads from 'pages/Downloads'
 import Home from 'pages/Home'
 import osqueryVersionsData from 'data/osquery_versions.json'
@@ -17,7 +18,18 @@ class Router extends Component {
         <App>
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/blog" component={Blog} />
+            <Route
+              exact
+              path="/blog/official-news"
+              render={props => <BlogIndex {...props} blogType="official-news" />}
+            />
+            <Route
+              exact
+              path="/blog/community-articles"
+              render={props => <BlogIndex {...props} blogType="community-articles" />}
+            />
+            <Redirect exact from="/blog" to="/blog/official-news" />
+            <Route path="/blog/:blog_title" component={BlogShow} />
 
             <Route path="/downloads/:release_type/:osquery_version" component={Downloads} />
             <Redirect

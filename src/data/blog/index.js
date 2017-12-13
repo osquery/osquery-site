@@ -1,15 +1,20 @@
 import frontMatter from 'front-matter'
 import moment from 'moment'
 
-const webpackMarkdownLoader = require.context('!raw-loader!./posts', false, /\.md$/)
+import slugify from 'helpers/slugify'
+
+const webpackMarkdownLoader = require.context('!raw-loader!./posts/', true, /\.md$/)
 const readFilename = filename => {
   const text = webpackMarkdownLoader(filename)
   const { attributes, body } = frontMatter(text)
+  const blogType = filename.startsWith('./official_news') ? 'official-news' : 'community-articles'
 
   return {
     attributes: {
       ...attributes,
       date: moment(attributes.date),
+      slugifiedTitle: slugify(attributes.title),
+      type: blogType,
     },
     body,
   }
