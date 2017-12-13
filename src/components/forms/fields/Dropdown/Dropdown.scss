@@ -1,21 +1,25 @@
 @import '../../../../styles/variables.scss';
 
 .dropdown small {
-  font-size: 10px;
+  font-size: 14px;
   margin-left: 5px;
 }
 
 .Select {
   .Select-control {
     background-color: $pale-gray;
+    border-radius: 4px;
     border: 1px solid rgba(74,157,255,0.6);
-    border-radius: 2px;
     cursor: pointer;
-    height: 40px;
+    height: 50px;
 
     .Select-input {
+      height: 50px;
+
       input {
         color: $white;
+        line-height: 50px;
+        padding: 0;
       }
     }
   }
@@ -28,23 +32,24 @@
     .Select-value-icon {
       border: 0;
       float: right;
-      visibility: hidden;
-      position: relative;
       line-height: 28px;
-      width: 25px;
-      padding: 0;
       margin: 0 5px;
+      padding: 0;
+      position: relative;
+      visibility: hidden;
+      width: 25px;
 
       &::after {
-        transition: color 150ms ease-in-out;
-        transform: translate -50% -50%;
+        color: $accent-color;
         content: '\f036';
+        font-size: 18px;
+        left: 50%;
+        letter-spacing: 1px;
         position: absolute;
         top: 50%;
-        left: 50%;
+        transform: translate -50% -50%;
+        transition: color 150ms ease-in-out;
         visibility: visible;
-        font-size: 16px;
-        color: $accent-color;
       }
 
       &:hover {
@@ -55,9 +60,10 @@
     }
 
     .Select-value-label {
-      font-size: 16px;
       color: $accent-color !important;
-      line-height: 38px;
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 50px;
     }
   }
 
@@ -97,7 +103,7 @@
       .Select-value {
         .Select-value-label {
           color: $accent-color !important;
-          font-size: 16px;
+          font-size: 18px;
         }
       }
     }
@@ -115,10 +121,10 @@
   }
 
   .Select-menu-outer {
-    margin-top: 2px;
-    box-shadow: 0 1px 3px 1px rgba(#000, 0.05);
-    border: 0;
     border-radius: 2px;
+    border: 0;
+    box-shadow: 0 1px 3px 1px rgba(#000, 0.05);
+    margin-top: 2px;
     z-index: 6;
 
     .Select-menu {
@@ -152,11 +158,12 @@
   }
 
   .Select-placeholder {
+    box-sizing: border-box;
     color: $accent-color;
-    font-size: 16px;
+    font-size: 18px;
+    letter-spacing: 1px;
     line-height: 40px;
     padding: 0 12px;
-    box-sizing: border-box;
   }
 
   &.Select--multi {
@@ -188,8 +195,8 @@
     }
 
     .Select-value {
-      margin-top: 3px;
       margin-bottom: 3px;
+      margin-top: 3px;
     }
 
     .Select-value-label {
