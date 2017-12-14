@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { arrayOf, func, string } from 'prop-types'
 
 import TOCEntry from './TOCEntry'
+import './SchemaTOC.css'
 
 const baseClass = 'schema-toc'
 
