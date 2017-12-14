@@ -1,62 +1,65 @@
 [
   {
+    "description": "StreamAlert is a serverless, realtime data analysis framework which empowers you to ingest, analyze, and alert on data from any environment, using datasources and alerting logic you define.",
+    "owner": "airbnb",
+    "repo": "streamalert",
+    "star_count": 983,
+    "url": "https://github.com/airbnb/streamalert"
+  },
+  {
+    "description": "an osquery fleet manager",
+    "owner": "mwielgoszewski",
+    "repo": "doorman",
+    "star_count": 312,
+    "url": "https://github.com/mwielgoszewski/doorman"
+  },
+  {
     "description": "Zentral is a framework to gather, process, and monitor system events and link them to an inventory.",
-    "name": "zentralopensource / zentral",
+    "owner": "zentralopensource",
+    "repo": "zentral",
     "star_count": 224,
     "url": "https://github.com/zentralopensource/zentral"
   },
   {
     "description": "A flexible control server for osquery fleets",
-    "name": "kolide / fleet",
+    "owner":"kolide",
+    "repo":"fleet",
     "star_count": 124,
     "url": "https://github.com/kolide/fleet"
   },
   {
-    "description": "Go app that dispatches osquery to multi-machines",
-    "name": "emirozer / exposq",
-    "star_count": 89,
-    "url": "https://github.com/emirozer/exposq"
-  },
-  {
     "description": "A repository for using osquery for incident detection and response",
-    "name": "palantir / osquery-configuration",
+    "owner": "palantir",
+    "repo": "osquery-configuration",
     "star_count": 89,
     "url": "https://github.com/palantir/osquery-configuration"
   },
   {
+    "description": "A TLS endpoint for serving osquery configuration",
+    "owner": "heroku",
+    "repo": "windmill",
+    "star_count": 76,
+    "url": "https://github.com/heroku/windmill"
+  },
+  {
+    "description": "python bindings for osquery",
+    "owner": "osquery",
+    "repo": "osquery-python",
+    "star_count": 74,
+    "url": "https://github.com/osquery/osquery-python"
+  },
+  {
     "description": "A lightweight osquery execution environment",
-    "name": "kolide / launcher",
+    "owner": "kolide",
+    "repo": "launcher",
     "star_count": 57,
     "url": "https://github.com/kolide/launcher"
   },
   {
     "description": "Go bindings for Osquery",
-    "name": "kolide / osquery-go",
+    "owner": "kolide",
+    "repo": "osquery-go",
     "star_count": 55,
     "url": "https://github.com/kolide/osquery-go"
-  },
-  {
-    "description": "A quickstart demo for Kolide tools",
-    "name": "kolide / kolide-quickstart",
-    "star_count": 30,
-    "url": "https://github.com/kolide/kolide-quickstart"
-  },
-  {
-    "description": "Scripts to return inventory information for use in the JamfPro, heavily leveraging osquery",
-    "name": "arubdesu / EAs",
-    "star_count": 24,
-    "url": "https://github.com/arubdesu/EAs"
-  },
-  {
-    "description": "node.js client for osquery",
-    "name": "sidorares / osquery-node",
-    "star_count": 19,
-    "url": "https://github.com/sidorares/osquery-node"
-  },
-  {
-    "description": "A simple threat hunter based on osquery, Salt Open and Cymon API",
-    "name": "0x4D31 / sqhunter",
-    "star_count": 18,
-    "url": "https://github.com/0x4D31/sqhunter"
   }
 ]

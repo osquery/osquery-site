@@ -37,10 +37,10 @@ const GithubCard = ({ className, description, name, starCount, url, urlText }) =
 }
 
 GithubCard.propTypes = {
-  description: string.isRequired,
-  name: oneOfType([string, node]).isRequired,
+  description: string,
+  name: oneOfType([node, string]).isRequired,
   starCount: number,
-  url: string.isRequired,
+  url: string,
   urlText: string,
 }
 

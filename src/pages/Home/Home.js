@@ -3,7 +3,8 @@ import MediaQuery from 'react-responsive'
 
 import Button from 'components/Button'
 import content from 'data/pages/home'
-import featuredProjects from 'data/featured_projects'
+import featuredProjectsData from 'data/featured_projects'
+import getGithubRepo from 'helpers/get_github_repo'
 import GithubCard from 'components/GithubCard'
 import H1SuperHeading from 'components/text/H1SuperHeading'
 import Heading1 from 'components/text/Heading1'
@@ -33,10 +34,41 @@ const {
 class Home extends Component {
   state = {
     howItWorksActiveTab: 'security',
+    featuredProjects: featuredProjectsData,
   }
 
-  featuredProjects = () => {
-    return featuredProjects.sort(() => 0.5 - Math.random()).slice(0, 6)
+  componentWillMount() {
+    const { loadFeaturedProjects } = this
+    loadFeaturedProjects()
+  }
+
+  addFeaturedProject = (owner, repo) => {
+    return getGithubRepo(owner, repo).then(response => {
+      const { description, name, owner, stargazers_count, html_url } = response.data
+
+      return Promise.resolve({
+        description: description,
+        owner: owner.login,
+        repo: name,
+        star_count: stargazers_count,
+        url: html_url,
+      })
+    })
+  }
+
+  addFeaturedProjects = () => {
+    return featuredProjectsData.map(({ owner, repo }) => {
+      return this.addFeaturedProject(owner, repo)
+    })
+  }
+
+  loadFeaturedProjects = () => {
+    return Promise.all(this.addFeaturedProjects()).then(data => {
+      const sortedData = data.sort((a, b) => {
+        return b.star_count - a.star_count
+      })
+      this.setState({ featuredProjects: sortedData })
+    })
   }
 
   onHowItWorksTabClick = tabName => {
@@ -46,6 +78,25 @@ class Home extends Component {
         howItWorksActiveTab: tabName,
       })
     }
+  }
+
+  renderFeaturedProjects = () => {
+    const { featuredProjects } = this.state
+
+    return featuredProjects.map((project, idx) => {
+      const { description, owner, repo, star_count: starCount, url } = project
+
+      return (
+        <div className={`${baseClass}__project-card-wrapper`} key={idx}>
+          <GithubCard
+            description={description}
+            name={`${owner} / ${repo}`}
+            starCount={starCount}
+            url={url}
+          />
+        </div>
+      )
+    })
   }
 
   renderOsqueryTableSnapshots = () => {
@@ -82,7 +133,7 @@ class Home extends Component {
 
   render() {
     const { howItWorksActiveTab } = this.state
-    const { featuredProjects, onHowItWorksTabClick, renderOsqueryTableSnapshots } = this
+    const { onHowItWorksTabClick, renderFeaturedProjects, renderOsqueryTableSnapshots } = this
 
     return (
       <div>
@@ -282,17 +333,7 @@ class Home extends Component {
 
           <Paragraph>{communityProjects.sectionSubHeading}</Paragraph>
 
-          <div className={`${baseClass}__project-cards`}>
-            {featuredProjects().map((project, idx) => {
-              const { description, name, url } = project
-
-              return (
-                <div className={`${baseClass}__project-card-wrapper`} key={idx}>
-                  <GithubCard description={description} name={name} url={url} />
-                </div>
-              )
-            })}
-          </div>
+          <div className={`${baseClass}__project-cards`}>{renderFeaturedProjects()}</div>
         </section>
 
         <SectionBreak />

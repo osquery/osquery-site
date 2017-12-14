@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.17.1",
     "classnames": "^2.2.5",
     "css-loader": "^0.28.7",
     "front-matter": "^2.3.0",

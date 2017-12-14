@@ -6,7 +6,7 @@
 
 .github-card__description {
   height: 68px;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .github-card__footer {
@@ -24,5 +24,5 @@
   color: $midnight-blue;
   font-size: 16px;
   font-weight: $font-bold;
-  margin: 0;
+  margin: 3px 0 0;
 }
