@@ -76,7 +76,7 @@ class PlatformForm extends Component {
             semi={!allChecked() && anyChecked()}
             onChange={onChange('all')}
           >
-            Compatible with All Platforms
+            All Platforms
           </Checkbox>
         </div>
 
