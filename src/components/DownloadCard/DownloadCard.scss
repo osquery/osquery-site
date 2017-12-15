@@ -21,6 +21,11 @@
   text-decoration: none;
 }
 
+.download-card .card-header {
+  box-sizing: border-box;
+  height: 90px;
+}
+
 .download-card .card-body {
   color: rgba($gray, .4);
   display: block;
