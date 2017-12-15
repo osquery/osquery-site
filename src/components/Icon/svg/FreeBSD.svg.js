@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class FreeBSD extends Component {
   static defaultProps = {
-    fillColor: '#4d4e7f',
+    fillColor: '#00125F',
     height: 17,
     width: 18,
   }
