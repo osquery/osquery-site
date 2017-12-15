@@ -165,6 +165,8 @@ class Home extends Component {
 
             {renderOsqueryTableSnapshots()}
           </section>
+
+          <SectionBreak fullScreen />
         </div>
 
         <section className={`${baseClass}__section`}>
