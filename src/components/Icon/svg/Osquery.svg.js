@@ -20,15 +20,17 @@ class Osquery extends Component {
       >
         <title>osquery</title>
 
-        <g fill="none" fillRule="evenodd">
-          <path fill="#A596FF" d="M0 2l10.5 9H21L10.5 2z" />
-          <path fill="#00125F" d="M10.5 10L0 19h10.5L21 10z" />
-          <path fill="#A596FF" d="M39 0l-9 10.474V21l9-10.526z" />
-          <path fill="#00125F" d="M21 0v10.474L30 21V10.474z" />
-          <path fill="#A596FF" d="M2 29.526V40l9-10.474V19z" />
-          <path fill="#00125F" d="M10 29.526L19 40V29.526L10 19z" />
-          <path fill="#A596FF" d="M19 30l10.5 9H40l-10.5-9z" />
-          <path fill="#00125F" d="M29.5 21L19 30h10.5L40 21z" />
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g>
+            <polygon fill="#A596FF" points="0 0 10 10 20 10 10 0"></polygon>
+            <polygon fill="#00125F" points="10 10 0 20 10 20 20 10"></polygon>
+            <polygon fill="#A596FF" points="40 0 40 10 30 20 30 10"></polygon>
+            <polygon fill="#00125F" points="30 10 30 20 20 10 20 0"></polygon>
+            <polygon fill="#A596FF" points="40 40 30 40 20 30 30 30"></polygon>
+            <polygon fill="#00125F" points="30 30 20 30 30 20 40 20"></polygon>
+            <polygon fill="#A596FF" points="0 40 0 30 10 20 10 30"></polygon>
+            <polygon fill="#00125F" points="10 30 10 20 20 30 20 40"></polygon>
+          </g>
         </g>
       </svg>
     )
