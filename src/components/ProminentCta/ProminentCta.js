@@ -6,15 +6,15 @@ import './ProminentCta.css'
 
 const baseClass = 'prominent-cta'
 
-const ProminentCta = ({ children, className, icon }) => {
+const ProminentCta = ({ children, className, href, icon }) => {
   const wrapperClassname = classnames(baseClass, className)
 
   return (
-    <div className={wrapperClassname}>
+    <a className={wrapperClassname} href={href}>
       <div className={`${baseClass}__circle`}>{icon}</div>
 
       {children}
-    </div>
+    </a>
   )
 }
 

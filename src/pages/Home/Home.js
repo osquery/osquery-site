@@ -346,19 +346,28 @@ class Home extends Component {
           <Paragraph>{additionalResources.sectionSubHeading}</Paragraph>
 
           <div className={`${baseClass}__additional-resources`}>
-            <ProminentCta className={`${baseClass}__prominent-cta`} icon={<Icon name="slack" />}>
-              <a href="https://osquery-slack.herokuapp.com/">Join the Osquery Slack</a>
+            <ProminentCta
+              className={`${baseClass}__prominent-cta`}
+              href="https://osquery-slack.herokuapp.com/"
+              icon={<Icon name="slack" />}
+            >
+              <span>Join the Osquery Slack</span>
             </ProminentCta>
 
             <ProminentCta
               className={`${baseClass}__prominent-cta`}
+              href="https://osquery.readthedocs.io/en/stable/"
               icon={<Icon name="osqueryDocs" />}
             >
-              <a href="https://osquery.readthedocs.io/en/stable/">Read the Osquery Docs</a>
+              <span>Read the Osquery Docs</span>
             </ProminentCta>
 
-            <ProminentCta className={`${baseClass}__prominent-cta`} icon={<Icon name="octocat" />}>
-              <a href="https://github.com/facebook/osquery">View the Github Project</a>
+            <ProminentCta
+              className={`${baseClass}__prominent-cta`}
+              href="https://github.com/facebook/osquery"
+              icon={<Icon name="octocat" />}
+            >
+              <span>View the Github Project</span>
             </ProminentCta>
           </div>
         </section>

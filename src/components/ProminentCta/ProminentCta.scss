@@ -2,6 +2,7 @@
 
 .prominent-cta {
   text-align: center;
+  text-decoration: none;
 }
 
 .prominent-cta__circle {
@@ -15,7 +16,7 @@
   width: 300px;
 }
 
-.prominent-cta > a {
+.prominent-cta > span {
   color: $accent-color;
   display: block;
   font-size: 20px;
