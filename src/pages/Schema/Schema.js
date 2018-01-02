@@ -48,12 +48,18 @@ class Schema extends Component {
   state = Schema.initialState
 
   componentDidMount() {
-    const { mapTables, scrollActiveTable, stickyTOC } = this
+    const { mapTables, scrollActiveTable, setActiveTable, stickyTOC } = this
+    const { hash } = this.props.location
 
     mapTables()
 
+    if (hash) {
+      setTimeout(() => setActiveTable(hash.replace('#', '')), 100)
+    }
+
     const tocElement = document.getElementById(`${baseClass}-toc`)
     tocOffset = tocElement ? tocElement.offsetTop : 0
+
     window.addEventListener('scroll', scrollActiveTable)
     window.addEventListener('scroll', stickyTOC)
   }
@@ -146,6 +152,11 @@ class Schema extends Component {
     if (!overrideScroll) {
       if (activeTable) {
         this.setState({ activeTable: activeTable.id, overrideScroll: false })
+
+        const tocEntry = document.getElementById(`toc-entry-${activeTable.id}`)
+        const schemaToc = document.getElementById('schema-toc__list')
+
+        schemaToc.scrollTop = tocEntry.offsetHeight * tocEntry.dataset.index
       }
 
       return false

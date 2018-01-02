@@ -23,13 +23,14 @@ class SchemaTOC extends Component {
     const { activeEntry, entries } = this.props
 
     return (
-      <ol className={baseClass}>
+      <ol className={baseClass} id={`${baseClass}__list`}>
         {entries &&
-          entries.map(entry => {
+          entries.map((entry, index) => {
             return (
               <TOCEntry
                 active={activeEntry === entry}
                 entry={entry}
+                index={index}
                 key={entry}
                 onClick={handleClick(entry)}
               >

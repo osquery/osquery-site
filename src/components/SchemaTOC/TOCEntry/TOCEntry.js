@@ -6,11 +6,11 @@ import './TOCEntry.css'
 
 const baseClass = 'toc-entry'
 
-const TOCEntry = ({ active, children, entry, onClick }) => {
+const TOCEntry = ({ active, children, entry, index, onClick }) => {
   const liClasses = classnames(baseClass, { [`${baseClass}--active`]: active })
 
   return (
-    <li className={liClasses}>
+    <li className={liClasses} data-index={index} id={`toc-entry-${entry}`}>
       <a className={`${baseClass}__link`} href={`#${entry}`} onClick={onClick}>
         {children}
       </a>
