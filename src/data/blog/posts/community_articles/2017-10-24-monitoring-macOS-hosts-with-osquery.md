@@ -46,7 +46,7 @@ Documentation is available at [osquery.readthedocs.io](http://osquery.readthedoc
 
 Osqueryi is osquery’s interactive shell. It is a great place to get started understanding osquery’s capabilities, testing queries, and performing real time investigation. In addition to user interaction, osqueryi is also a handy tool to generate structured data on demand in a scripting context.
 
-### **Basic Queries**
+### Basic Queries
 
 We can fire up osqueryi and begin to learn the query capabilities of the system. Running the .tables command is a good way to start getting a sense of what is available. More detailed table documentation is also available at [osquery.io/docs/tables/](http://osquery.io/docs/tables/). Note the use of .mode line to format query results in an easy to read format (this will be assumed in all further examples).
 
@@ -145,14 +145,14 @@ It is easy to take advantage of osquery data when scripting. With a variety of d
     $ osqueryi --json 'SELECT * FROM usb_devices WHERE removable'
     [
       {
-        **"model"**:"Natural® Ergonomic Keyboard 4000",
-        **"model_id"**:"00db",
-        **"removable"**:"1",
-        **"serial"**:"0",
-        **"usb_address"**:"14",
-        **"usb_port"**:"1",
-        **"vendor"**:"Microsoft",
-        **"vendor_id"**:"045e"
+        "model":"Natural® Ergonomic Keyboard 4000",
+        "model_id":"00db",
+        "removable":"1",
+        "serial":"0",
+        "usb_address":"14",
+        "usb_port":"1",
+        "vendor":"Microsoft",
+        "vendor_id":"045e"
       }
     ]
 
@@ -160,22 +160,22 @@ It is easy to take advantage of osquery data when scripting. With a variety of d
 
 The most common use of osquery is for monitoring and logging changes to the system over time. For this, there is osqueryd, the osquery daemon. osqueryd runs continuously on the host, executing a schedule of queries provided in its configuration. It enables logging of changes to query results over time, and tracking of events that occur between queries.
 
-### **Differential Queries**
+### Differential Queries
 
 The default mode of osqueryd is to log “differential queries”. Using the internal store of osquery, only the changes in results are logged at each run of a query. If there are no changes, no results are logged. This makes the data useful for shipping to a log aggregation system and defining alerts on problematic changes.
 
 What sort of information might be useful to monitor? Let’s consider the example investigation from above. In our exploration with osqueryi, we noticed a few undesirable behaviors. There is no indication that the videoconferencing software was malicious, but the behavior is representative of a common pattern utilized by macOS malware (for example, the recent Dok malware). From an IT compliance perspective, we could log any changes to the firewall state. From a security perspective, additions to the launchd agents could be potential problems. The following is an osqueryd configuration to track each of these concerns:
 
     {
-      **"schedule"**:{
-        **"firewall_state"**:{
-          **"query"**:"SELECT * FROM alf",
-          **"interval"**:60,
-          **"removed"**:false
+      "schedule":{
+        "firewall_state":{
+          "query":"SELECT * FROM alf",
+          "interval":60,
+          "removed":false
         },
-        **"launchd_agents"**:{
-          **"query"**:"SELECT l.*, h.sha256 FROM launchd l LEFT JOIN hash h ON l.program = h.path",
-          **"interval"**:60
+        "launchd_agents":{
+          "query":"SELECT l.*, h.sha256 FROM launchd l LEFT JOIN hash h ON l.program = h.path",
+          "interval":60
         }
       }
     }
@@ -183,20 +183,20 @@ What sort of information might be useful to monitor? Let’s consider the exampl
 If we start osqueryd with this configuration (do so with sudo osqueryd — config_path=/path/to/config.json), each of these queries will be executed once per minute and any changes to their results will be logged. We disable logging of removed rows for firewall_state because it generates redundant results in the case of a single row table like alf. This is the log generated when the firewall is disabled:
 
     {
-      **"name"**:"firewall_state",
-      **"hostIdentifier"**:"zwass.local",
-      **"calendarTime"**:"Sun Apr 30 01:15:11 2017 UTC",
-      **"unixTime"**:"1493514911",
-      **"columns"**:{
-        **"allow_signed_enabled"**:"1",
-        **"firewall_unload"**:"0",
-        **"global_state"**:"0",
-        **"logging_enabled"**:"1",
-        **"logging_option"**:"0",
-        **"stealth_enabled"**:"0",
-        **"version"**:"1.5"
+      "name":"firewall_state",
+      "hostIdentifier":"zwass.local",
+      "calendarTime":"Sun Apr 30 01:15:11 2017 UTC",
+      "unixTime":"1493514911",
+      "columns":{
+        "allow_signed_enabled":"1",
+        "firewall_unload":"0",
+        "global_state":"0",
+        "logging_enabled":"1",
+        "logging_option":"0",
+        "stealth_enabled":"0",
+        "version":"1.5"
       },
-      **"action"**:"added"
+      "action":"added"
     }
 
 Result logs will go to /var/log/osquery/osqueryd.results.log by default.
@@ -218,10 +218,10 @@ When these tables are enabled, the event publisher/subscriber system will store 
 The following is an example configuration for monitoring hardware events:
 
     {
-      **"schedule"**:{
-        **"hardware_events"**:{
-          **"query"**:"select * from hardware_events",
-          **"interval"**:10
+      "schedule":{
+        "hardware_events":{
+          "query":"select * from hardware_events",
+          "interval":10
         }
       }
     }
@@ -229,24 +229,24 @@ The following is an example configuration for monitoring hardware events:
 Using this configuration, logs generated when adding a USB device look like this:
 
     {
-      **"name"**:"hardware_events",
-      **"hostIdentifier"**:"zwass.local",
-      **"calendarTime"**:"Tue May  2 16:53:01 2017 UTC",
-      **"unixTime"**:"1493743981",
-      **"columns"**:{
-        **"action"**:"attach",
-        **"driver"**:"IOUSBDeviceUserClientV2",
-        **"model"**:"",
-        **"model_id"**:"00db",
-        **"path"**:"19:1",
-        **"revision"**:"",
-        **"serial"**:"0",
-        **"time"**:"1493743978",
-        **"type"**:"IOUSBDevice",
-        **"vendor"**:"Microsoft",
-        **"vendor_id"**:"045e"
+      "name":"hardware_events",
+      "hostIdentifier":"zwass.local",
+      "calendarTime":"Tue May  2 16:53:01 2017 UTC",
+      "unixTime":"1493743981",
+      "columns":{
+        "action":"attach",
+        "driver":"IOUSBDeviceUserClientV2",
+        "model":"",
+        "model_id":"00db",
+        "path":"19:1",
+        "revision":"",
+        "serial":"0",
+        "time":"1493743978",
+        "type":"IOUSBDevice",
+        "vendor":"Microsoft",
+        "vendor_id":"045e"
       },
-      **"action"**:"added"
+      "action":"added"
     }
 
 There is also an experimental kernel extension for macOS that enables a process_events table recording events about all process executions.
@@ -260,16 +260,16 @@ Query packs provide an explicit means for scheduling, targeting and sharing thes
 Imagine we want to apply extra scrutiny to any macOS hosts that have their application layer firewall turned off. We could do this with a query pack containing a discovery query that matches only when the firewall state is off (In this example, we include the pack directly in the osquery configuration file for simplicity).
 
     {
-      **"packs"**:{
-        **"macos_firewall_disabled"**:{
-          **"discovery"**:[
+      "packs":{
+        "macos_firewall_disabled":{
+          "discovery":[
             "select * from alf where global_status = 0"
           ],
-          **"queries"**:{
-            **"process_listening_ports"**:{
-              **"query"**:"SELECT * FROM processes JOIN listening_ports USING (pid)",
-              **"interval"**:60,
-              **"description"**:"All processes with open ports"
+          "queries":{
+            "process_listening_ports":{
+              "query":"SELECT * FROM processes JOIN listening_ports USING (pid)",
+              "interval":60,
+              "description":"All processes with open ports"
             }
           }
         }
