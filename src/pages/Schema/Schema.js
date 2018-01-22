@@ -35,7 +35,6 @@ class Schema extends Component {
   }
 
   static initialState = {
-    mappedTables: [],
     overrideScroll: false,
     platforms: {
       darwin: false,
@@ -43,15 +42,16 @@ class Schema extends Component {
       linux: false,
       windows: false,
     },
+    tables: [],
   }
 
   state = Schema.initialState
 
   componentDidMount() {
-    const { mapTables, scrollActiveTable, setActiveTable, stickyTOC } = this
+    const { filterTables, scrollActiveTable, setActiveTable, stickyTOC } = this
     const { hash } = this.props.location
 
-    mapTables()
+    filterTables()
 
     if (hash) {
       setTimeout(() => setActiveTable(hash.replace('#', '')), 100)
@@ -65,11 +65,13 @@ class Schema extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { mapTables } = this
+    const { filterTables } = this
     const { schemaVersion } = this.props.match.params
     const oldSchemaVersion = prevProps.match.params.schemaVersion
 
-    if (oldSchemaVersion !== schemaVersion) mapTables()
+    if (oldSchemaVersion !== schemaVersion) {
+      filterTables()
+    }
   }
 
   componentWillUnmount() {
@@ -93,27 +95,12 @@ class Schema extends Component {
       .replace('windows', 'Windows')
   }
 
-  mapTables = () => {
-    const { scrollActiveTable, tableNames } = this
-
-    if (!tableNames()) return false
-
-    const mappedTables = tableNames().map(tableName => {
-      const domTable = document.getElementById(tableName)
-
-      return {
-        id: tableName,
-        offset: domTable.offsetTop + 40,
-      }
-    })
-
-    this.setState({ mappedTables }, () => scrollActiveTable())
-  }
-
   onPlatformChange = platforms => {
-    const { mapTables } = this
+    const { filterTables } = this
 
-    this.setState({ platforms }, () => mapTables())
+    this.setState({ platforms }, () => {
+      filterTables()
+    })
   }
 
   onSchemaChange = ({ value }) => {
@@ -123,12 +110,12 @@ class Schema extends Component {
   }
 
   restoreDefaultView = () => {
-    const { mapTables } = this
+    const { filterTables } = this
     const { push } = this.props.history
 
     this.setState(Schema.initialState, () => {
       push(`/schema/${currentOsqueryVersion.version}`)
-      mapTables()
+      filterTables()
     })
   }
 
@@ -140,14 +127,27 @@ class Schema extends Component {
     return require(`data/osquery_schema_versions/${schemaVersion}`)
   }
 
+  get tablePositions() {
+    const { tables } = this.state
+    return tables.map(table => {
+      const name = table.name
+      const domTable = document.getElementById(name)
+
+      return {
+        id: name,
+        offset: domTable.offsetTop + 40,
+      }
+    })
+  }
+
   scrollActiveTable = throttle(() => {
-    const { mappedTables, overrideScroll } = this.state
+    const { tablePositions } = this
+    const { overrideScroll } = this.state
     const windowScroll = global.window.scrollY
 
-    const activeTable =
-      mappedTables.find(table => {
-        return table.offset > windowScroll
-      }) || mappedTables[mappedTables.length - 1]
+    const activeTable = tablePositions.find(table => {
+      return table.offset > windowScroll
+    }) || tablePositions[tablePositions.length -1].name
 
     if (!overrideScroll) {
       if (activeTable) {
@@ -183,36 +183,37 @@ class Schema extends Component {
     if (tocOffset < windowScroll && !this.state.fixedTOC) this.setState({ fixedTOC: true })
   }, 10)
 
-  tableNames = () => {
-    const { tables } = this
+  get tableNames() {
+    const { tables } = this.state
 
-    if (!tables()) return false
-    return tables().map(table => table.name)
+    if (!tables) return false
+    return tables.map(table => table.name)
   }
 
-  tables = () => {
+  filterTables = () => {
     const { schema, selectedPlatforms } = this
 
     if (!schema()) return false
 
-    return schema().filter(table => {
+    const tables = schema().filter(table => {
       return selectedPlatforms().every(selectedPlatform => {
         return table.platforms.includes(selectedPlatform)
       })
     })
+
+    this.setState({ tables: tables })
   }
 
   renderTables = () => {
-    const { tables } = this
+    const { tables } = this.state
 
-    return tables().map(table => {
+    return tables.map(table => {
       return <OsqueryTable className={`${baseClass}__table`} key={table.name} tableData={table} />
     })
   }
 
   renderTOC = () => {
-    const { setActiveTable, tableNames } = this
-    const entries = tableNames()
+    const { setActiveTable, tableNames: entries } = this
     const activeEntry = this.state.activeTable || entries[0]
     const classes = classnames(`${baseClass}__toc-wrapper`, {
       [`${baseClass}__toc-wrapper--fixed`]: this.state.fixedTOC,
