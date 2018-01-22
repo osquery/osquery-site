@@ -22,50 +22,56 @@ const PlatformIcons = ({ platforms }) => {
   })
 }
 
-const OsqueryTable = ({ className, tableData }) => {
-  return (
-    <Card.Wrapper className={classnames(baseClass, className)} id={tableData.name}>
-      <Card.Header className={`${baseClass}__header`}>
-        <div className={`${baseClass}__header--left`}>
-          <Heading5 className={`${baseClass}__table-name`}>
-            {tableData.name}
-            {tableData.evented && <span className={`${baseClass}__evented`}>(EVENTED TABLE)</span>}
-          </Heading5>
+class OsqueryTable extends React.PureComponent {
+  render() {
+    const { className, tableData } = this.props
 
-          <p className={`${baseClass}__table-description`}>{tableData.description}</p>
+    return (
+      <Card.Wrapper className={classnames(baseClass, className)} id={tableData.name}>
+        <Card.Header className={`${baseClass}__header`}>
+          <div className={`${baseClass}__header--left`}>
+            <Heading5 className={`${baseClass}__table-name`}>
+              {tableData.name}
+              {tableData.evented && (
+                <span className={`${baseClass}__evented`}>(EVENTED TABLE)</span>
+              )}
+            </Heading5>
 
-          <a className={`${baseClass}__table-url`} href={tableData.url}>
-            Improve this Description on Github
-          </a>
-        </div>
+            <p className={`${baseClass}__table-description`}>{tableData.description}</p>
 
-        <div className={`${baseClass}__header--right`}>
-          <PlatformIcons platforms={tableData.platforms} />
-        </div>
-      </Card.Header>
+            <a className={`${baseClass}__table-url`} href={tableData.url}>
+              Improve this Description on Github
+            </a>
+          </div>
 
-      <table>
-        <thead>
-          <tr>
-            <td>COLUMN</td>
-            <td>TYPE</td>
-            <td>DESCRIPTION</td>
-          </tr>
-        </thead>
-        <tbody>
-          {tableData.columns.map((column, idx) => {
-            return (
-              <tr key={`column-${idx}`}>
-                <td className={`${baseClass}__table-data`}>{column.name}</td>
-                <td className={`${baseClass}__table-data ${baseClass}__type`}>{column.type}</td>
-                <td className={`${baseClass}__table-data`}>{column.description}</td>
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
-    </Card.Wrapper>
-  )
+          <div className={`${baseClass}__header--right`}>
+            <PlatformIcons platforms={tableData.platforms} />
+          </div>
+        </Card.Header>
+
+        <table>
+          <thead>
+            <tr>
+              <td>COLUMN</td>
+              <td>TYPE</td>
+              <td>DESCRIPTION</td>
+            </tr>
+          </thead>
+          <tbody>
+            {tableData.columns.map((column, idx) => {
+              return (
+                <tr key={`column-${idx}`}>
+                  <td className={`${baseClass}__table-data`}>{column.name}</td>
+                  <td className={`${baseClass}__table-data ${baseClass}__type`}>{column.type}</td>
+                  <td className={`${baseClass}__table-data`}>{column.description}</td>
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+      </Card.Wrapper>
+    )
+  }
 }
 
 OsqueryTable.propTypes = {
