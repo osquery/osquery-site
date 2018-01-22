@@ -4,8 +4,6 @@ author: "Zach Wasserman"
 date: "2017-10-24"
 ---
 
-# Monitoring macOS hosts with osquery
-
 Modern operating systems hold a wealth of data about their operation. This data is spread across APIs, files and formats, rendering it difficult to find and track the important information. Security teams are finding that the proliferation of encryption is pushing their operations towards endpoints as indicators of compromise disappear from their networks. IT teams need to track compliance and health of the hosts they manage. Hobbyists would just like to have convenient access to information. With these increasing information needs, host instrumentation systems are proliferating across the industry.
 
 While Windows has a mature market for host instrumentation products, the options on macOS have been severely limited. Professionals and hobbyists alike now have a solid open-source option.
