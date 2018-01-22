@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 import { node, string } from 'prop-types'
 
 import Terminal from 'components/terminals/Terminal'
@@ -6,7 +7,7 @@ import './IosTerminal.css'
 
 const baseClass = 'ios-terminal'
 
-const IosTerminal = ({ children, className }) => {
+const IosTerminal = ({ bodyClassName, children, className }) => {
   const dotClass = `${baseClass}__dot`
 
   return (
@@ -19,12 +20,15 @@ const IosTerminal = ({ children, className }) => {
         <div className={`${dotClass} ${dotClass}--success`} />
       </Terminal.Header>
 
-      <Terminal.Body className={`${baseClass}__body`}>{children}</Terminal.Body>
+      <Terminal.Body className={classnames(`${baseClass}__body`, bodyClassName)}>
+        {children}
+      </Terminal.Body>
     </Terminal.Wrapper>
   )
 }
 
 IosTerminal.propTypes = {
+  bodyClassName: string,
   children: node.isRequired,
   className: string,
 }
