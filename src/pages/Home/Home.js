@@ -204,7 +204,10 @@ class Home extends Component {
 
           {this.state.howItWorksActiveTab === 'security' && (
             <div>
-              <IosTerminal className={`${baseClass}__ios-terminal`}>
+              <IosTerminal
+                bodyClassName={`${baseClass}__ios-terminal-body`}
+                className={`${baseClass}__ios-terminal`}
+              >
                 <Monospace>
                   <strong>osquery> </strong>
                   SELECT name, path, pid FROM processes WHERE on_disk = 0;
@@ -224,7 +227,10 @@ class Home extends Component {
 
           {this.state.howItWorksActiveTab === 'compliance' && (
             <div>
-              <IosTerminal className={`${baseClass}__ios-terminal`}>
+              <IosTerminal
+                bodyClassName={`${baseClass}__ios-terminal-body`}
+                className={`${baseClass}__ios-terminal`}
+              >
                 <Monospace>
                   <strong>osquery> </strong>
                   SELECT * FROM mounts m, disk_encryption d
@@ -232,6 +238,65 @@ class Home extends Component {
                 <Monospace>WHERE m.device_alias = d.name</Monospace>
                 <Monospace>AND m.path = "/"</Monospace>
                 <Monospace>AND d.encrypted = 0;</Monospace>
+                <br />
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;device =
+                  /dev/disk1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;device_alias =
+                  /dev/disk1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;path
+                  = /
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type
+                  = hfs
+                </Monospace>
+                <Monospace>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blocks_size = 4096</Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blocks =
+                  121815040
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blocks_free = 48994214
+                </Monospace>
+                <Monospace>&nbsp;&nbsp;blocks_available = 48930214</Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inodes =
+                  4294967279
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;inodes_free = 4292826261
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flags
+                  = 75550720
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name
+                  = /dev/disk1
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uuid
+                  = 23446C9A-18F9-4BCF-A088-801E376691FA
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;encrypted = 0
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type
+                  =
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uid
+                  =
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;user_uuid =
+                </Monospace>
               </IosTerminal>
 
               <Heading3>{howItWorks.subSection2Heading}</Heading3>
@@ -244,13 +309,40 @@ class Home extends Component {
 
           {this.state.howItWorksActiveTab === 'devops' && (
             <div>
-              <IosTerminal className={`${baseClass}__ios-terminal`}>
+              <IosTerminal
+                bodyClassName={`${baseClass}__ios-terminal-body`}
+                className={`${baseClass}__ios-terminal`}
+              >
                 <Monospace>
                   <strong>osquery> </strong>
                   SELECT * FROM last
                 </Monospace>
                 <Monospace>WHERE username = "root"</Monospace>
                 <Monospace>AND time > (( SELECT unix_time FROM time ) - 3600 );</Monospace>
+                <br />
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;username = root
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tty
+                  = pts/0
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pid
+                  = 1798
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type
+                  = 7
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;time
+                  = 1494350961
+                </Monospace>
+                <Monospace>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;host
+                  = 10.0.2.2
+                </Monospace>
               </IosTerminal>
 
               <Heading3>{howItWorks.subSection3Heading}</Heading3>
