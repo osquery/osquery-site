@@ -1,0 +1,51 @@
+{
+  "version": "2.10.2",
+  "downloads": {
+    "official": [
+      {
+        "type": "macOS",
+        "package": "osquery-2.10.2.pkg",
+        "content": "3251f677b4735b37aa29b685225bc87aa4d906912432a595753517f298edc472",
+        "url": "https://pkg.osquery.io/darwin/osquery-2.10.2.pkg"
+      },
+      {
+        "type": "Linux",
+        "package": "osquery-2.10.2_1.linux_x86_64.tar.gz",
+        "content": "7871ad268bccc9a84760c365ce3f1d1832ef75e06d5d27273cb6237980c50d43",
+        "url": "https://pkg.osquery.io/linux/osquery-2.10.2_1.linux_x86_64.tar.gz"
+      },
+      {
+        "type": "RPM",
+        "package": "osquery-2.10.2-1.linux.x86_64.rpm",
+        "content": "32d719fab707ce26bf8fde90fe0e17fb23c9c4ccd47e0917856aece8356a46c8",
+        "url": "https://pkg.osquery.io/rpm/osquery-2.10.2-1.linux.x86_64.rpm"
+      },
+      {
+        "type": "Debian",
+        "package": "osquery_2.10.2_1.linux.amd64.deb",
+        "content": "29cf0e55d79021397d999472f619f1733b186167db30480e9015dad54211d157",
+        "url": "https://pkg.osquery.io/deb/osquery_2.10.2_1.linux.amd64.deb"
+      }
+    ],
+    "debug": [
+      {
+        "type": "macOS",
+        "package": "osquery-debug-2.10.2.pkg",
+        "content": "9c7b5e3ffd2082556feff124e4ac2658f2706e44edf9885d6d0d8f4273c3f26d",
+        "url": "https://pkg.osquery.io/darwin/osquery-debug-2.10.2.pkg"
+      },
+      {
+        "type": "RPM",
+        "package": "osquery-debuginfo-2.10.0-1.linux.x86_64.rpm",
+        "content": "c4ae75d842340d059d4c8ee7a76085b84394a2f796fb42cfa1b2b7ffb62a08be",
+        "url": "https://pkg.osquery.io/rpm/osquery-debuginfo-2.10.2-1.linux.x86_64.rpm"
+      },
+      {
+        "type": "Debian",
+        "package": "osquery-dbg_2.10.2_1.linux.amd64.deb",
+        "content": "4217d086dec64e6544f6d9c613e6d39557d2f4cf343188b3ed47d926145ba7d4",
+        "url": "https://pkg.osquery.io/deb/osquery-dbg_2.10.2_1.linux.amd64.deb"
+      }
+    ]
+  }
+}
