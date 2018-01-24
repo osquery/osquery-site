@@ -7,10 +7,10 @@ import BlogShow from 'pages/BlogShow'
 import Downloads from 'pages/Downloads'
 import Home from 'pages/Home'
 import NotFound from 'pages/NotFound'
-import osqueryVersionsData from 'data/osquery_versions.json'
+import osqueryVersionsData from 'data/osquery_metadata'
 import Schema from 'pages/Schema'
 
-const currentOsqueryVersion = osqueryVersionsData.find(osqueryVersion => osqueryVersion.isCurrent)
+const currentOsqueryVersion = osqueryVersionsData.current_version
 
 class Router extends Component {
   render() {
@@ -38,14 +38,11 @@ class Router extends Component {
 
             <Route path="/downloads/:release_type/:osquery_version" component={Downloads} />
 
-            <Redirect
-              from="/downloads"
-              to={`/downloads/official/${currentOsqueryVersion.version}`}
-            />
+            <Redirect from="/downloads" to={`/downloads/official/${currentOsqueryVersion}`} />
 
             <Route exact path="/schema/:schemaVersion" component={Schema} />
 
-            <Redirect from="/schema" to={`/schema/${currentOsqueryVersion.version}`} />
+            <Redirect from="/schema" to={`/schema/${currentOsqueryVersion}`} />
 
             <Route component={NotFound} />
           </Switch>

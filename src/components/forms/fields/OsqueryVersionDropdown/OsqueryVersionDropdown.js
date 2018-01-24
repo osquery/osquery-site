@@ -2,20 +2,23 @@ import React from 'react'
 import { func, string } from 'prop-types'
 
 import Dropdown from 'components/forms/fields/Dropdown'
-import osqueryVersionData from 'data/osquery_versions.json'
+import osqueryVersionData from 'data/osquery_metadata'
 
-const dropdownOptions = osqueryVersionData.map(osqueryVersion => {
-  const label = osqueryVersion.isCurrent ? (
-    <span>
-      <strong>{osqueryVersion.version}</strong>
-      <small>(current)</small>
-    </span>
-  ) : (
-    <strong>{osqueryVersion.version}</strong>
-  )
+const { all_versions: allVersions, current_version: currentVersion } = osqueryVersionData
+
+const dropdownOptions = allVersions.map(osqueryVersion => {
+  const label =
+    osqueryVersion === currentVersion ? (
+      <span>
+        <strong>{osqueryVersion}</strong>
+        <small>(current)</small>
+      </span>
+    ) : (
+      <strong>{osqueryVersion}</strong>
+    )
 
   return {
-    value: osqueryVersion.version,
+    value: osqueryVersion,
     label,
   }
 })

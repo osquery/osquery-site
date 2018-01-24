@@ -8,7 +8,7 @@ import LabelText from 'components/text/LabelText'
 import NotFound from 'pages/NotFound'
 import OsqueryTable from 'components/OsqueryTable'
 import OsqueryVersionDropdown from 'components/forms/fields/OsqueryVersionDropdown'
-import osqueryVersionsData from 'data/osquery_versions'
+import osqueryVersionsData from 'data/osquery_metadata'
 import PlatformDropdown from 'components/forms/fields/PlatformDropdown'
 import SchemaTOC from 'components/SchemaTOC'
 import schemaVersionExists from 'helpers/schema_version_exists'
@@ -16,7 +16,7 @@ import throttle from 'helpers/throttle'
 import './Schema.css'
 
 const baseClass = 'schema'
-const currentOsqueryVersion = osqueryVersionsData.find(osqueryVersion => osqueryVersion.isCurrent)
+const currentOsqueryVersion = osqueryVersionsData.current_version
 let tocOffset
 
 class Schema extends Component {
@@ -114,7 +114,7 @@ class Schema extends Component {
     const { push } = this.props.history
 
     this.setState(Schema.initialState, () => {
-      push(`/schema/${currentOsqueryVersion.version}`)
+      push(`/schema/${currentOsqueryVersion}`)
       filterTables()
     })
   }
