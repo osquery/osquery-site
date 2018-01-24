@@ -9,7 +9,6 @@ import Heading5 from 'components/text/Heading5'
 import Icon from 'components/Icon'
 import Monospace from 'components/text/Monospace'
 import NotFound from 'pages/NotFound'
-import osqueryVersionsData from 'data/osquery_versions.json'
 import OsqueryVersionDropdown from 'components/forms/fields/OsqueryVersionDropdown'
 import Paragraph from 'components/text/Paragraph'
 import schemaVersionExists from 'helpers/schema_version_exists'
@@ -65,9 +64,8 @@ class Downloads extends Component {
     const { selectedInstallOption } = this.state
     const alternativeInstallOptionContent =
       content.sections.alternativeInstallationOptions.subheadings[selectedInstallOption]
-    const downloadsDataForOsqueryVersion = osqueryVersionsData.find(
-      data => data.version === osqueryVersion
-    )
+    const downloadsDataForOsqueryVersion =
+      require(`data/osquery_package_versions/${osqueryVersion}`)
 
     if (!schemaVersionExists(osqueryVersion) || ![DEBUG, OFFICIAL].includes(releaseType)) {
       return <NotFound />
