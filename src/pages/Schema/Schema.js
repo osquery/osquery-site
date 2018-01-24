@@ -145,9 +145,10 @@ class Schema extends Component {
     const { overrideScroll } = this.state
     const windowScroll = global.window.scrollY
 
-    const activeTable = tablePositions.find(table => {
-      return table.offset > windowScroll
-    }) || tablePositions[tablePositions.length -1].name
+    const activeTable =
+      tablePositions.find(table => {
+        return table.offset > windowScroll
+      }) || tablePositions[tablePositions.length - 1].name
 
     if (!overrideScroll) {
       if (activeTable) {
