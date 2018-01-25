@@ -25,6 +25,12 @@
         "package": "osquery_2.11.2_1.linux.amd64.deb",
         "content": "cf140838778e0c32344a6aeb3f45d2ae2cd44f2e7ec9acb19fc99ff883d52ef5",
         "url": "https://pkg.osquery.io/deb/osquery_2.11.2_1.linux.amd64.deb"
+      },
+      {
+        "type": "Windows",
+        "package": "osquery-2.11.2.msi",
+        "content": "dc1ab769c5960de24824184da63edcdda90b9bceda41d1fc8717bbfa8ab1d4bd",
+        "url": "https://pkg.osquery.io/windows/osquery-2.11.2.msi"
       }
     ],
     "debug": [
