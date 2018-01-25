@@ -11,6 +11,7 @@ const iconName = {
   Linux: 'linux',
   RPM: 'centos',
   Debian: 'ubuntu',
+  Windows: 'windows',
 }
 
 const NameSection = ({ packageName, type, url }) => {

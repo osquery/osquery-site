@@ -19,21 +19,25 @@
 .downloads-page__download-card {
   margin-top: 36px;
   width: 270px;
+
+  &:nth-child(even) {
+    margin-left: 36px;
+
+    @media(max-width: 610px) {
+      margin-left: 36px;
+      margin-right: 36px;
+    }
+  }
 }
 
 .downloads-page__downloads-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 579px;
+  justify-content: center;
+  width: 600px;
 
   @media(max-width: $mobile-width) {
-    justify-content: space-around;
     width: 100%;
-  }
-
-  @media(max-width: 574px) {
-    justify-content: center;
   }
 }
 
