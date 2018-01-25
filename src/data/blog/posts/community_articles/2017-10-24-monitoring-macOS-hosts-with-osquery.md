@@ -292,4 +292,4 @@ This article has walked through the basic concepts and data sources available in
 
 Users are encouraged to explore the available tables and experiment with writing queries, and logging data for useful analysis. The osquery tools are highly composable and extensible, enabling rich analysis without writing new code.
 
-> *This post originally appered on the [Kolide Blog](https://blog.kolide.com/monitoring-macos-hosts-with-osquery-ba5dcc83122d).*
+> *This post originally appeared on the [Kolide Blog](https://blog.kolide.com/monitoring-macos-hosts-with-osquery-ba5dcc83122d).*
