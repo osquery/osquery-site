@@ -459,7 +459,7 @@ class Home extends Component {
               href="https://github.com/facebook/osquery"
               icon={<Icon name="octocat" />}
             >
-              <span>View the Github Project</span>
+              <span>View the GitHub Project</span>
             </ProminentCta>
           </div>
         </section>

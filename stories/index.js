@@ -216,7 +216,7 @@ storiesOf('ProminentCta', module)
   ))
   .add('Github', () => (
     <ProminentCta icon={<Icon name="octocat" />}>
-      <a href="#">View the Github Project</a>
+      <a href="#">View the GitHub Project</a>
     </ProminentCta>
   ))
 
