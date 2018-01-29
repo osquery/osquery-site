@@ -36,6 +36,10 @@ class Router extends Component {
 
             <Route path="/blog/:blog_title" component={BlogShow} />
 
+            <Redirect exact from="/news" to="/blog/official-news" />
+
+            <Redirect exact from="/community" to="/blog/community-articles" />
+
             <Route path="/downloads/:release_type/:osquery_version" component={Downloads} />
 
             <Redirect from="/downloads" to={`/downloads/official/${currentOsqueryVersion}`} />
