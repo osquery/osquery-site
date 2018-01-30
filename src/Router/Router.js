@@ -40,6 +40,8 @@ class Router extends Component {
 
             <Redirect exact from="/community" to="/blog/community-articles" />
 
+            <Redirect exact from="/docs/tables" to="/schema" />
+
             <Route path="/downloads/:release_type/:osquery_version" component={Downloads} />
 
             <Redirect from="/downloads" to={`/downloads/official/${currentOsqueryVersion}`} />
