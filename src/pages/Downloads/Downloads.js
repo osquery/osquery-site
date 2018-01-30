@@ -64,8 +64,9 @@ class Downloads extends Component {
     const { selectedInstallOption } = this.state
     const alternativeInstallOptionContent =
       content.sections.alternativeInstallationOptions.subheadings[selectedInstallOption]
-    const downloadsDataForOsqueryVersion =
-      require(`data/osquery_package_versions/${osqueryVersion}`)
+    const downloadsDataForOsqueryVersion = require(`data/osquery_package_versions/${
+      osqueryVersion
+    }`)
 
     if (!schemaVersionExists(osqueryVersion) || ![DEBUG, OFFICIAL].includes(releaseType)) {
       return <NotFound />
