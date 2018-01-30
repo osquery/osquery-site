@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
+import { keys, values } from 'lodash'
 
 import content from 'data/pages/downloads.json'
 import DownloadCard from 'components/DownloadCard'
@@ -27,8 +28,8 @@ const installOptionNames = {
   freebsd: 'FreeBSD',
   windows: 'Windows',
 }
-const installOptionNamesKeys = Object.keys(installOptionNames)
-const installOptionNamesValues = Object.values(installOptionNames)
+const installOptionNamesKeys = keys(installOptionNames)
+const installOptionNamesValues = values(installOptionNames)
 
 class Downloads extends Component {
   state = {
