@@ -30,7 +30,7 @@ const Meta = () => {
         rel="noopener noreferrer"
         target="_blank"
       >
-        &copy; 2017 Project License
+        &copy; 2018 Project License
       </a>
 
       <p className={`${baseClass}__made-by-kolide`}>
