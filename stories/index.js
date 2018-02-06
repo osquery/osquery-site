@@ -23,7 +23,6 @@ import OsqueryTable from '../src/components/OsqueryTable'
 import OsqueryTableSnapshot from '../src/components/terminals/OsqueryTableSnapshot'
 import osqueryTableSnapshots from '../src/data/osquery_table_snapshots.json'
 import OsqueryVersionDropdown from '../src/components/forms/fields/OsqueryVersionDropdown'
-import osqueryVersionsData from '../src/data/osquery_versions.json'
 import Paragraph from '../src/components/text/Paragraph'
 import Pill from '../src/components/Pill'
 import PlatformDropdown from '../src/components/forms/fields/PlatformDropdown'
@@ -34,6 +33,7 @@ import SchemaTOC from '../src/components/SchemaTOC'
 import Tab from '../src/components/Tab'
 import TOCEntry from '../src/components/SchemaTOC/TOCEntry'
 
+const osqueryVersionData = require('data/osquery_package_versions/2.10.2.json')
 const tableData = {
   name: 'etc_hosts',
   description: 'Line-parsed /etc/hosts.',
@@ -128,7 +128,7 @@ storiesOf('Card', module)
   ))
   .add('Download card', () => (
     <div style={{ width: '270px' }}>
-      <DownloadCard downloadData={osqueryVersionsData[0].downloads[0]} />
+      <DownloadCard downloadData={osqueryVersionData.downloads[0]} />
     </div>
   ))
   .add('Osquery Table', () => (
