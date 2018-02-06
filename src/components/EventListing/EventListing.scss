@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.event-listing {
+  display: flex;
+  font-size: 18px;
+  justify-content: space-between;
+  margin: 30px auto;
+  max-width: 900px;
+  width: auto;
+
+  @media(max-width: $mobile-width) {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.event-listing__dates {
+  color: rgba($light-gray, 0.8);
+  flex: 1;
+}
+
+.event-listing__title {
+  color: $accent-color;
+  flex: 2;
+  font-weight: bold;
+  text-decoration: none;
+
+  @media(max-width: $mobile-width) {
+    display: block;
+    margin: 3px 0;
+  }
+}
+
+.event-listing__location {
+  color: rgba($light-gray, 0.54);
+  flex: 1;
+  text-align: right;
+
+  @media(max-width: $mobile-width) {
+    text-align: center;
+  }
+}

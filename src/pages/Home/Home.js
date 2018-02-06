@@ -3,6 +3,7 @@ import MediaQuery from 'react-responsive'
 
 import Button from 'components/Button'
 import content from 'data/pages/home'
+import EventList from 'components/EventList'
 import featuredProjectsData from 'data/featured_projects'
 import getGithubRepo from 'helpers/get_github_repo'
 import GithubCard from 'components/GithubCard'
@@ -25,6 +26,7 @@ const baseClass = 'home'
 const minMarqueeWidth = 1000
 const {
   additionalResources,
+  communityEvents,
   communityProjects,
   hero,
   howItWorks,
@@ -418,6 +420,20 @@ class Home extends Component {
               </Button>
             </div>
           </div>
+        </section>
+
+        <SectionBreak />
+
+        <section className={`${baseClass}__section`}>
+          <Heading2>{communityEvents.sectionHeading}</Heading2>
+
+          <Paragraph>{communityEvents.sectionSubHeading}</Paragraph>
+
+          <Paragraph className={`${baseClass}__community-events-header`} highlight>
+            {communityEvents.subSection1Heading}
+          </Paragraph>
+
+          <EventList />
         </section>
 
         <SectionBreak />
