@@ -23,6 +23,11 @@
       "subSection3Heading": "It's open source",
       "subSection3Paragraph1": "Our build infrastructure ensures that newly introduced code is benchmarked and tested. We perform continuous testing for memory leaks, thread safety, and binary reproducibility on all."
     },
+    "communityEvents": {
+      "sectionHeading": "Upcoming Community Events",
+      "sectionSubHeading": "See events related to Osquery that are being held in the near future.",
+      "subSection1Heading": "Events are listed in reverse chronological by date"
+    },
     "communityProjects": {
       "sectionHeading": "Featured Community Projects",
       "sectionSubHeading": "A curated list of community projects to help you use and extend osquery.",

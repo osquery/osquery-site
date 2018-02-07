@@ -7,11 +7,13 @@
   box-sizing: border-box;
   color: $accent-color;
   cursor: pointer;
+  font-family: $primary-font;
   font-size: 16px;
   outline: none;
   padding: 9px 12px 12px;
   text-align: center;
   text-decoration: none;
+  transition: background-color .2s, color .2s;
 
   &:hover {
     background-color: $accent-color;
@@ -22,7 +24,6 @@
 .button__link {
   background: transparent;
   border: 0;
-  font-family: $primary-font;
   padding: 0;
 
   &:hover {

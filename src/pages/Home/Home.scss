@@ -44,7 +44,7 @@
 }
 
 .home__section {
-  padding: 75px 0;
+  padding: 75px 15px;
 }
 
 .home__hero-section {
@@ -234,6 +234,15 @@
   @media(max-width: $mobile-width) {
     margin: 0 auto 30px;
     width: 85%;
+  }
+}
+
+.home__community-events-header {
+  max-width: 900px;
+  width: auto;
+
+  @media(max-width: $mobile-width) {
+    font-size: 14px;
   }
 }
 

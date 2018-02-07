@@ -1,0 +1,14 @@
+@import '../../styles/variables.scss';
+
+.event-list {
+  border-bottom: 1px solid $middle-gray;
+  margin: 0 auto;
+  max-width: 900px;
+  width: auto;
+}
+
+.event-list__toggle-events-button {
+  display: block;
+  margin: 54px auto 0;
+  width: 260px;
+}

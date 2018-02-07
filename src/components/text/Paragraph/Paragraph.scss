@@ -15,3 +15,16 @@
     max-width: 90%;
   }
 }
+
+.paragraph--highlight {
+  background-color: $pale-gray;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $dark-blue;
+  font-size: 16px;
+  height: 50px;
+  line-height: 1.5;
+  padding-top: 12px;
+  text-align: left;
+  text-indent: 15px;
+}

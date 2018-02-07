@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 import { BrowserRouter, Link } from 'react-router-dom'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
@@ -8,6 +9,7 @@ import CheckboxHelper from './helpers/CheckboxHelper'
 import DownloadCard from '../src/components/DownloadCard'
 import Dropdown from '../src/components/forms/fields/Dropdown'
 import DropdownHelper from './helpers/DropdownHelper'
+import EventListing from '../src/components/EventListing'
 import GithubCard from '../src/components/GithubCard'
 import H1SuperHeading from '../src/components/text/H1SuperHeading'
 import HamburgerMenu from '../src/components/HamburgerMenu'
@@ -23,7 +25,6 @@ import OsqueryTable from '../src/components/OsqueryTable'
 import OsqueryTableSnapshot from '../src/components/terminals/OsqueryTableSnapshot'
 import osqueryTableSnapshots from '../src/data/osquery_table_snapshots.json'
 import OsqueryVersionDropdown from '../src/components/forms/fields/OsqueryVersionDropdown'
-import osqueryVersionsData from '../src/data/osquery_versions.json'
 import Paragraph from '../src/components/text/Paragraph'
 import Pill from '../src/components/Pill'
 import PlatformDropdown from '../src/components/forms/fields/PlatformDropdown'
@@ -34,6 +35,7 @@ import SchemaTOC from '../src/components/SchemaTOC'
 import Tab from '../src/components/Tab'
 import TOCEntry from '../src/components/SchemaTOC/TOCEntry'
 
+const osqueryVersionData = require('data/osquery_package_versions/2.10.2.json')
 const tableData = {
   name: 'etc_hosts',
   description: 'Line-parsed /etc/hosts.',
@@ -128,7 +130,7 @@ storiesOf('Card', module)
   ))
   .add('Download card', () => (
     <div style={{ width: '270px' }}>
-      <DownloadCard downloadData={osqueryVersionsData[0].downloads[0]} />
+      <DownloadCard downloadData={osqueryVersionData.downloads[0]} />
     </div>
   ))
   .add('Osquery Table', () => (
@@ -274,7 +276,10 @@ storiesOf('Text', module)
         esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
         sunt in culpa qui officia deserunt mollit anim id est laborum.
       </Paragraph>
+
       <Paragraph>This is a one line paragraph.</Paragraph>
+
+      <Paragraph highlight>This is a highlighted paragraph.</Paragraph>
     </div>
   ))
   .add('Monospace', () => <Monospace>brew install npm install yarn</Monospace>)
@@ -286,3 +291,12 @@ storiesOf('TOCEntry', module)
       carbon_black_info
     </TOCEntry>
   ))
+
+storiesOf('EventListing', module).add('EventListing', () => (
+  <EventListing
+    location="San Francisco, USA"
+    startDate={moment()}
+    title="QueryCon18: An Osquery Conference"
+    url="https://example.com"
+  />
+))
