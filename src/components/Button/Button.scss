@@ -13,6 +13,7 @@
   padding: 9px 12px 12px;
   text-align: center;
   text-decoration: none;
+  transition: background-color .2s, color .2s;
 
   &:hover {
     background-color: $accent-color;

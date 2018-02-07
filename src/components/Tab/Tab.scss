@@ -10,6 +10,7 @@
   height: 50px;
   outline: none;
   padding: 0 16px;
+  transition: background-color .2s, color .2s, border-color .2s;
 }
 
 .tab:hover {
