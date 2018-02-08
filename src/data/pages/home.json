@@ -26,7 +26,7 @@
     "communityEvents": {
       "sectionHeading": "Upcoming Community Events",
       "sectionSubHeading": "See events related to Osquery that are being held in the near future.",
-      "subSection1Heading": "Events are listed in reverse chronological by date"
+      "subSection1Heading": "Events are listed in reverse chronological order by date"
     },
     "communityProjects": {
       "sectionHeading": "Featured Community Projects",
