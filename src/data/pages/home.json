@@ -21,7 +21,7 @@
       "subSection2Heading": "It runs everywhere",
       "subSection2Paragraph1": "Windows, macOS, CentOS, FreeBSD, and almost every Linux OS released since 2011 are supported with no dependencies. osquery powers some of the most demanding companies, including Facebook.",
       "subSection3Heading": "It's open source",
-      "subSection3Paragraph1": "Our build infrastructure ensures that newly introduced code is benchmarked and tested. We perform continuous testing for memory leaks, thread safety, and binary reproducibility on all."
+      "subSection3Paragraph1": "Osquery is released under the Apache License. Ever since we open-sourced it in 2014, organizations and individuals have contributed an ever-growing list of impressive features, useful tools, and helpful documentation."
     },
     "communityEvents": {
       "sectionHeading": "Upcoming Community Events",
