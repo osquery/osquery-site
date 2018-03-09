@@ -23,9 +23,12 @@ class TerminalBody extends Component {
   formatCopy = event => {
     const selection = window.getSelection().toString()
     if (event.target.closest(`.${baseClass}`)) {
-      const terminalLeader = /(^\$\s*|(?<=\n)\$\s*)/g
+      const terminalLeader = /(^\$\s*)/
+      const parts = selection.split(/\n/)
+      const updatedParts = parts.map(part => part.replace(terminalLeader, ''))
+      const updatedSelection = updatedParts.join('\n')
 
-      event.clipboardData.setData('text/plain', selection.replace(terminalLeader, ''))
+      event.clipboardData.setData('text/plain', updatedSelection)
       event.preventDefault()
     }
   }
