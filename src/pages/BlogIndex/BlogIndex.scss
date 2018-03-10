@@ -36,10 +36,10 @@
 .blog-index__tab-wrapper {
   border-bottom: 1px solid $pale-gray;
   border-top: 1px solid $pale-gray;
+  text-align: center;
   width: 700px;
 
   @media(max-width: $mobile-width) {
-    text-align: center;
     width: 100%;
   }
 }
