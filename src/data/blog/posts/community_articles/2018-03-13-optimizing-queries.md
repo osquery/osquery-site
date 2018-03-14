@@ -26,12 +26,17 @@ Ultimately, this can be anywhere from 5 seconds to 1 day to 1 month. One solutio
 
 There's a few factors that we suggest weighing when choosing a Query Interval -
 
-1.  What is the impact if data is missed?
-    1.  If it's none or low, the interval should be high (less often).
-    2.  If it's high, make efficient query and decrease interval (more often).
-2.  What is the [performance impact](https://osquery.readthedocs.io/en/stable/deployment/performance-safety/) if the query?
-    1.  If it's high, the interval needs to be less aggressive (less often).
-    2.  If it's low, the interval can potentially be more aggressive (more often).
+#### What is the impact if data is missed?
+
+If it's none or low, the interval should be high (less often).
+
+If it's high, make efficient query and decrease interval (more often).
+
+#### What is the [performance impact](https://osquery.readthedocs.io/en/stable/deployment/performance-safety/) if the query?
+
+If it's high, the interval needs to be less aggressive (less often).
+
+If it's low, the interval can potentially be more aggressive (more often).
 
 We've gotten our most important queries humming with fast interval and minimal system impact but what about all this data?
 
