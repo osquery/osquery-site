@@ -1,3 +1,9 @@
+---
+title: "Optimizing queries in osquery"
+author: "Dennis Griffin"
+date: "2018-03-13"
+---
+
 ### The Challenge
 
 Osquery is a tremendous leap forward in endpoint security. It's effectively made endpoint visibility, a key technology that was previously used as a "barrier to entry" for the endpoint security market into a commodity that is easily extendable.
