@@ -11,7 +11,7 @@ const baseClass = 'osquery-table'
 const allPlatforms = ['darwin', 'windows', 'linux', 'freebsd']
 
 const PlatformIcons = ({ platforms }) => {
-  if (platforms.length === 1 || platforms[0] === 'all') {
+  if (platforms.length === 1 && platforms[0] === 'all') {
     return allPlatforms.map((platformName, idx) => {
       return <Icon className={`${baseClass}__icon`} key={`platform-${idx}`} name={platformName} />
     })
