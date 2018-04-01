@@ -591,7 +591,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/arp_cache.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -1275,7 +1277,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/carbon_black_info.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -1456,7 +1460,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/carves.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -1718,7 +1724,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/chrome_extensions.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -1912,7 +1920,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/cpuid.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -2182,7 +2192,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/curl.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -2251,7 +2263,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/curl_certificate.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -4644,7 +4658,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/etc_hosts.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -4673,7 +4689,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/etc_protocols.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -4718,7 +4736,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/etc_services.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -4823,7 +4843,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/example.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -5569,7 +5591,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/groups.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -5731,7 +5755,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/hash.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -5887,7 +5913,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/interface_addresses.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -5956,7 +5984,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/interface_details.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -6601,7 +6631,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/kernel_info.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -7292,7 +7324,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/listening_ports.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -7938,7 +7972,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/logged_in_users.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -8966,7 +9002,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/os_version.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -10125,7 +10163,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/platform_info.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -10928,7 +10968,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/process_memory_map.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -11050,7 +11092,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/process_open_sockets.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -11143,7 +11187,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/processes.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -11477,7 +11523,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/python_packages.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -11706,7 +11754,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/routes.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -13077,7 +13127,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/startup_items.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -13357,7 +13409,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/system_info.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -13749,7 +13803,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/uptime.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
@@ -14098,7 +14154,9 @@
     "url":"https://github.com/facebook/osquery/blob/master/specs/users.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows",
+      "freebsd"
     ],
     "columns":[
       {
