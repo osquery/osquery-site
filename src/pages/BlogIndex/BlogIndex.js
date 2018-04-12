@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import showdown from 'showdown'
 import { withRouter } from 'react-router'
-
+import { Link } from 'react-router-dom'
+import truncate from 'html-truncate'
 import BlogPost from 'components/BlogPost'
 import blogPosts from 'data/blog/'
+import scrollTop from 'helpers/scroll_top'
 import H1SuperHeading from 'components/text/H1SuperHeading'
 import Heading1 from 'components/text/Heading1'
 import SectionBreak from 'components/SectionBreak'
@@ -52,11 +54,20 @@ class BlogIndex extends Component {
 
         {activeBlogPosts.map((blogPost, idx) => {
           const { attributes, body } = blogPost
-          const html = converter.makeHtml(body)
+          const html = truncate(converter.makeHtml(body), 400)
+          const blogPath = `/blog/${attributes.slugifiedTitle}`
           const isLastPost = idx === activeBlogPosts.length - 1
+          console.log(attributes)
 
           return [
             <BlogPost {...attributes} html={html} key={`blog-post-${idx}`} />,
+            <Link
+              className={`button ${baseClass}__read-more-button`}
+              onClick={scrollTop}
+              to={blogPath}
+            >
+              Read More
+            </Link>,
             !isLastPost && <SectionBreak key={`blog-section-${idx}`} />,
           ]
         })}
