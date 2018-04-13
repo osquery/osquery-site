@@ -1,3 +1,9 @@
+---
+title: "Deploying osquery part 2"
+author: "Security Clippy"
+date: "2017-12-10"
+---
+
 Wecome to part 2!  In [part 1](https://blog.securelyinsecure.com/post/holiday-hack-2015-pt1/) we looked at the first part of the osquery configuration
 and the options used to set osquery's behavior.  In this post, we'll finish up looking at the config so we can move
 on to more interesting things in subsequent posts!

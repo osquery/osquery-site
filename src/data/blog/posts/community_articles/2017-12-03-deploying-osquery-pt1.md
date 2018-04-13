@@ -1,4 +1,8 @@
-### Getting started with osquery
+---
+title: "Deploying osquery part 1"
+author: "Security Clippy"
+date: "2017-12-03"
+---
 
 Ok, so you've done some quick reading or perhaps someone told you about how friggin awesome osquery is and how
 they've used it to solve world hunger in their new fancy startup.  Maybe you read a cool article on
