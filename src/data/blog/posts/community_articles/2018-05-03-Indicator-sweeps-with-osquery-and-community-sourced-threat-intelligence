@@ -1,0 +1,16 @@
+---
+title: "Indicator sweeps with osquery and community-sourced threat intelligence"
+author: "Russell Spitler"
+date: "2018-05-03"
+---
+AlienVault recently introduced a new service based on osquery–**OTX Endpoint Threat Hunter&#8482;** to the Open Threat Exchange &#174; (OTX&#8482;). This free service enables any registered OTX user to manage osquery and use it to scan their endpoints for indicators of compromise, using the world’s largest repository of community-sourced threat intelligence in OTX.
+
+In case you’re not familiar with OTX, it’s the world’s largest open and completely free threat intelligence community. Its 80,000+ participants representing 140 countries collaborate and share emerging threat intelligence to the OTX community at a rate of over 19 million indicators of compromise (IOCs) daily. Anyone can join OTX and begin to share and consume threat intelligence and to actively detect threats with OTX Endpoint Threat Hunter.
+
+We built OTX Endpoint Threat Hunter to make it easy for OTX users to take advantage of the IOCs shared in OTX without the use of a separate endpoint security product. After deploying the osquery-based, managed agent (the AlienVault Agent), OTX users can immediately begin to scan their endpoints against any IOCs catalogued in OTX using the pre-built queries for OTX Endpoint Threat Hunter. This makes it free, fast, and simple for anyone to know the security state of their critical endpoints at any time.
+
+We developed OTX Endpoint Threat Hunter in hopes of making a meaningful contribution to the  osquery community. In its first week of availability, OTX users have activated over 2500 osquery-based agents. As we expand and explore this project, we expect to be able to engage and make meaningful contributions to the osquery community.
+
+We hope that you share our excitement for this project. Please test out OTX Endpoint Threat Hunter for yourself and let us know how we can improve. You can submit feedback to otx-support@alienvault.com.
+
+To learn more about OTX Endpoint Threat Hunter, including sample scans, please check out our blog post at [www.alienvault.com](https://www.alienvault.com/blogs/security-essentials/new-free-threat-hunting-service-from-alienvault-otx-endpoint-threat-hunter)
