@@ -11,6 +11,19 @@
   white-space: nowrap;
 }
 
+.osquery-table__new-indicator {
+  background-color: $accent-color;
+  border-radius: 3px;
+  color: $white;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 1px 4px;
+  margin-left: 4px;
+  position: relative;
+  text-transform: uppercase;
+  top: -2px;
+}
+
 .osquery-table__evented {
   color: $gray;
   font-size: 11px;

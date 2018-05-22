@@ -32,6 +32,14 @@ class OsqueryTable extends React.PureComponent {
           <div className={`${baseClass}__header--left`}>
             <Heading5 className={`${baseClass}__table-name`}>
               {tableData.name}
+
+              {tableData.new && (
+                <span>
+                  <span>{` `}</span>
+                  <span className={`${baseClass}__new-indicator`}>new</span>
+                </span>
+              )}
+
               {tableData.evented && (
                 <span className={`${baseClass}__evented`}>(EVENTED TABLE)</span>
               )}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { arrayOf, func, string } from 'prop-types'
+import { arrayOf, bool, func, shape, string } from 'prop-types'
 
 import TOCEntry from './TOCEntry'
 import './SchemaTOC.css'
@@ -9,13 +9,18 @@ const baseClass = 'schema-toc'
 class SchemaTOC extends Component {
   static propTypes = {
     activeEntry: string,
-    entries: arrayOf(string),
     onEntryClick: func.isRequired,
+    tables: arrayOf(
+      shape({
+        name: string,
+        new: bool,
+      })
+    ).isRequired,
   }
 
-  handleClick = entry => {
+  handleClick = tableName => {
     const { onEntryClick } = this.props
-    return () => onEntryClick(entry)
+    return () => onEntryClick(tableName)
   }
 
   preventBodyScroll = () => document.body.classList.add('noscroll')
@@ -33,21 +38,21 @@ class SchemaTOC extends Component {
 
   render() {
     const { handleClick } = this
-    const { activeEntry, entries } = this.props
+    const { activeEntry, tables } = this.props
 
     return (
       <ol className={baseClass} id={`${baseClass}__list`} ref={el => (this.toc = el)}>
-        {entries &&
-          entries.map((entry, index) => {
+        {tables &&
+          tables.map((table, index) => {
             return (
               <TOCEntry
-                active={activeEntry === entry}
-                entry={entry}
+                active={activeEntry === table.name}
                 index={index}
-                key={entry}
-                onClick={handleClick(entry)}
+                key={table.name}
+                onClick={handleClick(table.name)}
+                table={table}
               >
-                {entry}
+                {table.name}
               </TOCEntry>
             )
           })}

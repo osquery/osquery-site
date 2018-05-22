@@ -32,6 +32,8 @@
     "html-truncate": "^1.2.2",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "lodash.includes": "^4.3.0",
+    "lodash.indexof": "^4.0.5",
     "moment": "^2.19.3",
     "node-sass-chokidar": "^0.0.3",
     "npm-run-all": "^4.1.2",

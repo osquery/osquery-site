@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import classnames from 'classnames'
+import includes from 'lodash.includes'
+import indexOf from 'lodash.indexof'
 import { func, shape, string } from 'prop-types'
 import { withRouter } from 'react-router'
 
@@ -81,6 +83,14 @@ class Schema extends Component {
     window.removeEventListener('scroll', stickyTOC)
   }
 
+  getSchema = schemaVersion => {
+    if (!schemaVersion) {
+      return null
+    } else {
+      return require(`data/osquery_schema_versions/${schemaVersion}`)
+    }
+  }
+
   humanFriendlyPlatforms = () => {
     const { selectedPlatforms } = this
     const { platforms } = this.state
@@ -109,6 +119,16 @@ class Schema extends Component {
     return push(`/schema/${value}`)
   }
 
+  priorSchemaVersion = () => {
+    const { schemaVersion } = this.props.match.params
+    const priorSchemaIndex = indexOf(osqueryVersionsData.all_versions, schemaVersion) - 1
+    if (priorSchemaIndex === -1) {
+      return undefined
+    } else {
+      return osqueryVersionsData.all_versions[priorSchemaIndex]
+    }
+  }
+
   restoreDefaultView = () => {
     const { filterTables } = this
     const { push } = this.props.history
@@ -119,12 +139,26 @@ class Schema extends Component {
     })
   }
 
+  decoratedSchema = (selectedSchema, priorSchema) => {
+    if (!priorSchema) return selectedSchema
+
+    const priorTableNames = priorSchema.map(table => table.name)
+
+    return selectedSchema.map(table => {
+      table.new = !includes(priorTableNames, table.name)
+      return table
+    })
+  }
+
   schema = () => {
     const { schemaVersion } = this.props.match.params
 
     if (!schemaVersionExists(schemaVersion)) return false
 
-    return require(`data/osquery_schema_versions/${schemaVersion}`)
+    const selectedSchema = this.getSchema(schemaVersion)
+    const priorSchema = this.getSchema(this.priorSchemaVersion())
+
+    return this.decoratedSchema(selectedSchema, priorSchema)
   }
 
   get tablePositions() {
@@ -184,13 +218,6 @@ class Schema extends Component {
     if (tocOffset < windowScroll && !this.state.fixedTOC) this.setState({ fixedTOC: true })
   }, 10)
 
-  get tableNames() {
-    const { tables } = this.state
-
-    if (!tables) return false
-    return tables.map(table => table.name)
-  }
-
   filterTables = () => {
     const { schema, selectedPlatforms } = this
 
@@ -202,7 +229,7 @@ class Schema extends Component {
       })
     })
 
-    this.setState({ tables: tables })
+    this.setState({ tables })
   }
 
   renderTables = () => {
@@ -214,20 +241,23 @@ class Schema extends Component {
   }
 
   renderTOC = () => {
-    const { setActiveTable, tableNames: entries } = this
-    const activeEntry = this.state.activeTable || entries[0]
+    const { activeTable, fixedTOC, tables } = this.state
+
+    if (!tables.length) return null
+
+    const activeEntry = activeTable || tables[0].name
     const classes = classnames(`${baseClass}__toc-wrapper`, {
-      [`${baseClass}__toc-wrapper--fixed`]: this.state.fixedTOC,
+      [`${baseClass}__toc-wrapper--fixed`]: fixedTOC,
     })
 
     return (
       <div className={classes} id={`${baseClass}-toc`}>
         <h2 className={`${baseClass}__toc-header`}>
-          <span className={`${baseClass}__tables-count`}>{entries.length}</span>
-          {`Table${entries.length > 1 ? 's' : ''}`}
+          <span className={`${baseClass}__tables-count`}>{tables.length}</span>
+          {`Table${tables.length > 1 ? 's' : ''}`}
         </h2>
 
-        <SchemaTOC activeEntry={activeEntry} entries={entries} onEntryClick={setActiveTable} />
+        <SchemaTOC activeEntry={activeEntry} onEntryClick={this.setActiveTable} tables={tables} />
       </div>
     )
   }

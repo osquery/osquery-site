@@ -18,6 +18,19 @@
   text-decoration: none;
 }
 
+.toc-entry__new-indicator {
+  background-color: $accent-color;
+  border-radius: 3px;
+  color: $white;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 4px;
+  position: relative;
+  margin-left: 5px;
+  text-transform: uppercase;
+  top: -1px;
+}
+
 .toc-entry--active {
   background-color: rgba($light-gray, .06);
   border-bottom-right-radius: 4px;
