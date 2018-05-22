@@ -25,6 +25,7 @@
   padding: 0;
   position: absolute;
   width: 300px;
+  z-index: 1;
 
   @media(max-width: $mobile-width) {
     right: -62px;
