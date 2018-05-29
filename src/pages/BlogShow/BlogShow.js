@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
+import forEach from 'lodash.foreach'
 import showdown from 'showdown'
 import { withRouter } from 'react-router'
 
 import BlogPost from 'components/BlogPost'
 import blogPosts from 'data/blog/'
 import NotFound from 'pages/NotFound'
+import images from '../../data/blog/posts/images'
 import './BlogShow.css'
 
 const baseClass = 'blog-show'
@@ -29,18 +31,30 @@ class BlogShow extends Component {
     this.setState({ blogPost })
   }
 
+  get htmlWithImages() {
+    const { body } = this.state.blogPost
+
+    let html = this.converter.makeHtml(body)
+
+    forEach(images, (path, name) => {
+      html = html.replace(`img src="${name}"`, `img src="${path}"`)
+    })
+
+    return html
+  }
+
   render() {
     const { blogPost } = this.state
 
-    if (!blogPost) return <NotFound />
+    if (!blogPost) {
+      return <NotFound />
+    }
 
-    const { attributes, body } = blogPost
-    const { converter } = this
-    const html = converter.makeHtml(body)
+    const { attributes } = blogPost
 
     return (
       <div className={baseClass}>
-        <BlogPost {...attributes} html={html} />
+        <BlogPost {...attributes} html={this.htmlWithImages} />
       </div>
     )
   }

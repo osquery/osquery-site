@@ -50,6 +50,11 @@ To upload a new blog post, please submit a PR with a markdown file to either
 [official news](/src/data/blog/posts/official_news) or
 [community articles](/src/data/blog/posts/community_articles).
 
+If you would like to upload an image for your blog post, please do the following:
+1. Add the image to [the blog post images directory](/src/data/blog/posts/images).
+1. Import the image in the [images manifest](/src/data/blog/posts/images/index.js), and give your image a unique reference name.
+1. Insert the image in your markdown as you typically would, but instead of the file path use the reference name from the manifest. i.e. `![image alt text](myCoolImage)`.
+
 
 ## Submitting a community event listing
 
