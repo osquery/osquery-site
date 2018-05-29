@@ -57,12 +57,12 @@ class BlogIndex extends Component {
           const html = truncate(converter.makeHtml(body), 400)
           const blogPath = `/blog/${attributes.slugifiedTitle}`
           const isLastPost = idx === activeBlogPosts.length - 1
-          console.log(attributes)
 
           return [
             <BlogPost {...attributes} html={html} key={`blog-post-${idx}`} />,
             <Link
               className={`button ${baseClass}__read-more-button`}
+              key={`link-${idx}`}
               onClick={scrollTop}
               to={blogPath}
             >
