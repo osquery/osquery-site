@@ -272,7 +272,7 @@
   margin: 50px auto 0;
   max-width: 1000px;
 
-  @media(max-width: $mobile-width) {
+  @media(max-width: 970px) {
     flex-direction: column;
   }
 }
