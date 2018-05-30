@@ -41,7 +41,11 @@ class OsqueryTable extends React.PureComponent {
               )}
 
               {tableData.evented && (
-                <span className={`${baseClass}__evented`}>(EVENTED TABLE)</span>
+                <span>
+                  <Icon className={`${baseClass}__evented-icon`} name="calendars" />
+
+                  <span className={`${baseClass}__evented`}>(EVENTED TABLE)</span>
+                </span>
               )}
             </Heading5>
 
