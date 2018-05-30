@@ -29,7 +29,7 @@
       {
         "type": "Windows",
         "package": "osquery-3.2.6.msi",
-        "content": "39cf5a69b968eb21a6d9255ea8de82eb3a57dc2437691579edea6a46430d1c8d",
+        "content": "0632a43c37e1c169ff313290b9460258d6bd6edc7764b446ec2de02e588905bf",
         "url": "https://pkg.osquery.io/windows/osquery-3.2.6.msi"
       }
     ],
