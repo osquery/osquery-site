@@ -40,6 +40,10 @@
       line-height: 1.56;
       font-size: 18px;
 
+      @media(max-width: $mobile-width) {
+        font-size: 16px;
+      }
+
       code {
         background-color: $pale-gray;
         box-sizing: border-box;
@@ -64,12 +68,24 @@
       }
     }
 
-    ul {
+    p > img:first-child {
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      max-width: 90%;
+    }
+
+    ul, ol {
       color: rgba($gray, .8);
       font-size: 18px;
       margin-left: 42px;
 
+      @media(max-width: $mobile-width) {
+        font-size: 16px;
+      }
+
       li {
+        color: rgba($gray, .8);
         line-height: 1.56;
         margin-bottom: 20px;
 
