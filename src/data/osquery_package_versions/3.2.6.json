@@ -1,0 +1,57 @@
+{
+  "version": "3.2.6",
+  "downloads": {
+    "official": [
+      {
+        "type": "macOS",
+        "package": "osquery-3.2.6.pkg",
+        "content": "24975d47f36fe0dde27ce4273f99d13bfc664d1f1cff52752b6bca09f05be97b",
+        "url": "https://pkg.osquery.io/darwin/osquery-3.2.6.pkg"
+      },
+      {
+        "type": "Linux",
+        "package": "osquery-.linux_x86_64.tar.gz",
+        "content": "cb9b1d47bbc8cd2e014914cd035b969278901a7745b2646a439bcad64d517a83",
+        "url": "https://pkg.osquery.io/linux/osquery-.linux_x86_64.tar.gz"
+      },
+      {
+        "type": "RPM",
+        "package": "osquery-3.2.6-1.linux.x86_64.rpm",
+        "content": "221596c3e9e9bf8ba99b54c335c923ac314dd4da72a9ca3c40a15f158a179bd9",
+        "url": "https://pkg.osquery.io/rpm/osquery-3.2.6-1.linux.x86_64.rpm"
+      },
+      {
+        "type": "Debian",
+        "package": "osquery_.linux.amd64.deb",
+        "content": "b00d9104b08de734995b0a36fe6197d985b5ebb4e33c914dc23c2fba23d7f511",
+        "url": "https://pkg.osquery.io/deb/osquery_.linux.amd64.deb"
+      },
+      {
+        "type": "Windows",
+        "package": "osquery-3.2.6.msi",
+        "content": "0632a43c37e1c169ff313290b9460258d6bd6edc7764b446ec2de02e588905bf",
+        "url": "https://pkg.osquery.io/windows/osquery-3.2.6.msi"
+      }
+    ],
+    "debug": [
+      {
+        "type": "macOS",
+        "package": "osquery-debug-3.2.6.pkg",
+        "content": "55c38004be5e1fec382c341377f83d0ce9dbeb93930e1eeecacf79b4081b4045",
+        "url": "https://pkg.osquery.io/darwin/osquery-debug-3.2.6.pkg"
+      },
+      {
+        "type": "RPM",
+        "package": "osquery-debuginfo-3.2.6-1.linux.x86_64.rpm",
+        "content": "15d6f1ddec37b54647d6fcd88f30defb8cbaf8a30f71138dca6106953b40698a",
+        "url": "https://pkg.osquery.io/rpm/osquery-debuginfo-3.2.6-1.linux.x86_64.rpm"
+      },
+      {
+        "type": "Debian",
+        "package": "osquery-dbg_2.10.2_1.linux.amd64.deb",
+        "content": "364c78bbabf42924cbf135b5832765c5268c75199700194733ab8c2edbab409e",
+        "url": "https://pkg.osquery.io/deb/osquery-dbg_.linux.amd64.deb"
+      }
+    ]
+  }
+}
