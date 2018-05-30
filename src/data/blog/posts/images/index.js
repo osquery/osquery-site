@@ -2,8 +2,12 @@
 // Import images here, and export the image identifier.
 // ****************************************************
 
-// import myUniqueImageIdentifier from './my-cool-image.svg
+import microscopeMan from './microscope-man-2018-05-30.svg'
+import osqueryTerminalListeningPorts from './osquery-terminal-listening-ports-2018-05-30.png'
+import osqueryTextLogo from './osquery-text-logo-2018-05-30.png'
 
 export default {
-  // myUniqueImageIdentifier
+  microscopeMan,
+  osqueryTerminalListeningPorts,
+  osqueryTextLogo,
 }

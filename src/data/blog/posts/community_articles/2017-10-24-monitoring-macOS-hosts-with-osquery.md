@@ -4,11 +4,15 @@ author: "Zach Wasserman"
 date: "2017-10-24"
 ---
 
+!['man at microscope'](microscopeMan =400x300)
+
 Modern operating systems hold a wealth of data about their operation. This data is spread across APIs, files and formats, rendering it difficult to find and track the important information. Security teams are finding that the proliferation of encryption is pushing their operations towards endpoints as indicators of compromise disappear from their networks. IT teams need to track compliance and health of the hosts they manage. Hobbyists would just like to have convenient access to information. With these increasing information needs, host instrumentation systems are proliferating across the industry.
 
 While Windows has a mature market for host instrumentation products, the options on macOS have been severely limited. Professionals and hobbyists alike now have a solid open-source option.
 
 ## Introducing osquery
+
+!['osquery logo'](osqueryTextLogo =420x120)
 
 Osquery is a host instrumentation system built with first-class support for macOS. It provides deep introspection capabilities and normalized access to a large number of data sources. Using the SQLite query language, this power is accessible to users from a wide range of technical backgrounds.
 
@@ -41,6 +45,8 @@ The official package includes osqueryd, osqueryi, and a launchd agent that maint
 Documentation is available at [osquery.readthedocs.io](http://osquery.readthedocs.io). An active Slack community is available for discussion and support. Sign up at [osquery-slack.herokuapp.com](http://osquery-slack.herokuapp.com).
 
 ## Exploring Host Internals with osqueryi
+
+!['osquery terminal'](osqueryTerminalListeningPorts =700x346)
 
 Osqueryi is osquery’s interactive shell. It is a great place to get started understanding osquery’s capabilities, testing queries, and performing real time investigation. In addition to user interaction, osqueryi is also a handy tool to generate structured data on demand in a scripting context.
 
@@ -178,7 +184,7 @@ What sort of information might be useful to monitor? Let’s consider the exampl
       }
     }
 
-If we start osqueryd with this configuration (do so with sudo osqueryd — config_path=/path/to/config.json), each of these queries will be executed once per minute and any changes to their results will be logged. We disable logging of removed rows for firewall_state because it generates redundant results in the case of a single row table like alf. This is the log generated when the firewall is disabled:
+If we start osqueryd with this configuration (do so with `sudo osqueryd — config_path=/path/to/config.json`), each of these queries will be executed once per minute and any changes to their results will be logged. We disable logging of removed rows for firewall_state because it generates redundant results in the case of a single row table like alf. This is the log generated when the firewall is disabled:
 
     {
       "name":"firewall_state",
