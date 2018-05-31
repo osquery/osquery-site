@@ -17,6 +17,7 @@ import schemaVersionExists from 'helpers/schema_version_exists'
 import throttle from 'helpers/throttle'
 import './Schema.css'
 
+const HEADER_HEIGHT = 80
 const baseClass = 'schema'
 const currentOsqueryVersion = osqueryVersionsData.current_version
 let tocOffset
@@ -56,9 +57,6 @@ class Schema extends Component {
       setTimeout(() => this.setActiveTable(this.props.location.hash.replace('#', '')), 100)
     }
 
-    const tocElement = document.getElementById(`${baseClass}-toc`)
-    tocOffset = tocElement ? tocElement.offsetTop : 0
-
     window.addEventListener('scroll', this.scrollActiveTable)
     window.addEventListener('scroll', this.stickyTOC)
   }
@@ -75,6 +73,10 @@ class Schema extends Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.scrollActiveTable)
     window.removeEventListener('scroll', this.stickyTOC)
+  }
+
+  get headerIsVisible() {
+    return global.window.scrollY < HEADER_HEIGHT
   }
 
   getNormalizedSchemaVersion = schemaVersion => {
@@ -196,9 +198,11 @@ class Schema extends Component {
   }
 
   stickyTOC = throttle(() => {
-    if (tocOffset >= global.window.scrollY && this.state.fixedTOC)
+    if (this.headerIsVisible && this.state.fixedTOC) {
       this.setState({ fixedTOC: false })
-    if (tocOffset < global.window.scrollY && !this.state.fixedTOC) this.setState({ fixedTOC: true })
+    } else if (!this.headerIsVisible && !this.state.fixedTOC) {
+      this.setState({ fixedTOC: true })
+    }
   }, 10)
 
   filterTables = () => {
@@ -228,7 +232,7 @@ class Schema extends Component {
     })
 
     return (
-      <div className={classes} id={`${baseClass}-toc`}>
+      <div className={classes}>
         <h2 className={`${baseClass}__toc-header`}>
           <span className={`${baseClass}__tables-count`}>{this.state.tables.length}</span>
           {`Table${this.state.tables.length > 1 ? 's' : ''}`}
