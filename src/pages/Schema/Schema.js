@@ -20,7 +20,6 @@ import './Schema.css'
 const HEADER_HEIGHT = 80
 const baseClass = 'schema'
 const currentOsqueryVersion = osqueryVersionsData.current_version
-let tocOffset
 
 class Schema extends Component {
   static propTypes = {
