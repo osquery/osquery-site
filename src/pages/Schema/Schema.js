@@ -196,10 +196,9 @@ class Schema extends Component {
   }
 
   stickyTOC = throttle(() => {
-    if (tocOffset >= global.window.scrollY.windowScroll && this.state.fixedTOC)
+    if (tocOffset >= global.window.scrollY && this.state.fixedTOC)
       this.setState({ fixedTOC: false })
-    if (tocOffset < global.window.scrollY.windowScroll && !this.state.fixedTOC)
-      this.setState({ fixedTOC: true })
+    if (tocOffset < global.window.scrollY && !this.state.fixedTOC) this.setState({ fixedTOC: true })
   }, 10)
 
   filterTables = () => {
