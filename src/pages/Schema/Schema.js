@@ -166,7 +166,7 @@ class Schema extends Component {
   scrollActiveTable = throttle(() => {
     const activeTable =
       this.tablePositions.find(table => {
-        return table.offset > global.window.scrollY.windowScroll
+        return table.offset > global.window.scrollY
       }) || this.tablePositions[this.tablePositions.length - 1].name
 
     if (!this.state.overrideScroll) {
