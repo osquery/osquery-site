@@ -79,6 +79,28 @@ class Schema extends Component {
     return global.window.scrollY < HEADER_HEIGHT
   }
 
+  get humanFriendlyPlatforms() {
+    if (this.selectedPlatforms().length === Object.entries(this.state.platforms).length)
+      return 'All platforms'
+
+    return this.selectedPlatforms()
+      .join(', ')
+      .replace('darwin', 'macOS')
+      .replace('freebsd', 'FreeBSD')
+      .replace('linux', 'Linux')
+      .replace('windows', 'Windows')
+  }
+
+  get pluralizedTables() {
+    const { tables } = this.state
+
+    if (tables.length === 1) {
+      return 'Table'
+    } else {
+      return 'Tables'
+    }
+  }
+
   getNormalizedSchemaVersion = schemaVersion => {
     return schemaVersion === 'current' ? currentOsqueryVersion : schemaVersion
   }
@@ -89,18 +111,6 @@ class Schema extends Component {
     } else {
       return require(`data/osquery_schema_versions/${schemaVersion}`)
     }
-  }
-
-  humanFriendlyPlatforms = () => {
-    if (this.selectedPlatforms().length === Object.entries(this.state.platforms).length)
-      return 'All platforms'
-
-    return this.selectedPlatforms()
-      .join(', ')
-      .replace('darwin', 'macOS')
-      .replace('freebsd', 'FreeBSD')
-      .replace('linux', 'Linux')
-      .replace('windows', 'Windows')
   }
 
   onPlatformChange = platforms => {
@@ -235,7 +245,7 @@ class Schema extends Component {
       <div className={classes}>
         <h2 className={`${baseClass}__toc-header`}>
           <span className={`${baseClass}__tables-count`}>{this.state.tables.length}</span>
-          {`Table${this.state.tables.length > 1 ? 's' : ''}`}
+          {this.pluralizedTables}
         </h2>
 
         <SchemaTOC
@@ -280,7 +290,7 @@ class Schema extends Component {
                   onChange={this.onPlatformChange}
                   platforms={this.state.platforms}
                 >
-                  {this.humanFriendlyPlatforms()}
+                  {this.humanFriendlyPlatforms}
                 </PlatformDropdown>
               </div>
 
