@@ -39,7 +39,7 @@
         "type": "RPM",
         "package": "osquery-debuginfo-2.10.0-1.linux.x86_64.rpm",
         "content": "95e23b3ea710d85260e4aea1f8fab71c9c8f1dfe0dec5b21ed5439cf3ba4bcce",
-        "platform": "rpm/"
+        "platform": "rpm"
       },
       {
         "type": "Debian",
