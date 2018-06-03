@@ -10,9 +10,9 @@
       },
       {
         "type": "Linux",
-        "package": "osquery-.linux_x86_64.tar.gz",
+        "package": "osquery-3.2.6_1.linux_x86_64.tar.gz",
         "content": "cb9b1d47bbc8cd2e014914cd035b969278901a7745b2646a439bcad64d517a83",
-        "url": "https://pkg.osquery.io/linux/osquery-.linux_x86_64.tar.gz"
+        "url": "https://pkg.osquery.io/linux/osquery-3.2.6_1.linux_x86_64.tar.gz"
       },
       {
         "type": "RPM",
@@ -22,9 +22,9 @@
       },
       {
         "type": "Debian",
-        "package": "osquery_.linux.amd64.deb",
+        "package": "osquery_3.2.6_1.linux.amd64.deb",
         "content": "b00d9104b08de734995b0a36fe6197d985b5ebb4e33c914dc23c2fba23d7f511",
-        "url": "https://pkg.osquery.io/deb/osquery_.linux.amd64.deb"
+        "url": "https://pkg.osquery.io/deb/osquery_3.2.6_1.linux.amd64.deb"
       },
       {
         "type": "Windows",
