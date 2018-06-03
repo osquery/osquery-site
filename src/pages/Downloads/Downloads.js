@@ -69,8 +69,6 @@ class Downloads extends Component {
       osqueryVersion
     }`)
 
-    console.log('downloadsDataForOsqueryVersion', downloadsDataForOsqueryVersion)
-
     if (!schemaVersionExists(osqueryVersion) || ![DEBUG, OFFICIAL].includes(releaseType)) {
       return <NotFound />
     }

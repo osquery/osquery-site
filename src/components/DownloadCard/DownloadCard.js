@@ -30,7 +30,6 @@ const NameSection = ({ packageName, type, url }) => {
 }
 
 const DownloadCard = ({ className, downloadData, urlBase }) => {
-  console.log('downloadData', downloadData)
   const wrapperClassName = classnames(baseClass, className)
   const url = `${urlBase}/${downloadData.platform}/${downloadData.package}`
 
