@@ -10,9 +10,9 @@
       },
       {
         "type": "Linux",
-        "package": "osquery-.linux_x86_64.tar.gz",
+        "package": "osquery-3.2.6_1.linux_x86_64.tar.gz",
         "content": "cb9b1d47bbc8cd2e014914cd035b969278901a7745b2646a439bcad64d517a83",
-        "url": "https://pkg.osquery.io/linux/osquery-.linux_x86_64.tar.gz"
+        "url": "https://pkg.osquery.io/linux/osquery-3.2.6_1.linux_x86_64.tar.gz"
       },
       {
         "type": "RPM",
