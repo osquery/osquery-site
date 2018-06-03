@@ -22,9 +22,9 @@
       },
       {
         "type": "Debian",
-        "package": "osquery_.linux.amd64.deb",
+        "package": "osquery_3.2.6_1.linux.amd64.deb",
         "content": "b00d9104b08de734995b0a36fe6197d985b5ebb4e33c914dc23c2fba23d7f511",
-        "url": "https://pkg.osquery.io/deb/osquery_.linux.amd64.deb"
+        "url": "https://pkg.osquery.io/deb/osquery_3.2.6_1.linux.amd64.deb"
       },
       {
         "type": "Windows",
