@@ -17,9 +17,9 @@ import schemaVersionExists from 'helpers/schema_version_exists'
 import throttle from 'helpers/throttle'
 import './Schema.css'
 
+const HEADER_HEIGHT = 80
 const baseClass = 'schema'
 const currentOsqueryVersion = osqueryVersionsData.current_version
-let tocOffset
 
 class Schema extends Component {
   static propTypes = {
@@ -56,9 +56,6 @@ class Schema extends Component {
       setTimeout(() => this.setActiveTable(this.props.location.hash.replace('#', '')), 100)
     }
 
-    const tocElement = document.getElementById(`${baseClass}-toc`)
-    tocOffset = tocElement ? tocElement.offsetTop : 0
-
     window.addEventListener('scroll', this.scrollActiveTable)
     window.addEventListener('scroll', this.stickyTOC)
   }
@@ -77,6 +74,32 @@ class Schema extends Component {
     window.removeEventListener('scroll', this.stickyTOC)
   }
 
+  get headerIsVisible() {
+    return global.window.scrollY < HEADER_HEIGHT
+  }
+
+  get humanFriendlyPlatforms() {
+    if (this.selectedPlatforms().length === Object.entries(this.state.platforms).length)
+      return 'All platforms'
+
+    return this.selectedPlatforms()
+      .join(', ')
+      .replace('darwin', 'macOS')
+      .replace('freebsd', 'FreeBSD')
+      .replace('linux', 'Linux')
+      .replace('windows', 'Windows')
+  }
+
+  get pluralizedTables() {
+    const { tables } = this.state
+
+    if (tables.length === 1) {
+      return 'Table'
+    } else {
+      return 'Tables'
+    }
+  }
+
   getNormalizedSchemaVersion = schemaVersion => {
     return schemaVersion === 'current' ? currentOsqueryVersion : schemaVersion
   }
@@ -87,18 +110,6 @@ class Schema extends Component {
     } else {
       return require(`data/osquery_schema_versions/${schemaVersion}`)
     }
-  }
-
-  humanFriendlyPlatforms = () => {
-    if (this.selectedPlatforms().length === Object.entries(this.state.platforms).length)
-      return 'All platforms'
-
-    return this.selectedPlatforms()
-      .join(', ')
-      .replace('darwin', 'macOS')
-      .replace('freebsd', 'FreeBSD')
-      .replace('linux', 'Linux')
-      .replace('windows', 'Windows')
   }
 
   onPlatformChange = platforms => {
@@ -196,9 +207,11 @@ class Schema extends Component {
   }
 
   stickyTOC = throttle(() => {
-    if (tocOffset >= global.window.scrollY && this.state.fixedTOC)
+    if (this.headerIsVisible && this.state.fixedTOC) {
       this.setState({ fixedTOC: false })
-    if (tocOffset < global.window.scrollY && !this.state.fixedTOC) this.setState({ fixedTOC: true })
+    } else if (!this.headerIsVisible && !this.state.fixedTOC) {
+      this.setState({ fixedTOC: true })
+    }
   }, 10)
 
   filterTables = () => {
@@ -228,10 +241,10 @@ class Schema extends Component {
     })
 
     return (
-      <div className={classes} id={`${baseClass}-toc`}>
+      <div className={classes}>
         <h2 className={`${baseClass}__toc-header`}>
           <span className={`${baseClass}__tables-count`}>{this.state.tables.length}</span>
-          {`Table${this.state.tables.length > 1 ? 's' : ''}`}
+          {this.pluralizedTables}
         </h2>
 
         <SchemaTOC
@@ -276,7 +289,7 @@ class Schema extends Component {
                   onChange={this.onPlatformChange}
                   platforms={this.state.platforms}
                 >
-                  {this.humanFriendlyPlatforms()}
+                  {this.humanFriendlyPlatforms}
                 </PlatformDropdown>
               </div>
 
