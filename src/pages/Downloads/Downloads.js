@@ -69,6 +69,8 @@ class Downloads extends Component {
       osqueryVersion
     }`)
 
+    console.log('downloadsDataForOsqueryVersion', downloadsDataForOsqueryVersion)
+
     if (!schemaVersionExists(osqueryVersion) || ![DEBUG, OFFICIAL].includes(releaseType)) {
       return <NotFound />
     }
@@ -117,6 +119,7 @@ class Downloads extends Component {
             {downloadsDataForOsqueryVersion.downloads[releaseType].map((data, idx) => {
               return (
                 <DownloadCard
+                  urlBase={downloadsDataForOsqueryVersion.url}
                   className={`${baseClass}__download-card`}
                   downloadData={data}
                   key={`download-card-${idx}`}

@@ -1,30 +1,31 @@
 {
   "version": "2.10.0",
+  "url": "https://pkg.osquery.io",
   "downloads": {
     "official": [
       {
         "type": "macOS",
         "package": "osquery-2.10.0.pkg",
         "content": "b30499ed09ddf649d6c49b49413b71e57183e786f82e65f2b8234e1a10d4ebf7",
-        "url": "https://pkg.osquery.io/darwin/osquery-2.10.0.pkg"
+        "platform": "darwin"
       },
       {
         "type": "Linux",
         "package": "osquery-2.10.0_1.linux_x86_64.tar.gz",
         "content": "dddceec84c002c46dd3cf2bc009dc8df4430e052631ff519b4665222ec018eb8",
-        "url": "https://pkg.osquery.io/linux/osquery-2.10.0_1.linux_x86_64.tar.gz"
+        "platform": "linux"
       },
       {
         "type": "RPM",
         "package": "osquery-2.10.0-1.linux.x86_64.rpm",
         "content": "501d9f79d5be09b901441109c9fd6d1fcbcf4fd0deb85a4d7abca3565ad0e9cf",
-        "url": "https://pkg.osquery.io/rpm/osquery-2.10.0-1.linux.x86_64.rpm"
+        "platform": "rpm"
       },
       {
         "type": "Debian",
         "package": "osquery_2.10.0_1.linux.amd64.deb",
         "content": "2b5eb496696420ec008e7d85a9c5555d3ea89fe56757cdec951730b9a2b58a93",
-        "url": "https://pkg.osquery.io/deb/osquery_2.10.0_1.linux.amd64.deb"
+        "platform": "deb"
       }
     ],
     "debug": [
@@ -32,19 +33,19 @@
         "type": "macOS",
         "package": "osquery-debug-2.10.0.pkg",
         "content": "1b4d3a739e4a398b33b7ad2e417d20b961feec6e328830d80de73a76ed8df940",
-        "url": "https://pkg.osquery.io/darwin/osquery-debug-2.10.0.pkg"
+        "platform": "darwin"
       },
       {
         "type": "RPM",
         "package": "osquery-debuginfo-2.10.0-1.linux.x86_64.rpm",
         "content": "95e23b3ea710d85260e4aea1f8fab71c9c8f1dfe0dec5b21ed5439cf3ba4bcce",
-        "url": "https://pkg.osquery.io/rpm/osquery-debuginfo-2.10.0-1.linux.x86_64.rpm"
+        "platform": "rpm/"
       },
       {
         "type": "Debian",
         "package": "osquery-dbg_2.10.2_1.linux.amd64.deb",
         "content": "33f7752206e15b44c3f5d17b24197d6e86b7b085c7030902e2e7bc4b5a81af1e",
-        "url": "https://pkg.osquery.io/deb/osquery-dbg_2.10.0_1.linux.amd64.deb"
+        "platform": "deb"
       }
     ]
   }

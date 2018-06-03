@@ -1,36 +1,37 @@
 {
   "version": "3.2.4",
+  "url": "https://pkg.osquery.io",
   "downloads": {
     "official": [
       {
         "type": "macOS",
         "package": "osquery-3.2.4.pkg",
         "content": "953ebeaec271bb1aaefa80df266a27f1364ea46d3db8dbd4c9f463204131a943",
-        "url": "https://pkg.osquery.io/darwin/osquery-3.2.4.pkg"
+        "platform": "darwin"
       },
       {
         "type": "Linux",
         "package": "osquery-3.2.4_1.linux_x86_64.tar.gz",
         "content": "9ae9c0b935288bb066571b1eebdf71095a1271e32871bb8eb71e4fda2183b8a7",
-        "url": "https://pkg.osquery.io/linux/osquery-3.2.4_1.linux_x86_64.tar.gz"
+        "platform": "linux"
       },
       {
         "type": "RPM",
         "package": "osquery-3.2.4-1.linux.x86_64.rpm",
         "content": "e1b8d8958b4e69631ca905b9e12da82e97f116b9f4e00d19f9faf65f423d1a57",
-        "url": "https://pkg.osquery.io/rpm/osquery-3.2.4-1.linux.x86_64.rpm"
+        "platform": "rpm"
       },
       {
         "type": "Debian",
         "package": "osquery_3.2.4_1.linux.amd64.deb",
         "content": "5c6bf38532f73c16ce1a7f33445bfa130979c30036b012426109d87472655bfd",
-        "url": "https://pkg.osquery.io/deb/osquery_3.2.4_1.linux.amd64.deb"
+        "platform": "deb"
       },
       {
         "type": "Windows",
         "package": "osquery-3.2.4.msi",
         "content": "14d57dcb55f74ce7944e9163ee1113d877691f03874c8220d23d4b86bfb58ff3",
-        "url": "https://pkg.osquery.io/windows/osquery-3.2.4.msi"
+        "platform": "windows"
       }
     ],
     "debug": [
@@ -38,19 +39,19 @@
         "type": "macOS",
         "package": "osquery-debug-3.2.4.pkg",
         "content": "3a72bb0d7a18387b672b345488168dd93c08a3dc21df825a5426c69ea4693f22",
-        "url": "https://pkg.osquery.io/darwin/osquery-debug-3.2.4.pkg"
+        "platform": "darwin"
       },
       {
         "type": "RPM",
         "package": "osquery-debuginfo-3.2.4-1.linux.x86_64.rpm",
         "content": "2c61af92c2e50a8621972e4550d151029cf8cdefb5f0347461060a681c6922b4",
-        "url": "https://pkg.osquery.io/rpm/osquery-debuginfo-3.2.4-1.linux.x86_64.rpm"
+        "platform": "rpm"
       },
       {
         "type": "Debian",
         "package": "osquery-dbg_2.10.2_1.linux.amd64.deb",
         "content": "185f851959ad2a8a09c1a4ae13a5f047c88e50926c4e8156d70a7d16be33a8c8",
-        "url": "https://pkg.osquery.io/deb/osquery-dbg_.linux.amd64.deb"
+        "platform": "deb"
       }
     ]
   }
