@@ -130,7 +130,10 @@ storiesOf('Card', module)
   ))
   .add('Download card', () => (
     <div style={{ width: '270px' }}>
-      <DownloadCard downloadData={osqueryVersionData.downloads[0]} />
+      <DownloadCard
+        downloadData={osqueryVersionData.downloads.official[0]}
+        urlBase={osqueryVersionData.url}
+      />
     </div>
   ))
   .add('Osquery Table', () => (

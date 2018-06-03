@@ -29,21 +29,16 @@ const NameSection = ({ packageName, type, url }) => {
   )
 }
 
-const DownloadCard = ({ className, downloadData }) => {
+const DownloadCard = ({ className, downloadData, urlBase }) => {
   const wrapperClassName = classnames(baseClass, className)
+  const url = `${urlBase}/${downloadData.platform}/${downloadData.package}`
 
   return (
     <GithubCard
       className={wrapperClassName}
       description={downloadData.content}
-      name={
-        <NameSection
-          packageName={downloadData.package}
-          type={downloadData.type}
-          url={downloadData.url}
-        />
-      }
-      url={downloadData.url}
+      name={<NameSection packageName={downloadData.package} type={downloadData.type} url={url} />}
+      url={url}
       urlText={`Download for ${downloadData.type}`}
     />
   )

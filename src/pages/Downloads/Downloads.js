@@ -117,6 +117,7 @@ class Downloads extends Component {
             {downloadsDataForOsqueryVersion.downloads[releaseType].map((data, idx) => {
               return (
                 <DownloadCard
+                  urlBase={downloadsDataForOsqueryVersion.url}
                   className={`${baseClass}__download-card`}
                   downloadData={data}
                   key={`download-card-${idx}`}
