@@ -52,12 +52,12 @@ class Schema extends Component {
   componentDidMount() {
     this.filterTables()
 
+    window.addEventListener('scroll', this.scrollActiveTable)
+    window.addEventListener('scroll', this.stickyTOC)
+
     if (this.props.location.hash) {
       setTimeout(() => this.setActiveTable(this.props.location.hash.replace('#', '')), 100)
     }
-
-    window.addEventListener('scroll', this.scrollActiveTable)
-    window.addEventListener('scroll', this.stickyTOC)
   }
 
   componentDidUpdate(prevProps) {
