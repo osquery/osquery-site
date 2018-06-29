@@ -8,7 +8,7 @@
       "sectionHeading": "Query your devices like a database",
       "sectionSubheading": "Osquery uses basic SQL commands to leverage a relational data-model to describe a device.",
       "subSection1Heading": "Processes running without a binary on disk",
-      "subSection1Paragraph1": "Frequently, attackers will leave a malicious process running but delete the original binary on disk. This query returns any process whose original binary has been deleted or modified (which could be an indicator of a suspicious process).",
+      "subSection1Paragraph1": "Frequently, attackers will leave a malicious process running but delete the original binary on disk. This query returns any process whose original binary has been deleted, which could be an indicator of a suspicious process.",
       "subSection2Heading": "Primary disks that are unencrypted",
       "subSection2Paragraph1": "Disk encryption is an organizational policy for many companies, this query returns hosts whose primary disk is currently unencrypted.",
       "subSection3Heading": "Servers with root login in last hour",
