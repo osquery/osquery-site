@@ -1,4 +1,4 @@
-## State of Osquery Process Auditing
+## Configure Process Auditing with Osquery on Windows
 
 Facebook's [Osquery](https://osquery.io/) is a proven, lightweight tool to gather process information from endpoints.
 
@@ -8,21 +8,19 @@ Let's dive into how this applies in the context of process auditing.
 
 #### Processes Table
 
-The ["processes"](https://osquery.io/schema/3.2.6#processes) table is a normal table that takes a snapshot of the current running processes. This is similar to running "ps" in MacOS/Linux or "tasklist" in Windows.
+The [`processes`](https://osquery.io/schema/3.2.6#processes) table is a normal table that takes a snapshot of the current running processes. This is similar to running "ps" in macOS/Linux or "tasklist" in Windows.
 
-This works alright for use-cases that only need a data sample. However, it does a pretty awful job at providing an audit log of every process creation event.
+This works alright for use-cases that only need a data sample. However, it does a pretty awful job at providing an audit log of every process creation event. Facebook covers this briefly in their blog post about [How to use RocksDB](https://code.fb.com/security/how-rocksdb-is-used-in-osquery/).
 
-There are a couple benefits to the processes table such as not needing any system configuration changes and being supported on all 3 platforms - Windows, MacOS, and Linux.
+> While periodically querying the `processes` table will satisfy some use-cases, this is a lossy strategy for event-based tables. If you, for example, wanted an audit log of every process creation event, periodically observing the running processes would not produce accurate data.
+
+There are a couple benefits to the `processes` table such as not needing any system configuration changes and being supported on all 3 platforms - Windows, macOS, and Linux.
 
 ####  Process_events Table
 
-The ["process_events"](https://osquery.io/schema/3.2.6#process_events) table is an event based table. Results in an event-based table are cleared after each query that is executed on that table. In addition, new results are added to the table every time a process is created. Therefore, the process_events table provides a complete audit log of every process creation without duplicates.
+The [`process_events`](https://osquery.io/schema/3.2.6#process_events) table is an event-based table. Results in an event-based table are cleared after each query that is executed on that table. In addition, new results are added to the table every time a process is created. Therefore, the `process_events` table provides a complete audit log of every process creation without duplicates.
 
- This is implemented via  OpenBSM on MacOS and Auditd on Linux. Unfortunately, the process_events table is not currently supported on the Windows version of Osquery. This is quite unfortunate since many enterprises rely heavily on Windows systems.
-
-#### So what?
-
-Most use-cases related to gathering process information are security and IT related. These use-cases demand data consistency and reliability. In the context of threat detection, missing attacks could have a big impact.
+This is implemented via  OpenBSM on macOS and Auditd on Linux. Unfortunately, the `process_events` table is not currently supported on the Windows version of Osquery. This is quite unfortunate since many enterprises rely heavily on Windows systems.
 
 ## Enabling Windows Process Auditing
 
@@ -54,7 +52,7 @@ Next we're going to leverage the [windows_events table](https://osquery.io/schem
 
 #### Query
 
-This query will gather the Process Creation events, extract the fields from the JSON data, and format them into columns that are similar to the existing processes and process_events tables.
+This query will gather the Process Creation events, extract the fields from the JSON data, and format them into columns that are similar to the existing `processes` and `process_events` tables.
 
 ```sql
 SELECT
@@ -81,7 +79,7 @@ That's it! Lots of syntax and parsing but not much in terms of complex query log
 
 #### Result
 
-The result from this query is pretty similar to the "processes" table. It's missing some of the more esoteric columns but it has the important ones.
+The result from this query is pretty similar to the `processes` table. It's missing some of the more esoteric columns but it has the important ones.
 
 ```
 eventid = 4688
@@ -102,7 +100,14 @@ parent_name = cmd.exe
 
 One thing that's a little annoying is that the process IDs and user IDs are expressed as a hex string in the event log. Since it's a string, it cannot be natively interpreted by SQLite in order to CAST it to a decimal.
 
-At [DarkBytes](https://www.darkbytes.com/), we worked around this problem by creating a simple utility table (hex_to_int) in the DarkBytes Osquery extension to convert it. The table ingests the hex string and returns a decimal.
+At [DarkBytes](https://www.darkbytes.com/), we worked around this problem by creating a simple utility table (hex_to_int) in the DarkBytes Osquery extension to convert it. The extension is implemented using [Kolide's osquery-go](https://github.com/kolide/osquery-go) bindings and Golang's strconv library.
+
+The table ingests the hex string and returns a decimal.
+
+````
+strconv.ParseInt(hexString, 0, 64)
+
+```
 
 ```sql
 SELECT int from hex_to_int WHERE hex_string = "0x664"
@@ -129,6 +134,6 @@ pid = 1636
 
 ## Learn More
 
-Stay tuned for [future posts](https://www.darkbytes.com/blog) on Osquery!
+Stay tuned for [future posts](https://osquery.io/blog/community-articles) on Osquery! If you have any questions please hop into #process-auditing or #windows in the [Osquery Slack](https://osquery.slack.com/).
 
-If you have any questions please hop into #darkbytes in the [Osquery Slack](https://osquery.slack.com/) and shoot us a message!
+Learn more about how [DarkBytes](https://www.darkbytes.com/blog) is leveraging Osquery to streamline security operations!
