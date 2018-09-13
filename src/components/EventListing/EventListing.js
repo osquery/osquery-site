@@ -29,7 +29,6 @@ const EventListing = props => {
 
         <span className={`${baseClass}__date`}>
           <MediaQuery minWidth={mobileWidth + 1}>
-            {' '}
             , {endDate ? endDate.format('YYYY') : startDate.format('YYYY')}
           </MediaQuery>
         </span>
