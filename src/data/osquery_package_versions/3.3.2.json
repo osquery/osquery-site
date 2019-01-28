@@ -1,0 +1,58 @@
+{
+  "version": "3.3.2",
+  "url": "https://pkg.osquery.io",
+  "downloads": {
+    "official": [
+      {
+        "type": "macOS",
+        "package": "osquery-3.3.2.pkg",
+        "content": "6ac1baa9bd13fcf3bd4c1b20a020479d51e26a8ec81783be7a8692d2c4a9926a",
+        "platform": "darwin"
+      },
+      {
+        "type": "Linux",
+        "package": "osquery-3.3.2_1.linux_x86_64.tar.gz",
+        "content": "05b0b15bd44e6a85813dd92a567c371031938aedbcd2e64d32229a3ca0c2d509",
+        "platform": "linux"
+      },
+      {
+        "type": "RPM",
+        "package": "osquery-3.3.2-1.linux.x86_64.rpm",
+        "content": "c69382f622db68036bb61767f1f456474e86d2ad9bf0e33454b9d5dbb543a37e",
+        "platform": "rpm"
+      },
+      {
+        "type": "Debian",
+        "package": "osquery_3.3.2_1.linux.amd64.deb",
+        "content": "6c54a55df1feaf410064bc87696f9829d0787fb5b9c7beabeb4f5cca7ce6c3fb",
+        "platform": "deb"
+      },
+      {
+        "type": "Windows",
+        "package": "osquery-3.3.2.msi",
+        "content": "3dcef980e942dc0c6a0bd389c547cba277d2f04518b48c3ce97cf646621c6f00",
+        "platform": "windows"
+      }
+    ],
+    "debug": [
+      {
+        "type": "macOS",
+        "package": "osquery-debug-3.3.2.pkg",
+        "content": "0bca848e23f7327efbccc28e383d09a296bb43b87a60cade82b0189dc1955f65",
+        "platform": "darwin"
+      },
+      {
+        "type": "RPM",
+        "package": "osquery-debuginfo-3.3.2-1.linux.x86_64.rpm",
+        "content": "ef6ba7a6dea5bab8eed45ae61bf2a4ed527f500e2a770815a16478b2e38cb17e",
+        "platform": "rpm"
+      },
+      {
+        "type": "Debian",
+        "package": "osquery-dbg_3.3.2_1.linux.amd64.deb",
+        "content": "b7f9ef099cfa729b27207cec672ccbde2979a1ad3eafa3cd3eb721a291700c7c",
+        "platform": "deb"
+      }
+    ]
+  }
+}
