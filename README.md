@@ -74,3 +74,9 @@ To upload a new community event, submit a PR adding a JSON file to the [communit
 ```
 
 Additionally, please add the newly-added filename to the [manifest file](/src/data/community_events/manifest.js).
+
+## License
+
+This repository is licensed under the terms of the 
+Creative Commons 4.0 International (Documentation License). 
+See LICENSE-DOCUMENTATION for the full terms of the license. 
