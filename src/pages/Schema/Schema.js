@@ -119,7 +119,7 @@ class Schema extends Component {
   }
 
   onSchemaChange = ({ value }) => {
-    return this.props.history.push(`/schema/${value}`)
+    return this.props.history.push(`${process.env.PUBLIC_URL}/schema/${value}`)
   }
 
   priorSchemaVersion = () => {
@@ -135,7 +135,7 @@ class Schema extends Component {
 
   restoreDefaultView = () => {
     this.setState(Schema.initialState, () => {
-      this.props.history.push(`/schema/${currentOsqueryVersion}`)
+      this.props.history.push(`${process.env.PUBLIC_URL}/schema/${currentOsqueryVersion}`)
       this.filterTables()
     })
   }
