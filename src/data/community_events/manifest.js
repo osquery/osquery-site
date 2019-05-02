@@ -7,4 +7,6 @@ export default [
   'bsidessf2019',
   'altseccon19',
   'querycon19',
+  'uptycs-free-osquery-workshop',
+  'hackmiami19',
 ]
