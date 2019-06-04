@@ -2,6 +2,8 @@
 
 ## Running the app locally
 
+If you are on OS X, see the document [building on OS X](Building_on_OSX.md).
+
 Install all dependencies:
 
 ```
