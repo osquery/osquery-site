@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "resolutions": {
+    "**/clean-css": "4.1.11",
     "**/fstream": "1.0.12",
+    "**/handlebars": "4.0.14",
+    "**/js-yaml": "3.13.1",
     "**/sshpk": "1.16.1"
   },
   "dependencies": {
