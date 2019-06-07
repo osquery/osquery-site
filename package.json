@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "resolutions": {
+    "**/braces": "2.3.2",
     "**/clean-css": "4.1.11",
     "**/fstream": "1.0.12",
     "**/handlebars": "4.0.14",
