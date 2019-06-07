@@ -8,6 +8,7 @@
     "**/fstream": "1.0.12",
     "**/handlebars": "4.0.14",
     "**/js-yaml": "3.13.1",
+    "**/macaddress": "0.2.9",
     "**/sshpk": "1.16.1"
   },
   "dependencies": {
