@@ -15,13 +15,11 @@ const Meta = () => {
     <section className={`${baseClass}__meta`}>
       <a
         className={`${baseClass}__facebook-open-source`}
-        href="https://code.facebook.com/projects/"
+        href="https://www.linuxfoundation.org/projects/"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <Icon name="facebookOpenSource" />
-
-        <span>Facebook Open Source</span>
+        <Icon name="linuxFoundationLogo" />
       </a>
 
       <a
@@ -30,7 +28,7 @@ const Meta = () => {
         rel="noopener noreferrer"
         target="_blank"
       >
-        &copy; 2018 Project License
+        &copy; 2019 Project License
       </a>
 
       <p className={`${baseClass}__made-by-kolide`}>

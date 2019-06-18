@@ -8,7 +8,7 @@ import Centos from 'components/Icon/svg/Centos.svg.js'
 import Cpu from 'components/Icon/svg/Cpu.svg.js'
 import DownCarat from 'components/Icon/svg/DownCarat.svg.js'
 import GithubMark from 'components/Icon/svg/GithubMark.svg.js'
-import FacebookOpenSource from 'components/Icon/svg/FacebookOpenSource.svg.js'
+import LinuxFoundationLogo from 'components/Icon/svg/LinuxFoundationLogo.svg.js'
 import FrameOverlay from 'components/Icon/svg/FrameOverlay.svg.js'
 import FreeBSD from 'components/Icon/svg/FreeBSD.svg.js'
 import Imac from 'components/Icon/svg/Imac.svg.js'
@@ -39,7 +39,7 @@ class Icon extends Component {
     darwin: Apple,
     downCarat: DownCarat,
     githubMark: GithubMark,
-    facebookOpenSource: FacebookOpenSource,
+    linuxFoundationLogo: LinuxFoundationLogo,
     frameOverlay: FrameOverlay,
     freebsd: FreeBSD,
     imac: Imac,

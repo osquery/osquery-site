@@ -23,14 +23,12 @@
   }
 }
 
-.footer__facebook-open-source {
-  align-items: center;
-  display: flex;
-  text-decoration: none;
+.footer__linuxfoundation-st0 {
+  fill: #003764
+}
 
-  @media(max-width: $mobile-width) {
-    margin-top: 50px;
-  }
+.footer__linuxfoundation-st1 {
+  fill: #009ADE
 }
 
 .footer__facebook-open-source > span {
