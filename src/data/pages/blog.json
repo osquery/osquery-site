@@ -1,7 +1,7 @@
 {
   "sections": {
     "hero": {
-      "sectionSuperHeading": "facebook/osquery",
+      "sectionSuperHeading": "osquery/osquery",
       "sectionHeading": "The Osquery Blog"
     }
   }

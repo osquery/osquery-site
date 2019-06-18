@@ -8,7 +8,7 @@ date: "2018-03-13"
 
 Osquery is a tremendous leap forward in endpoint security. It's effectively made endpoint visibility, a key technology that was previously used as a "barrier to entry" for the endpoint security market into a commodity that is easily extendable.
 
-However, with that flexibility and extensibility, comes some challenges related to dealing with large volumes of data. There's many free [Osquery packs](https://github.com/facebook/osquery/tree/master/packs) included in Github.
+However, with that flexibility and extensibility, comes some challenges related to dealing with large volumes of data. There's many free [Osquery packs](https://github.com/osquery/osquery/tree/master/packs) included in Github.
 
 These serve as a great reference and starting place. Yet the reality is that if you downloaded and enabled all these packs then you can expect 30MB per host per day. A company that wants to retain 3 months of data for analysis with 1000 devices is looking at around 2.5TB of data to store and process. This is not viable for most given the cost of storage and SIEM tools.
 

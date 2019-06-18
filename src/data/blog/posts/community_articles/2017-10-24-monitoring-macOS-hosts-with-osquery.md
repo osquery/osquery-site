@@ -36,7 +36,7 @@ Users are empowered to focus on their information retrieval goals by the standar
 
 It is recommended that readers install osquery and experiment with its capabilities on their own machine.
 
-The supported installation for osquery on macOS is through the package available at [osquery.io/downloads](http://osquery.io/downloads). It can also be built from source (available at [github.com/facebook/osquery](http://github.com/facebook/osquery)).
+The supported installation for osquery on macOS is through the package available at [osquery.io/downloads](http://osquery.io/downloads). It can also be built from source (available at [github.com/osquery/osquery](http://github.com/osquery/osquery)).
 
 The official package includes osqueryd, osqueryi, and a launchd agent that maintains a persistent osquery daemon.
 
