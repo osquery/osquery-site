@@ -94,7 +94,7 @@ class ResponsiveNav extends Component {
           Docs
         </Pill>
 
-        <Pill className={pillClass} onClick={handleClick('https://github.com/facebook/osquery')}>
+        <Pill className={pillClass} onClick={handleClick('https://github.com/osquery/osquery')}>
           <Icon className={`${baseClass}__github-mark`} name="githubMark" />
           Github
         </Pill>

@@ -39,7 +39,7 @@ const osqueryVersionData = require('data/osquery_package_versions/2.10.2.json')
 const tableData = {
   name: 'etc_hosts',
   description: 'Line-parsed /etc/hosts.',
-  url: 'https://github.com/facebook/osquery/blob/master/specs/etc_hosts.table',
+  url: 'https://github.com/osquery/osquery/blob/master/specs/etc_hosts.table',
   platforms: ['all'],
   evented: true,
   columns: [

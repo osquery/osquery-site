@@ -26,7 +26,7 @@ const Meta = () => {
 
       <a
         className={`${baseClass}__copyright`}
-        href="https://github.com/facebook/osquery/blob/master/LICENSE"
+        href="https://github.com/osquery/osquery/blob/master/LICENSE"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -55,7 +55,7 @@ const Footer = () => {
 
         <ul>
           <li className={`${baseClass}__li`}>
-            <a href="https://github.com/facebook/osquery">View the code on GitHub</a>
+            <a href="https://github.com/osquery/osquery">View the code on GitHub</a>
           </li>
         </ul>
       </section>

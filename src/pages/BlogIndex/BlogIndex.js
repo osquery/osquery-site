@@ -32,7 +32,7 @@ class BlogIndex extends Component {
     return (
       <div className={baseClass}>
         <div className={`${baseClass}__header`}>
-          <H1SuperHeading>facebook/osquery</H1SuperHeading>
+          <H1SuperHeading>osquery/osquery</H1SuperHeading>
 
           <Heading1>The Osquery Blog</Heading1>
         </div>

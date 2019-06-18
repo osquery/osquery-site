@@ -382,7 +382,7 @@ class Home extends Component {
 
               <Button
                 className={`${baseClass}__thing-to-know-button`}
-                href="https://github.com/facebook/osquery"
+                href="https://github.com/osquery/osquery"
               >
                 View the Code
               </Button>
@@ -478,7 +478,7 @@ class Home extends Component {
 
             <ProminentCta
               className={`${baseClass}__prominent-cta`}
-              href="https://github.com/facebook/osquery"
+              href="https://github.com/osquery/osquery"
               icon={<Icon name="octocat" />}
             >
               <span>View the GitHub Project</span>

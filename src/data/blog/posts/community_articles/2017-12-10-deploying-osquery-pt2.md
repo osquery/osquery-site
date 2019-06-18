@@ -147,7 +147,7 @@ Lastly, the `description` and `value` keys provide context for the query. They s
 but its important to remember to include them when writing new queries.  Just like comments in code, you'll be glad you
 included them when you come back to a query months later and can't remember what it w as used for.
 
-More documentation on some lesser used options can also be found [here](https://github.com/facebook/osquery/blob/master/docs/wiki/deployment/configuration.md#schedule)
+More documentation on some lesser used options can also be found [here](https://github.com/osquery/osquery/blob/master/docs/wiki/deployment/configuration.md#schedule)
 
 NOTE:  While it is possible to use the platform key inside a query to define what systems it will run on,
 in practice I have found that managing packs with different queries that only run on certain Operating Systems
