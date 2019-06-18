@@ -54,7 +54,7 @@ class App extends Component {
     return (
       <div className={baseClass}>
         <header className={`${baseClass}__header`}>
-          <Link className={`${baseClass}__home-link`} to="/">
+          <Link className={`${baseClass}__home-link`} to={`${process.env.PUBLIC_URL}/`}>
             <Logo className={`${baseClass}__logo`} />
           </Link>
 

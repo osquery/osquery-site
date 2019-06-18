@@ -20,7 +20,7 @@ class BlogPost extends Component {
 
   render() {
     const { author, date, html, slugifiedTitle, title } = this.props
-    const blogPath = `/blog/${slugifiedTitle}`
+    const blogPath = `${process.env.PUBLIC_URL}/blog/${slugifiedTitle}`
 
     return (
       <div className={`${baseClass}`}>

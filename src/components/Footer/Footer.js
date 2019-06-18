@@ -65,13 +65,13 @@ const Footer = () => {
 
         <ul>
           <li className={`${baseClass}__li`}>
-            <Link onClick={scrollTop} to="/blog">
+            <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/blog`}>
               Blog
             </Link>
           </li>
 
           <li className={`${baseClass}__li`}>
-            <Link onClick={scrollTop} to="/schema">
+            <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/schema`}>
               Schema
             </Link>
           </li>
@@ -81,7 +81,7 @@ const Footer = () => {
           </li>
 
           <li className={`${baseClass}__li`}>
-            <Link onClick={scrollTop} to="/downloads">
+            <Link onClick={scrollTop} to={`${process.env.PUBLIC_URL}/downloads`}>
               Downloads
             </Link>
           </li>

@@ -46,7 +46,9 @@ class Downloads extends Component {
     if (option) {
       const { history, match } = this.props
 
-      history.push(`/downloads/${match.params.release_type}/${option.value}`)
+      history.push(
+        `${process.env.PUBLIC_URL}/downloads/${match.params.release_type}/${option.value}`
+      )
     }
   }
 
@@ -54,7 +56,9 @@ class Downloads extends Component {
     return () => {
       const { history, match } = this.props
 
-      history.push(`/downloads/${releaseType}/${match.params.osquery_version}`)
+      history.push(
+        `${process.env.PUBLIC_URL}/downloads/${releaseType}/${match.params.osquery_version}`
+      )
     }
   }
 

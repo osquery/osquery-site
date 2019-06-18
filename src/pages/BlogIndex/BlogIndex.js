@@ -21,7 +21,8 @@ class BlogIndex extends Component {
     this.converter = new showdown.Converter()
   }
 
-  onToggleBlogType = blogType => () => this.props.history.push(`/blog/${blogType}`)
+  onToggleBlogType = blogType => () =>
+    this.props.history.push(`${process.env.PUBLIC_URL}/blog/${blogType}`)
 
   render() {
     const { blogType } = this.props
@@ -55,7 +56,7 @@ class BlogIndex extends Component {
         {activeBlogPosts.map((blogPost, idx) => {
           const { attributes, body } = blogPost
           const html = truncate(converter.makeHtml(body), 400)
-          const blogPath = `/blog/${attributes.slugifiedTitle}`
+          const blogPath = `${process.env.PUBLIC_URL}/blog/${attributes.slugifiedTitle}`
           const isLastPost = idx === activeBlogPosts.length - 1
 
           return [

@@ -59,25 +59,30 @@ class ResponsiveNav extends Component {
     const { handleClick } = this
     const { pathname } = this.props.location
     const pillClass = `${baseClass}__link`
+    const prefix = process.env.PUBLIC_URL
 
     return (
       <nav className={baseClass}>
-        <Pill active={pathname === '/'} className={pillClass} onClick={handleClick('/')}>
+        <Pill
+          active={pathname === prefix + '/'}
+          className={pillClass}
+          onClick={handleClick(prefix + '/')}
+        >
           Home
         </Pill>
 
         <Pill
-          active={pathname.startsWith('/schema')}
+          active={pathname.startsWith(prefix + '/schema')}
           className={pillClass}
-          onClick={handleClick('/schema')}
+          onClick={handleClick(prefix + '/schema')}
         >
           Schema
         </Pill>
 
         <Pill
-          active={pathname.startsWith('/blog')}
+          active={pathname.startsWith(prefix + '/blog')}
           className={pillClass}
-          onClick={handleClick('/blog')}
+          onClick={handleClick(prefix + '/blog')}
         >
           Blog
         </Pill>
@@ -95,9 +100,9 @@ class ResponsiveNav extends Component {
         </Pill>
 
         <Pill
-          active={pathname.startsWith('/downloads')}
+          active={pathname.startsWith(prefix + '/downloads')}
           className={pillClass}
-          onClick={handleClick('/downloads')}
+          onClick={handleClick(prefix + '/downloads')}
         >
           Downloads
         </Pill>

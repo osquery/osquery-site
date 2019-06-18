@@ -18,37 +18,62 @@ class Router extends Component {
       <BrowserRouter>
         <App>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
 
             <Route
               exact
-              path="/blog/official-news"
+              path={`${process.env.PUBLIC_URL}/blog/official-news`}
               render={props => <BlogIndex {...props} blogType="official-news" />}
             />
 
             <Route
               exact
-              path="/blog/community-articles"
+              path={`${process.env.PUBLIC_URL}/blog/community-articles`}
               render={props => <BlogIndex {...props} blogType="community-articles" />}
             />
 
-            <Redirect exact from="/blog" to="/blog/official-news" />
+            <Redirect
+              exact
+              from={`${process.env.PUBLIC_URL}/blog`}
+              to={`${process.env.PUBLIC_URL}/blog/official-news`}
+            />
 
-            <Route path="/blog/:blog_title" component={BlogShow} />
+            <Route path={`${process.env.PUBLIC_URL}/blog/:blog_title`} component={BlogShow} />
 
-            <Redirect exact from="/news" to="/blog/official-news" />
+            <Redirect
+              exact
+              from={`${process.env.PUBLIC_URL}/news`}
+              to={`${process.env.PUBLIC_URL}/blog/official-news`}
+            />
 
-            <Redirect exact from="/community" to="/blog/community-articles" />
+            <Redirect
+              exact
+              from={`${process.env.PUBLIC_URL}/community`}
+              to={`${process.env.PUBLIC_URL}/blog/community-articles`}
+            />
 
-            <Redirect exact from="/docs/tables" to="/schema" />
+            <Redirect exact from={`${process.env.PUBLIC_URL}/docs/tables`} to="/schema" />
 
-            <Route path="/downloads/:release_type/:osquery_version" component={Downloads} />
+            <Route
+              path={`${process.env.PUBLIC_URL}/downloads/:release_type/:osquery_version`}
+              component={Downloads}
+            />
 
-            <Redirect from="/downloads" to={`/downloads/official/${currentOsqueryVersion}`} />
+            <Redirect
+              from={`${process.env.PUBLIC_URL}/downloads`}
+              to={`${process.env.PUBLIC_URL}/downloads/official/${currentOsqueryVersion}`}
+            />
 
-            <Route exact path="/schema/:schemaVersion" component={Schema} />
+            <Route
+              exact
+              path={`${process.env.PUBLIC_URL}/schema/:schemaVersion`}
+              component={Schema}
+            />
 
-            <Redirect from="/schema" to={`/schema/${currentOsqueryVersion}`} />
+            <Redirect
+              from={`${process.env.PUBLIC_URL}/schema`}
+              to={`${process.env.PUBLIC_URL}/schema/${currentOsqueryVersion}`}
+            />
 
             <Route component={NotFound} />
           </Switch>

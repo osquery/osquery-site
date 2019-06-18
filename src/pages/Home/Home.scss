@@ -130,18 +130,12 @@
 }
 
 @keyframes marquee-1 {
-  0% { transform: translateX(%0); }
-  100% { transform: translateX(-200%); }
 }
 
 @keyframes marquee-2 {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
 }
 
 @keyframes marquee-3 {
-  0% { transform: translateX(200%); }
-  100% { transform: translateX(0%); }
 }
 
 .home__snapshot {

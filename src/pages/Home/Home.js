@@ -357,7 +357,7 @@ class Home extends Component {
 
           <Button
             className={`${baseClass}__cta-button ${baseClass}__available-tables-button`}
-            href="/schema"
+            href={`${process.env.PUBLIC_URL}/schema`}
           >
             See Available Tables
           </Button>
@@ -399,7 +399,10 @@ class Home extends Component {
                 </Paragraph>
               </div>
 
-              <Button className={`${baseClass}__thing-to-know-button`} href="/downloads">
+              <Button
+                className={`${baseClass}__thing-to-know-button`}
+                href={`${process.env.PUBLIC_URL}/downloads`}
+              >
                 Download Osquery
               </Button>
             </div>
@@ -415,7 +418,10 @@ class Home extends Component {
                 </Paragraph>
               </div>
 
-              <Button className={`${baseClass}__thing-to-know-button`} href="/blog">
+              <Button
+                className={`${baseClass}__thing-to-know-button`}
+                href={`${process.env.PUBLIC_URL}/blog`}
+              >
                 Read Community Articles
               </Button>
             </div>
