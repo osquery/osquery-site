@@ -1,10 +1,11 @@
 {
-  "main.css": "static/css/main.3e9030a5.css",
-  "main.css.map": "static/css/main.3e9030a5.css.map",
-  "main.js": "static/js/main.a827e532.js",
-  "main.js.map": "static/js/main.a827e532.js.map",
-  "static/media/gradient-line.svg": "static/media/gradient-line.8955d747.svg",
-  "static/media/microscope-man-2018-05-30.svg": "static/media/microscope-man-2018-05-30.7cebc4c4.svg",
-  "static/media/osquery-terminal-listening-ports-2018-05-30.png": "static/media/osquery-terminal-listening-ports-2018-05-30.c160bb91.png",
-  "static/media/osquery-text-logo-2018-05-30.png": "static/media/osquery-text-logo-2018-05-30.6639d4bd.png"
+  "main.css": "/static/css/main.d526e12d.css",
+  "main.js": "/static/js/main.53088be0.js",
+  "main.css.map": "/static/css/main.d526e12d.css.map",
+  "main.js.map": "/static/js/main.53088be0.js.map",
+  "index.html": "/index.html",
+  "static/media/SectionBreak.css": "/static/media/gradient-line.8955d747.svg",
+  "static/media/microscope-man-2018-05-30.svg": "/static/media/microscope-man-2018-05-30.7cebc4c4.svg",
+  "static/media/osquery-terminal-listening-ports-2018-05-30.png": "/static/media/osquery-terminal-listening-ports-2018-05-30.c160bb91.png",
+  "static/media/osquery-text-logo-2018-05-30.png": "/static/media/osquery-text-logo-2018-05-30.6639d4bd.png"
 }
