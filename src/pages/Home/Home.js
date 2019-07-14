@@ -46,7 +46,7 @@ class Home extends Component {
 
   addFeaturedProject = (owner, repo) => {
     return getGithubRepo(owner, repo).then(response => {
-      const { description, name, owner, stargazers_count, html_url } = response.data
+      const { description, name, owner, stargazers_count, html_url } = response
 
       return Promise.resolve({
         description: description,
