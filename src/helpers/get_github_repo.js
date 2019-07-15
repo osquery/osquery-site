@@ -1,10 +1,7 @@
-import axios from 'axios'
-
 const getGithubRepo = (owner, repo) => {
-  return axios({
-    method: 'get',
-    url: `https://api.github.com/repos/${owner}/${repo}`,
-  })
+  return fetch(`https://api.github.com/repos/${owner}/${repo}`, { method: 'get' }).then(response =>
+    response.json()
+  )
 }
 
 export default getGithubRepo
