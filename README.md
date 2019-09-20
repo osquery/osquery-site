@@ -75,6 +75,22 @@ To upload a new community event, submit a PR adding a JSON file to the [communit
 
 Additionally, please add the newly-added filename to the [manifest file](/src/data/community_events/manifest.js).
 
+## Hosting & Deployment
+
+The website is hosted on github pages, off of the `master` branch. It is developed on the `source` branch. 
+
+To deploy:
+
+```shell
+cd .../osquery-site
+git checkout source
+git pull --rebase
+
+yarn deploy
+```
+
+This will create and push a commit to master with the update.
+
 ## License
 
 This repository is licensed under the terms of the 
