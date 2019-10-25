@@ -3,7 +3,7 @@
     "cacheable":false,
     "evented":false,
     "name":"account_policy_data",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/account_policy_data.table",
     "platforms":[
       "darwin"
     ],
@@ -55,7 +55,7 @@
     "cacheable":false,
     "evented":false,
     "name":"acpi_tables",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/acpi_tables.table",
     "platforms":[
       "darwin",
       "linux"
@@ -92,7 +92,7 @@
     "cacheable":false,
     "evented":false,
     "name":"ad_config",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/ad_config.table",
     "platforms":[
       "darwin"
     ],
@@ -136,7 +136,7 @@
     "cacheable":false,
     "evented":false,
     "name":"alf",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/alf.table",
     "platforms":[
       "darwin"
     ],
@@ -204,7 +204,7 @@
     "cacheable":false,
     "evented":false,
     "name":"alf_exceptions",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/alf_exceptions.table",
     "platforms":[
       "darwin"
     ],
@@ -232,7 +232,7 @@
     "cacheable":false,
     "evented":false,
     "name":"alf_explicit_auths",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/alf_explicit_auths.table",
     "platforms":[
       "darwin"
     ],
@@ -252,7 +252,7 @@
     "cacheable":false,
     "evented":false,
     "name":"alf_services",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/alf_services.table",
     "platforms":[
       "darwin"
     ],
@@ -288,7 +288,7 @@
     "cacheable":false,
     "evented":false,
     "name":"app_schemes",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/app_schemes.table",
     "platforms":[
       "darwin"
     ],
@@ -340,7 +340,7 @@
     "cacheable":false,
     "evented":false,
     "name":"appcompat_shims",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/appcompat_shims.table",
     "platforms":[
       "windows"
     ],
@@ -400,7 +400,7 @@
     "cacheable":true,
     "evented":false,
     "name":"apps",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/apps.table",
     "platforms":[
       "darwin"
     ],
@@ -564,7 +564,7 @@
     "cacheable":false,
     "evented":false,
     "name":"apt_sources",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/apt_sources.table",
     "platforms":[
       "darwin",
       "linux"
@@ -641,7 +641,7 @@
     "cacheable":false,
     "evented":false,
     "name":"arp_cache",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/arp_cache.table",
     "platforms":[
       "darwin",
       "linux",
@@ -688,7 +688,7 @@
     "cacheable":false,
     "evented":false,
     "name":"asl",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/asl.table",
     "platforms":[
       "darwin"
     ],
@@ -804,7 +804,7 @@
     "cacheable":false,
     "evented":false,
     "name":"atom_packages",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/atom_packages.table",
     "platforms":[
       "darwin",
       "linux",
@@ -867,7 +867,7 @@
     "cacheable":false,
     "evented":false,
     "name":"augeas",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/augeas.table",
     "platforms":[
       "darwin",
       "linux"
@@ -912,7 +912,7 @@
     "cacheable":false,
     "evented":false,
     "name":"authenticode",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/authenticode.table",
     "platforms":[
       "windows"
     ],
@@ -972,7 +972,7 @@
     "cacheable":false,
     "evented":false,
     "name":"authorization_mechanisms",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/authorization_mechanisms.table",
     "platforms":[
       "darwin"
     ],
@@ -1024,7 +1024,7 @@
     "cacheable":false,
     "evented":false,
     "name":"authorizations",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/authorizations.table",
     "platforms":[
       "darwin"
     ],
@@ -1132,7 +1132,7 @@
     "cacheable":false,
     "evented":false,
     "name":"authorized_keys",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/authorized_keys.table",
     "platforms":[
       "darwin",
       "linux"
@@ -1177,7 +1177,7 @@
     "cacheable":false,
     "evented":false,
     "name":"autoexec",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/autoexec.table",
     "platforms":[
       "windows"
     ],
@@ -1213,7 +1213,7 @@
     "cacheable":false,
     "evented":false,
     "name":"battery",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/battery.table",
     "platforms":[
       "darwin"
     ],
@@ -1369,7 +1369,7 @@
     "cacheable":false,
     "evented":false,
     "name":"bitlocker_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/bitlocker_info.table",
     "platforms":[
       "windows"
     ],
@@ -1429,7 +1429,7 @@
     "cacheable":false,
     "evented":false,
     "name":"block_devices",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/block_devices.table",
     "platforms":[
       "darwin",
       "linux"
@@ -1514,7 +1514,7 @@
     "cacheable":false,
     "evented":false,
     "name":"browser_plugins",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/browser_plugins.table",
     "platforms":[
       "darwin"
     ],
@@ -1606,7 +1606,7 @@
     "cacheable":false,
     "evented":false,
     "name":"carbon_black_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/carbon_black_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -1789,7 +1789,7 @@
     "cacheable":false,
     "evented":false,
     "name":"carves",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/carves.table",
     "platforms":[
       "darwin",
       "linux",
@@ -1860,7 +1860,7 @@
     "cacheable":true,
     "evented":false,
     "name":"certificates",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/macwin/certificates.table",
     "platforms":[
       "darwin",
       "windows"
@@ -2041,7 +2041,7 @@
     "cacheable":false,
     "evented":false,
     "name":"chocolatey_packages",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/chocolatey_packages.table",
     "platforms":[
       "windows"
     ],
@@ -2101,7 +2101,7 @@
     "cacheable":false,
     "evented":false,
     "name":"chrome_extensions",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/chrome_extensions.table",
     "platforms":[
       "darwin",
       "linux",
@@ -2212,7 +2212,7 @@
     "cacheable":false,
     "evented":false,
     "name":"cpu_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/cpu_info.table",
     "platforms":[
       "windows"
     ],
@@ -2320,7 +2320,7 @@
     "cacheable":false,
     "evented":false,
     "name":"cpu_time",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/cpu_time.table",
     "platforms":[
       "darwin",
       "linux"
@@ -2421,7 +2421,7 @@
     "cacheable":false,
     "evented":false,
     "name":"cpuid",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/cpuid.table",
     "platforms":[
       "darwin",
       "linux",
@@ -2476,7 +2476,7 @@
     "cacheable":false,
     "evented":false,
     "name":"crashes",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/crashes.table",
     "platforms":[
       "darwin"
     ],
@@ -2616,7 +2616,7 @@
     "cacheable":true,
     "evented":false,
     "name":"crontab",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/crontab.table",
     "platforms":[
       "darwin",
       "linux"
@@ -2693,7 +2693,7 @@
     "cacheable":false,
     "evented":false,
     "name":"cups_destinations",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/cups_destinations.table",
     "platforms":[
       "darwin"
     ],
@@ -2729,7 +2729,7 @@
     "cacheable":false,
     "evented":false,
     "name":"cups_jobs",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/cups_jobs.table",
     "platforms":[
       "darwin"
     ],
@@ -2805,7 +2805,7 @@
     "cacheable":false,
     "evented":false,
     "name":"curl",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/curl.table",
     "platforms":[
       "darwin",
       "linux",
@@ -2876,7 +2876,7 @@
     "cacheable":false,
     "evented":false,
     "name":"curl_certificate",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/curl_certificate.table",
     "platforms":[
       "darwin",
       "linux",
@@ -2987,7 +2987,7 @@
     "cacheable":true,
     "evented":false,
     "name":"deb_packages",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/deb_packages.table",
     "platforms":[
       "linux"
     ],
@@ -3047,7 +3047,7 @@
     "cacheable":false,
     "evented":false,
     "name":"device_file",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/sleuthkit/device_file.table",
     "platforms":[
       "darwin",
       "linux"
@@ -3180,7 +3180,7 @@
     "cacheable":false,
     "evented":false,
     "name":"device_firmware",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/device_firmware.table",
     "platforms":[
       "darwin"
     ],
@@ -3216,7 +3216,7 @@
     "cacheable":false,
     "evented":false,
     "name":"device_hash",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/sleuthkit/device_hash.table",
     "platforms":[
       "darwin",
       "linux"
@@ -3277,7 +3277,7 @@
     "cacheable":false,
     "evented":false,
     "name":"device_partitions",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/sleuthkit/device_partitions.table",
     "platforms":[
       "darwin",
       "linux"
@@ -3362,7 +3362,7 @@
     "cacheable":false,
     "evented":false,
     "name":"disk_encryption",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/disk_encryption.table",
     "platforms":[
       "darwin",
       "linux"
@@ -3431,7 +3431,7 @@
     "cacheable":false,
     "evented":true,
     "name":"disk_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/disk_events.table",
     "platforms":[
       "darwin"
     ],
@@ -3571,7 +3571,7 @@
     "cacheable":false,
     "evented":false,
     "name":"disk_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/disk_info.table",
     "platforms":[
       "windows"
     ],
@@ -3671,7 +3671,7 @@
     "cacheable":false,
     "evented":false,
     "name":"dns_resolvers",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/dns_resolvers.table",
     "platforms":[
       "darwin",
       "linux"
@@ -3724,7 +3724,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_container_labels",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_labels.table",
     "platforms":[
       "darwin",
       "linux"
@@ -3761,7 +3761,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_container_mounts",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_mounts.table",
     "platforms":[
       "darwin",
       "linux"
@@ -3846,7 +3846,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_container_networks",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_networks.table",
     "platforms":[
       "darwin",
       "linux"
@@ -3947,7 +3947,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_container_ports",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_ports.table",
     "platforms":[
       "darwin",
       "linux"
@@ -4000,7 +4000,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_container_processes",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_processes.table",
     "platforms":[
       "darwin",
       "linux"
@@ -4197,7 +4197,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_container_stats",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_stats.table",
     "platforms":[
       "darwin",
       "linux"
@@ -4402,7 +4402,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_containers",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_containers.table",
     "platforms":[
       "darwin",
       "linux"
@@ -4607,7 +4607,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_image_labels",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_image_labels.table",
     "platforms":[
       "darwin",
       "linux"
@@ -4644,7 +4644,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_images",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_images.table",
     "platforms":[
       "darwin",
       "linux"
@@ -4689,7 +4689,7 @@
     "cacheable":true,
     "evented":false,
     "name":"docker_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_info.table",
     "platforms":[
       "darwin",
       "linux"
@@ -4958,7 +4958,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_network_labels",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_network_labels.table",
     "platforms":[
       "darwin",
       "linux"
@@ -4995,7 +4995,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_networks",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_networks.table",
     "platforms":[
       "darwin",
       "linux"
@@ -5064,7 +5064,7 @@
     "cacheable":true,
     "evented":false,
     "name":"docker_version",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_version.table",
     "platforms":[
       "darwin",
       "linux"
@@ -5149,7 +5149,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_volume_labels",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_volume_labels.table",
     "platforms":[
       "darwin",
       "linux"
@@ -5186,7 +5186,7 @@
     "cacheable":false,
     "evented":false,
     "name":"docker_volumes",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_volumes.table",
     "platforms":[
       "darwin",
       "linux"
@@ -5231,7 +5231,7 @@
     "cacheable":false,
     "evented":false,
     "name":"drivers",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/drivers.table",
     "platforms":[
       "windows"
     ],
@@ -5355,7 +5355,7 @@
     "cacheable":true,
     "evented":false,
     "name":"ec2_instance_metadata",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/ec2_instance_metadata.table",
     "platforms":[
       "linux"
     ],
@@ -5479,7 +5479,7 @@
     "cacheable":true,
     "evented":false,
     "name":"ec2_instance_tags",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/ec2_instance_tags.table",
     "platforms":[
       "linux"
     ],
@@ -5515,7 +5515,7 @@
     "cacheable":false,
     "evented":false,
     "name":"elf_dynamic",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/elf_dynamic.table",
     "platforms":[
       "linux"
     ],
@@ -5559,7 +5559,7 @@
     "cacheable":false,
     "evented":false,
     "name":"elf_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/elf_info.table",
     "platforms":[
       "linux"
     ],
@@ -5643,7 +5643,7 @@
     "cacheable":false,
     "evented":false,
     "name":"elf_sections",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/elf_sections.table",
     "platforms":[
       "linux"
     ],
@@ -5727,7 +5727,7 @@
     "cacheable":false,
     "evented":false,
     "name":"elf_segments",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/elf_segments.table",
     "platforms":[
       "linux"
     ],
@@ -5803,7 +5803,7 @@
     "cacheable":false,
     "evented":false,
     "name":"elf_symbols",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/elf_symbols.table",
     "platforms":[
       "linux"
     ],
@@ -5879,7 +5879,7 @@
     "cacheable":true,
     "evented":false,
     "name":"etc_hosts",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/etc_hosts.table",
     "platforms":[
       "darwin",
       "linux",
@@ -5910,7 +5910,7 @@
     "cacheable":true,
     "evented":false,
     "name":"etc_protocols",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/etc_protocols.table",
     "platforms":[
       "darwin",
       "linux",
@@ -5957,7 +5957,7 @@
     "cacheable":true,
     "evented":false,
     "name":"etc_services",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/etc_services.table",
     "platforms":[
       "darwin",
       "linux",
@@ -6012,7 +6012,7 @@
     "cacheable":false,
     "evented":false,
     "name":"event_taps",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/event_taps.table",
     "platforms":[
       "darwin"
     ],
@@ -6064,7 +6064,7 @@
     "cacheable":false,
     "evented":true,
     "name":"example",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/example.table",
     "platforms":[
       "darwin",
       "linux",
@@ -6127,7 +6127,7 @@
     "cacheable":false,
     "evented":false,
     "name":"extended_attributes",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/extended_attributes.table",
     "platforms":[
       "darwin"
     ],
@@ -6179,7 +6179,7 @@
     "cacheable":false,
     "evented":false,
     "name":"fan_speed_sensors",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/fan_speed_sensors.table",
     "platforms":[
       "darwin"
     ],
@@ -6239,7 +6239,7 @@
     "cacheable":false,
     "evented":false,
     "name":"fbsd_kmods",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/freebsd/fbsd_kmods.table",
     "platforms":[
       "freebsd"
     ],
@@ -6283,7 +6283,7 @@
     "cacheable":false,
     "evented":false,
     "name":"file",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/file.table",
     "platforms":[
       "darwin",
       "linux",
@@ -6466,7 +6466,7 @@
     "cacheable":false,
     "evented":true,
     "name":"file_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/file_events.table",
     "platforms":[
       "darwin",
       "linux"
@@ -6623,7 +6623,7 @@
     "cacheable":false,
     "evented":false,
     "name":"firefox_addons",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/firefox_addons.table",
     "platforms":[
       "darwin",
       "linux"
@@ -6756,7 +6756,7 @@
     "cacheable":false,
     "evented":false,
     "name":"gatekeeper",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/gatekeeper.table",
     "platforms":[
       "darwin"
     ],
@@ -6800,7 +6800,7 @@
     "cacheable":false,
     "evented":false,
     "name":"gatekeeper_approved_apps",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/gatekeeper_approved_apps.table",
     "platforms":[
       "darwin"
     ],
@@ -6844,7 +6844,7 @@
     "cacheable":false,
     "evented":false,
     "name":"groups",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/groups.table",
     "platforms":[
       "darwin",
       "linux",
@@ -6907,7 +6907,7 @@
     "cacheable":false,
     "evented":true,
     "name":"hardware_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/hardware_events.table",
     "platforms":[
       "darwin",
       "linux"
@@ -7016,7 +7016,7 @@
     "cacheable":false,
     "evented":false,
     "name":"hash",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/hash.table",
     "platforms":[
       "darwin",
       "linux",
@@ -7079,7 +7079,7 @@
     "cacheable":true,
     "evented":false,
     "name":"homebrew_packages",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/homebrew_packages.table",
     "platforms":[
       "darwin"
     ],
@@ -7115,7 +7115,7 @@
     "cacheable":true,
     "evented":false,
     "name":"ibridge_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/ibridge_info.table",
     "platforms":[
       "darwin"
     ],
@@ -7159,7 +7159,7 @@
     "cacheable":false,
     "evented":false,
     "name":"ie_extensions",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/ie_extensions.table",
     "platforms":[
       "windows"
     ],
@@ -7203,7 +7203,7 @@
     "cacheable":false,
     "evented":false,
     "name":"intel_me_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linwin/intel_me_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -7226,7 +7226,7 @@
     "cacheable":true,
     "evented":false,
     "name":"interface_addresses",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/interface_addresses.table",
     "platforms":[
       "darwin",
       "linux",
@@ -7297,7 +7297,7 @@
     "cacheable":true,
     "evented":false,
     "name":"interface_details",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/interface_details.table",
     "platforms":[
       "darwin",
       "linux",
@@ -7592,7 +7592,7 @@
     "cacheable":false,
     "evented":false,
     "name":"interface_ipv6",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/interface_ipv6.table",
     "platforms":[
       "darwin",
       "linux"
@@ -7645,7 +7645,7 @@
     "cacheable":true,
     "evented":false,
     "name":"iokit_devicetree",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/iokit_devicetree.table",
     "platforms":[
       "darwin"
     ],
@@ -7729,7 +7729,7 @@
     "cacheable":true,
     "evented":false,
     "name":"iokit_registry",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/iokit_registry.table",
     "platforms":[
       "darwin"
     ],
@@ -7797,7 +7797,7 @@
     "cacheable":false,
     "evented":false,
     "name":"iptables",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/iptables.table",
     "platforms":[
       "linux"
     ],
@@ -7953,7 +7953,7 @@
     "cacheable":false,
     "evented":false,
     "name":"kernel_extensions",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/kernel_extensions.table",
     "platforms":[
       "darwin"
     ],
@@ -8021,7 +8021,7 @@
     "cacheable":true,
     "evented":false,
     "name":"kernel_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/kernel_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -8068,7 +8068,7 @@
     "cacheable":false,
     "evented":false,
     "name":"kernel_integrity",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/kernel_integrity.table",
     "platforms":[
       "linux"
     ],
@@ -8096,7 +8096,7 @@
     "cacheable":false,
     "evented":false,
     "name":"kernel_modules",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/kernel_modules.table",
     "platforms":[
       "linux"
     ],
@@ -8148,7 +8148,7 @@
     "cacheable":false,
     "evented":false,
     "name":"kernel_panics",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/kernel_panics.table",
     "platforms":[
       "darwin"
     ],
@@ -8264,7 +8264,7 @@
     "cacheable":true,
     "evented":false,
     "name":"keychain_acls",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/keychain_acls.table",
     "platforms":[
       "darwin"
     ],
@@ -8316,7 +8316,7 @@
     "cacheable":false,
     "evented":false,
     "name":"keychain_items",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/keychain_items.table",
     "platforms":[
       "darwin"
     ],
@@ -8384,7 +8384,7 @@
     "cacheable":false,
     "evented":false,
     "name":"known_hosts",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/known_hosts.table",
     "platforms":[
       "darwin",
       "linux"
@@ -8421,7 +8421,7 @@
     "cacheable":false,
     "evented":false,
     "name":"kva_speculative_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/kva_speculative_info.table",
     "platforms":[
       "windows"
     ],
@@ -8521,7 +8521,7 @@
     "cacheable":true,
     "evented":false,
     "name":"last",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/last.table",
     "platforms":[
       "darwin",
       "linux"
@@ -8582,7 +8582,7 @@
     "cacheable":true,
     "evented":false,
     "name":"launchd",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/launchd.table",
     "platforms":[
       "darwin"
     ],
@@ -8762,7 +8762,7 @@
     "cacheable":true,
     "evented":false,
     "name":"launchd_overrides",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/launchd_overrides.table",
     "platforms":[
       "darwin"
     ],
@@ -8814,7 +8814,7 @@
     "cacheable":true,
     "evented":false,
     "name":"listening_ports",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/listening_ports.table",
     "platforms":[
       "darwin",
       "linux",
@@ -8901,7 +8901,7 @@
     "cacheable":false,
     "evented":false,
     "name":"lldp_neighbors",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/lldpd/lldp_neighbors.table",
     "platforms":[
       "linux"
     ],
@@ -9465,7 +9465,7 @@
     "cacheable":false,
     "evented":false,
     "name":"load_average",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/load_average.table",
     "platforms":[
       "darwin",
       "linux"
@@ -9494,7 +9494,7 @@
     "cacheable":true,
     "evented":false,
     "name":"logged_in_users",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/logged_in_users.table",
     "platforms":[
       "darwin",
       "linux",
@@ -9573,7 +9573,7 @@
     "cacheable":false,
     "evented":false,
     "name":"logical_drives",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/logical_drives.table",
     "platforms":[
       "windows"
     ],
@@ -9641,7 +9641,7 @@
     "cacheable":false,
     "evented":false,
     "name":"logon_sessions",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/logon_sessions.table",
     "platforms":[
       "windows"
     ],
@@ -9773,7 +9773,7 @@
     "cacheable":false,
     "evented":false,
     "name":"magic",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/magic.table",
     "platforms":[
       "darwin",
       "linux"
@@ -9826,7 +9826,7 @@
     "cacheable":false,
     "evented":false,
     "name":"managed_policies",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/managed_policies.table",
     "platforms":[
       "darwin"
     ],
@@ -9886,7 +9886,7 @@
     "cacheable":false,
     "evented":false,
     "name":"md_devices",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/md_devices.table",
     "platforms":[
       "linux"
     ],
@@ -10146,7 +10146,7 @@
     "cacheable":false,
     "evented":false,
     "name":"md_drives",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/md_drives.table",
     "platforms":[
       "linux"
     ],
@@ -10190,7 +10190,7 @@
     "cacheable":false,
     "evented":false,
     "name":"md_personalities",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/md_personalities.table",
     "platforms":[
       "linux"
     ],
@@ -10210,7 +10210,7 @@
     "cacheable":false,
     "evented":false,
     "name":"mdfind",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/mdfind.table",
     "platforms":[
       "darwin"
     ],
@@ -10238,7 +10238,7 @@
     "cacheable":false,
     "evented":false,
     "name":"memory_array_mapped_addresses",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/memory_array_mapped_addresses.table",
     "platforms":[
       "darwin",
       "linux"
@@ -10291,7 +10291,7 @@
     "cacheable":false,
     "evented":false,
     "name":"memory_arrays",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/memory_arrays.table",
     "platforms":[
       "darwin",
       "linux"
@@ -10360,7 +10360,7 @@
     "cacheable":false,
     "evented":false,
     "name":"memory_device_mapped_addresses",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/memory_device_mapped_addresses.table",
     "platforms":[
       "darwin",
       "linux"
@@ -10437,7 +10437,7 @@
     "cacheable":false,
     "evented":false,
     "name":"memory_devices",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/memory_devices.table",
     "platforms":[
       "darwin",
       "linux"
@@ -10610,7 +10610,7 @@
     "cacheable":false,
     "evented":false,
     "name":"memory_error_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/memory_error_info.table",
     "platforms":[
       "darwin",
       "linux"
@@ -10687,7 +10687,7 @@
     "cacheable":false,
     "evented":false,
     "name":"memory_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/memory_info.table",
     "platforms":[
       "linux"
     ],
@@ -10771,7 +10771,7 @@
     "cacheable":false,
     "evented":false,
     "name":"memory_map",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/memory_map.table",
     "platforms":[
       "linux"
     ],
@@ -10807,7 +10807,7 @@
     "cacheable":false,
     "evented":false,
     "name":"mounts",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/mounts.table",
     "platforms":[
       "darwin",
       "linux"
@@ -10908,7 +10908,7 @@
     "cacheable":false,
     "evented":false,
     "name":"msr",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/msr.table",
     "platforms":[
       "linux"
     ],
@@ -11000,7 +11000,7 @@
     "cacheable":false,
     "evented":false,
     "name":"nfs_shares",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/nfs_shares.table",
     "platforms":[
       "darwin"
     ],
@@ -11036,7 +11036,7 @@
     "cacheable":false,
     "evented":false,
     "name":"npm_packages",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/npm_packages.table",
     "platforms":[
       "linux"
     ],
@@ -11104,7 +11104,7 @@
     "cacheable":false,
     "evented":false,
     "name":"ntdomains",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/ntdomains.table",
     "platforms":[
       "windows"
     ],
@@ -11180,7 +11180,7 @@
     "cacheable":false,
     "evented":false,
     "name":"ntfs_acl_permissions",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/ntfs_acl_permissions.table",
     "platforms":[
       "windows"
     ],
@@ -11232,7 +11232,7 @@
     "cacheable":false,
     "evented":false,
     "name":"nvram",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/nvram.table",
     "platforms":[
       "darwin"
     ],
@@ -11268,7 +11268,7 @@
     "cacheable":false,
     "evented":false,
     "name":"oem_strings",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/oem_strings.table",
     "platforms":[
       "darwin",
       "linux"
@@ -11305,7 +11305,7 @@
     "cacheable":false,
     "evented":false,
     "name":"opera_extensions",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/opera_extensions.table",
     "platforms":[
       "darwin",
       "linux"
@@ -11398,7 +11398,7 @@
     "cacheable":false,
     "evented":false,
     "name":"os_version",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/os_version.table",
     "platforms":[
       "darwin",
       "linux",
@@ -11493,7 +11493,7 @@
     "cacheable":false,
     "evented":false,
     "name":"osquery_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_events.table",
     "platforms":[
       "darwin",
       "linux",
@@ -11564,7 +11564,7 @@
     "cacheable":false,
     "evented":false,
     "name":"osquery_extensions",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_extensions.table",
     "platforms":[
       "darwin",
       "linux",
@@ -11627,7 +11627,7 @@
     "cacheable":false,
     "evented":false,
     "name":"osquery_flags",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_flags.table",
     "platforms":[
       "darwin",
       "linux",
@@ -11690,7 +11690,7 @@
     "cacheable":false,
     "evented":false,
     "name":"osquery_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -11793,7 +11793,7 @@
     "cacheable":false,
     "evented":false,
     "name":"osquery_packs",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_packs.table",
     "platforms":[
       "darwin",
       "linux",
@@ -11864,7 +11864,7 @@
     "cacheable":false,
     "evented":false,
     "name":"osquery_registry",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_registry.table",
     "platforms":[
       "darwin",
       "linux",
@@ -11919,7 +11919,7 @@
     "cacheable":false,
     "evented":false,
     "name":"osquery_schedule",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_schedule.table",
     "platforms":[
       "darwin",
       "linux",
@@ -12022,7 +12022,7 @@
     "cacheable":false,
     "evented":false,
     "name":"package_bom",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/package_bom.table",
     "platforms":[
       "darwin"
     ],
@@ -12090,7 +12090,7 @@
     "cacheable":false,
     "evented":false,
     "name":"package_install_history",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/package_install_history.table",
     "platforms":[
       "darwin"
     ],
@@ -12150,7 +12150,7 @@
     "cacheable":false,
     "evented":false,
     "name":"package_receipts",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/package_receipts.table",
     "platforms":[
       "darwin"
     ],
@@ -12218,7 +12218,7 @@
     "cacheable":false,
     "evented":false,
     "name":"patches",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/patches.table",
     "platforms":[
       "windows"
     ],
@@ -12294,7 +12294,7 @@
     "cacheable":false,
     "evented":false,
     "name":"pci_devices",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/pci_devices.table",
     "platforms":[
       "darwin",
       "linux"
@@ -12419,7 +12419,7 @@
     "cacheable":false,
     "evented":false,
     "name":"physical_disk_performance",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/physical_disk_performance.table",
     "platforms":[
       "windows"
     ],
@@ -12527,7 +12527,7 @@
     "cacheable":false,
     "evented":false,
     "name":"pipes",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/pipes.table",
     "platforms":[
       "windows"
     ],
@@ -12579,7 +12579,7 @@
     "cacheable":true,
     "evented":false,
     "name":"pkg_packages",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/freebsd/pkg_packages.table",
     "platforms":[
       "freebsd"
     ],
@@ -12623,7 +12623,7 @@
     "cacheable":false,
     "evented":false,
     "name":"platform_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/platform_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -12702,7 +12702,7 @@
     "cacheable":false,
     "evented":false,
     "name":"plist",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/plist.table",
     "platforms":[
       "darwin"
     ],
@@ -12746,7 +12746,7 @@
     "cacheable":false,
     "evented":false,
     "name":"portage_keywords",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/portage_keywords.table",
     "platforms":[
       "linux"
     ],
@@ -12798,7 +12798,7 @@
     "cacheable":false,
     "evented":false,
     "name":"portage_packages",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/portage_packages.table",
     "platforms":[
       "linux"
     ],
@@ -12874,7 +12874,7 @@
     "cacheable":false,
     "evented":false,
     "name":"portage_use",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/portage_use.table",
     "platforms":[
       "linux"
     ],
@@ -12910,7 +12910,7 @@
     "cacheable":false,
     "evented":false,
     "name":"power_sensors",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/power_sensors.table",
     "platforms":[
       "darwin"
     ],
@@ -12954,7 +12954,7 @@
     "cacheable":false,
     "evented":true,
     "name":"powershell_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/powershell_events.table",
     "platforms":[
       "windows"
     ],
@@ -13030,7 +13030,7 @@
     "cacheable":false,
     "evented":false,
     "name":"preferences",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/preferences.table",
     "platforms":[
       "darwin"
     ],
@@ -13098,7 +13098,7 @@
     "cacheable":false,
     "evented":false,
     "name":"process_envs",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/process_envs.table",
     "platforms":[
       "darwin",
       "linux"
@@ -13135,7 +13135,7 @@
     "cacheable":false,
     "evented":true,
     "name":"process_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/process_events.table",
     "platforms":[
       "darwin",
       "linux"
@@ -13364,7 +13364,7 @@
     "cacheable":false,
     "evented":true,
     "name":"process_file_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/process_file_events.table",
     "platforms":[
       "linux"
     ],
@@ -13496,7 +13496,7 @@
     "cacheable":false,
     "evented":false,
     "name":"process_memory_map",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/process_memory_map.table",
     "platforms":[
       "darwin",
       "linux",
@@ -13583,7 +13583,7 @@
     "cacheable":false,
     "evented":false,
     "name":"process_namespaces",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/process_namespaces.table",
     "platforms":[
       "linux"
     ],
@@ -13659,7 +13659,7 @@
     "cacheable":false,
     "evented":false,
     "name":"process_open_files",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/process_open_files.table",
     "platforms":[
       "darwin",
       "linux"
@@ -13696,7 +13696,7 @@
     "cacheable":false,
     "evented":false,
     "name":"process_open_sockets",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/process_open_sockets.table",
     "platforms":[
       "darwin",
       "linux",
@@ -13807,7 +13807,7 @@
     "cacheable":true,
     "evented":false,
     "name":"processes",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/processes.table",
     "platforms":[
       "darwin",
       "linux",
@@ -14094,7 +14094,7 @@
     "cacheable":false,
     "evented":false,
     "name":"programs",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/programs.table",
     "platforms":[
       "windows"
     ],
@@ -14178,7 +14178,7 @@
     "cacheable":false,
     "evented":false,
     "name":"prometheus_metrics",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/prometheus_metrics.table",
     "platforms":[
       "darwin",
       "linux"
@@ -14223,7 +14223,7 @@
     "cacheable":false,
     "evented":false,
     "name":"python_packages",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/python_packages.table",
     "platforms":[
       "darwin",
       "linux",
@@ -14294,7 +14294,7 @@
     "cacheable":true,
     "evented":false,
     "name":"quicklook_cache",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/quicklook_cache.table",
     "platforms":[
       "darwin"
     ],
@@ -14402,7 +14402,7 @@
     "cacheable":false,
     "evented":false,
     "name":"registry",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/registry.table",
     "platforms":[
       "windows"
     ],
@@ -14462,7 +14462,7 @@
     "cacheable":true,
     "evented":false,
     "name":"routes",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/routes.table",
     "platforms":[
       "darwin",
       "linux",
@@ -14557,7 +14557,7 @@
     "cacheable":false,
     "evented":false,
     "name":"rpm_package_files",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/rpm_package_files.table",
     "platforms":[
       "linux"
     ],
@@ -14625,7 +14625,7 @@
     "cacheable":true,
     "evented":false,
     "name":"rpm_packages",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/rpm_packages.table",
     "platforms":[
       "linux"
     ],
@@ -14701,7 +14701,7 @@
     "cacheable":false,
     "evented":false,
     "name":"running_apps",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/running_apps.table",
     "platforms":[
       "darwin"
     ],
@@ -14737,7 +14737,7 @@
     "cacheable":false,
     "evented":false,
     "name":"safari_extensions",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/safari_extensions.table",
     "platforms":[
       "darwin"
     ],
@@ -14829,7 +14829,7 @@
     "cacheable":true,
     "evented":false,
     "name":"sandboxes",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/sandboxes.table",
     "platforms":[
       "darwin"
     ],
@@ -14889,7 +14889,7 @@
     "cacheable":false,
     "evented":false,
     "name":"scheduled_tasks",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/scheduled_tasks.table",
     "platforms":[
       "windows"
     ],
@@ -14981,7 +14981,7 @@
     "cacheable":false,
     "evented":true,
     "name":"selinux_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/selinux_events.table",
     "platforms":[
       "linux"
     ],
@@ -15033,7 +15033,7 @@
     "cacheable":false,
     "evented":false,
     "name":"services",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/services.table",
     "platforms":[
       "windows"
     ],
@@ -15141,7 +15141,7 @@
     "cacheable":false,
     "evented":false,
     "name":"shadow",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/shadow.table",
     "platforms":[
       "linux"
     ],
@@ -15233,7 +15233,7 @@
     "cacheable":false,
     "evented":false,
     "name":"shared_folders",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/shared_folders.table",
     "platforms":[
       "darwin"
     ],
@@ -15261,7 +15261,7 @@
     "cacheable":false,
     "evented":false,
     "name":"shared_memory",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/shared_memory.table",
     "platforms":[
       "linux"
     ],
@@ -15377,7 +15377,7 @@
     "cacheable":false,
     "evented":false,
     "name":"shared_resources",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/shared_resources.table",
     "platforms":[
       "windows"
     ],
@@ -15453,7 +15453,7 @@
     "cacheable":false,
     "evented":false,
     "name":"sharing_preferences",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/sharing_preferences.table",
     "platforms":[
       "darwin"
     ],
@@ -15545,7 +15545,7 @@
     "cacheable":false,
     "evented":false,
     "name":"shell_history",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/shell_history.table",
     "platforms":[
       "darwin",
       "linux"
@@ -15590,7 +15590,7 @@
     "cacheable":false,
     "evented":false,
     "name":"signature",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/signature.table",
     "platforms":[
       "darwin"
     ],
@@ -15666,7 +15666,7 @@
     "cacheable":false,
     "evented":false,
     "name":"sip_config",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/sip_config.table",
     "platforms":[
       "darwin"
     ],
@@ -15702,7 +15702,7 @@
     "cacheable":false,
     "evented":false,
     "name":"smart_drive_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/smart/smart_drive_info.table",
     "platforms":[
       "darwin",
       "linux"
@@ -15899,7 +15899,7 @@
     "cacheable":false,
     "evented":false,
     "name":"smbios_tables",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/smbios_tables.table",
     "platforms":[
       "darwin",
       "linux"
@@ -15968,7 +15968,7 @@
     "cacheable":false,
     "evented":false,
     "name":"smc_keys",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/smc_keys.table",
     "platforms":[
       "darwin"
     ],
@@ -16020,7 +16020,7 @@
     "cacheable":false,
     "evented":true,
     "name":"socket_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/socket_events.table",
     "platforms":[
       "linux"
     ],
@@ -16160,7 +16160,7 @@
     "cacheable":false,
     "evented":false,
     "name":"ssh_configs",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/ssh_configs.table",
     "platforms":[
       "darwin",
       "linux"
@@ -16205,7 +16205,7 @@
     "cacheable":true,
     "evented":false,
     "name":"startup_items",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/macwin/startup_items.table",
     "platforms":[
       "darwin",
       "windows"
@@ -16274,7 +16274,7 @@
     "cacheable":false,
     "evented":false,
     "name":"sudoers",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/sudoers.table",
     "platforms":[
       "darwin",
       "linux"
@@ -16311,7 +16311,7 @@
     "cacheable":true,
     "evented":false,
     "name":"suid_bin",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/suid_bin.table",
     "platforms":[
       "darwin",
       "linux"
@@ -16356,7 +16356,7 @@
     "cacheable":false,
     "evented":true,
     "name":"syslog_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/syslog_events.table",
     "platforms":[
       "linux"
     ],
@@ -16432,7 +16432,7 @@
     "cacheable":false,
     "evented":false,
     "name":"system_controls",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/system_controls.table",
     "platforms":[
       "darwin",
       "linux"
@@ -16501,7 +16501,7 @@
     "cacheable":false,
     "evented":false,
     "name":"system_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/system_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -16636,7 +16636,7 @@
     "cacheable":false,
     "evented":false,
     "name":"temperature_sensors",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/temperature_sensors.table",
     "platforms":[
       "darwin"
     ],
@@ -16680,7 +16680,7 @@
     "cacheable":false,
     "evented":false,
     "name":"time",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/time.table",
     "platforms":[
       "darwin",
       "linux",
@@ -16815,7 +16815,7 @@
     "cacheable":false,
     "evented":false,
     "name":"time_machine_backups",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/time_machine_backups.table",
     "platforms":[
       "darwin"
     ],
@@ -16843,7 +16843,7 @@
     "cacheable":false,
     "evented":false,
     "name":"time_machine_destinations",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/time_machine_destinations.table",
     "platforms":[
       "darwin"
     ],
@@ -16911,7 +16911,7 @@
     "cacheable":false,
     "evented":false,
     "name":"ulimit_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/ulimit_info.table",
     "platforms":[
       "darwin",
       "linux"
@@ -16948,7 +16948,7 @@
     "cacheable":false,
     "evented":false,
     "name":"uptime",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/uptime.table",
     "platforms":[
       "darwin",
       "linux",
@@ -17003,7 +17003,7 @@
     "cacheable":false,
     "evented":false,
     "name":"usb_devices",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/usb_devices.table",
     "platforms":[
       "darwin",
       "linux"
@@ -17112,7 +17112,7 @@
     "cacheable":false,
     "evented":true,
     "name":"user_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/user_events.table",
     "platforms":[
       "darwin",
       "linux"
@@ -17213,7 +17213,7 @@
     "cacheable":false,
     "evented":false,
     "name":"user_groups",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/user_groups.table",
     "platforms":[
       "darwin",
       "linux",
@@ -17244,7 +17244,7 @@
     "cacheable":false,
     "evented":true,
     "name":"user_interaction_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/user_interaction_events.table",
     "platforms":[
       "darwin"
     ],
@@ -17264,7 +17264,7 @@
     "cacheable":false,
     "evented":false,
     "name":"user_ssh_keys",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/user_ssh_keys.table",
     "platforms":[
       "darwin",
       "linux"
@@ -17301,7 +17301,7 @@
     "cacheable":false,
     "evented":false,
     "name":"users",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/users.table",
     "platforms":[
       "darwin",
       "linux",
@@ -17404,7 +17404,7 @@
     "cacheable":false,
     "evented":false,
     "name":"video_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/video_info.table",
     "platforms":[
       "windows"
     ],
@@ -17480,7 +17480,7 @@
     "cacheable":false,
     "evented":false,
     "name":"virtual_memory_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/virtual_memory_info.table",
     "platforms":[
       "darwin"
     ],
@@ -17668,7 +17668,7 @@
     "cacheable":true,
     "evented":false,
     "name":"wifi_networks",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/wifi_networks.table",
     "platforms":[
       "darwin"
     ],
@@ -17776,7 +17776,7 @@
     "cacheable":true,
     "evented":false,
     "name":"wifi_status",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/wifi_status.table",
     "platforms":[
       "darwin"
     ],
@@ -17892,7 +17892,7 @@
     "cacheable":true,
     "evented":false,
     "name":"wifi_survey",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/wifi_scan.table",
     "platforms":[
       "darwin"
     ],
@@ -17984,7 +17984,7 @@
     "cacheable":false,
     "evented":false,
     "name":"winbaseobj",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/winbaseobj.table",
     "platforms":[
       "windows"
     ],
@@ -18020,7 +18020,7 @@
     "cacheable":false,
     "evented":false,
     "name":"windows_crashes",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/windows_crashes.table",
     "platforms":[
       "windows"
     ],
@@ -18200,7 +18200,7 @@
     "cacheable":false,
     "evented":true,
     "name":"windows_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/windows_events.table",
     "platforms":[
       "windows"
     ],
@@ -18300,7 +18300,7 @@
     "cacheable":false,
     "evented":false,
     "name":"wmi_bios_info",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/wmi_bios_info.table",
     "platforms":[
       "windows"
     ],
@@ -18328,7 +18328,7 @@
     "cacheable":false,
     "evented":false,
     "name":"wmi_cli_event_consumers",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/wmi_cli_event_consumers.table",
     "platforms":[
       "windows"
     ],
@@ -18380,7 +18380,7 @@
     "cacheable":false,
     "evented":false,
     "name":"wmi_event_filters",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/wmi_event_filters.table",
     "platforms":[
       "windows"
     ],
@@ -18432,7 +18432,7 @@
     "cacheable":false,
     "evented":false,
     "name":"wmi_filter_consumer_binding",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/wmi_filter_consumer_binding.table",
     "platforms":[
       "windows"
     ],
@@ -18476,7 +18476,7 @@
     "cacheable":false,
     "evented":false,
     "name":"wmi_script_event_consumers",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/wmi_script_event_consumers.table",
     "platforms":[
       "windows"
     ],
@@ -18536,7 +18536,7 @@
     "cacheable":true,
     "evented":false,
     "name":"xprotect_entries",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/xprotect_entries.table",
     "platforms":[
       "darwin"
     ],
@@ -18604,7 +18604,7 @@
     "cacheable":true,
     "evented":false,
     "name":"xprotect_meta",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/xprotect_meta.table",
     "platforms":[
       "darwin"
     ],
@@ -18648,7 +18648,7 @@
     "cacheable":false,
     "evented":false,
     "name":"xprotect_reports",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/xprotect_reports.table",
     "platforms":[
       "darwin"
     ],
@@ -18684,7 +18684,7 @@
     "cacheable":false,
     "evented":false,
     "name":"yara",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/yara/yara.table",
     "platforms":[
       "darwin",
       "linux"
@@ -18753,7 +18753,7 @@
     "cacheable":false,
     "evented":true,
     "name":"yara_events",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/yara/yara_events.table",
     "platforms":[
       "darwin",
       "linux"
@@ -18846,7 +18846,7 @@
     "cacheable":false,
     "evented":false,
     "name":"yum_sources",
-    "url":"https://github.com/osquery/osquery/blob/master",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/yum_sources.table",
     "platforms":[
       "darwin",
       "linux"
