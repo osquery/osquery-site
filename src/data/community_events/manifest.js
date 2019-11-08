@@ -9,4 +9,5 @@ export default [
   'querycon19',
   'uptycs-free-osquery-workshop',
   'hackmiami19',
+  'osquery@scale'
 ]
