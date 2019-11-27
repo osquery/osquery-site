@@ -1,0 +1,52 @@
+{
+  "version": "4.1.1",
+  "url": "https://pkg.osquery.io",
+  "downloads": {
+    "official": [
+      {
+        "type": "macOS",
+        "package": "osquery-4.1.1.pkg",
+        "content": "256dea9da891a94b176943ba661d1f2a791ce488224ab5df3e95d8099ee7dea0",
+        "platform": "darwin"
+      },
+      {
+        "type": "Linux",
+        "package": "osquery-4.1.1_1.linux_x86_64.tar.gz",
+        "content": "3dbebc69d8f6396c4832c3976197a4cbab6d11e571194464565b16d69b3ad513",
+        "platform": "linux"
+      },
+      {
+        "type": "RPM",
+        "package": "osquery-4.1.1-1.linux.x86_64.rpm",
+        "content": "cb393d8e7d588084849f33386bfb023a182a4f4fc67a499d64a8b6acecd8cbf9",
+        "platform": "rpm"
+      },
+      {
+        "type": "Debian",
+        "package": "osquery_4.1.1_1.linux.amd64.deb",
+        "content": "2f954e9f487713666e89a76d22e84e604f1cd062393f248eb306e86fea4955c8",
+        "platform": "deb"
+      },
+      {
+        "type": "Windows",
+        "package": "osquery-4.1.1.msi",
+        "content": "9f38b88d58b2a8d62a7636811a93a37032b91270c4b6b31e24c0dc60754be3c6",
+        "platform": "windows"
+      }
+    ],
+    "debug": [
+      {
+        "type": "RPM",
+        "package": "osquery-debuginfo-4.1.1-1.linux.x86_64.rpm",
+        "content": "2d5ae9a39c50b27d895b418dec10c05cb961a6afbd53ba348142d834473100d7",
+        "platform": "rpm"
+      },
+      {
+        "type": "Debian",
+        "package": "osquery-dbgsym_4.1.1_1.linux.amd64.deb",
+        "content": "20fdab67c3d3237db9da62ac6198ca36c67ac171b88f787e0e50799608b9a98f",
+        "platform": "deb"
+      }
+    ]
+  }
+}
