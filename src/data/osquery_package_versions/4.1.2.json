@@ -18,7 +18,7 @@
       {
         "type": "RPM",
         "package": "osquery-4.1.2-1.linux.x86_64.rpm",
-        "content": "9902a634d8b1bd4b0873e603674f5223ff734d368c59748a0904a68cb79f88b1",
+        "content": "2f0a86f63f7579ed6da0c09756d494537888f58dfc71194de067717de8b43cdb",
         "platform": "rpm"
       },
       {
@@ -38,7 +38,7 @@
       {
         "type": "RPM",
         "package": "osquery-debuginfo-4.1.2-1.linux.x86_64.rpm",
-        "content": "1f6faf1eeeb8f4d36cee8177a0773d0d6c00f71d570b210c8d05629cbe366a9a",
+        "content": "beb2bc4d2c2184c9eca9efab4ee08783965c73e9315cfb0be39f810679cfea54",
         "platform": "rpm"
       },
       {
