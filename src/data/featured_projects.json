@@ -3,63 +3,63 @@
     "description": "StreamAlert is a serverless, realtime data analysis framework which empowers you to ingest, analyze, and alert on data from any environment, using datasources and alerting logic you define.",
     "owner": "airbnb",
     "repo": "streamalert",
-    "star_count": 1496,
+    "star_count": 2115,
     "url": "https://github.com/airbnb/streamalert"
   },
   {
     "description": "A flexible control server for osquery fleets",
     "owner":"kolide",
     "repo":"fleet",
-    "star_count": 454,
+    "star_count": 793,
     "url": "https://github.com/kolide/fleet"
   },
   {
     "description": "an osquery fleet manager",
     "owner": "mwielgoszewski",
     "repo": "doorman",
-    "star_count": 408,
+    "star_count": 523,
     "url": "https://github.com/mwielgoszewski/doorman"
   },
   {
     "description": "Zentral is a framework to gather, process, and monitor system events and link them to an inventory.",
     "owner": "zentralopensource",
     "repo": "zentral",
-    "star_count": 329,
+    "star_count": 435,
     "url": "https://github.com/zentralopensource/zentral"
   },
   {
     "description": "A repository for using osquery for incident detection and response",
     "owner": "palantir",
     "repo": "osquery-configuration",
-    "star_count": 265,
+    "star_count": 480,
     "url": "https://github.com/palantir/osquery-configuration"
   },
   {
-    "description": "A lightweight osquery execution environment",
+    "description": "Mapping the MITRE ATT&CK Matrix with Osquery",
+    "owner": "teoseller",
+    "repo": "osquery-attck",
+    "star_count": 357,
+    "url": "https://github.com/teoseller/osquery-attck"
+  },
+  {
+    "description": "Osquery launcher, autoupdater, and packager",
     "owner": "kolide",
     "repo": "launcher",
-    "star_count": 158,
+    "star_count": 251,
     "url": "https://github.com/kolide/launcher"
   },
   {
     "description": "python bindings for osquery",
     "owner": "osquery",
     "repo": "osquery-python",
-    "star_count": 136,
+    "star_count": 191,
     "url": "https://github.com/osquery/osquery-python"
   },
   {
     "description": "Go bindings for Osquery",
     "owner": "kolide",
     "repo": "osquery-go",
-    "star_count": 117,
+    "star_count": 190,
     "url": "https://github.com/kolide/osquery-go"
-  },
-  {
-    "description": "Osquery Mangement Server",
-    "owner": "OktaSecurityLabs",
-    "repo": "sgt",
-    "star_count": 47,
-    "url": "https://github.com/OktaSecurityLabs/sgt"
   }
 ]
