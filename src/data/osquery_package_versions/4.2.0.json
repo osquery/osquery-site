@@ -6,7 +6,7 @@
       {
         "type": "macOS",
         "package": "osquery-4.2.0.pkg",
-        "content": "f9fbe0fd04baec2bfc5f3964b928e864a283bf0697f403be54ddf8a619ff40ca",
+        "content": "c9d74ce008b1077a4db69c6df30ce2d66e9e231c012f09516bf7e0f0562a9647",
         "platform": "darwin"
       },
       {
@@ -30,7 +30,7 @@
       {
         "type": "Windows",
         "package": "osquery-4.2.0.msi",
-        "content": "a5da677b669f8d72cbbf124fb30edc02ce094bbadf5b32f48383043f602cf6e8",
+        "content": "0c5526ba75c617dfc3202573a184437d424a7b5af75d6a50e4e31dc4e820b5fd",
         "platform": "windows"
       }
     ],
