@@ -10,4 +10,5 @@ export default [
   'uptycs-free-osquery-workshop',
   'hackmiami19',
   'osquery@scale',
+  'bsidesslc20',
 ]
