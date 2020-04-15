@@ -1,0 +1,52 @@
+{
+  "version": "4.3.0",
+  "url": "https://pkg.osquery.io",
+  "downloads": {
+    "official": [
+      {
+        "type": "macOS",
+        "package": "osquery-4.3.0.pkg",
+        "content": "197eae9624ec830bf3fec53b79b11e084792a04a461c3241d95cf6aebd3e6ac2",
+        "platform": "darwin"
+      },
+      {
+        "type": "Linux",
+        "package": "osquery-4.3.0_1.linux_x86_64.tar.gz",
+        "content": "44ef3303faa88ef6e450b4dd8339e85f717132e37b61bce6cd8adf28a8504db6",
+        "platform": "linux"
+      },
+      {
+        "type": "RPM",
+        "package": "osquery-4.3.0-1.linux.x86_64.rpm",
+        "content": "71a844ec9afe92bee7ab035a169bc57d9b8f4dcbc84ec40444c623e2ac5499eb",
+        "platform": "rpm"
+      },
+      {
+        "type": "Debian",
+        "package": "osquery_4.3.0_1.linux.amd64.deb",
+        "content": "3705fd38c8ebcd4fd9b241910f98aeabfd9c9ce71db7328269a026cb2db473a9",
+        "platform": "deb"
+      },
+      {
+        "type": "Windows",
+        "package": "osquery-4.3.0.msi",
+        "content": "TODO",
+        "platform": "windows"
+      }
+    ],
+    "debug": [
+      {
+        "type": "RPM",
+        "package": "osquery-debuginfo-4.3.0-1.linux.x86_64.rpm",
+        "content": "bfbad5f1eaba25a40a249673e68c863b9ef58467f33b984a886b0d7b4440a57f",
+        "platform": "rpm"
+      },
+      {
+        "type": "Debian",
+        "package": "osquery-dbgsym_4.3.0_1.linux.amd64.deb",
+        "content": "eee0e64c8b97f238531ff25e296fa98b799159b7ecce7a31362c9a0220f2ebdb",
+        "platform": "deb"
+      }
+    ]
+  }
+}
