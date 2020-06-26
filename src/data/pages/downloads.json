@@ -12,11 +12,10 @@
       "subheadings": {
         "darwin": {
           "subSection1Heading": "Install darwin repository",
-          "subSection1Paragraph1": "We publish a stable osquery into OS X homebrew every other week. Installing using brew has several advantages: most current stable release (with additional performance guarantees). You should update brew often.",
+          "subSection1Paragraph1": "osquery can be installed from the Homebrew Cask repository.",
           "terminalCommands": [
             "brew update",
-            "brew install osquery",
-            "/usr/local/bin/osqueryi"
+            "brew cask install osquery"
           ]
         },
         "ubuntu": {
