@@ -211,7 +211,7 @@ storiesOf('Pill', module)
 storiesOf('ProminentCta', module)
   .add('Slack', () => (
     <ProminentCta icon={<Icon name="slack" />}>
-      <a href="#">Join the Osquery Slack</a>
+      <a href="#">Join the osquery Slack</a>
     </ProminentCta>
   ))
   .add('Osquery Docs', () => (
