@@ -4,9 +4,9 @@ author: "Dennis Griffin"
 date: "2018-08-20"
 ---
 
-## Configure Process Auditing with Osquery on Windows
+## Configure Process Auditing with osquery on Windows
 
-Facebook's [Osquery](https://osquery.io/) is a proven, lightweight tool to gather process information from endpoints.
+Facebook's [osquery](https://osquery.io/) is a proven, lightweight tool to gather process information from endpoints.
 
 Osquery has a concept of "tables", similar to a database, that provide a SQL interface to structured data. It's important to understand the 2 different types of tables, normal and event, which operate very differently.
 
@@ -26,11 +26,11 @@ There are a couple benefits to the `processes` table such as not needing any sys
 
 The [`process_events`](https://osquery.io/schema/3.2.6#process_events) table is an event-based table. Results in an event-based table are cleared after each query that is executed on that table. In addition, new results are added to the table every time a process is created. Therefore, the `process_events` table provides a complete audit log of every process creation without duplicates.
 
-This is implemented via  OpenBSM on macOS and Auditd on Linux. Unfortunately, the `process_events` table is not currently supported on the Windows version of Osquery. This is quite unfortunate since many enterprises rely heavily on Windows systems.
+This is implemented via  OpenBSM on macOS and Auditd on Linux. Unfortunately, the `process_events` table is not currently supported on the Windows version of osquery. This is quite unfortunate since many enterprises rely heavily on Windows systems.
 
 ## Enabling Windows Process Auditing
 
-Fortunately, there is a way to solve this problem using the power Osquery already has built-in. Microsoft Windows 7 and up has a concept of ["process auditing"](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-process-creation) which is not turned on by default. Once enabled, it will generate event logs for process creation with all the typical data points that one would expect.
+Fortunately, there is a way to solve this problem using the power osquery already has built-in. Microsoft Windows 7 and up has a concept of ["process auditing"](https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/audit-process-creation) which is not turned on by default. Once enabled, it will generate event logs for process creation with all the typical data points that one would expect.
 
 The first step is to enable process auditing. This can be done using [Group Policy](https://docs.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/command-line-process-auditing) or locally with the command below.
 
@@ -106,7 +106,7 @@ parent_name = cmd.exe
 
 One thing that's a little annoying is that the process IDs and user IDs are expressed as a hex string in the event log. Since it's a string, it cannot be natively interpreted by SQLite in order to CAST it to a decimal.
 
-At [DarkBytes](https://www.darkbytes.com/), we worked around this problem by creating a simple utility table (hex_to_int) in the DarkBytes Osquery extension to convert it. The extension is implemented using [Kolide's osquery-go](https://github.com/kolide/osquery-go) bindings and Golang's strconv library. Please [check out the code](https://gist.github.com/dgriffin831/dc014c76ae33b4a1dbd613dd2ea418ee) for this utility table on Github.
+At [DarkBytes](https://www.darkbytes.com/), we worked around this problem by creating a simple utility table (hex_to_int) in the DarkBytes osquery extension to convert it. The extension is implemented using [Kolide's osquery-go](https://github.com/kolide/osquery-go) bindings and Golang's strconv library. Please [check out the code](https://gist.github.com/dgriffin831/dc014c76ae33b4a1dbd613dd2ea418ee) for this utility table on Github.
 
 The table ingests the hex string and returns a decimal.
 
@@ -135,6 +135,6 @@ pid = 1636
 
 ## Learn More
 
-Stay tuned for [future posts](https://osquery.io/blog/community-articles) on Osquery! If you have any questions please hop into #process-auditing or #windows in the [Osquery Slack](https://osquery.slack.com/).
+Stay tuned for [future posts](https://osquery.io/blog/community-articles) on osquery! If you have any questions please hop into #process-auditing or #windows in the [osquery Slack](https://osquery.slack.com/).
 
 Learn more about how [DarkBytes](https://www.darkbytes.com/) is leveraging Osquery to streamline security operations!
