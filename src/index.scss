@@ -7,7 +7,9 @@ body {
   padding: 0;
 
   &.noscroll {
-    overflow: hidden;
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
   }
 }
 
