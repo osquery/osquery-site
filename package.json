@@ -37,7 +37,7 @@
     "react-responsive": "^4.0.3",
     "react-router-dom": "^4.2.2",
     "react-select": "^1.1.0",
-    "showdown": "^1.8.4",
+    "showdown": "^1.9.1",
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
