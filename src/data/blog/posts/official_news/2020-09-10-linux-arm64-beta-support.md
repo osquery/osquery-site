@@ -23,4 +23,4 @@ Bugs and incompatibilities should be filled as GitHub [issues](https://github.co
 
 And of course if you would like to build osquery for aarch64 yourself, please follow our [building](https://osquery.readthedocs.io/en/latest/development/building/) guide. But use the [aarch64](https://github.com/osquery/osquery-toolchain/releases/download/1.1.0/osquery-toolchain-1.1.0-aarch64.tar.xz) version of our toolchain.
 
-A big thanks to everyone who made this possible, and specifically [artemist](https://github.com/artemist), [alessandrogario](https://github.com/alessandrogario), and [ozbenh](https://github.com/ozbenh).
+A big thanks to everyone who made this possible, and specifically [artemist](https://github.com/artemist), [lizthegrey](https://github.com/lizthegrey), and [ozbenh](https://github.com/ozbenh).
