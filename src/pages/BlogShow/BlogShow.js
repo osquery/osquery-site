@@ -15,7 +15,7 @@ class BlogShow extends Component {
   constructor(props) {
     super(props)
 
-    this.converter = new showdown.Converter()
+    this.converter = new showdown.Converter({ tables: true })
 
     this.state = {
       blogPost: undefined,
