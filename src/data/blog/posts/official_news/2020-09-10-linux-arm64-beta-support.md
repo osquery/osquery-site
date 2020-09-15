@@ -9,11 +9,11 @@ We would like to announce beta support for Linux arm64/aarch64. And we are worki
 
 | Type    |    Filename / sha256  |
 |:------|:-------|
-| Tarball        | [osquery-4.5.0\_1.linux\_aarch64.tar.gz](https://pkg.osquery.io/osquery-4.5.0_1.linux_aarch64.tar) `19880dac2dc1ea7d1a5fbc5f91c3a8c55b26e64cfe402306bc78032c7b97f721` |
-| Debian         | [osquery\_4.5.0-1.linux\_arm64.deb](https://pkg.osquery.io/osquery_4.5.0-1.linux_arm64.deb) `f5d58f03200c26eadc2bf1e783fe56e264301ac892c8828cea16dadca475ad7b` |
-| Debian&nbsp;(Debug) | [osquery-dbgsym_4.5.0-1.linux\_arm64.ddeb](https://pkg.osquery.io/osquery-dbgsym_4.5.0-1.linux_arm64.ddeb) `f48db8c4182213cc61707de4d9dcaa90005a996710e52de7b5cba20c0cbfabf9` |
-| RPM            | [osquery-4.5.0-1.aarch64.rpm](https://pkg.osquery.io/osquery-4.5.0-1.aarch64.rpm) `fa4d17a5cdb3ec67989b3f275996fea92bec9ca62a01e6f5679863782d5d2dda` |
-| RPM&nbsp;(Debug)    | [osquery-debuginfo-4.5.0-1.aarch64.rpm](https://pkg.osquery.io/osquery-debuginfo-4.5.0-1.aarch64.rpm) `67608cfc6fed0479e8e47b9562235397fc7a459f471ee6f02adc3a0592aa6ce6` |
+| Tarball        | [osquery-4.5.0\_1.linux\_aarch64.tar.gz](https://pkg.osquery.io/linux/osquery-4.5.0_1.linux_aarch64.tar) `b26929aceb2cc84511ba7d02bb22a092eb17047c54487df60c487ac880f79c02` |
+| Debian         | [osquery\_4.5.0\_1.linux.arm64.deb](https://pkg.osquery.io/deb/osquery_4.5.0_1.linux.arm64.deb) `5502cc70fa38ea7e8a6bc243ec16ca90ac1443fc9fd7c15ec9cfd28aa35f0900` |
+| Debian&nbsp;(Debug) | [osquery-dbgsym_4.5.0\_1.linux.arm64.ddeb](https://pkg.osquery.io/deb/osquery-dbgsym_4.5.0_1.linux.arm64.deb) `4e63a8605519fc51095e7ef70f3f9ae93adcb7aef29ca1a398caf2f3f77b73fb` |
+| RPM            | [osquery-4.5.0-1.linux.aarch64.rpm](https://pkg.osquery.io/rpm/osquery-4.5.0-1.linux.aarch64.rpm) `1d482d9151d58d58af519470595f2968c75b389426e6b8f80a742058966c1b05` |
+| RPM&nbsp;(Debug)    | [osquery-debuginfo-4.5.0-1.linux.aarch64.rpm](https://pkg.osquery.io/rpm/osquery-debuginfo-4.5.0-1.linux.aarch64.rpm) `a9af73b2e465ceaa6b2954ec401d458443dc8d0d0dc003c65f5d84f620a5c609` |
 
 
 
