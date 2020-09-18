@@ -9,7 +9,7 @@ We would like to announce beta support for Linux arm64/aarch64. And we are worki
 
 | Type    |    Filename / sha256  |
 |:------|:-------|
-| Tarball        | [osquery-4.5.0\_1.linux\_aarch64.tar.gz](https://pkg.osquery.io/linux/osquery-4.5.0_1.linux_aarch64.tar) `b26929aceb2cc84511ba7d02bb22a092eb17047c54487df60c487ac880f79c02` |
+| Tarball        | [osquery-4.5.0\_1.linux\_aarch64.tar.gz](https://pkg.osquery.io/linux/osquery-4.5.0_1.linux_aarch64.tar.gz) `b26929aceb2cc84511ba7d02bb22a092eb17047c54487df60c487ac880f79c02` |
 | Debian         | [osquery\_4.5.0\_1.linux.arm64.deb](https://pkg.osquery.io/deb/osquery_4.5.0_1.linux.arm64.deb) `5502cc70fa38ea7e8a6bc243ec16ca90ac1443fc9fd7c15ec9cfd28aa35f0900` |
 | Debian&nbsp;(Debug) | [osquery-dbgsym_4.5.0\_1.linux.arm64.ddeb](https://pkg.osquery.io/deb/osquery-dbgsym_4.5.0_1.linux.arm64.deb) `4e63a8605519fc51095e7ef70f3f9ae93adcb7aef29ca1a398caf2f3f77b73fb` |
 | RPM            | [osquery-4.5.0-1.linux.aarch64.rpm](https://pkg.osquery.io/rpm/osquery-4.5.0-1.linux.aarch64.rpm) `1d482d9151d58d58af519470595f2968c75b389426e6b8f80a742058966c1b05` |
