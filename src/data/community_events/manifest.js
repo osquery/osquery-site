@@ -11,4 +11,5 @@ export default [
   'hackmiami19',
   'osquery@scale',
   'bsidesslc20',
+  'osquery@scale2021',
 ]
