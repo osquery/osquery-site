@@ -14,8 +14,7 @@
           "subSection1Heading": "Install darwin repository",
           "subSection1Paragraph1": "osquery can be installed from the Homebrew Cask repository.",
           "terminalCommands": [
-            "brew update",
-            "brew cask install osquery"
+            "brew install --cask osquery"
           ]
         },
         "ubuntu": {
