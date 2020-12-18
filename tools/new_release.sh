@@ -40,7 +40,7 @@ function main() {
   echo "[+] Downloading $PACKAGE"
   LINUX=$(curl $PACKAGE | shasum -a 256 | awk '{print $1}')
 
-  PACKAGE="$URL/deb/osquery_${VERSION}_1.linux.amd64.deb"
+  PACKAGE="$URL/deb/osquery_${VERSION}-1.linux_amd64.deb"
   echo "[+] Downloading $PACKAGE"
   DEB=$(curl $PACKAGE | shasum -a 256 | awk '{print $1}')
 
@@ -65,7 +65,7 @@ function main() {
   echo "[+] Downloading $PACKAGE"
   DEBUG_RPM=$(curl $PACKAGE | shasum -a 256 | awk '{print $1}')
 
-  PACKAGE="$URL/deb/osquery-dbgsym_${VERSION}_1.linux.amd64.deb"
+  PACKAGE="$URL/deb/osquery-dbgsym_${VERSION}-1.linux_amd64.deb"
   echo "[+] Downloading $PACKAGE"
   DEBUG_DEB=$(curl $PACKAGE | shasum -a 256 | awk '{print $1}')
 
@@ -97,7 +97,7 @@ function main() {
       },
       {
         "type": "Debian",
-        "package": "osquery_${VERSION}_1.linux.amd64.deb",
+        "package": "osquery_${VERSION}-1.linux_amd64.deb",
         "content": "$DEB",
         "platform": "deb"
       },
@@ -117,7 +117,7 @@ function main() {
       },
       {
         "type": "Debian",
-        "package": "osquery-dbgsym_${VERSION}_1.linux.amd64.deb",
+        "package": "osquery-dbgsym_${VERSION}-1.linux_amd64.deb",
         "content": "$DEBUG_DEB",
         "platform": "deb"
       }
