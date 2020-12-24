@@ -29,8 +29,8 @@
       },
       {
         "type": "Windows",
-        "package": "osquery-4.6.0.msi",
-        "content": "3e01a71df74cc7c29ccc37b247ef17d6fab9bc975bd8ad5c6919ee13d25cd414",
+        "package": "osquery-4.6.0.2.msi",
+        "content": "18845659c46e7cde4e569b0b158d5158ef31eca1535a9d0174d825ae6e1c731f",
         "platform": "windows"
       }
     ],
