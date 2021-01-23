@@ -7,20 +7,6 @@
     "url": "https://github.com/airbnb/streamalert"
   },
   {
-    "description": "A flexible control server for osquery fleets",
-    "owner":"kolide",
-    "repo":"fleet",
-    "star_count": 793,
-    "url": "https://github.com/kolide/fleet"
-  },
-  {
-    "description": "an osquery fleet manager",
-    "owner": "mwielgoszewski",
-    "repo": "doorman",
-    "star_count": 523,
-    "url": "https://github.com/mwielgoszewski/doorman"
-  },
-  {
     "description": "Zentral is a framework to gather, process, and monitor system events and link them to an inventory.",
     "owner": "zentralopensource",
     "repo": "zentral",
@@ -57,9 +43,23 @@
   },
   {
     "description": "Go bindings for Osquery",
-    "owner": "kolide",
+    "owner": "osquery",
     "repo": "osquery-go",
     "star_count": 190,
-    "url": "https://github.com/kolide/osquery-go"
+    "url": "https://github.com/osquery/osquery-go"
+  },
+  {
+    "description": "Fast and efficient osquery management",
+    "owner": "jmpsec",
+    "repo": "osctrl",
+    "star_count": 179,
+    "url": "https://github.com/jmpsec/osctrl"
+  },
+  {
+    "description": "The premier osquery fleet manager.",
+    "owner": "fleetdm",
+    "repo": "fleet",
+    "star_count": 140,
+    "url": "https://github.com/fleetdm/fleet"
   }
 ]
