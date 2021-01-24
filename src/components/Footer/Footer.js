@@ -31,7 +31,7 @@ const renderSponsors = () => {
   return [
     intersperse(sponsors.map(s => renderSponsor(s[0], s[1])), ', '),
     ', and ',
-    renderSponsor('you?', 'https://crowdfunding.lfx.linuxfoundation.org/projects/osquery'),
+    renderSponsor('You?', 'https://crowdfunding.lfx.linuxfoundation.org/projects/osquery'),
   ]
 }
 
