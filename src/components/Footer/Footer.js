@@ -10,6 +10,44 @@ import './Footer.css'
 const baseClass = 'footer'
 const mobileWidth = 800
 
+const sponsors = [
+  ['1Password', 'https://1password.com/'],
+  ['Facebook', 'https://www.facebook.com/'],
+  ['Fastly', 'https://www.fastly.com/'],
+  ['GitHub', 'https://www.github.com/'],
+  ['Kolide', 'https://www.kolide.com/'],
+  ['Trail of Bits', 'https://www.trailofbits.com/'],
+]
+
+const renderSponsor = (name, url) => {
+  return (
+    <a href={url} rel="noopener noreferrer" target="_blank">
+      {name}
+    </a>
+  )
+}
+
+const renderSponsors = () => {
+  return [
+    intersperse(sponsors.map(s => renderSponsor(s[0], s[1])), ', '),
+    ', and ',
+    renderSponsor('You?', 'https://crowdfunding.lfx.linuxfoundation.org/projects/osquery'),
+  ]
+}
+
+function intersperse(arr, sep) {
+  if (arr.length === 0) {
+    return []
+  }
+
+  return arr.slice(1).reduce(
+    function(xs, x, i) {
+      return xs.concat([sep, x])
+    },
+    [arr[0]]
+  )
+}
+
 const Meta = () => {
   return (
     <section className={`${baseClass}__meta`}>
@@ -32,12 +70,9 @@ const Meta = () => {
       </a>
 
       <p className={`${baseClass}__made-by-kolide`}>
-        Site made with
         <span className={`${baseClass}__heart-text`}> &#10084; </span>
-        <span>by </span>
-        <a href="https://kolide.com" rel="noopener noreferrer" target="_blank">
-          Kolide
-        </a>
+        <span>to our sponsors: </span>
+        {renderSponsors()}
       </p>
     </section>
   )
