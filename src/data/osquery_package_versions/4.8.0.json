@@ -30,7 +30,7 @@
       {
         "type": "Windows",
         "package": "osquery-4.8.0.msi",
-        "content": "89f31b0a9467e12029629e44a605e84bf90a211c74207b85f92a1632945b7a9d",
+        "content": "5a88aaeb9bf2cd52071817be9a8124fa0c4fd9188ca1730ee77058a1449b8ab9",
         "platform": "windows"
       }
     ],
