@@ -2,7 +2,7 @@
     "name": "osquery-site",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://willrushi.github.io/osquery-site/",
+    "homepage": "https://osquery.io",
     "resolutions": {
         "**/braces": "2.3.2",
         "**/clean-css": "4.1.11",
@@ -48,7 +48,7 @@
         "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
         "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
         "predeploy": "yarn run build",
-        "deploy": "gh-pages -d build",
+        "deploy": "gh-pages -d build -b gh-pages2",
         "lint": "eslint src",
         "postinstall": "npm rebuild node-sass",
         "test": "node scripts/test.js --env=jsdom",
