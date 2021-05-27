@@ -2,7 +2,7 @@
     "name": "osquery-site",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://willrushi.github.io/osquery-site",
+    "homepage": "https://willrushi.github.io/osquery-site/",
     "resolutions": {
         "**/braces": "2.3.2",
         "**/clean-css": "4.1.11",
