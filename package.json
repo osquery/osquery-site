@@ -48,7 +48,7 @@
         "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
         "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
         "predeploy": "yarn run build",
-        "deploy": "gh-pages -d build -b gh-pages2",
+        "deploy": "gh-pages -b master -d build",
         "lint": "eslint src",
         "postinstall": "npm rebuild node-sass",
         "test": "node scripts/test.js --env=jsdom",
