@@ -4,6 +4,7 @@ require 'digest'
 require 'json'
 require 'net/http'
 require 'net/https'
+require 'open3'
 require 'ostruct'
 require 'uri'
 
@@ -127,10 +128,92 @@ end
 
 
 
-ver="4.8.0"
+def usage(err: nil, ec: 0)
+  if err
+    puts err
+    puts ""
+    ec = 1
+  end
+
+  puts "#{__FILE__} <version> <osquery checkout> <website checkout>"
+  exit ec
+end
 
 
+def set_checkout_to_version(ver, dir)
+  #(cd $OSQUERY; git checkout $VERSION)
+end
 
+def generate_table_api(version, dir, website_dir)
+  env = {
+    'PYTHONPATH' => File.join(dir, 'build/python_path'),
+  }
+
+  cmd = [
+    env,
+    "python3",
+    File.join(dir, 'tools/codegen/genwebsitejson.py'),
+    "--specs",  File.join(dir, "specs"),
+  ]
+
+  output, status = Open3.capture2(*cmd)
+
+  unless status.success?
+    puts "Failed to run #{cmd.join(' ')}:"
+    puts output
+    exit 1
+  end
+
+  File.open(File.join(website_dir, "src/data/osquery_schema_versions/#{version}.json"), 'w') do |f|
+    f.write(output)
+  end
+
+  return nil
+end
+
+def generate_version_metadata(version, dir, website_dir)
+    env = {
+    'PYTHONPATH' => File.join(dir, 'build/python_path'),
+  }
+
+  cmd = [
+    env,
+    "python3",
+    File.join(dir, 'tools/codegen/genwebsitemetadata.py'),
+    "--file", "#{website_dir}/src/data/osquery_metadata.json",
+    "--version", version,
+  ]
+
+  output, status = Open3.capture2(*cmd)
+
+  unless status.success?
+    puts "Failed to run #{cmd.join(' ')}:"
+    puts output
+    exit 1
+  end
+
+  return nil
+end
+
+# What are we doing?
+ver = ARGV[0]
+osquery_checkout = ARGV[1]
+website_checkout = ARGV[2]
+
+# Quick sanity check on args
+usage(err: "Invalid version") unless ver&.match(/^[0-9.]+$/)
+usage(err: "Invalid osquery directory") unless osquery_checkout && Dir.exists?(osquery_checkout)
+usage(err: "Invalid website directory") unless website_checkout && Dir.exists?(website_checkout)
+
+# Checkout the requested version in the osquery dir, and generate
+# metadata.  This would be better replaced by something in the
+# build. See https://github.com/osquery/osquery/issues/7131
+set_checkout_to_version(ver, osquery_checkout)
+generate_table_api(ver, osquery_checkout, website_checkout)
+generate_version_metadata(ver, osquery_checkout, website_checkout)
+
+
+# Generate the list of downloads, and their digests
 entries = []
 entries_debug = []
 
@@ -157,7 +240,7 @@ data = {
   },
 }
 
-require 'pry'
-binding.pry
-
-puts JSON.pretty_generate(data)
+File.open(File.join(website_checkout, "src/data/osquery_package_versions/#{ver}.json"), 'w') do |f|
+  puts "Writing packages to #{f.path}"
+  f.write(JSON.pretty_generate(data))
+end
