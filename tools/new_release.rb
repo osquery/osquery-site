@@ -1,5 +1,12 @@
 #!/usr/bin/env ruby
 
+# Copyright (c) 2014-present, The osquery authors
+#
+# This source code is licensed as defined by the LICENSE file found in the
+# root directory of this source tree.
+#
+# SPDX-License-Identifier: (Apache-2.0 OR GPL-2.0-only)
+
 require 'digest'
 require 'json'
 require 'net/http'
@@ -7,6 +14,8 @@ require 'net/https'
 require 'open3'
 require 'ostruct'
 require 'uri'
+require 'tmpdir'
+
 
 BASE_URL = "https://pkg.osquery.io"
 
@@ -78,7 +87,6 @@ def gen_data(version, platform, arch, debug: false )
   return data
 end
 
-
 def verify_uri(uri)
   http = Net::HTTP.new(uri.host, uri.port)
   http.use_ssl = true
@@ -139,18 +147,53 @@ def usage(err: nil, ec: 0)
   exit ec
 end
 
+def download_url_to_path(url, filepath)
+  uri = URI.parse(url)
 
-def set_checkout_to_version(ver, dir)
-  #(cd $OSQUERY; git checkout $VERSION)
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true
+  http.start
+
+  req = Net::HTTP::Get.new(uri)
+
+  File.open(filepath, "w") do |f|
+    http.request req do |resp|
+      resp.read_body do |chunk|
+        f.write(chunk)
+      end
+    end
+  end
 end
 
-def generate_table_api(version, dir, website_dir)
-  env = {
-    'PYTHONPATH' => File.join(dir, 'build/python_path'),
-  }
+def tmp_dir_with_osquery_version(ver)
+  url = "https://github.com/osquery/osquery/archive/refs/tags/#{ver}.tar.gz"
+  url = "https://codeload.github.com/osquery/osquery/tar.gz/refs/tags/#{ver}"
+
+  Dir.mktmpdir("osquery-checkout-website-json-generation") do |dir|
+    tarfile = File.join(dir, "o.tar.gz")
+    download_url_to_path(url, tarfile)
+
+    # While it would be cleaner to do the uncompress in ruby, we can
+    # be pragmatic here.
+    Dir.chdir(dir) do
+      Dir.mkdir("osquery")
+      system("tar", "xzf", tarfile, "-C", "osquery", "--strip-components=1")
+      raise("Tar failed") unless $?.success?
+    end
+
+    yield(File.join(dir, "osquery"))
+  end
+end
+
+def generate_table_api(version, website_dir)
+  tmp_dir_with_osquery_version(version) do |dir|
+    generate_table_api_python(version, dir, website_dir)
+  end
+end
+
+def generate_table_api_python(version, dir, website_dir)
 
   cmd = [
-    env,
     "python3",
     File.join(dir, 'tools/codegen/genwebsitejson.py'),
     "--specs",  File.join(dir, "specs"),
@@ -171,25 +214,20 @@ def generate_table_api(version, dir, website_dir)
   return nil
 end
 
-def generate_version_metadata(version, dir, website_dir)
-    env = {
-    'PYTHONPATH' => File.join(dir, 'build/python_path'),
-  }
+def generate_version_metadata(version, website_dir, set_current: true)
+  file_path = File.join(website_dir, "#{website_dir}/src/data/osquery_metadata.json")
 
-  cmd = [
-    env,
-    "python3",
-    File.join(dir, 'tools/codegen/genwebsitemetadata.py'),
-    "--file", "#{website_dir}/src/data/osquery_metadata.json",
-    "--version", version,
-  ]
+  data = nil
+  File.open(file_path) do |f|
+    data = JSON.load(f)
+  end
 
-  output, status = Open3.capture2(*cmd)
+  data["all_versions"] << version
+  data["all_versions"].uniq!
+  data["current_version"] = version if set_current
 
-  unless status.success?
-    puts "Failed to run #{cmd.join(' ')}:"
-    puts output
-    exit 1
+  File.open(file_path, 'w') do |f|
+    f.write(JSON.pretty_generate(data))
   end
 
   return nil
@@ -197,21 +235,19 @@ end
 
 # What are we doing?
 ver = ARGV[0]
-osquery_checkout = ARGV[1]
-website_checkout = ARGV[2]
+website_checkout = ARGV[1]
 
 # Quick sanity check on args
 usage(err: "Invalid version") unless ver&.match(/^[0-9.]+$/)
-usage(err: "Invalid osquery directory") unless osquery_checkout && Dir.exists?(osquery_checkout)
 usage(err: "Invalid website directory") unless website_checkout && Dir.exists?(website_checkout)
 
 # Checkout the requested version in the osquery dir, and generate
 # metadata.  This would be better replaced by something in the
 # build. See https://github.com/osquery/osquery/issues/7131
-set_checkout_to_version(ver, osquery_checkout)
-generate_table_api(ver, osquery_checkout, website_checkout)
-generate_version_metadata(ver, osquery_checkout, website_checkout)
+generate_table_api(ver, website_checkout)
+generate_version_metadata(ver, website_checkout)
 
+raise "Early exit!"
 
 # Generate the list of downloads, and their digests
 entries = []
