@@ -4,9 +4,11 @@ author: "Alessandro Gario"
 date: "2020-09-18 21:00"
 ---
 
+> **Update**: Linux arm64/aarch64 is considered stable. Updates will be on the usual [Downloads](/downloads) page
+
+
 We would like to announce beta support for Linux arm64/aarch64. We are working diligently towards official releases and support for more operating systems. If you would like to test, please find beta packages for the 4.5.0 tag here:
 
-> **Update**: We have updated the package links to the most recent 4.8.0 release.
 
 | Type    |    Filename / sha256  |
 |:------|:-------|

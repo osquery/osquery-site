@@ -19,7 +19,6 @@ import './Downloads.css'
 
 const DEBUG = 'debug'
 const OFFICIAL = 'official'
-const AARCH64 = 'aarch64'
 
 const baseClass = 'downloads-page'
 const installOptionNames = {
@@ -63,22 +62,9 @@ class Downloads extends Component {
     }
   }
 
-  onGoToAarch64Blog = () => {
-    return () => {
-      const { history, match } = this.props
-
-      history.push(`${process.env.PUBLIC_URL}/blog/linux-arm64-beta-support`)
-    }
-  }
-
   render() {
     const { match } = this.props
-    const {
-      onInstallOptionChange,
-      onOsqueryVersionChange,
-      onReleaseTypeChange,
-      onGoToAarch64Blog,
-    } = this
+    const { onInstallOptionChange, onOsqueryVersionChange, onReleaseTypeChange } = this
     const { osquery_version: osqueryVersion, release_type: releaseType } = match.params
     const { selectedInstallOption } = this.state
     const alternativeInstallOptionContent =
@@ -125,13 +111,6 @@ class Downloads extends Component {
             className={`${baseClass}__tab`}
             onClick={onReleaseTypeChange(DEBUG)}
             text="Debug"
-          />
-
-          <Tab
-            active={releaseType === AARCH64}
-            className={`${baseClass}__tab ${baseClass}__tab--arm64`}
-            onClick={onGoToAarch64Blog()}
-            text="ARM64"
           />
 
           <div className={`section-break ${baseClass}__section-break`} />
