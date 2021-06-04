@@ -143,7 +143,7 @@ def usage(err: nil, ec: 0)
     ec = 1
   end
 
-  puts "#{__FILE__} <version> <osquery checkout> <website checkout>"
+  puts "#{__FILE__} <version> <website checkout> <osquery build dir>"
   exit ec
 end
 
@@ -185,15 +185,21 @@ def tmp_dir_with_osquery_version(ver)
   end
 end
 
-def generate_table_api(version, website_dir)
+def generate_table_api(version, website_dir, build_dir)
   tmp_dir_with_osquery_version(version) do |dir|
-    generate_table_api_python(version, dir, website_dir)
+    generate_table_api_python(version, dir, website_dir, build_dir)
   end
 end
 
-def generate_table_api_python(version, dir, website_dir)
+def generate_table_api_python(version, dir, website_dir, build_dir)
+
+  # We need builddir until https://github.com/osquery/osquery/pull/7136
+  env = {
+      "PYTHONPATH" => "#{build_dir}/python_path",
+  }
 
   cmd = [
+    env,
     "python3",
     File.join(dir, 'tools/codegen/genwebsitejson.py'),
     "--specs",  File.join(dir, "specs"),
@@ -236,18 +242,20 @@ end
 # What are we doing?
 ver = ARGV[0]
 website_checkout = ARGV[1]
+osquery_build = ARGV[2]
 
 # Quick sanity check on args
 usage(err: "Invalid version") unless ver&.match(/^[0-9.]+$/)
 usage(err: "Invalid website directory") unless website_checkout && Dir.exists?(website_checkout)
+usage(err: "Doesn't look like a build dir") unless osquery_build &&
+                                                   Dir.exists?(osquery_build) &&
+                                                   File.basename(osquery_build) == "build"
 
 # Checkout the requested version in the osquery dir, and generate
 # metadata.  This would be better replaced by something in the
 # build. See https://github.com/osquery/osquery/issues/7131
-generate_table_api(ver, website_checkout)
+generate_table_api(ver, website_checkout, osquery_build)
 generate_version_metadata(ver, website_checkout)
-
-raise "Early exit!"
 
 # Generate the list of downloads, and their digests
 entries = []
@@ -263,9 +271,6 @@ entries << gen_download_entry(ver, "windows", "")
     entries_debug << gen_download_entry(ver, plat, arch, debug: true)
   end
 end
-
-
-
 
 data = {
   version: ver,
