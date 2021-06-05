@@ -7,15 +7,12 @@ import './DownloadCard.css'
 
 const baseClass = 'download-card'
 const iconName = {
-  macOS: 'darwin',
+  macos: 'darwin',
   darwin: 'darwin',
-  Linux: 'linux',
   linux: 'linux',
-  RPM: 'centos',
   rpm: 'centos',
-  Debian: 'ubuntu',
+  debian: 'ubuntu',
   deb: 'ubuntu',
-  Windows: 'windows',
   windows: 'windows',
 }
 
@@ -23,7 +20,7 @@ const NameSection = ({ packageName, type, url, platform }) => {
   return (
     <div>
       <div className={`${baseClass}__name-wrapper`}>
-        <Icon name={iconName[platform]} />
+        <Icon name={iconName[platform.toLowerCase()]} />
         <span className={`${baseClass}__download-type`}>{type}</span>
       </div>
 
