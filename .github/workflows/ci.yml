@@ -32,7 +32,7 @@ jobs:
 
 
     - name: Install modules
-      run: yarn
+      run: yarn --prefer-offline
 
     - name: Run ESLint
       run: yarn lint
