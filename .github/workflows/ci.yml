@@ -32,7 +32,6 @@ jobs:
 
 
     - name: Install modules
-      if: steps.yarn-cache.outputs.cache-hit != 'true'
       run: yarn
 
     - name: Run ESLint
