@@ -15,7 +15,7 @@ env:
   NODE_CACHE_VERSION: 1
 
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
@@ -43,9 +43,16 @@ jobs:
         restore-keys: |
           v${{env.NODE_CACHE_VERSION}}-${{ runner.os }}-${{ matrix.node-version }}-nodemodules-
 
-
     - name: Install modules
       run: yarn --prefer-offline
 
+  # Split lint into it's own job so the setup is cached more aggressively
+  lint:
+    needs: setup
+    runs-on: ubuntu-18.04
+    steps:
     - name: Lint
       run: yarn lint
+
+    - name: Build
+      run: yarn build
