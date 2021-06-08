@@ -46,11 +46,6 @@ jobs:
     - name: Install modules
       run: yarn --prefer-offline
 
-  # Split lint into it's own job so the setup is cached more aggressively
-  lint:
-    needs: setup
-    runs-on: ubuntu-18.04
-    steps:
     - name: Lint
       run: yarn lint
 
