@@ -59,8 +59,8 @@ module.exports = {
   entry: [require.resolve('./polyfills'), paths.appIndexJs],
   mode: process.env.NODE_ENV,
   optimization: {
-    runtimeChunk: 'single',
     minimize: true,
+    runtimeChunk: 'single',
     splitChunks: {
       chunks:'all',
     },
@@ -305,7 +305,5 @@ module.exports = {
     net: 'empty',
     tls: 'empty',
     child_process: 'empty',
-    Buffer: false, // webpack v5 prep
-    process: false, // webpack v5 prep
   },
 };
