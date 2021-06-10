@@ -46,7 +46,7 @@ jobs:
     - name: Install modules
       run: yarn --prefer-offline
 
-    - name: No updates to CWD
+    - name: Check for uncommitted dependencies
       run: |
         test -z "$(git status --porcelain)" && exit
         echo "yarn modified something. Please commit"
