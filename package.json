@@ -133,5 +133,8 @@
     },
     "eslintConfig": {
         "extends": "react-app"
+    },
+    "engines": {
+        "node": "~12"
     }
 }
