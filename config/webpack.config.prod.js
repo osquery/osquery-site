@@ -60,6 +60,10 @@ module.exports = {
   mode: process.env.NODE_ENV,
   optimization: {
     minimize: true,
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks:'all',
+    },
   },
   output: {
     // The build folder.

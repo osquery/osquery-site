@@ -15,7 +15,7 @@ env:
   NODE_CACHE_VERSION: 1
 
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
@@ -43,9 +43,25 @@ jobs:
         restore-keys: |
           v${{env.NODE_CACHE_VERSION}}-${{ runner.os }}-${{ matrix.node-version }}-nodemodules-
 
-
     - name: Install modules
       run: yarn --prefer-offline
 
+    - name: Check for uncommitted dependencies
+      run: |
+        test -z "$(git status --porcelain)" && exit
+        echo "yarn modified something. Please commit"
+        echo ""
+        git status
+        exit 1
+
     - name: Lint
       run: yarn lint
+
+    - name: Build
+      run: yarn build
+      env:
+        # our bundle is too big. So we have to skip failures here
+        CI: false
+
+    - name: Test
+      run: yarn test
