@@ -62,3 +62,6 @@ jobs:
       env:
         # our bundle is too big. So we have to skip failures here
         CI: false
+
+    - name: Test
+      run: yarn test
