@@ -46,6 +46,14 @@ jobs:
     - name: Install modules
       run: yarn --prefer-offline
 
+    - name: No updates to CWD
+      run: |
+        test -z "$(git status --porcelain)" && exit
+        echo "yarn modified something. Please commit"
+        echo ""
+        git status
+        exit 1
+
     - name: Lint
       run: yarn lint
 
