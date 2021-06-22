@@ -19,7 +19,7 @@
         "type": "Linux (x86_64)",
         "package": "osquery-4.9.0_1.linux_x86_64.tar.gz",
         "platform": "linux",
-        "content": "5a99d295b6973920590afefcfde9235bb337f3189f73ee8adbefd71c0e27adac"
+        "content": "4187f5b76e21ce96f765e509f96cb04708c43596b7609eba0e5a10ab5fdf58c5"
       },
       {
         "type": "Debian (x86_64)",
@@ -37,7 +37,7 @@
         "type": "Linux (arm64)",
         "package": "osquery-4.9.0_1.linux_aarch64.tar.gz",
         "platform": "linux",
-        "content": "f968c1fc2147366320363b51e45e1f265d6f555ce2bc3be3ef93c221e334c776"
+        "content": "f3f5f3d6d81d727aad52a50b9f252aea3d7200add643eca06e9f462e66daeb18"
       },
       {
         "type": "Debian (arm64)",
