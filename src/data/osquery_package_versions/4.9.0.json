@@ -13,7 +13,7 @@
         "type": "Windows",
         "package": "osquery-4.9.0.msi",
         "platform": "windows",
-        "content": "fa6ff1be31cbe935a27efe67114900cec26d79513a3e51d1618bd693f91ae84e"
+        "content": "ae5e8b5948f3e2783aadc66e8b9d5d417b8606b39abf79f06af466c3455ce249"
       },
       {
         "type": "Linux (x86_64)",
