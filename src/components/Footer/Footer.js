@@ -14,7 +14,6 @@ const sponsors = [
   ['1Password', 'https://1password.com/'],
   ['Amazon Web Services (AWS)', 'https://aws.amazon.com/'],
   ['Facebook', 'https://www.facebook.com/'],
-  ['Fastly', 'https://www.fastly.com/'],
   ['GitHub', 'https://www.github.com/'],
   ['Kolide', 'https://www.kolide.com/'],
   ['Trail of Bits', 'https://www.trailofbits.com/'],
