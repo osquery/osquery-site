@@ -61,12 +61,7 @@ def gen_data(version, platform, arch, debug: false )
     real_arch = canonicalize_arch(arch, arm64: "arm64", x86: "amd64")
     data.title = "Debian#{title_arch(arch)}"
     data.filename = if debug
-                      # WHY DO WE HAVE THIS INCONSISTENCY!?
-                      suffix = if real_arch == "arm64"
-                                 "ddeb"
-                               else
-                                 "deb"
-                               end
+                      suffix =  "deb"
                       "osquery-dbgsym_#{version}-1.linux_#{real_arch}.#{suffix}"
                     else
                       "osquery_#{version}-1.linux_#{real_arch}.deb"
@@ -185,24 +180,17 @@ def tmp_dir_with_osquery_version(ver)
   end
 end
 
-def generate_table_api(version, website_dir, build_dir)
+def generate_table_api(version, website_dir)
   tmp_dir_with_osquery_version(version) do |dir|
-    generate_table_api_python(version, dir, website_dir, build_dir)
+    generate_table_api_python(version, dir, website_dir)
   end
 end
 
-def generate_table_api_python(version, dir, website_dir, build_dir)
-
-  # We need builddir until https://github.com/osquery/osquery/pull/7136
-  env = {
-      "PYTHONPATH" => "#{build_dir}/python_path",
-  }
-
+def generate_table_api_python(version, osquery_dir, website_dir)
   cmd = [
-    env,
     "python3",
-    File.join(dir, 'tools/codegen/genwebsitejson.py'),
-    "--specs",  File.join(dir, "specs"),
+    File.join(osquery_dir, 'tools/codegen/genwebsitejson.py'),
+    "--specs",  File.join(osquery_dir, "specs"),
   ]
 
   output, status = Open3.capture2(*cmd)
@@ -242,19 +230,15 @@ end
 # What are we doing?
 ver = ARGV[0]
 website_checkout = ARGV[1]
-osquery_build = ARGV[2]
 
 # Quick sanity check on args
 usage(err: "Invalid version") unless ver&.match(/^[0-9.]+$/)
 usage(err: "Invalid website directory") unless website_checkout && Dir.exists?(website_checkout)
-usage(err: "Doesn't look like a build dir") unless osquery_build &&
-                                                   Dir.exists?(osquery_build) &&
-                                                   File.basename(osquery_build) == "build"
 
 # Checkout the requested version in the osquery dir, and generate
 # metadata.  This would be better replaced by something in the
 # build. See https://github.com/osquery/osquery/issues/7131
-generate_table_api(ver, website_checkout, osquery_build)
+generate_table_api(ver, website_checkout)
 generate_version_metadata(ver, website_checkout)
 
 # Generate the list of downloads, and their digests
