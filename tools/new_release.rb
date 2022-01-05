@@ -138,7 +138,7 @@ def usage(err: nil, ec: 0)
     ec = 1
   end
 
-  puts "#{__FILE__} <version> <website checkout> <osquery build dir>"
+  puts "#{__FILE__} <version> <website checkout>"
   exit ec
 end
 
