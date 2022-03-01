@@ -87,29 +87,43 @@ def verify_uri(uri)
   http.use_ssl = true
   http.start
   response = http.head(uri.path)
-  return response.code == "200"
+  return %w(200 301 302).include?(response.code)
 end
 
 def digest_uri(uri)
   # equivlent to
   # SHA=$(curl $PACKAGE | shasum -a 256 | awk '{print $1}')
   sha256 = Digest::SHA256.new
+  initial_sha = sha256.to_s
 
-  http = Net::HTTP.new(uri.host, uri.port)
-  http.use_ssl = true
-  http.start
-
-  req = Net::HTTP::Get.new(uri)
-
-  http.request req do |resp|
-    resp.read_body do |chunk|
-      sha256.update(chunk)
-    end
+  fetch_uri(uri) do |response|
+    sha256.update(response.body)
   end
 
+  # this can happen if the http request fails, or hits a redirect
+  raise "Digest has no data" if initial_sha.eql?(sha256.to_s)
   sha256.to_s
 end
 
+# From https://ruby-doc.org/stdlib-3.1.1/libdoc/net/http/rdoc/Net/HTTP.html#class-Net::HTTP-label-Following+Redirection
+def fetch_uri(uri, redirect_limit = 10, &block)
+  raise "Redirect loop" if redirect_limit < 1
+
+  # Note that this seems to get the entire body, which makes this hard to stream/chunk. 
+  response = Net::HTTP.get_response(uri)
+
+  case response
+  when Net::HTTPSuccess then
+    block.call(response)
+  when Net::HTTPRedirection then
+    location = response['location']
+    warn "redirected to #{location}"
+    fetch_uri(URI(location), redirect_limit - 1, &block)
+  else
+    puts response.code
+    raise "Got something weird"
+  end
+end
 
 def gen_download_entry(version, platform, arch, debug: false )
   data = gen_data(version, platform, arch, debug: debug)
