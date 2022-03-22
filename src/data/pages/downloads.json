@@ -38,15 +38,6 @@
             "sudo yum install osquery"
           ]
         },
-        "freebsd": {
-          "subSection1Heading": "Install freebsd repository",
-          "subSection1Paragraph1": "The easiest way to install osquery on FreeBSD is via the ports tree. Check FreshPorts for the latest version information.",
-          "terminalCommands": [
-            "cd /usr/ports/sysutils/osquery && make install clean",
-            "pkg install osquery",
-            "portmaster sysutils/osquery"
-          ]
-        },
         "windows": {
           "subSection1Heading": "Install windows repository",
           "subSection1Paragraph1": "We recommend installing and deploying Windows support using chocolatey. Please let us know if your enterprise could make use of other package formats.",
