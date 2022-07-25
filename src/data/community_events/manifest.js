@@ -12,4 +12,5 @@ export default [
   'osquery@scale',
   'bsidesslc20',
   'osquery@scale2021',
+  'osquery@scale2022',
 ]
