@@ -4,17 +4,19 @@ author: "Alessandro Gario"
 date: "2020-09-18 21:00"
 ---
 
+> **Update**: Linux arm64/aarch64 is considered stable. Updates will be on the usual [Downloads](/downloads) page
+
+
 We would like to announce beta support for Linux arm64/aarch64. We are working diligently towards official releases and support for more operating systems. If you would like to test, please find beta packages for the 4.5.0 tag here:
 
-> **Update**: We have updated the package links to the most recent 4.5.1 release.
 
 | Type    |    Filename / sha256  |
 |:------|:-------|
-| Tarball        | [osquery-4.5.1\_1.linux\_aarch64.tar.gz](https://pkg.osquery.io/linux/osquery-4.5.1_1.linux_aarch64.tar.gz) `7d8f156ea206655da3c465c4c19443e2c2b97e4d3f9f7ab41d16ec891886c58a` |
-| Debian         | [osquery\_4.5.1\_1.linux.arm64.deb](https://pkg.osquery.io/deb/osquery_4.5.1_1.linux.arm64.deb) `af0b1c93a70b66af1c8c851a7a2e8e0fba8c23cc5046c53afe9c33fc2ca65e48` |
-| Debian&nbsp;(Debug) | [osquery-dbgsym_4.5.1\_1.linux.arm64.deb](https://pkg.osquery.io/deb/osquery-dbgsym_4.5.1_1.linux.arm64.deb) `fda339c59567bcb56b4e5a1d42b65de50a874acaa08279299fd1c33ae38f121a` |
-| RPM            | [osquery-4.5.1-1.linux.aarch64.rpm](https://pkg.osquery.io/rpm/osquery-4.5.1-1.linux.aarch64.rpm) `b6cff1fe07ca84238394f1e13af9b96deb262b261b378ad00cf77cbe064734a2` |
-| RPM&nbsp;(Debug)    | [osquery-debuginfo-4.5.1-1.linux.aarch64.rpm](https://pkg.osquery.io/rpm/osquery-debuginfo-4.5.1-1.linux.aarch64.rpm) `1be8fd762836f8f6de5850a1b62908e14534f2826e84eef590958e677b8762ae` |
+| Tarball        | [osquery-4.8.0\_1.linux\_aarch64.tar.gz](https://pkg.osquery.io/linux/osquery-4.8.0_1.linux_aarch64.tar.gz) `61fbd2b5e2f8fd2e65dec91955499eee8639efff289c3279b5ffa2786741a8c4` |
+| Debian         | [osquery\_4.8.0-1.linux\_arm64.deb](https://pkg.osquery.io/deb/osquery_4.8.0-1.linux_arm64.deb) `eb48d5a77aab503a3bd0f5d0a642c4fd7b7a86a9754e33bbe49fa68ae855372c` |
+| Debian&nbsp;(Debug) | [osquery-dbgsym\_4.8.0-1.linux\_arm64.ddeb](https://pkg.osquery.io/deb/osquery-dbgsym_4.8.0-1.linux_arm64.ddeb) `8102c39cf707ef30890092ceee25af9bf5d348816523aa4f43959bacd5eea66c` |
+| RPM            | [osquery-4.8.0-1.linux.aarch64.rpm](https://pkg.osquery.io/rpm/osquery-4.8.0-1.linux.aarch64.rpm) `8e58bff947b287a9e7659208d152fe0873226b698ba7a229a3439ff1c667a4b1` |
+| RPM&nbsp;(Debug)    | [osquery-debuginfo-4.8.0-1.linux.aarch64.rpm](https://pkg.osquery.io/rpm/osquery-debuginfo-4.8.0-1.linux.aarch64.rpm) `db6daf10b286ee4ce910640c99bb584b50155e08867ea36cde1e324ba9744be1` |
 
 
 

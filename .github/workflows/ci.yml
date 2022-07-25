@@ -1,0 +1,70 @@
+#
+# Copyright (c) 2014-present, The osquery authors
+#
+# This source code is licensed as defined by the LICENSE file found in the
+# root directory of this source tree.
+#
+# SPDX-License-Identifier: (Apache-2.0 OR GPL-2.0-only)
+#
+on:
+  pull_request:
+    branches:
+      - '*'
+
+env:
+  NODE_CACHE_VERSION: 1
+
+jobs:
+  ci:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    # Caching. As recommended by the github action
+    - name: Get yarn cache directory path
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+    - name: Cache yarn cache
+      uses: actions/cache@v2
+      id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+      with:
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-yarn-
+
+    # Caching node_modules is not always recommended. But our usage is fairly minimal, and yarn is slow.
+    - name: Cache node_modules
+      id: cache-node-modules
+      uses: actions/cache@v2
+      with:
+        path: node_modules
+        key: v${{env.NODE_CACHE_VERSION}}-${{ runner.os }}-${{ matrix.node-version }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          v${{env.NODE_CACHE_VERSION}}-${{ runner.os }}-${{ matrix.node-version }}-nodemodules-
+
+    - name: Install modules
+      run: yarn --prefer-offline
+
+    - name: Check for uncommitted dependencies
+      run: |
+        test -z "$(git status --porcelain)" && exit
+        echo "yarn modified something. Please commit"
+        echo ""
+        git status
+        exit 1
+
+    - name: Lint
+      run: yarn lint
+
+    - name: Build
+      run: yarn build
+      env:
+        # our bundle is too big. So we have to skip failures here
+        CI: false
+
+    - name: Test
+      run: yarn test

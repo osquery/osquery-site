@@ -1,65 +1,65 @@
 [
   {
-    "description": "StreamAlert is a serverless, realtime data analysis framework which empowers you to ingest, analyze, and alert on data from any environment, using datasources and alerting logic you define.",
-    "owner": "airbnb",
-    "repo": "streamalert",
-    "star_count": 2115,
-    "url": "https://github.com/airbnb/streamalert"
-  },
-  {
-    "description": "A flexible control server for osquery fleets",
-    "owner":"kolide",
-    "repo":"fleet",
-    "star_count": 793,
-    "url": "https://github.com/kolide/fleet"
-  },
-  {
-    "description": "an osquery fleet manager",
-    "owner": "mwielgoszewski",
-    "repo": "doorman",
-    "star_count": 523,
-    "url": "https://github.com/mwielgoszewski/doorman"
-  },
-  {
-    "description": "Zentral is a framework to gather, process, and monitor system events and link them to an inventory.",
-    "owner": "zentralopensource",
-    "repo": "zentral",
-    "star_count": 435,
-    "url": "https://github.com/zentralopensource/zentral"
-  },
-  {
     "description": "A repository for using osquery for incident detection and response",
     "owner": "palantir",
     "repo": "osquery-configuration",
-    "star_count": 480,
+    "star_count": 627,
     "url": "https://github.com/palantir/osquery-configuration"
   },
   {
     "description": "Mapping the MITRE ATT&CK Matrix with Osquery",
     "owner": "teoseller",
     "repo": "osquery-attck",
-    "star_count": 357,
+    "star_count": 547,
     "url": "https://github.com/teoseller/osquery-attck"
+  },
+  {
+    "description": "Zentral is a framework to gather, process, and monitor system events and link them to an inventory.",
+    "owner": "zentralopensource",
+    "repo": "zentral",
+    "star_count": 535,
+    "url": "https://github.com/zentralopensource/zentral"
   },
   {
     "description": "Osquery launcher, autoupdater, and packager",
     "owner": "kolide",
     "repo": "launcher",
-    "star_count": 251,
+    "star_count": 358,
     "url": "https://github.com/kolide/launcher"
+  },
+  {
+    "description": "The premier osquery fleet manager.",
+    "owner": "fleetdm",
+    "repo": "fleet",
+    "star_count": 287,
+    "url": "https://github.com/fleetdm/fleet"
+  },
+  {
+    "description": "Go bindings for Osquery",
+    "owner": "osquery",
+    "repo": "osquery-go",
+    "star_count": 253,
+    "url": "https://github.com/kolide/osquery-go"
   },
   {
     "description": "python bindings for osquery",
     "owner": "osquery",
     "repo": "osquery-python",
-    "star_count": 191,
+    "star_count": 244,
     "url": "https://github.com/osquery/osquery-python"
   },
   {
-    "description": "Go bindings for Osquery",
-    "owner": "kolide",
-    "repo": "osquery-go",
-    "star_count": 190,
-    "url": "https://github.com/kolide/osquery-go"
+    "description": "Fast and efficient osquery management",
+    "owner": "jmpsec",
+    "repo": "osctrl",
+    "star_count": 191,
+    "url": "https://github.com/jmpsec/osctrl"
+  },
+  {
+    "description": "osquery extensions by Trail of Bits",
+    "owner": "trailofbits",
+    "repo": "osquery-extensions",
+    "star_count": 188,
+    "url": "https://github.com/trailofbits/osquery-extensions"
   }
 ]
