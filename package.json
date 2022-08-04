@@ -51,7 +51,6 @@
         "predeploy": "yarn run build",
         "deploy": "gh-pages -b master -d build",
         "lint": "eslint src",
-        "postinstall": "npm rebuild node-sass",
         "test": "node scripts/test.js --env=jsdom",
         "storybook": "start-storybook -p 9001 -c .storybook"
   },
