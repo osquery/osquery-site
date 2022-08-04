@@ -46,15 +46,15 @@
         "serve-build": "yarn run serve -s build",
         "build-js": "node scripts/build.js",
         "build": "npm-run-all build-css build-js && cp build/index.html build/404.html",
-        "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
-        "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+        "watch-css": "npm run build-css --watch",
+        "build-css": "sass --load-path ./src --load-path ./node_modules src/:src/",
         "predeploy": "yarn run build",
         "deploy": "gh-pages -b master -d build",
         "lint": "eslint src",
         "postinstall": "npm rebuild node-sass",
         "test": "node scripts/test.js --env=jsdom",
         "storybook": "start-storybook -p 9001 -c .storybook"
-    },
+  },
     "devDependencies": {
         "@babel/core": "^7.5.5",
         "@babel/helper-define-map": "^7.13.12",
