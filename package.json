@@ -47,7 +47,7 @@
         "build-js": "node scripts/build.js",
         "build": "npm-run-all build-css build-js && cp build/index.html build/404.html",
         "watch-css": "npm run build-css --watch",
-        "build-css": "sass --load-path ./src --load-path ./node_modules src/:src/ --no-source-map ",
+        "build-css": "sass --load-path ./src --load-path ./node_modules src/:src/ --no-source-map",
         "predeploy": "yarn run build",
         "deploy": "gh-pages -b master -d build",
         "lint": "eslint src",
