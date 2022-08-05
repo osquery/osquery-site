@@ -58,6 +58,12 @@
   font-size: 14px;
 }
 
+.osquery-table__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .osquery-table__table-name {
   margin-bottom: 5px;
 }
