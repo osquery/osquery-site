@@ -24,6 +24,7 @@ import SlackText from 'components/Icon/svg/SlackText.svg.js'
 import Star from 'components/Icon/svg/Star.svg.js'
 import Ubuntu from 'components/Icon/svg/Ubuntu.svg.js'
 import Windows from 'components/Icon/svg/Windows.svg.js'
+import PushPin from 'components/Icon/svg/PushPin.svg.js'
 
 class Icon extends Component {
   static propTypes = {
@@ -55,6 +56,7 @@ class Icon extends Component {
     star: Star,
     ubuntu: Ubuntu,
     windows: Windows,
+    pushPin: PushPin,
   }
 
   render() {
