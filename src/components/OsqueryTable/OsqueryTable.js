@@ -75,7 +75,15 @@ class OsqueryTable extends React.PureComponent {
                 <tr key={`column-${idx}`}>
                   <td className={`${baseClass}__table-data`}>{column.name}</td>
                   <td className={`${baseClass}__table-data ${baseClass}__type`}>{column.type}</td>
-                  <td className={`${baseClass}__table-data`}>{column.description}</td>
+                  <td className={`${baseClass}__table-data ${baseClass}__description`}>
+                    <span>{column.description}</span>
+
+                    {column.required && (
+                      <span>
+                        <Icon name="pushPin" />
+                      </span>
+                    )}
+                  </td>
                 </tr>
               )
             })}
