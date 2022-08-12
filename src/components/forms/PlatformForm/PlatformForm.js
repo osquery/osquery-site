@@ -18,7 +18,6 @@ class PlatformForm extends Component {
 
   state = {
     darwin: true,
-    freebsd: true,
     linux: true,
     windows: true,
   }
@@ -39,7 +38,6 @@ class PlatformForm extends Component {
 
         newState = {
           darwin: nextValue,
-          freebsd: nextValue,
           linux: nextValue,
           windows: nextValue,
         }
@@ -52,15 +50,15 @@ class PlatformForm extends Component {
   }
 
   allChecked = () => {
-    const { darwin, freebsd, linux, windows } = this.state
+    const { darwin, linux, windows } = this.state
 
-    return !!(darwin && freebsd && linux && windows)
+    return !!(darwin && linux && windows)
   }
 
   anyChecked = () => {
-    const { darwin, freebsd, linux, windows } = this.state
+    const { darwin, linux, windows } = this.state
 
-    return !!(darwin || freebsd || linux || windows)
+    return !!(darwin || linux || windows)
   }
 
   render() {
@@ -91,19 +89,6 @@ class PlatformForm extends Component {
           </Checkbox>
 
           <Icon fillColor={this.state.darwin ? darkBlue : lightGray} name="darwin" />
-        </div>
-
-        <div className={`${baseClass}__input-wrapper`}>
-          <Checkbox
-            checked={this.state.freebsd}
-            className={`${baseClass}__input`}
-            name="free-bsd"
-            onChange={onChange('freebsd')}
-          >
-            FreeBSD
-          </Checkbox>
-
-          <Icon fillColor={this.state.freebsd ? darkBlue : lightGray} name="freebsd" />
         </div>
 
         <div className={`${baseClass}__input-wrapper`}>

@@ -40,7 +40,6 @@ class Schema extends Component {
     overrideScroll: false,
     platforms: {
       darwin: false,
-      freebsd: false,
       linux: false,
       windows: false,
     },
@@ -85,7 +84,6 @@ class Schema extends Component {
     return this.selectedPlatforms()
       .join(', ')
       .replace('darwin', 'macOS')
-      .replace('freebsd', 'FreeBSD')
       .replace('linux', 'Linux')
       .replace('windows', 'Windows')
   }

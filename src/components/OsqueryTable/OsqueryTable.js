@@ -8,7 +8,7 @@ import Icon from 'components/Icon'
 import './OsqueryTable.css'
 
 const baseClass = 'osquery-table'
-const allPlatforms = ['darwin', 'windows', 'linux', 'freebsd']
+const allPlatforms = ['darwin', 'windows', 'linux']
 
 const PlatformIcons = ({ platforms }) => {
   if (platforms.length === 1 && platforms[0] === 'all') {
