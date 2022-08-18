@@ -164,7 +164,12 @@ class Downloads extends Component {
           <Terminal.Wrapper className={`${baseClass}__terminal`}>
             <Terminal.Body className={`${baseClass}__terminal-body`}>
               {alternativeInstallOptionContent.terminalCommands.map((terminalCommand, idx) => {
-                return <Monospace key={`terminal-command-${idx}`}>$ {terminalCommand}</Monospace>
+                return (
+                  <Monospace key={`terminal-command-${idx}`}>
+                    <label className="unselectable">$</label> {terminalCommand}
+                    <br />
+                  </Monospace>
+                )
               })}
             </Terminal.Body>
           </Terminal.Wrapper>
