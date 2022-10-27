@@ -17,6 +17,7 @@ const sponsors = [
   ['GitHub', 'https://www.github.com/'],
   ['Kolide', 'https://www.kolide.com/'],
   ['Trail of Bits', 'https://www.trailofbits.com/'],
+  ['Fleet', 'https://www.fleetdm.com/'],
 ]
 
 const renderSponsor = (name, url) => {
