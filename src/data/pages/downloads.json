@@ -21,11 +21,10 @@
           "subSection1Heading": "Install apt repository",
           "subSection1Paragraph1": "We publish osquery to an apt repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems.",
           "terminalCommands": [
-            "export OSQUERY_KEY=1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B",
-            "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys $OSQUERY_KEY",
-            "sudo add-apt-repository 'deb [arch=amd64] https://pkg.osquery.io/deb deb main'",
-            "sudo apt-get update",
-            "sudo apt-get install osquery"
+            "sudo mkdir -p /etc/apt/keyrings",
+            "curl -L https://pkg.osquery.io/deb/pubkey.gpg | sudo tee /etc/apt/keyrings/osquery.asc",
+            "sudo add-apt-repository 'deb [arch=amd64 signed-by=/etc/apt/keyrings/osquery.asc] https://pkg.osquery.io/deb deb main'",
+            "sudo apt install osquery"
           ]
         },
         "centos": {
