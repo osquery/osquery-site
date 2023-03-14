@@ -109,7 +109,7 @@ end
 def fetch_uri(uri, redirect_limit = 10, &block)
   raise "Redirect loop" if redirect_limit < 1
 
-  # Note that this seems to get the entire body, which makes this hard to stream/chunk. 
+  # Note that this seems to get the entire body, which makes this hard to stream/chunk.
   response = Net::HTTP.get_response(uri)
 
   case response
@@ -247,7 +247,7 @@ website_checkout = ARGV[1]
 
 # Quick sanity check on args
 usage(err: "Invalid version") unless ver&.match(/^[0-9.]+$/)
-usage(err: "Invalid website directory") unless website_checkout && Dir.exists?(website_checkout)
+usage(err: "Invalid website directory") unless website_checkout && Dir.exist?(website_checkout)
 
 # Checkout the requested version in the osquery dir, and generate
 # metadata.  This would be better replaced by something in the
