@@ -1,0 +1,82 @@
+{
+  "version": "5.8.2",
+  "url": "https://pkg.osquery.io",
+  "downloads": {
+    "official": [
+      {
+        "type": "macOS",
+        "package": "osquery-5.8.2.pkg",
+        "platform": "darwin",
+        "content": "1fea8ac9b603851d2e76c5fc73138a468a3075a3002c8cb1fd7fff53b889c4dd"
+      },
+      {
+        "type": "Windows",
+        "package": "osquery-5.8.2.msi",
+        "platform": "windows",
+        "content": "d319837d4e95d1e477c2126d383501180925a29f488ff1164fa16d2e576f96dd"
+      },
+      {
+        "type": "Linux (x86_64)",
+        "package": "osquery-5.8.2_1.linux_x86_64.tar.gz",
+        "platform": "linux",
+        "content": "5bb2647b45a423e68d7dbc16ab2316c3f512d0944a56e4662c7010b59cddc721"
+      },
+      {
+        "type": "Debian (x86_64)",
+        "package": "osquery_5.8.2-1.linux_amd64.deb",
+        "platform": "deb",
+        "content": "1d001395bc5a4a9f3bf420b252b5ca2b218d55c693019c1a18f8ed48a5c98bbc"
+      },
+      {
+        "type": "RPM (x86_64)",
+        "package": "osquery-5.8.2-1.linux.x86_64.rpm",
+        "platform": "rpm",
+        "content": "cd8428c75c8f94e4f4b8cd2f19f419a66744f240d76ebbd1653a202d18392a51"
+      },
+      {
+        "type": "Linux (arm64)",
+        "package": "osquery-5.8.2_1.linux_aarch64.tar.gz",
+        "platform": "linux",
+        "content": "e51620928210970abb51d6ec79235bafff73bd354bdb54eec6e5969072d3d115"
+      },
+      {
+        "type": "Debian (arm64)",
+        "package": "osquery_5.8.2-1.linux_arm64.deb",
+        "platform": "deb",
+        "content": "b1032ffb31185aaeb4efc6ff02d23610817b5652e31930dda34b97e54ebbe0c4"
+      },
+      {
+        "type": "RPM (arm64)",
+        "package": "osquery-5.8.2-1.linux.aarch64.rpm",
+        "platform": "rpm",
+        "content": "cfc53ea908c1ce0d54a9e562304e42d6819ee9dbb90d6d291c06b5889de86ad6"
+      }
+    ],
+    "debug": [
+      {
+        "type": "Debian (x86_64)",
+        "package": "osquery-dbgsym_5.8.2-1.linux_amd64.deb",
+        "platform": "deb",
+        "content": "27a871d64ea41f4f000d8bc1bf6ab9c0948941a6a21ee6105f6017b9cdd28d17"
+      },
+      {
+        "type": "RPM (x86_64)",
+        "package": "osquery-debuginfo-5.8.2-1.linux.x86_64.rpm",
+        "platform": "rpm",
+        "content": "377d3f9c1b980d58ca275b4f10821a85ebf44063ceae80be0353cc57cba01bbd"
+      },
+      {
+        "type": "Debian (arm64)",
+        "package": "osquery-dbgsym_5.8.2-1.linux_arm64.deb",
+        "platform": "deb",
+        "content": "2204f1415ccc06131fa513a7bf822cda6e7b4f81f6317662473838c8ad124e45"
+      },
+      {
+        "type": "RPM (arm64)",
+        "package": "osquery-debuginfo-5.8.2-1.linux.aarch64.rpm",
+        "platform": "rpm",
+        "content": "185c2033304ae9cfe70838aab746dad68df9974c2f0f3a467f6f2ed8a2a8c1be"
+      }
+    ]
+  }
+}
