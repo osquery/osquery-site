@@ -23,19 +23,6 @@ class SchemaTOC extends Component {
     return () => onEntryClick(tableName)
   }
 
-  preventBodyScroll = () => document.body.classList.add('noscroll')
-  allowBodyScroll = () => document.body.classList.remove('noscroll')
-
-  componentDidMount() {
-    this.toc.addEventListener('mouseenter', this.preventBodyScroll)
-    this.toc.addEventListener('mouseleave', this.allowBodyScroll)
-  }
-
-  componentWillUnmount() {
-    this.toc.removeEventListener('mouseenter', this.preventBodyScroll)
-    this.toc.removeEventListener('mouseleave', this.allowBodyScroll)
-  }
-
   render() {
     const { handleClick } = this
     const { activeEntry, tables } = this.props
