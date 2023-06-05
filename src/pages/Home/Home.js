@@ -462,7 +462,7 @@ class Home extends Component {
           <div className={`${baseClass}__additional-resources`}>
             <ProminentCta
               className={`${baseClass}__prominent-cta`}
-              href="https://join.slack.com/t/osquery/shared_invite/zt-h29zm0gk-s2DBtGUTW4CFel0f0IjTEw"
+              href="https://join.slack.com/t/osquery/shared_invite/zt-1wi6cdgf7-zR2wt7FZ0ClHj6tEym6KFQ"
               icon={<Icon name="slack" />}
             >
               <span>Join the osquery Slack</span>

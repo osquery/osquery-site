@@ -42,7 +42,7 @@ The official package includes osqueryd, osqueryi, and a launchd agent that maint
 
 ## Getting Help
 
-Documentation is available at [osquery.readthedocs.io](http://osquery.readthedocs.io). An active Slack community is available for discussion and support, request an [auto-invite](https://join.slack.com/t/osquery/shared_invite/zt-h29zm0gk-s2DBtGUTW4CFel0f0IjTEw).
+Documentation is available at [osquery.readthedocs.io](http://osquery.readthedocs.io). An active Slack community is available for discussion and support, request an [auto-invite](https://join.slack.com/t/osquery/shared_invite/zt-1wi6cdgf7-zR2wt7FZ0ClHj6tEym6KFQ).
 
 ## Exploring Host Internals with osqueryi
 
