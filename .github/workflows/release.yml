@@ -8,6 +8,8 @@ on:
                 required: true
                 type: string
 
+permissions:
+    pull-requests: write
 
 jobs:
     release:
@@ -15,6 +17,18 @@ jobs:
         timeout-minutes: 5
         steps:
             - uses: actions/checkout@v3
+              with:
+                ref: source
+                depth: 0
 
             - name: generate json files
               run: ruby tools/new_release.rb "${{ github.event.inputs.version }}" .
+
+            - name: Git Commit
+              run: |
+                  git checkout -b release-"${{ github.event.inputs.version }}"
+                  git add --all
+                  git commit -m "Release ${{ github.event.inputs.version }}"
+
+            - name: Generate PR
+              run: gh pr create --base source --fill
