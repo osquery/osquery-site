@@ -31,7 +31,7 @@ jobs:
                   git -c user.name='GHA Automation' -c user.email=noreply@example.com commit -m "Release ${{ github.event.inputs.version }}"
 
             - name: git push
-              run: git push -u origin
+              run: git push --set-upstream origin release-"${{ github.event.inputs.version }}"
               env:
                 GH_TOKEN: ${{ github.token }}
 
