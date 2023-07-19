@@ -32,3 +32,6 @@ jobs:
 
             - name: Generate PR
               run: gh pr create --base source --fill
+              env:
+                GH_TOKEN: ${{ github.token }}
+
