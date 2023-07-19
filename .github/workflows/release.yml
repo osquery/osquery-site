@@ -33,7 +33,7 @@ jobs:
             - name: git push
               run: |
                 git remote set-url origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
-                git push
+                git push --set-upstream origin release-"${{ github.event.inputs.version }}"
               #env:
               #  GH_TOKEN: ${{ github.token }}
 
