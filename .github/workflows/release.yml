@@ -28,7 +28,7 @@ jobs:
               run: |
                   git checkout -b release-"${{ github.event.inputs.version }}"
                   git add --all
-                  git commit -c user.name='GHA Automation' -c user.email=noreply@example.com -m "Release ${{ github.event.inputs.version }}"
+                  git -c user.name='GHA Automation' -c user.email=noreply@example.com commit -m "Release ${{ github.event.inputs.version }}"
 
             - name: Generate PR
               run: gh pr create --base source --fill
