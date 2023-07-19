@@ -10,6 +10,7 @@ on:
 
 permissions:
     pull-requests: write
+    contents: write
 
 jobs:
     release:
@@ -31,11 +32,9 @@ jobs:
                   git -c user.name='github-actions[bot]' -c user.email='github-actions[bot]@users.noreply.github.com' commit -m "Release ${{ github.event.inputs.version }}"
 
             - name: git push
-              run: |
-                git remote set-url origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}
-                git push --set-upstream origin release-"${{ github.event.inputs.version }}"
-              #env:
-              #  GH_TOKEN: ${{ github.token }}
+              env:
+                GH_TOKEN: ${{ github.token }}
+              run: git push --set-upstream origin release-"${{ github.event.inputs.version }}"
 
             - name: Generate PR
               run: gh pr create --base source --fill --head release-"${{ github.event.inputs.version }}"
