@@ -30,8 +30,13 @@ jobs:
                   git add --all
                   git -c user.name='GHA Automation' -c user.email=noreply@example.com commit -m "Release ${{ github.event.inputs.version }}"
 
+            - name: git push
+              run: git push -u origin
+              env:
+                GH_TOKEN: ${{ github.token }}
+
             - name: Generate PR
-              run: gh pr create --base source --fill
+              run: gh pr create --base source --fill --head release-"${{ github.event.inputs.version }}"
               env:
                 GH_TOKEN: ${{ github.token }}
 
