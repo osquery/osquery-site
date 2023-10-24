@@ -11,7 +11,7 @@ const Paragraph = ({ children, className, highlight }) => {
     [`${baseClass}--highlight`]: highlight,
   })
 
-  return <p className={classes}>{children}</p>
+  return <p className={classes} dangerouslySetInnerHTML={{ __html: children }}></p>
 }
 
 Paragraph.propTypes = {
