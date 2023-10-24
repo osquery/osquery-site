@@ -64,7 +64,7 @@
           "sections": [
             {
               "heading": "arm64/aarch64 windows support",
-              "paragraph": "Though there is not currently an msi install available, you can find the windows arm64 build on the GitHub releases page (https://github.com/osquery/osquery/releases)",
+              "paragraph": "Though there is not currently an msi install available, you can find the windows-arm64 build on the <a href=\"https://github.com/osquery/osquery/releases\">GitHub releases page</a>.",
               "terminalCommands": []
             },
             {
