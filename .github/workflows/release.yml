@@ -9,8 +9,9 @@ on:
                 type: string
 
 permissions:
-    pull-requests: write
-    contents: write
+  pull-requests: write
+  contents: write
+  actions: write
 
 jobs:
     release:
@@ -27,17 +28,19 @@ jobs:
 
             - name: Git Commit
               run: |
-                  git checkout -b release-"${{ github.event.inputs.version }}"
+                  git checkout -B release-"${{ github.event.inputs.version }}"
                   git add --all
                   git -c user.name='github-actions[bot]' -c user.email='github-actions[bot]@users.noreply.github.com' commit -m "Release ${{ github.event.inputs.version }}"
 
             - name: git push
               env:
                 GH_TOKEN: ${{ github.token }}
-              run: git push --set-upstream origin release-"${{ github.event.inputs.version }}"
+              run: git push --set-upstream origin release-"${{ github.event.inputs.version }}" --force
 
+            # This is a gnarly command for updating an existing, or making a new PR
+            # https://github.com/cli/cli/discussions/5792
             - name: Generate PR
-              run: gh pr create --base source --fill --head release-"${{ github.event.inputs.version }}"
+              run: gh pr edit 'release-${{ github.event.inputs.version }}' -b '${{ env.PR_BODY }}' -t '${{ env.PR_TITLE }}'  && gh pr reopen '${{ env.BRANCH_NAME }}' || gh pr create --base source --fill --head 'release-${{ github.event.inputs.version }}'
               env:
                 GH_TOKEN: ${{ github.token }}
 
