@@ -155,24 +155,28 @@ class Downloads extends Component {
             name={selectedInstallOption}
           />
 
-          <div>
-            <Heading5>{alternativeInstallOptionContent.subSection1Heading}</Heading5>
-
-            <Paragraph>{alternativeInstallOptionContent.subSection1Paragraph1}</Paragraph>
-          </div>
-
-          <Terminal.Wrapper className={`${baseClass}__terminal`}>
-            <Terminal.Body className={`${baseClass}__terminal-body`}>
-              {alternativeInstallOptionContent.terminalCommands.map((terminalCommand, idx) => {
-                return (
-                  <Monospace key={`terminal-command-${idx}`}>
-                    <label className="unselectable">$</label> {terminalCommand}
-                    <br />
-                  </Monospace>
-                )
-              })}
-            </Terminal.Body>
-          </Terminal.Wrapper>
+          {alternativeInstallOptionContent.sections.map((sec, idx) => {
+            return (
+              <div>
+                <Heading5>{sec.heading}</Heading5>
+                <Paragraph>{sec.paragraph}</Paragraph>
+                {sec.terminalCommands.length > 0 && (
+                  <Terminal.Wrapper className={`${baseClass}__terminal`}>
+                    <Terminal.Body className={`${baseClass}__terminal-body`}>
+                      {sec.terminalCommands.map((terminalCommand, idx) => {
+                        return (
+                          <Monospace key={`terminal-command-${idx}`}>
+                            <label className="unselectable">$</label> {terminalCommand}
+                            <br />
+                          </Monospace>
+                        )
+                      })}
+                    </Terminal.Body>
+                  </Terminal.Wrapper>
+                )}
+              </div>
+            )
+          })}
         </section>
       </div>
     )
