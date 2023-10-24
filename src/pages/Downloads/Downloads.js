@@ -22,17 +22,17 @@ const OFFICIAL = 'official'
 
 const baseClass = 'downloads-page'
 const installOptionNames = {
+  windows: 'Windows',
   darwin: 'macOS',
   ubuntu: 'Debian Linux',
   centos: 'RPM Linux',
-  windows: 'Windows',
 }
 const installOptionNamesKeys = keys(installOptionNames)
 const installOptionNamesValues = values(installOptionNames)
 
 class Downloads extends Component {
   state = {
-    selectedInstallOption: 'darwin',
+    selectedInstallOption: 'windows',
   }
 
   onInstallOptionChange = installOption => {

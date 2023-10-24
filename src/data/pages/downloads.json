@@ -24,13 +24,24 @@
         "ubuntu": {
           "sections": [
             {
-              "heading": "Install apt repository",
+              "heading": "Install apt repository (22.04 and later)",
               "paragraph": "We publish osquery to an apt repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems.",
               "terminalCommands": [
                 "sudo mkdir -p /etc/apt/keyrings",
                 "curl -L https://pkg.osquery.io/deb/pubkey.gpg | sudo tee /etc/apt/keyrings/osquery.asc",
                 "sudo add-apt-repository 'deb [arch=amd64 signed-by=/etc/apt/keyrings/osquery.asc] https://pkg.osquery.io/deb deb main'",
                 "sudo apt install osquery"
+              ]
+            },
+            {
+              "heading": "Install apt repository (Prior to 22.04)",
+              "paragraph": "This uses apt-key",
+              "terminalCommands": [
+                "export OSQUERY_KEY=1484120AC4E9F8A1A577AEEE97A80C63C9D8B80B",
+                "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys $OSQUERY_KEY",
+                "sudo add-apt-repository 'deb [arch=amd64] https://pkg.osquery.io/deb deb main'",
+                "sudo apt-get update",
+                "sudo apt-get install osquery"
               ]
             }
           ]
@@ -53,7 +64,7 @@
           "sections": [
             {
               "heading": "arm64/aarch64 windows support",
-              "paragraph": "Though there is not currently an msi install available, you can find the windows arm64 build on the GitHub releases page -- https://github.com/osquery/osquery/releases",
+              "paragraph": "Though there is not currently an msi install available, you can find the windows arm64 build on the GitHub releases page (https://github.com/osquery/osquery/releases)",
               "terminalCommands": []
             },
             {
