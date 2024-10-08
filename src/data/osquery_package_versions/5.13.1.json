@@ -25,7 +25,7 @@
         "type": "Debian (x86_64)",
         "package": "osquery_5.13.1-1.linux_amd64.deb",
         "platform": "deb",
-        "content": "f8a0354161d784f9493d81a086723ef756be22b949b1062ebc80447566a22135"
+        "content": "2caecc83576fa39a272afbc6c1b938bf7dad39190a45333569d968b673b79b45"
       },
       {
         "type": "RPM (x86_64)",
