@@ -1,0 +1,82 @@
+{
+  "version": "5.15.0",
+  "url": "https://pkg.osquery.io",
+  "downloads": {
+    "official": [
+      {
+        "type": "macOS",
+        "package": "osquery-5.15.0.pkg",
+        "platform": "darwin",
+        "content": "5044ba8207a68cd756ef01ffcb408e558cf4e28eab7793cce0337095c9499bac"
+      },
+      {
+        "type": "Windows",
+        "package": "osquery-5.15.0.msi",
+        "platform": "windows",
+        "content": "9c06dd0b8fbe76129cff5bebc79277044213d5cddccb9ddfe2179606908a817e"
+      },
+      {
+        "type": "Linux (x86_64)",
+        "package": "osquery-5.15.0_1.linux_x86_64.tar.gz",
+        "platform": "linux",
+        "content": "9bc11806afba259a5d25bf937fbf6c16337abc672c1a5b09369226c2abe8dcd3"
+      },
+      {
+        "type": "Debian (x86_64)",
+        "package": "osquery_5.15.0-1.linux_amd64.deb",
+        "platform": "deb",
+        "content": "bb20b589037665aab60060d313a10d2d2c0b2e5955e7fba52a2dc88b445eb8cd"
+      },
+      {
+        "type": "RPM (x86_64)",
+        "package": "osquery-5.15.0-1.linux.x86_64.rpm",
+        "platform": "rpm",
+        "content": "4022d7543564bc27227ff8bc589fbf7ce0a2d0ece31988a29f28b6bc46278a8f"
+      },
+      {
+        "type": "Linux (arm64)",
+        "package": "osquery-5.15.0_1.linux_aarch64.tar.gz",
+        "platform": "linux",
+        "content": "ca6e92e4d60cf2990d346c98362c171e9ce3d43aa050db79f0bc2b03949800d3"
+      },
+      {
+        "type": "Debian (arm64)",
+        "package": "osquery_5.15.0-1.linux_arm64.deb",
+        "platform": "deb",
+        "content": "342f85a4466e745c7d83b7c1004d91c0aa902db291f5f7f798028978aa218656"
+      },
+      {
+        "type": "RPM (arm64)",
+        "package": "osquery-5.15.0-1.linux.aarch64.rpm",
+        "platform": "rpm",
+        "content": "5da098717ccbd012c05bfa0c9aee43fc13d42d5844719daee641596e02dd7112"
+      }
+    ],
+    "debug": [
+      {
+        "type": "Debian (x86_64)",
+        "package": "osquery-dbgsym_5.15.0-1.linux_amd64.deb",
+        "platform": "deb",
+        "content": "736314f63625a2055044cbae88dabfac33de5db2b762b4f0c2d546ecb8e97248"
+      },
+      {
+        "type": "RPM (x86_64)",
+        "package": "osquery-debuginfo-5.15.0-1.linux.x86_64.rpm",
+        "platform": "rpm",
+        "content": "94322cf1361621de340719d17bc00c87f845a58c6808bc485b32a5da2eb90fa3"
+      },
+      {
+        "type": "Debian (arm64)",
+        "package": "osquery-dbgsym_5.15.0-1.linux_arm64.deb",
+        "platform": "deb",
+        "content": "390f1cff56e68349cb28ebe9f486e861f75edb8763d48b33c887ffaa6fd7e22c"
+      },
+      {
+        "type": "RPM (arm64)",
+        "package": "osquery-debuginfo-5.15.0-1.linux.aarch64.rpm",
+        "platform": "rpm",
+        "content": "c96ec8230f0f821257567fd5413e0c7d2973bbd2477800761b135e5ca1e7aac9"
+      }
+    ]
+  }
+}
