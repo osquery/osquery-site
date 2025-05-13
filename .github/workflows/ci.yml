@@ -10,7 +10,7 @@ name: CI
 
 on:
   pull_request:
-    branches: ['main', 'source']
+    branches: ['main']
 
 env:
   NODE_CACHE_VERSION: 1
