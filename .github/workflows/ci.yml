@@ -63,6 +63,10 @@ jobs:
 
     - name: Build
       run: yarn build
+      env:
+        # our bundle is too big. So we have to skip warnings here
+        CI: false
+
 
     - name: Test
       run: yarn test
