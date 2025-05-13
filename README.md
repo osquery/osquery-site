@@ -1,6 +1,17 @@
 # Osquery Website
 
-## Running the app locally
+The osquery website was written in js some time ago. It is not under active develelopment, and parts may be getting quite flakey. 
+
+## Deployment & Hosting
+
+The website is hosted on GitHub pages. It is deployed there using GitHub actions. As of 2025, this follows a normal github
+flow -- development on feature branches, PR to main. The deploy-to-pages happens on merge to main.
+
+In front of GitHub Pages is AWS Cloudfront. This is in the `infra` account. We should probably migrate off it.
+
+When debugging, be aware of a bit of a weirdness -- pages deploys to `https://osquery.github.io/osquery-site/` but that URL won't work, because several parts of the website generate absolute URLs rooted in `/`. This is okay behind the CDN though.
+
+## Development / Running the app locally
 
 Install all dependencies:
 
@@ -74,22 +85,6 @@ To upload a new community event, submit a PR adding a JSON file to the [communit
 ```
 
 Additionally, please add the newly-added filename to the [manifest file](/src/data/community_events/manifest.js).
-
-## Hosting & Deployment
-
-The website is hosted on github pages, off of the `master` branch. It is developed on the `source` branch. 
-
-To deploy:
-
-```shell
-cd .../osquery-site
-git checkout source
-git pull --rebase
-
-yarn deploy
-```
-
-This will create and push a commit to master with the update.
 
 ## License
 
