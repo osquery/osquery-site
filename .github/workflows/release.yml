@@ -1,4 +1,4 @@
-name: Release Osquery Version to Webstite
+name: Generate PR to Release Osquery Version to Webstite
 
 on:
     workflow_dispatch:
