@@ -1,4 +1,4 @@
-name: Release Osquery Version to Webstite
+name: Generate PR to Release Osquery Version to Webstite
 
 on:
     workflow_dispatch:
@@ -18,7 +18,7 @@ jobs:
         runs-on: ubuntu-latest
         timeout-minutes: 5
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
               with:
                 ref: source
                 fetch-depth: 0
@@ -40,7 +40,7 @@ jobs:
             # This is a gnarly command for updating an existing, or making a new PR
             # https://github.com/cli/cli/discussions/5792
             - name: Generate PR
-              run: gh pr edit 'release-${{ github.event.inputs.version }}' -b '${{ env.PR_BODY }}' -t '${{ env.PR_TITLE }}'  && gh pr reopen '${{ env.BRANCH_NAME }}' || gh pr create --base source --fill --head 'release-${{ github.event.inputs.version }}'
+              run: gh pr edit 'release-${{ github.event.inputs.version }}' -b '${{ env.PR_BODY }}' -t '${{ env.PR_TITLE }}'  && (gh pr reopen '${{ env.BRANCH_NAME }}' || gh pr create --base source --fill --head 'release-${{ github.event.inputs.version }}')
               env:
                 GH_TOKEN: ${{ github.token }}
 
