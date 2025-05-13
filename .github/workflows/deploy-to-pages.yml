@@ -6,20 +6,32 @@
 #
 # SPDX-License-Identifier: (Apache-2.0 OR GPL-2.0-only)
 #
-name: CI
+name: Deploy to GitHub Pages
 
 on:
-  pull_request:
-    branches: ['main', 'source']
+  push:
+    branches: ["main", "source"]
+  workflow_dispatch:
 
 env:
   NODE_CACHE_VERSION: 1
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
 
 jobs:
   ci:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: actions/setup-node@v2
       with:
         node-version: '14'
@@ -29,7 +41,7 @@ jobs:
       id: yarn-cache-dir-path
       run: echo "::set-output name=dir::$(yarn cache dir)"
     - name: Cache yarn cache
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
       with:
         path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -40,7 +52,7 @@ jobs:
     # Caching node_modules is not always recommended. But our usage is fairly minimal, and yarn is slow.
     - name: Cache node_modules
       id: cache-node-modules
-      uses: actions/cache@v2
+      uses: actions/cache@v4
       with:
         path: node_modules
         key: v${{env.NODE_CACHE_VERSION}}-${{ runner.os }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
@@ -50,19 +62,25 @@ jobs:
     - name: Install modules
       run: yarn --prefer-offline
 
-    - name: Check for uncommitted dependencies
-      run: |
-        test -z "$(git status --porcelain)" && exit
-        echo "yarn modified something. Please commit"
-        echo ""
-        git status
-        exit 1
-
-    - name: Lint
-      run: yarn lint
-
     - name: Build
       run: yarn build
 
     - name: Test
       run: yarn test
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./build
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
