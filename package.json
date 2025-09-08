@@ -41,10 +41,10 @@
         "whatwg-fetch": "2.0.3"
     },
     "scripts": {
-        "start-js": "node scripts/start.js",
+        "start-js": "NODE_OPTIONS=--openssl-legacy-provider node scripts/start.js",
         "start": "npm-run-all -p watch-css start-js",
         "serve-build": "yarn run serve -s build",
-        "build-js": "node scripts/build.js",
+        "build-js": "NODE_OPTIONS=--openssl-legacy-provider node scripts/build.js",
         "build": "npm-run-all build-css build-js && cp build/index.html build/404.html",
         "watch-css": "npm run build-css -- --watch",
         "build-css": "sass --load-path ./src --load-path ./node_modules src/:src/ --no-source-map",
@@ -53,7 +53,7 @@
         "lint": "eslint src",
         "test": "node scripts/test.js --env=jsdom",
         "storybook": "start-storybook -p 9001 -c .storybook"
-  },
+    },
     "devDependencies": {
         "@babel/core": "^7.5.5",
         "@babel/helper-define-map": "^7.13.12",
@@ -135,6 +135,6 @@
         "extends": "react-app"
     },
     "engines": {
-        "node": "~14"
+        "node": ">=18.0.0"
     }
 }
