@@ -62,7 +62,29 @@ module.exports = {
     minimize: true,
     runtimeChunk: 'single',
     splitChunks: {
-      chunks:'all',
+      chunks: 'all',
+      maxSize: 244000,
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+          priority: 10,
+        },
+        common: {
+          name: 'common',
+          minChunks: 2,
+          chunks: 'all',
+          priority: 5,
+          reuseExistingChunk: true,
+        },
+        data: {
+          test: /[\\/]src[\\/]data[\\/]/,
+          name: 'data',
+          chunks: 'all',
+          priority: 15,
+        },
+      },
     },
   },
   output: {

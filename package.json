@@ -44,7 +44,7 @@
         "start-js": "NODE_OPTIONS=--openssl-legacy-provider node scripts/start.js",
         "start": "npm-run-all -p watch-css start-js",
         "serve-build": "yarn run serve -s build",
-        "build-js": "NODE_OPTIONS=--openssl-legacy-provider node scripts/build.js",
+        "build-js": "NODE_OPTIONS=\"--openssl-legacy-provider --max-old-space-size=4096\" node scripts/build.js",
         "build": "npm-run-all build-css build-js && cp build/index.html build/404.html",
         "watch-css": "npm run build-css -- --watch",
         "build-css": "sass --load-path ./src --load-path ./node_modules src/:src/ --no-source-map",
