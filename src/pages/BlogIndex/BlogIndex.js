@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import showdown from 'showdown'
 import { withRouter } from 'react-router'
 import { Link } from 'react-router-dom'
 import truncate from 'html-truncate'
@@ -18,7 +17,14 @@ class BlogIndex extends Component {
   constructor(props) {
     super(props)
 
-    this.converter = new showdown.Converter()
+    this.converter = null
+    this.initShowdown()
+  }
+
+  async initShowdown() {
+    const showdown = await import('showdown')
+    this.converter = new showdown.default.Converter()
+    this.forceUpdate()
   }
 
   onToggleBlogType = blogType => () =>
@@ -55,7 +61,7 @@ class BlogIndex extends Component {
 
         {activeBlogPosts.map((blogPost, idx) => {
           const { attributes, body } = blogPost
-          const html = truncate(converter.makeHtml(body), 400)
+          const html = converter ? truncate(converter.makeHtml(body), 400) : 'Loading...'
           const blogPath = `${process.env.PUBLIC_URL}/blog/${attributes.slugifiedTitle}`
           const isLastPost = idx === activeBlogPosts.length - 1
 
