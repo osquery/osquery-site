@@ -53,8 +53,8 @@
               "paragraph": "We publish osquery to a yum repository. The RPMs have extremely few dependencies and should work on *most* x86_64 Linux operating systems. You may install the \"auto-repo-add\" RPM or add the repository target.",
               "terminalCommands": [
                 "curl -L https://pkg.osquery.io/rpm/GPG | sudo tee /etc/pki/rpm-gpg/RPM-GPG-KEY-osquery",
-                "sudo yum-config-manager --add-repo https://pkg.osquery.io/rpm/osquery-s3-rpm.repo",
-                "sudo yum-config-manager --enable osquery-s3-rpm-repo",
+                "sudo yum-config-manager --add-repo https://pkg.osquery.io/rpm/osquery-rpm.repo",
+                "sudo yum-config-manager --enable osquery-rpm-repo",
                 "sudo yum install osquery"
               ]
             }
