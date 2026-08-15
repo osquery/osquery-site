@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import forEach from 'lodash.foreach'
-import showdown from 'showdown'
 import { withRouter } from 'react-router'
 
 import BlogPost from 'components/BlogPost'
@@ -15,7 +14,7 @@ class BlogShow extends Component {
   constructor(props) {
     super(props)
 
-    this.converter = new showdown.Converter({ tables: true })
+    this.converter = null
 
     this.state = {
       blogPost: undefined,
@@ -23,16 +22,25 @@ class BlogShow extends Component {
     }
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     const { blogTitle } = this.state
 
     const blogPost = blogPosts.find(post => post.attributes.slugifiedTitle === blogTitle)
+
+    if (blogPost) {
+      const showdown = await import('showdown')
+      this.converter = new showdown.default.Converter({ tables: true })
+    }
 
     this.setState({ blogPost })
   }
 
   get htmlWithImages() {
     const { body } = this.state.blogPost
+
+    if (!this.converter) {
+      return 'Loading...'
+    }
 
     let html = this.converter.makeHtml(body)
 
