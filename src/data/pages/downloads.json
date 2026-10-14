@@ -28,8 +28,9 @@
               "paragraph": "We publish osquery to an apt repository. The DEBs have extremely few dependencies and should work on *most* x86_64 Linux operating systems.",
               "terminalCommands": [
                 "sudo mkdir -p /etc/apt/keyrings",
-                "curl -L https://pkg.osquery.io/deb/pubkey.gpg | sudo tee /etc/apt/keyrings/osquery.asc",
-                "sudo add-apt-repository 'deb [arch=amd64 signed-by=/etc/apt/keyrings/osquery.asc] https://pkg.osquery.io/deb deb main'",
+                "curl -fsSL https://pkg.osquery.io/deb/pubkey.gpg | sudo tee /etc/apt/keyrings/osquery.asc > /dev/null",
+                "echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/osquery.asc] https://pkg.osquery.io/deb deb main' | sudo tee /etc/apt/sources.list.d/osquery.list",
+                "sudo apt update",
                 "sudo apt install osquery"
               ]
             },
