@@ -10505,10 +10505,11 @@
   {
     "name":"gpu_info",
     "description":"Retrieve GPU (graphics processing unit) inventory information of the machine, reporting only stable attributes.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/gpu_info.table",
+    "url":"https://github.com/osquery/osquery/blob/master/specs/gpu_info.table",
     "platforms":[
       "darwin",
-      "linux"
+      "linux",
+      "windows"
     ],
     "evented":false,
     "cacheable":false,
