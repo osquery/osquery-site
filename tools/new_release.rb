@@ -215,6 +215,12 @@ def generate_table_api_python(version, osquery_dir, website_dir)
     exit 1
   end
 
+  # genwebsitejson.py links each table to its spec on master, where specs are
+  # later moved or removed. Link to this release's tag instead, so the links
+  # keep working for every version listed on the site.
+  output = output.gsub("https://github.com/osquery/osquery/blob/master/",
+                       "https://github.com/osquery/osquery/blob/#{version}/")
+
   File.open(File.join(website_dir, "src/data/osquery_schema_versions/#{version}.json"), 'w') do |f|
     f.write(output)
   end
