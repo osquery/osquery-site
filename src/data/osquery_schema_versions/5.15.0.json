@@ -2,7 +2,7 @@
   {
     "name":"account_policy_data",
     "description":"Additional macOS user account data from the AccountPolicy section of OpenDirectory.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/account_policy_data.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/account_policy_data.table",
     "platforms":[
       "darwin"
     ],
@@ -63,7 +63,7 @@
   {
     "name":"acpi_tables",
     "description":"Firmware ACPI functional table common metadata and content.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/acpi_tables.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/acpi_tables.table",
     "platforms":[
       "darwin",
       "linux"
@@ -105,7 +105,7 @@
   {
     "name":"ad_config",
     "description":"macOS Active Directory configuration.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/ad_config.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/ad_config.table",
     "platforms":[
       "darwin"
     ],
@@ -155,7 +155,7 @@
   {
     "name":"alf",
     "description":"macOS application layer firewall (ALF) service details.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/alf.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/alf.table",
     "platforms":[
       "darwin"
     ],
@@ -232,7 +232,7 @@
   {
     "name":"alf_exceptions",
     "description":"macOS application layer firewall (ALF) service exceptions.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/alf_exceptions.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/alf_exceptions.table",
     "platforms":[
       "darwin"
     ],
@@ -264,7 +264,7 @@
   {
     "name":"alf_explicit_auths",
     "description":"ALF services explicitly allowed to perform networking. Not supported on macOS 15+ (returns no results).",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/alf_explicit_auths.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/alf_explicit_auths.table",
     "platforms":[
       "darwin"
     ],
@@ -287,7 +287,7 @@
   {
     "name":"app_schemes",
     "description":"macOS application schemes and handlers (e.g., http, file, mailto).",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/app_schemes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/app_schemes.table",
     "platforms":[
       "darwin"
     ],
@@ -346,7 +346,7 @@
   {
     "name":"apparmor_events",
     "description":"Track AppArmor events.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/apparmor_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/apparmor_events.table",
     "platforms":[
       "linux"
     ],
@@ -558,7 +558,7 @@
   {
     "name":"apparmor_profiles",
     "description":"Track active AppArmor profiles.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/apparmor_profiles.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/apparmor_profiles.table",
     "platforms":[
       "linux"
     ],
@@ -628,7 +628,7 @@
   {
     "name":"appcompat_shims",
     "description":"Application Compatibility shims are a way to persist malware. This table presents the AppCompat Shim information from the registry in a nice format. See http://files.brucon.org/2015/Tomczak_and_Ballenthin_Shims_for_the_Win.pdf for more details.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/appcompat_shims.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/appcompat_shims.table",
     "platforms":[
       "windows"
     ],
@@ -698,7 +698,7 @@
   {
     "name":"apps",
     "description":"macOS applications installed in known search paths (e.g., /Applications).",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/apps.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/apps.table",
     "platforms":[
       "darwin"
     ],
@@ -883,7 +883,7 @@
   {
     "name":"apt_sources",
     "description":"Current list of APT repositories or software channels.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/apt_sources.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/apt_sources.table",
     "platforms":[
       "linux"
     ],
@@ -981,7 +981,7 @@
   {
     "name":"arp_cache",
     "description":"Address resolution cache, both static and dynamic (from ARP, NDP).",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/arp_cache.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/arp_cache.table",
     "platforms":[
       "darwin",
       "linux",
@@ -1033,7 +1033,7 @@
   {
     "name":"asl",
     "description":"Queries the Apple System Log data structure for system events.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/asl.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/asl.table",
     "platforms":[
       "darwin"
     ],
@@ -1164,7 +1164,7 @@
   {
     "name":"augeas",
     "description":"Configuration files parsed by augeas.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/augeas.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/augeas.table",
     "platforms":[
       "darwin",
       "linux"
@@ -1217,7 +1217,7 @@
   {
     "name":"authenticode",
     "description":"File (executable, bundle, installer, disk) code signing status.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/authenticode.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/authenticode.table",
     "platforms":[
       "windows"
     ],
@@ -1288,7 +1288,7 @@
   {
     "name":"authorization_mechanisms",
     "description":"macOS Authorization mechanisms database.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/authorization_mechanisms.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/authorization_mechanisms.table",
     "platforms":[
       "darwin"
     ],
@@ -1351,7 +1351,7 @@
   {
     "name":"authorizations",
     "description":"macOS Authorization rights database.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/authorizations.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/authorizations.table",
     "platforms":[
       "darwin"
     ],
@@ -1478,7 +1478,7 @@
   {
     "name":"authorized_keys",
     "description":"A line-delimited authorized_keys table.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/authorized_keys.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/authorized_keys.table",
     "platforms":[
       "darwin",
       "linux"
@@ -1561,7 +1561,7 @@
   {
     "name":"autoexec",
     "description":"Aggregate of executables that will automatically execute on the target machine. This is an amalgamation of other tables like services, scheduled_tasks, startup_items and more.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/autoexec.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/autoexec.table",
     "platforms":[
       "windows"
     ],
@@ -1602,7 +1602,7 @@
   {
     "name":"azure_instance_metadata",
     "description":"Azure instance metadata.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/azure_instance_metadata.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/azure_instance_metadata.table",
     "platforms":[
       "darwin",
       "linux",
@@ -1764,7 +1764,7 @@
   {
     "name":"azure_instance_tags",
     "description":"Azure instance tags.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/azure_instance_tags.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/azure_instance_tags.table",
     "platforms":[
       "darwin",
       "linux",
@@ -1809,7 +1809,7 @@
   {
     "name":"background_activities_moderator",
     "description":"Background Activities Moderator (BAM) tracks application execution.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/background_activities_moderator.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/background_activities_moderator.table",
     "platforms":[
       "windows"
     ],
@@ -1852,7 +1852,7 @@
   {
     "name":"battery",
     "description":"Provides information about the internal battery of a laptop. Note: On Windows, columns with Ah or mAh units assume that the battery is 12V.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/macwin/battery.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/macwin/battery.table",
     "platforms":[
       "darwin",
       "windows"
@@ -2052,7 +2052,7 @@
   {
     "name":"bitlocker_info",
     "description":"Retrieve bitlocker status of the machine.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/bitlocker_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/bitlocker_info.table",
     "platforms":[
       "windows"
     ],
@@ -2147,7 +2147,7 @@
   {
     "name":"block_devices",
     "description":"Block (buffered access) device file nodes: disks, ramdisks, and DMG containers.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/block_devices.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/block_devices.table",
     "platforms":[
       "darwin",
       "linux"
@@ -2243,7 +2243,7 @@
   {
     "name":"bpf_process_events",
     "description":"Track time/action process executions.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/bpf_process_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/bpf_process_events.table",
     "platforms":[
       "linux"
     ],
@@ -2410,7 +2410,7 @@
   {
     "name":"bpf_socket_events",
     "description":"Track network socket opens and closes.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/bpf_socket_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/bpf_socket_events.table",
     "platforms":[
       "linux"
     ],
@@ -2622,7 +2622,7 @@
   {
     "name":"browser_plugins",
     "description":"All C/NPAPI browser plugin details for all users. C/NPAPI has been deprecated on all major browsers. To query for plugins on modern browsers, try: `chrome_extensions` `firefox_addons` `safari_extensions`.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/browser_plugins.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/browser_plugins.table",
     "platforms":[
       "darwin"
     ],
@@ -2728,7 +2728,7 @@
   {
     "name":"carbon_black_info",
     "description":"Returns info about a Carbon Black sensor install.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/carbon_black_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/carbon_black_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -2933,7 +2933,7 @@
   {
     "name":"carves",
     "description":"List the set of completed and in-progress carves. If carve=1 then the query is treated as a new carve request.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/carves.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/carves.table",
     "platforms":[
       "darwin",
       "linux",
@@ -3025,7 +3025,7 @@
   {
     "name":"certificates",
     "description":"Certificate Authorities installed in Keychains/ca-bundles. NOTE: osquery limits frequent access to keychain files on macOS. This limit is controlled by keychain_access_interval flag.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/certificates.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/certificates.table",
     "platforms":[
       "darwin",
       "linux",
@@ -3281,7 +3281,7 @@
   {
     "name":"chassis_info",
     "description":"Display information pertaining to the chassis and its security status.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/chassis_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/chassis_info.table",
     "platforms":[
       "windows"
     ],
@@ -3414,7 +3414,7 @@
   {
     "name":"chocolatey_packages",
     "description":"Chocolatey packages installed in a system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/chocolatey_packages.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/chocolatey_packages.table",
     "platforms":[
       "windows"
     ],
@@ -3482,7 +3482,7 @@
   {
     "name":"chrome_extension_content_scripts",
     "description":"Chrome browser extension content scripts.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/chrome_extension_content_scripts.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/chrome_extension_content_scripts.table",
     "platforms":[
       "darwin",
       "linux",
@@ -3581,7 +3581,7 @@
   {
     "name":"chrome_extensions",
     "description":"Chrome-based browser extensions.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/chrome_extensions.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/chrome_extensions.table",
     "platforms":[
       "darwin",
       "linux",
@@ -3842,7 +3842,7 @@
   {
     "name":"connected_displays",
     "description":"Provides information about the connected displays of the machine.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/connected_displays.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/connected_displays.table",
     "platforms":[
       "darwin"
     ],
@@ -4000,7 +4000,7 @@
   {
     "name":"connectivity",
     "description":"Provides the overall system's network state.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/connectivity.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/connectivity.table",
     "platforms":[
       "windows"
     ],
@@ -4098,7 +4098,7 @@
   {
     "name":"cpu_info",
     "description":"Retrieve cpu hardware info of the machine.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/cpu_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/cpu_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -4265,7 +4265,7 @@
   {
     "name":"cpu_time",
     "description":"Displays information from /proc/stat file about the time the cpu cores spent in different parts of the system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/cpu_time.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/cpu_time.table",
     "platforms":[
       "darwin",
       "linux"
@@ -4379,7 +4379,7 @@
   {
     "name":"cpuid",
     "description":"Useful CPU features from the cpuid ASM call.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/cpuid.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/cpuid.table",
     "platforms":[
       "darwin",
       "linux",
@@ -4440,7 +4440,7 @@
   {
     "name":"crashes",
     "description":"Application, System, and Mobile App crash logs.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/crashes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/crashes.table",
     "platforms":[
       "darwin"
     ],
@@ -4600,7 +4600,7 @@
   {
     "name":"crontab",
     "description":"Line parsed values from system and user cron/tab.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/crontab.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/crontab.table",
     "platforms":[
       "darwin",
       "linux"
@@ -4699,7 +4699,7 @@
   {
     "name":"cups_destinations",
     "description":"Returns all configured printers.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/cups_destinations.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/cups_destinations.table",
     "platforms":[
       "darwin"
     ],
@@ -4740,7 +4740,7 @@
   {
     "name":"cups_jobs",
     "description":"Returns all completed print jobs from cups.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/cups_jobs.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/cups_jobs.table",
     "platforms":[
       "darwin"
     ],
@@ -4826,7 +4826,7 @@
   {
     "name":"curl",
     "description":"Perform an http request and return stats about it.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/curl.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/curl.table",
     "platforms":[
       "darwin",
       "linux",
@@ -4907,7 +4907,7 @@
   {
     "name":"curl_certificate",
     "description":"Inspect TLS certificates by connecting to input hostnames.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/curl_certificate.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/curl_certificate.table",
     "platforms":[
       "darwin",
       "linux",
@@ -5213,7 +5213,7 @@
   {
     "name":"deb_packages",
     "description":"The installed DEB package database.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/deb_packages.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/deb_packages.table",
     "platforms":[
       "linux"
     ],
@@ -5350,7 +5350,7 @@
   {
     "name":"default_environment",
     "description":"Default environment variables and values.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/default_environment.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/default_environment.table",
     "platforms":[
       "windows"
     ],
@@ -5391,7 +5391,7 @@
   {
     "name":"device_file",
     "description":"Similar to the file table, but use TSK and allow block address access.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/sleuthkit/device_file.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/sleuthkit/device_file.table",
     "platforms":[
       "darwin",
       "linux"
@@ -5541,7 +5541,7 @@
   {
     "name":"device_firmware",
     "description":"A best-effort list of discovered firmware versions.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/device_firmware.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/device_firmware.table",
     "platforms":[
       "darwin"
     ],
@@ -5582,7 +5582,7 @@
   {
     "name":"device_hash",
     "description":"Similar to the hash table, but use TSK and allow block address access.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/sleuthkit/device_hash.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/sleuthkit/device_hash.table",
     "platforms":[
       "darwin",
       "linux"
@@ -5651,7 +5651,7 @@
   {
     "name":"device_partitions",
     "description":"Use TSK to enumerate details about partitions on a disk device.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/sleuthkit/device_partitions.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/sleuthkit/device_partitions.table",
     "platforms":[
       "darwin",
       "linux"
@@ -5747,7 +5747,7 @@
   {
     "name":"deviceguard_status",
     "description":"Retrieve DeviceGuard info of the machine.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/deviceguard_status.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/deviceguard_status.table",
     "platforms":[
       "windows"
     ],
@@ -5824,7 +5824,7 @@
   {
     "name":"disk_encryption",
     "description":"Disk encryption status and information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/disk_encryption.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/disk_encryption.table",
     "platforms":[
       "darwin",
       "linux"
@@ -5920,7 +5920,7 @@
   {
     "name":"disk_events",
     "description":"Track DMG disk image events (appearance/disappearance) when opened.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/disk_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/disk_events.table",
     "platforms":[
       "darwin"
     ],
@@ -6078,7 +6078,7 @@
   {
     "name":"disk_info",
     "description":"Retrieve basic information about the physical disks of a system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/disk_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/disk_info.table",
     "platforms":[
       "windows"
     ],
@@ -6191,7 +6191,7 @@
   {
     "name":"dns_cache",
     "description":"Enumerate the DNS cache using the undocumented DnsGetCacheDataTable function in dnsapi.dll.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/dns_cache.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/dns_cache.table",
     "platforms":[
       "windows"
     ],
@@ -6234,7 +6234,7 @@
   {
     "name":"dns_resolvers",
     "description":"Resolvers used by this host.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/dns_resolvers.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/dns_resolvers.table",
     "platforms":[
       "darwin",
       "linux"
@@ -6306,7 +6306,7 @@
   {
     "name":"docker_container_envs",
     "description":"Docker container environment variables.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_envs.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_container_envs.table",
     "platforms":[
       "darwin",
       "linux"
@@ -6352,7 +6352,7 @@
   {
     "name":"docker_container_fs_changes",
     "description":"Changes to files or directories on container's filesystem.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_fs_changes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_container_fs_changes.table",
     "platforms":[
       "darwin",
       "linux"
@@ -6397,7 +6397,7 @@
   {
     "name":"docker_container_labels",
     "description":"Docker container labels.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_labels.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_container_labels.table",
     "platforms":[
       "darwin",
       "linux"
@@ -6443,7 +6443,7 @@
   {
     "name":"docker_container_mounts",
     "description":"Docker container mounts.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_mounts.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_container_mounts.table",
     "platforms":[
       "darwin",
       "linux"
@@ -6543,7 +6543,7 @@
   {
     "name":"docker_container_networks",
     "description":"Docker container networks.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_networks.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_container_networks.table",
     "platforms":[
       "darwin",
       "linux"
@@ -6661,7 +6661,7 @@
   {
     "name":"docker_container_ports",
     "description":"Docker container ports.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_ports.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_container_ports.table",
     "platforms":[
       "darwin",
       "linux"
@@ -6725,7 +6725,7 @@
   {
     "name":"docker_container_processes",
     "description":"Docker container processes.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_processes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_container_processes.table",
     "platforms":[
       "darwin",
       "linux"
@@ -6950,7 +6950,7 @@
   {
     "name":"docker_container_stats",
     "description":"Docker container statistics. Queries on this table take at least one second.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_container_stats.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_container_stats.table",
     "platforms":[
       "darwin",
       "linux"
@@ -7193,7 +7193,7 @@
   {
     "name":"docker_containers",
     "description":"Docker containers information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_containers.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_containers.table",
     "platforms":[
       "darwin",
       "linux"
@@ -7448,7 +7448,7 @@
   {
     "name":"docker_image_history",
     "description":"Docker image history information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_image_history.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_image_history.table",
     "platforms":[
       "darwin",
       "linux"
@@ -7521,7 +7521,7 @@
   {
     "name":"docker_image_labels",
     "description":"Docker image labels.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_image_labels.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_image_labels.table",
     "platforms":[
       "darwin",
       "linux"
@@ -7567,7 +7567,7 @@
   {
     "name":"docker_image_layers",
     "description":"Docker image layers information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_image_layers.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_image_layers.table",
     "platforms":[
       "darwin",
       "linux"
@@ -7613,7 +7613,7 @@
   {
     "name":"docker_images",
     "description":"Docker images information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_images.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_images.table",
     "platforms":[
       "darwin",
       "linux"
@@ -7668,7 +7668,7 @@
   {
     "name":"docker_info",
     "description":"Docker system information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_info.table",
     "platforms":[
       "darwin",
       "linux"
@@ -7973,7 +7973,7 @@
   {
     "name":"docker_network_labels",
     "description":"Docker network labels.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_network_labels.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_network_labels.table",
     "platforms":[
       "darwin",
       "linux"
@@ -8019,7 +8019,7 @@
   {
     "name":"docker_networks",
     "description":"Docker networks information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_networks.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_networks.table",
     "platforms":[
       "darwin",
       "linux"
@@ -8101,7 +8101,7 @@
   {
     "name":"docker_version",
     "description":"Docker version information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_version.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_version.table",
     "platforms":[
       "darwin",
       "linux"
@@ -8199,7 +8199,7 @@
   {
     "name":"docker_volume_labels",
     "description":"Docker volume labels.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_volume_labels.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_volume_labels.table",
     "platforms":[
       "darwin",
       "linux"
@@ -8244,7 +8244,7 @@
   {
     "name":"docker_volumes",
     "description":"Docker volumes information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/docker_volumes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/docker_volumes.table",
     "platforms":[
       "darwin",
       "linux"
@@ -8298,7 +8298,7 @@
   {
     "name":"drivers",
     "description":"Details for in-use Windows device drivers. This does not display installed but unused drivers.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/drivers.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/drivers.table",
     "platforms":[
       "windows"
     ],
@@ -8440,7 +8440,7 @@
   {
     "name":"ec2_instance_metadata",
     "description":"EC2 instance metadata.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/ec2_instance_metadata.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/ec2_instance_metadata.table",
     "platforms":[
       "darwin",
       "linux",
@@ -8584,7 +8584,7 @@
   {
     "name":"ec2_instance_tags",
     "description":"EC2 instance tag key value pairs.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/ec2_instance_tags.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/ec2_instance_tags.table",
     "platforms":[
       "darwin",
       "linux",
@@ -8629,7 +8629,7 @@
   {
     "name":"es_process_events",
     "description":"Process execution events from EndpointSecurity.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/es_process_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/es_process_events.table",
     "platforms":[
       "darwin"
     ],
@@ -8931,7 +8931,7 @@
   {
     "name":"es_process_file_events",
     "description":"File integrity monitoring events from EndpointSecurity including process context.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/es_process_file_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/es_process_file_events.table",
     "platforms":[
       "darwin"
     ],
@@ -9044,7 +9044,7 @@
   {
     "name":"etc_hosts",
     "description":"Line-parsed /etc/hosts.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/etc_hosts.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/etc_hosts.table",
     "platforms":[
       "darwin",
       "linux",
@@ -9090,7 +9090,7 @@
   {
     "name":"etc_protocols",
     "description":"Line-parsed /etc/protocols.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/etc_protocols.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/etc_protocols.table",
     "platforms":[
       "darwin",
       "linux",
@@ -9142,7 +9142,7 @@
   {
     "name":"etc_services",
     "description":"Line-parsed /etc/services.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/etc_services.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/etc_services.table",
     "platforms":[
       "darwin",
       "linux",
@@ -9203,7 +9203,7 @@
   {
     "name":"event_taps",
     "description":"Returns information about installed event taps.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/event_taps.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/event_taps.table",
     "platforms":[
       "darwin"
     ],
@@ -9262,7 +9262,7 @@
   {
     "name":"extended_attributes",
     "description":"Returns the extended attributes for files (similar to Windows ADS).",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/extended_attributes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/extended_attributes.table",
     "platforms":[
       "darwin",
       "linux"
@@ -9322,7 +9322,7 @@
   {
     "name":"fan_speed_sensors",
     "description":"Fan speeds.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/fan_speed_sensors.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/fan_speed_sensors.table",
     "platforms":[
       "darwin"
     ],
@@ -9390,7 +9390,7 @@
   {
     "name":"file",
     "description":"Interactive filesystem attributes and metadata.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/file.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/utility/file.table",
     "platforms":[
       "darwin",
       "linux",
@@ -9767,7 +9767,7 @@
   {
     "name":"file_events",
     "description":"Track time/action changes to files specified in configuration data.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/file_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/file_events.table",
     "platforms":[
       "darwin",
       "linux"
@@ -9944,7 +9944,7 @@
   {
     "name":"firefox_addons",
     "description":"Firefox browser extensions, webapps, and addons.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/firefox_addons.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/firefox_addons.table",
     "platforms":[
       "darwin",
       "linux",
@@ -10088,7 +10088,7 @@
   {
     "name":"gatekeeper",
     "description":"macOS Gatekeeper Details.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/gatekeeper.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/gatekeeper.table",
     "platforms":[
       "darwin"
     ],
@@ -10138,7 +10138,7 @@
   {
     "name":"gatekeeper_approved_apps",
     "description":"Gatekeeper apps a user has allowed to run.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/gatekeeper_approved_apps.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/gatekeeper_approved_apps.table",
     "platforms":[
       "darwin"
     ],
@@ -10188,7 +10188,7 @@
   {
     "name":"groups",
     "description":"Local system groups.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/groups.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/groups.table",
     "platforms":[
       "darwin",
       "linux",
@@ -10285,7 +10285,7 @@
   {
     "name":"hardware_events",
     "description":"Hardware (PCI/USB/HID) events from UDEV or IOKit.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/hardware_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/hardware_events.table",
     "platforms":[
       "darwin",
       "linux"
@@ -10408,7 +10408,7 @@
   {
     "name":"hash",
     "description":"Filesystem hash data.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/hash.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/hash.table",
     "platforms":[
       "darwin",
       "linux",
@@ -10496,7 +10496,7 @@
   {
     "name":"homebrew_packages",
     "description":"The installed homebrew package database.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/homebrew_packages.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/homebrew_packages.table",
     "platforms":[
       "darwin"
     ],
@@ -10555,7 +10555,7 @@
   {
     "name":"ibridge_info",
     "description":"Information about the Apple iBridge hardware controller.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/ibridge_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/ibridge_info.table",
     "platforms":[
       "darwin"
     ],
@@ -10605,7 +10605,7 @@
   {
     "name":"ie_extensions",
     "description":"Internet Explorer browser extensions.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/ie_extensions.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/ie_extensions.table",
     "platforms":[
       "windows"
     ],
@@ -10655,7 +10655,7 @@
   {
     "name":"intel_me_info",
     "description":"Intel ME/CSE Info.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linwin/intel_me_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linwin/intel_me_info.table",
     "platforms":[
       "linux",
       "windows"
@@ -10679,7 +10679,7 @@
   {
     "name":"interface_addresses",
     "description":"Network interfaces and relevant metadata.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/interface_addresses.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/interface_addresses.table",
     "platforms":[
       "darwin",
       "linux",
@@ -10763,7 +10763,7 @@
   {
     "name":"interface_details",
     "description":"Detailed information and stats of network interfaces.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/interface_details.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/interface_details.table",
     "platforms":[
       "darwin",
       "linux",
@@ -11190,7 +11190,7 @@
   {
     "name":"interface_ipv6",
     "description":"IPv6 configuration and stats of network interfaces.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/interface_ipv6.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/interface_ipv6.table",
     "platforms":[
       "darwin",
       "linux"
@@ -11250,7 +11250,7 @@
   {
     "name":"iokit_devicetree",
     "description":"The IOKit registry matching the DeviceTree plane.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/iokit_devicetree.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/iokit_devicetree.table",
     "platforms":[
       "darwin"
     ],
@@ -11345,7 +11345,7 @@
   {
     "name":"iokit_registry",
     "description":"The full IOKit registry without selecting a plane.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/iokit_registry.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/iokit_registry.table",
     "platforms":[
       "darwin"
     ],
@@ -11422,7 +11422,7 @@
   {
     "name":"iptables",
     "description":"Linux IP packet filtering and NAT tool.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/iptables.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/iptables.table",
     "platforms":[
       "linux"
     ],
@@ -11598,7 +11598,7 @@
   {
     "name":"kernel_extensions",
     "description":"macOS's kernel extensions, both loaded and within the load search path.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/kernel_extensions.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/kernel_extensions.table",
     "platforms":[
       "darwin"
     ],
@@ -11675,7 +11675,7 @@
   {
     "name":"kernel_info",
     "description":"Basic active kernel information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/kernel_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/kernel_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -11727,7 +11727,7 @@
   {
     "name":"kernel_keys",
     "description":"List of security data, authentication keys and encryption keys.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/kernel_keys.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/kernel_keys.table",
     "platforms":[
       "linux"
     ],
@@ -11824,7 +11824,7 @@
   {
     "name":"kernel_modules",
     "description":"Linux kernel modules both loaded and within the load search path.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/kernel_modules.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/kernel_modules.table",
     "platforms":[
       "linux"
     ],
@@ -11883,7 +11883,7 @@
   {
     "name":"kernel_panics",
     "description":"System kernel panic logs.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/kernel_panics.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/kernel_panics.table",
     "platforms":[
       "darwin"
     ],
@@ -12014,7 +12014,7 @@
   {
     "name":"keychain_acls",
     "description":"Applications that have ACL entries in the keychain. NOTE: osquery limits frequent access to keychain files. This limit is controlled by keychain_access_interval flag.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/keychain_acls.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/keychain_acls.table",
     "platforms":[
       "darwin"
     ],
@@ -12075,7 +12075,7 @@
   {
     "name":"keychain_items",
     "description":"Generic details about keychain items. NOTE: osquery limits frequent access to keychain files. This limit is controlled by keychain_access_interval flag.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/keychain_items.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/keychain_items.table",
     "platforms":[
       "darwin"
     ],
@@ -12170,7 +12170,7 @@
   {
     "name":"known_hosts",
     "description":"A line-delimited known_hosts table.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/known_hosts.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/known_hosts.table",
     "platforms":[
       "darwin",
       "linux"
@@ -12214,7 +12214,7 @@
   {
     "name":"kva_speculative_info",
     "description":"Display kernel virtual address and speculative execution information for the system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/kva_speculative_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/kva_speculative_info.table",
     "platforms":[
       "windows"
     ],
@@ -12329,7 +12329,7 @@
   {
     "name":"last",
     "description":"System logins and logouts.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/last.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/last.table",
     "platforms":[
       "darwin",
       "linux"
@@ -12407,7 +12407,7 @@
   {
     "name":"launchd",
     "description":"LaunchAgents and LaunchDaemons from default search paths.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/launchd.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/launchd.table",
     "platforms":[
       "darwin"
     ],
@@ -12610,7 +12610,7 @@
   {
     "name":"launchd_overrides",
     "description":"Override keys, per user, for LaunchDaemons and Agents.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/launchd_overrides.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/launchd_overrides.table",
     "platforms":[
       "darwin"
     ],
@@ -12669,7 +12669,7 @@
   {
     "name":"listening_ports",
     "description":"Processes with listening (bound) network sockets/ports.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/listening_ports.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/listening_ports.table",
     "platforms":[
       "darwin",
       "linux",
@@ -12769,7 +12769,7 @@
   {
     "name":"load_average",
     "description":"Displays information about the system wide load averages.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/load_average.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/load_average.table",
     "platforms":[
       "darwin",
       "linux"
@@ -12804,7 +12804,7 @@
   {
     "name":"location_services",
     "description":"Reports the status of the Location Services feature of the OS.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/location_services.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/location_services.table",
     "platforms":[
       "darwin"
     ],
@@ -12827,7 +12827,7 @@
   {
     "name":"logged_in_users",
     "description":"Users with an active shell on the system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/logged_in_users.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/logged_in_users.table",
     "platforms":[
       "darwin",
       "linux",
@@ -12925,7 +12925,7 @@
   {
     "name":"logical_drives",
     "description":"Details for logical drives on the system. A logical drive generally represents a single partition.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/logical_drives.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/logical_drives.table",
     "platforms":[
       "windows"
     ],
@@ -13005,7 +13005,7 @@
   {
     "name":"logon_sessions",
     "description":"Windows Logon Session.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/logon_sessions.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/logon_sessions.table",
     "platforms":[
       "windows"
     ],
@@ -13156,7 +13156,7 @@
   {
     "name":"lxd_certificates",
     "description":"LXD certificates information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/lxd_certificates.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/lxd_certificates.table",
     "platforms":[
       "linux"
     ],
@@ -13208,7 +13208,7 @@
   {
     "name":"lxd_cluster",
     "description":"LXD cluster information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/lxd_cluster.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/lxd_cluster.table",
     "platforms":[
       "linux"
     ],
@@ -13287,7 +13287,7 @@
   {
     "name":"lxd_cluster_members",
     "description":"LXD cluster members information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/lxd_cluster_members.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/lxd_cluster_members.table",
     "platforms":[
       "linux"
     ],
@@ -13348,7 +13348,7 @@
   {
     "name":"lxd_images",
     "description":"LXD images information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/lxd_images.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/lxd_images.table",
     "platforms":[
       "linux"
     ],
@@ -13537,7 +13537,7 @@
   {
     "name":"lxd_instance_config",
     "description":"LXD instance configuration information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/lxd_instance_config.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/lxd_instance_config.table",
     "platforms":[
       "linux"
     ],
@@ -13580,7 +13580,7 @@
   {
     "name":"lxd_instance_devices",
     "description":"LXD instance devices information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/lxd_instance_devices.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/lxd_instance_devices.table",
     "platforms":[
       "linux"
     ],
@@ -13641,7 +13641,7 @@
   {
     "name":"lxd_instances",
     "description":"LXD instances information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/lxd_instances.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/lxd_instances.table",
     "platforms":[
       "linux"
     ],
@@ -13757,7 +13757,7 @@
   {
     "name":"lxd_networks",
     "description":"LXD network information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/lxd_networks.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/lxd_networks.table",
     "platforms":[
       "linux"
     ],
@@ -13890,7 +13890,7 @@
   {
     "name":"lxd_storage_pools",
     "description":"LXD storage pool information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/lxd_storage_pools.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/lxd_storage_pools.table",
     "platforms":[
       "linux"
     ],
@@ -13978,7 +13978,7 @@
   {
     "name":"magic",
     "description":"Magic number recognition library table.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/magic.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/magic.table",
     "platforms":[
       "darwin",
       "linux"
@@ -14038,7 +14038,7 @@
   {
     "name":"managed_policies",
     "description":"The managed configuration policies from AD, MDM, MCX, etc.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/managed_policies.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/managed_policies.table",
     "platforms":[
       "darwin"
     ],
@@ -14106,7 +14106,7 @@
   {
     "name":"md_devices",
     "description":"Software RAID array settings.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/md_devices.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/md_devices.table",
     "platforms":[
       "linux"
     ],
@@ -14399,7 +14399,7 @@
   {
     "name":"md_drives",
     "description":"Drive devices used for Software RAID.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/md_drives.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/md_drives.table",
     "platforms":[
       "linux"
     ],
@@ -14449,7 +14449,7 @@
   {
     "name":"md_personalities",
     "description":"Software RAID setting supported by the kernel.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/md_personalities.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/md_personalities.table",
     "platforms":[
       "linux"
     ],
@@ -14472,7 +14472,7 @@
   {
     "name":"mdfind",
     "description":"Run searches against the spotlight database.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/mdfind.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/mdfind.table",
     "platforms":[
       "darwin"
     ],
@@ -14507,7 +14507,7 @@
   {
     "name":"mdls",
     "description":"Query file metadata in the Spotlight database.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/mdls.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/mdls.table",
     "platforms":[
       "darwin"
     ],
@@ -14559,7 +14559,7 @@
   {
     "name":"memory_array_mapped_addresses",
     "description":"Data associated for address mapping of physical memory arrays.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/memory_array_mapped_addresses.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/memory_array_mapped_addresses.table",
     "platforms":[
       "darwin",
       "linux"
@@ -14619,7 +14619,7 @@
   {
     "name":"memory_arrays",
     "description":"Data associated with collection of memory devices that operate to form a memory address.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/memory_arrays.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/memory_arrays.table",
     "platforms":[
       "darwin",
       "linux"
@@ -14697,7 +14697,7 @@
   {
     "name":"memory_device_mapped_addresses",
     "description":"Data associated for address mapping of physical memory devices.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/memory_device_mapped_addresses.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/memory_device_mapped_addresses.table",
     "platforms":[
       "darwin",
       "linux"
@@ -14784,7 +14784,7 @@
   {
     "name":"memory_devices",
     "description":"Physical memory device (type 17) information retrieved from SMBIOS.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/memory_devices.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/memory_devices.table",
     "platforms":[
       "darwin",
       "linux",
@@ -14980,7 +14980,7 @@
   {
     "name":"memory_error_info",
     "description":"Data associated with errors of a physical memory array.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/memory_error_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/memory_error_info.table",
     "platforms":[
       "darwin",
       "linux"
@@ -15067,7 +15067,7 @@
   {
     "name":"memory_info",
     "description":"Main memory information in bytes.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/memory_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/memory_info.table",
     "platforms":[
       "linux"
     ],
@@ -15171,7 +15171,7 @@
   {
     "name":"memory_map",
     "description":"OS memory region map.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/memory_map.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/memory_map.table",
     "platforms":[
       "linux"
     ],
@@ -15212,7 +15212,7 @@
   {
     "name":"mounts",
     "description":"System mounted devices and filesystems (not process specific).",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/mounts.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/mounts.table",
     "platforms":[
       "darwin",
       "linux"
@@ -15326,7 +15326,7 @@
   {
     "name":"msr",
     "description":"Various pieces of data stored in the model specific register per processor. NOTE: the msr kernel module must be enabled, and osquery must be run as root.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/msr.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/msr.table",
     "platforms":[
       "linux"
     ],
@@ -15430,7 +15430,7 @@
   {
     "name":"nfs_shares",
     "description":"NFS shares exported by the host.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/nfs_shares.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/nfs_shares.table",
     "platforms":[
       "darwin"
     ],
@@ -15471,7 +15471,7 @@
   {
     "name":"npm_packages",
     "description":"Node packages installed in a system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/npm_packages.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/npm_packages.table",
     "platforms":[
       "darwin",
       "linux",
@@ -15586,7 +15586,7 @@
   {
     "name":"ntdomains",
     "description":"Display basic NT domain information of a Windows machine.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/ntdomains.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/ntdomains.table",
     "platforms":[
       "windows"
     ],
@@ -15674,7 +15674,7 @@
   {
     "name":"ntfs_acl_permissions",
     "description":"Retrieve NTFS ACL permission information for files and directories.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/ntfs_acl_permissions.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/ntfs_acl_permissions.table",
     "platforms":[
       "windows"
     ],
@@ -15733,7 +15733,7 @@
   {
     "name":"ntfs_journal_events",
     "description":"Track time/action changes to files specified in configuration data.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/ntfs_journal_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/ntfs_journal_events.table",
     "platforms":[
       "windows"
     ],
@@ -15864,7 +15864,7 @@
   {
     "name":"nvram",
     "description":"Apple NVRAM variable listing.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/nvram.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/nvram.table",
     "platforms":[
       "darwin"
     ],
@@ -15905,7 +15905,7 @@
   {
     "name":"oem_strings",
     "description":"OEM defined strings retrieved from SMBIOS.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/oem_strings.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/oem_strings.table",
     "platforms":[
       "darwin",
       "linux"
@@ -15947,7 +15947,7 @@
   {
     "name":"office_mru",
     "description":"View recently opened Office documents.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/office_mru.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/office_mru.table",
     "platforms":[
       "windows"
     ],
@@ -16008,7 +16008,7 @@
   {
     "name":"os_version",
     "description":"A single row containing the operating system name and version.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/os_version.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/os_version.table",
     "platforms":[
       "darwin",
       "linux",
@@ -16178,7 +16178,7 @@
   {
     "name":"osquery_events",
     "description":"Information about the event publishers and subscribers.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/utility/osquery_events.table",
     "platforms":[
       "darwin",
       "linux",
@@ -16257,7 +16257,7 @@
   {
     "name":"osquery_extensions",
     "description":"List of active osquery extensions.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_extensions.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/utility/osquery_extensions.table",
     "platforms":[
       "darwin",
       "linux",
@@ -16327,7 +16327,7 @@
   {
     "name":"osquery_flags",
     "description":"Configurable flags that modify osquery's behavior.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_flags.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/utility/osquery_flags.table",
     "platforms":[
       "darwin",
       "linux",
@@ -16397,7 +16397,7 @@
   {
     "name":"osquery_info",
     "description":"Top level information about the running version of osquery.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/utility/osquery_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -16521,7 +16521,7 @@
   {
     "name":"osquery_packs",
     "description":"Information about the current query packs that are loaded in osquery.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_packs.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/utility/osquery_packs.table",
     "platforms":[
       "darwin",
       "linux",
@@ -16600,7 +16600,7 @@
   {
     "name":"osquery_registry",
     "description":"List the osquery registry plugins.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_registry.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/utility/osquery_registry.table",
     "platforms":[
       "darwin",
       "linux",
@@ -16661,7 +16661,7 @@
   {
     "name":"osquery_schedule",
     "description":"Information about the current queries that are scheduled in osquery.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/osquery_schedule.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/utility/osquery_schedule.table",
     "platforms":[
       "darwin",
       "linux",
@@ -16821,7 +16821,7 @@
   {
     "name":"package_bom",
     "description":"macOS package bill of materials (BOM) file list.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/package_bom.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/package_bom.table",
     "platforms":[
       "darwin"
     ],
@@ -16900,7 +16900,7 @@
   {
     "name":"package_install_history",
     "description":"macOS package install history.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/package_install_history.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/package_install_history.table",
     "platforms":[
       "darwin"
     ],
@@ -16968,7 +16968,7 @@
   {
     "name":"package_receipts",
     "description":"macOS package receipt details.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/package_receipts.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/package_receipts.table",
     "platforms":[
       "darwin"
     ],
@@ -17047,7 +17047,7 @@
   {
     "name":"password_policy",
     "description":"Password Policies for macOS.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/password_policy.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/password_policy.table",
     "platforms":[
       "darwin"
     ],
@@ -17099,7 +17099,7 @@
   {
     "name":"patches",
     "description":"Lists all the patches applied. Note: This does not include patches applied via MSI or downloaded from Windows Update (e.g. Service Packs).",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/patches.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/patches.table",
     "platforms":[
       "windows"
     ],
@@ -17187,7 +17187,7 @@
   {
     "name":"pci_devices",
     "description":"PCI devices active on the host system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/pci_devices.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/pci_devices.table",
     "platforms":[
       "darwin",
       "linux"
@@ -17349,7 +17349,7 @@
   {
     "name":"physical_disk_performance",
     "description":"Provides provides raw data from performance counters that monitor hard or fixed disk drives on the system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/physical_disk_performance.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/physical_disk_performance.table",
     "platforms":[
       "windows"
     ],
@@ -17471,7 +17471,7 @@
   {
     "name":"pipes",
     "description":"Named and Anonymous pipes.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/pipes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/pipes.table",
     "platforms":[
       "windows"
     ],
@@ -17532,7 +17532,7 @@
   {
     "name":"platform_info",
     "description":"Information about EFI/UEFI/ROM and platform/boot.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/platform_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/platform_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -17641,7 +17641,7 @@
   {
     "name":"plist",
     "description":"Read and parse a plist file.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/plist.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/plist.table",
     "platforms":[
       "darwin"
     ],
@@ -17693,7 +17693,7 @@
   {
     "name":"portage_keywords",
     "description":"A summary about portage configurations like keywords, mask and unmask.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/portage_keywords.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/portage_keywords.table",
     "platforms":[
       "linux"
     ],
@@ -17752,7 +17752,7 @@
   {
     "name":"portage_packages",
     "description":"List of currently installed packages.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/portage_packages.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/portage_packages.table",
     "platforms":[
       "linux"
     ],
@@ -17838,7 +17838,7 @@
   {
     "name":"portage_use",
     "description":"List of enabled portage USE values for specific package.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/portage_use.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/portage_use.table",
     "platforms":[
       "linux"
     ],
@@ -17879,7 +17879,7 @@
   {
     "name":"power_sensors",
     "description":"Machine power (currents, voltages, wattages, etc) sensors.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/power_sensors.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/power_sensors.table",
     "platforms":[
       "darwin"
     ],
@@ -17931,7 +17931,7 @@
   {
     "name":"powershell_events",
     "description":"Powershell script blocks reconstructed to their full script content, this table requires script block logging to be enabled.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/powershell_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/powershell_events.table",
     "platforms":[
       "windows"
     ],
@@ -18021,7 +18021,7 @@
   {
     "name":"preferences",
     "description":"macOS defaults and managed preferences.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/preferences.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/preferences.table",
     "platforms":[
       "darwin"
     ],
@@ -18101,7 +18101,7 @@
   {
     "name":"prefetch",
     "description":"Prefetch files show metadata related to file execution.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/prefetch.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/prefetch.table",
     "platforms":[
       "windows"
     ],
@@ -18234,7 +18234,7 @@
   {
     "name":"process_envs",
     "description":"A key/value table of environment variables for each process.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/process_envs.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/process_envs.table",
     "platforms":[
       "darwin",
       "linux"
@@ -18279,7 +18279,7 @@
   {
     "name":"process_etw_events",
     "description":"Windows process execution events.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/process_etw_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/process_etw_events.table",
     "platforms":[
       "windows"
     ],
@@ -18469,7 +18469,7 @@
   {
     "name":"process_events",
     "description":"Track time/action process executions.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/process_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/process_events.table",
     "platforms":[
       "darwin",
       "linux"
@@ -18781,7 +18781,7 @@
   {
     "name":"process_file_events",
     "description":"A File Integrity Monitor implementation using the audit service.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/process_file_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/process_file_events.table",
     "platforms":[
       "linux"
     ],
@@ -18975,7 +18975,7 @@
   {
     "name":"process_memory_map",
     "description":"Process memory mapped files and pseudo device/regions.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/process_memory_map.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/process_memory_map.table",
     "platforms":[
       "darwin",
       "linux",
@@ -19074,7 +19074,7 @@
   {
     "name":"process_namespaces",
     "description":"Linux namespaces for processes running on the host system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/process_namespaces.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/process_namespaces.table",
     "platforms":[
       "linux"
     ],
@@ -19162,7 +19162,7 @@
   {
     "name":"process_open_files",
     "description":"File descriptors for each process.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/process_open_files.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/process_open_files.table",
     "platforms":[
       "darwin",
       "linux"
@@ -19206,7 +19206,7 @@
   {
     "name":"process_open_pipes",
     "description":"Pipes and partner processes for each process.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/process_open_pipes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/process_open_pipes.table",
     "platforms":[
       "linux"
     ],
@@ -19294,7 +19294,7 @@
   {
     "name":"process_open_sockets",
     "description":"Processes which have open network sockets on the system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/process_open_sockets.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/process_open_sockets.table",
     "platforms":[
       "darwin",
       "linux",
@@ -19423,7 +19423,7 @@
   {
     "name":"processes",
     "description":"All running processes on the host system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/processes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/processes.table",
     "platforms":[
       "darwin",
       "linux",
@@ -19845,7 +19845,7 @@
   {
     "name":"programs",
     "description":"Represents products as they are installed by Windows Installer. A product generally correlates to one installation package on Windows. Some fields may be blank as Windows installation details are left to the discretion of the product author.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/programs.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/programs.table",
     "platforms":[
       "windows"
     ],
@@ -19943,7 +19943,7 @@
   {
     "name":"prometheus_metrics",
     "description":"Retrieve metrics from a Prometheus server.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/prometheus_metrics.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/prometheus_metrics.table",
     "platforms":[
       "darwin",
       "linux"
@@ -19994,7 +19994,7 @@
   {
     "name":"python_packages",
     "description":"Python packages installed in a system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/python_packages.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/python_packages.table",
     "platforms":[
       "darwin",
       "linux",
@@ -20087,7 +20087,7 @@
   {
     "name":"quicklook_cache",
     "description":"Files and thumbnails within macOS's Quicklook Cache.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/quicklook_cache.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/quicklook_cache.table",
     "platforms":[
       "darwin"
     ],
@@ -20209,7 +20209,7 @@
   {
     "name":"registry",
     "description":"All of the Windows registry hives.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/registry.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/registry.table",
     "platforms":[
       "windows"
     ],
@@ -20285,7 +20285,7 @@
   {
     "name":"routes",
     "description":"The active route table for the host system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/routes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/routes.table",
     "platforms":[
       "darwin",
       "linux",
@@ -20395,7 +20395,7 @@
   {
     "name":"rpm_package_files",
     "description":"RPM packages that are currently installed on the host system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/rpm_package_files.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/rpm_package_files.table",
     "platforms":[
       "linux"
     ],
@@ -20472,7 +20472,7 @@
   {
     "name":"rpm_packages",
     "description":"RPM packages that are currently installed on the host system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/rpm_packages.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/rpm_packages.table",
     "platforms":[
       "linux"
     ],
@@ -20609,7 +20609,7 @@
   {
     "name":"running_apps",
     "description":"macOS applications currently running on the host system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/running_apps.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/running_apps.table",
     "platforms":[
       "darwin"
     ],
@@ -20650,7 +20650,7 @@
   {
     "name":"safari_extensions",
     "description":"Safari browser extension details for all users. This table requires Full Disk Access (FDA) permission.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/safari_extensions.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/safari_extensions.table",
     "platforms":[
       "darwin"
     ],
@@ -20748,7 +20748,7 @@
   {
     "name":"sandboxes",
     "description":"macOS application sandboxes container details.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/sandboxes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/sandboxes.table",
     "platforms":[
       "darwin"
     ],
@@ -20816,7 +20816,7 @@
   {
     "name":"scheduled_tasks",
     "description":"Lists all of the tasks in the Windows task scheduler.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/scheduled_tasks.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/scheduled_tasks.table",
     "platforms":[
       "windows"
     ],
@@ -20923,7 +20923,7 @@
   {
     "name":"screenlock",
     "description":"macOS screenlock status. Note: only fetches results for osquery's current logged-in user context. The user must also have recently logged in.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/screenlock.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/screenlock.table",
     "platforms":[
       "darwin"
     ],
@@ -20955,7 +20955,7 @@
   {
     "name":"seccomp_events",
     "description":"A virtual table that tracks seccomp events.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/seccomp_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/seccomp_events.table",
     "platforms":[
       "linux"
     ],
@@ -21104,7 +21104,7 @@
   {
     "name":"secureboot",
     "description":"Secure Boot UEFI Settings.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/secureboot.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/secureboot.table",
     "platforms":[
       "darwin",
       "linux",
@@ -21192,7 +21192,7 @@
   {
     "name":"security_profile_info",
     "description":"Information on the security profile of a given system by listing the system Account and Audit Policies. This table mimics the exported securitypolicy output from the secedit tool.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/security_profile_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/security_profile_info.table",
     "platforms":[
       "windows"
     ],
@@ -21413,7 +21413,7 @@
   {
     "name":"selinux_events",
     "description":"Track SELinux events.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/selinux_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/selinux_events.table",
     "platforms":[
       "linux"
     ],
@@ -21472,7 +21472,7 @@
   {
     "name":"selinux_settings",
     "description":"Track active SELinux settings.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/selinux_settings.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/selinux_settings.table",
     "platforms":[
       "linux"
     ],
@@ -21515,7 +21515,7 @@
   {
     "name":"services",
     "description":"Lists all installed Windows services and their relevant data.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/services.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/services.table",
     "platforms":[
       "windows"
     ],
@@ -21639,7 +21639,7 @@
   {
     "name":"shadow",
     "description":"Local system users encrypted passwords and related information. Please note, that you usually need superuser rights to access `/etc/shadow`.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/shadow.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/shadow.table",
     "platforms":[
       "linux"
     ],
@@ -21745,7 +21745,7 @@
   {
     "name":"shared_folders",
     "description":"Folders available to others via SMB or AFP.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/shared_folders.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/shared_folders.table",
     "platforms":[
       "darwin"
     ],
@@ -21777,7 +21777,7 @@
   {
     "name":"shared_memory",
     "description":"OS shared memory regions.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/shared_memory.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/shared_memory.table",
     "platforms":[
       "linux"
     ],
@@ -21908,7 +21908,7 @@
   {
     "name":"shared_resources",
     "description":"Displays shared resources on a computer system running Windows. This may be a disk drive, printer, interprocess communication, or other sharable device.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/shared_resources.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/shared_resources.table",
     "platforms":[
       "windows"
     ],
@@ -22005,7 +22005,7 @@
   {
     "name":"sharing_preferences",
     "description":"macOS Sharing preferences.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/sharing_preferences.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/sharing_preferences.table",
     "platforms":[
       "darwin"
     ],
@@ -22109,7 +22109,7 @@
   {
     "name":"shell_history",
     "description":"A line-delimited (command) table of per-user .*_history data.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/shell_history.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/shell_history.table",
     "platforms":[
       "darwin",
       "linux"
@@ -22162,7 +22162,7 @@
   {
     "name":"shellbags",
     "description":"Shows directories accessed via Windows Explorer.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/shellbags.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/shellbags.table",
     "platforms":[
       "windows"
     ],
@@ -22250,7 +22250,7 @@
   {
     "name":"shimcache",
     "description":"Application Compatibility Cache, contains artifacts of execution.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/shimcache.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/shimcache.table",
     "platforms":[
       "windows"
     ],
@@ -22302,7 +22302,7 @@
   {
     "name":"signature",
     "description":"File (executable, bundle, installer, disk) code signing status.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/signature.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/signature.table",
     "platforms":[
       "darwin"
     ],
@@ -22401,7 +22401,7 @@
   {
     "name":"sip_config",
     "description":"Apple's System Integrity Protection (rootless) status.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/sip_config.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/sip_config.table",
     "platforms":[
       "darwin"
     ],
@@ -22444,7 +22444,7 @@
   {
     "name":"smbios_tables",
     "description":"BIOS (DMI) structure common details and content.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/smbios_tables.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/smbios_tables.table",
     "platforms":[
       "darwin",
       "linux"
@@ -22522,7 +22522,7 @@
   {
     "name":"smc_keys",
     "description":"Apple's system management controller keys.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/smc_keys.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/smc_keys.table",
     "platforms":[
       "darwin"
     ],
@@ -22583,7 +22583,7 @@
   {
     "name":"socket_events",
     "description":"Track network socket bind, connect, and accepts.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/socket_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/socket_events.table",
     "platforms":[
       "darwin",
       "linux"
@@ -22754,7 +22754,7 @@
   {
     "name":"ssh_configs",
     "description":"A table of parsed ssh_configs.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/ssh_configs.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/ssh_configs.table",
     "platforms":[
       "darwin",
       "linux",
@@ -22808,7 +22808,7 @@
   {
     "name":"startup_items",
     "description":"Applications and binaries set as user/login startup items.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/startup_items.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/startup_items.table",
     "platforms":[
       "darwin",
       "linux",
@@ -22887,7 +22887,7 @@
   {
     "name":"sudoers",
     "description":"Rules for running commands as other users via sudo.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/sudoers.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/sudoers.table",
     "platforms":[
       "darwin",
       "linux"
@@ -22929,7 +22929,7 @@
   {
     "name":"suid_bin",
     "description":"suid binaries in common locations.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/suid_bin.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/suid_bin.table",
     "platforms":[
       "darwin",
       "linux"
@@ -22992,7 +22992,7 @@
   {
     "name":"syslog_events",
     "description":"",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/syslog_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/syslog_events.table",
     "platforms":[
       "linux"
     ],
@@ -23078,7 +23078,7 @@
   {
     "name":"system_controls",
     "description":"sysctl names, values, and settings information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/system_controls.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/system_controls.table",
     "platforms":[
       "darwin",
       "linux"
@@ -23159,7 +23159,7 @@
   {
     "name":"system_extensions",
     "description":"macOS (>= 10.15) system extension table.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/system_extensions.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/system_extensions.table",
     "platforms":[
       "darwin"
     ],
@@ -23256,7 +23256,7 @@
   {
     "name":"system_info",
     "description":"System information for identification.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/system_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/system_info.table",
     "platforms":[
       "darwin",
       "linux",
@@ -23452,7 +23452,7 @@
   {
     "name":"systemd_units",
     "description":"Track systemd units.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/systemd_units.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/systemd_units.table",
     "platforms":[
       "linux"
     ],
@@ -23592,7 +23592,7 @@
   {
     "name":"temperature_sensors",
     "description":"Machine's temperature sensors.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/temperature_sensors.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/temperature_sensors.table",
     "platforms":[
       "darwin"
     ],
@@ -23642,7 +23642,7 @@
   {
     "name":"time",
     "description":"Track current date and time in UTC.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/utility/time.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/utility/time.table",
     "platforms":[
       "darwin",
       "linux",
@@ -23789,7 +23789,7 @@
   {
     "name":"time_machine_backups",
     "description":"Backups to drives using TimeMachine. This table requires Full Disk Access (FDA) permission.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/time_machine_backups.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/time_machine_backups.table",
     "platforms":[
       "darwin"
     ],
@@ -23823,7 +23823,7 @@
   {
     "name":"time_machine_destinations",
     "description":"Locations backed up to using Time Machine. This table requires Full Disk Access (FDA) permission.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/time_machine_destinations.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/time_machine_destinations.table",
     "platforms":[
       "darwin"
     ],
@@ -23902,7 +23902,7 @@
   {
     "name":"tpm_info",
     "description":"A table that lists the TPM related information.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/tpm_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/tpm_info.table",
     "platforms":[
       "windows"
     ],
@@ -23999,7 +23999,7 @@
   {
     "name":"ulimit_info",
     "description":"System resource usage limits.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/ulimit_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/ulimit_info.table",
     "platforms":[
       "darwin",
       "linux"
@@ -24043,7 +24043,7 @@
   {
     "name":"unified_log",
     "description":"Queries the OSLog framework for entries in the system log. The maximum number of rows returned is limited for performance issues. Use timestamp > or >= constraints to optimize query performance. This table introduces a new idiom for extracting sequential data in batches using multiple queries, ordered by timestamp. To trigger it, the user should include the condition \"timestamp > -1\", and the table will handle pagination. Note that the saved pagination counter is incremented globally across all queries and table invocations within a query. To avoid multiple table invocations within a query, use only AND and = constraints in WHERE clause.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/unified_log.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/unified_log.table",
     "platforms":[
       "darwin"
     ],
@@ -24192,7 +24192,7 @@
   {
     "name":"uptime",
     "description":"Track time passed since last boot. Some systems track this as calendar time, some as runtime.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/uptime.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/uptime.table",
     "platforms":[
       "darwin",
       "linux",
@@ -24253,7 +24253,7 @@
   {
     "name":"usb_devices",
     "description":"USB devices that are actively plugged into the host system.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/usb_devices.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/usb_devices.table",
     "platforms":[
       "darwin",
       "linux"
@@ -24376,7 +24376,7 @@
   {
     "name":"user_events",
     "description":"Track user events from the audit framework.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/user_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/user_events.table",
     "platforms":[
       "darwin",
       "linux"
@@ -24490,7 +24490,7 @@
   {
     "name":"user_groups",
     "description":"Local system user group relationships.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/user_groups.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/user_groups.table",
     "platforms":[
       "darwin",
       "linux",
@@ -24524,7 +24524,7 @@
   {
     "name":"user_interaction_events",
     "description":"Track user interaction events from macOS' event tapping framework.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/user_interaction_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/user_interaction_events.table",
     "platforms":[
       "darwin"
     ],
@@ -24547,7 +24547,7 @@
   {
     "name":"user_ssh_keys",
     "description":"Returns the private keys in the users ~/.ssh directory and whether or not they are encrypted.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/user_ssh_keys.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/user_ssh_keys.table",
     "platforms":[
       "darwin",
       "linux",
@@ -24640,7 +24640,7 @@
   {
     "name":"userassist",
     "description":"UserAssist Registry Key tracks when a user executes an application from Windows Explorer.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/userassist.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/userassist.table",
     "platforms":[
       "windows"
     ],
@@ -24692,7 +24692,7 @@
   {
     "name":"users",
     "description":"Local user accounts (including domain accounts that have logged on locally (Windows)).",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/users.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/users.table",
     "platforms":[
       "darwin",
       "linux",
@@ -24843,7 +24843,7 @@
   {
     "name":"video_info",
     "description":"Retrieve video card information of the machine.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/video_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/video_info.table",
     "platforms":[
       "windows"
     ],
@@ -24929,7 +24929,7 @@
   {
     "name":"virtual_memory_info",
     "description":"Darwin Virtual Memory statistics.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/virtual_memory_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/virtual_memory_info.table",
     "platforms":[
       "darwin"
     ],
@@ -25143,7 +25143,7 @@
   {
     "name":"vscode_extensions",
     "description":"Lists all vscode extensions.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/vscode_extensions.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/vscode_extensions.table",
     "platforms":[
       "darwin",
       "linux",
@@ -25251,7 +25251,7 @@
   {
     "name":"wifi_networks",
     "description":"macOS known/remembered Wi-Fi networks list.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/wifi_networks.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/wifi_networks.table",
     "platforms":[
       "darwin"
     ],
@@ -25427,7 +25427,7 @@
   {
     "name":"wifi_status",
     "description":"macOS current WiFi status.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/wifi_status.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/wifi_status.table",
     "platforms":[
       "darwin"
     ],
@@ -25558,7 +25558,7 @@
   {
     "name":"wifi_survey",
     "description":"Scan for nearby WiFi networks.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/wifi_scan.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/wifi_scan.table",
     "platforms":[
       "darwin"
     ],
@@ -25662,7 +25662,7 @@
   {
     "name":"winbaseobj",
     "description":"Lists named Windows objects in the default object directories, across all terminal services sessions.  Example Windows ojbect types include Mutexes, Events, Jobs and Semaphors.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/winbaseobj.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/winbaseobj.table",
     "platforms":[
       "windows"
     ],
@@ -25706,7 +25706,7 @@
   {
     "name":"windows_crashes",
     "description":"Extracted information from Windows crash logs (Minidumps).",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/windows_crashes.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/windows_crashes.table",
     "platforms":[
       "windows"
     ],
@@ -25915,7 +25915,7 @@
   {
     "name":"windows_eventlog",
     "description":"Table for querying all recorded Windows event logs.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/windows_eventlog.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/windows_eventlog.table",
     "platforms":[
       "windows"
     ],
@@ -26066,7 +26066,7 @@
   {
     "name":"windows_events",
     "description":"Windows Event logs.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/windows_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/windows_events.table",
     "platforms":[
       "windows"
     ],
@@ -26190,7 +26190,7 @@
   {
     "name":"windows_firewall_rules",
     "description":"Provides the list of Windows firewall rules.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/windows_firewall_rules.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/windows_firewall_rules.table",
     "platforms":[
       "windows"
     ],
@@ -26350,7 +26350,7 @@
   {
     "name":"windows_optional_features",
     "description":"Lists names and installation states of windows features. Maps to Win32_OptionalFeature WMI class.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/windows_optional_features.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/windows_optional_features.table",
     "platforms":[
       "windows"
     ],
@@ -26403,7 +26403,7 @@
   {
     "name":"windows_search",
     "description":"Run searches against the Windows system index database using Advanced Query Syntax. See https://learn.microsoft.com/en-us/windows/win32/search/-search-3x-advancedquerysyntax for details.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/windows_search.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/windows_search.table",
     "platforms":[
       "windows"
     ],
@@ -26537,7 +26537,7 @@
   {
     "name":"windows_security_center",
     "description":"The health status of Window Security features. Health values can be \"Good\", \"Poor\". \"Snoozed\", \"Not Monitored\", and \"Error\".",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/windows_security_center.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/windows_security_center.table",
     "platforms":[
       "windows"
     ],
@@ -26616,7 +26616,7 @@
   {
     "name":"windows_security_products",
     "description":"Enumeration of registered Windows security products. Note: Not compatible with Windows Server.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/windows_security_products.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/windows_security_products.table",
     "platforms":[
       "windows"
     ],
@@ -26686,7 +26686,7 @@
   {
     "name":"windows_update_history",
     "description":"Provides the history of the windows update events.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/windows_update_history.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/windows_update_history.table",
     "platforms":[
       "windows"
     ],
@@ -26810,7 +26810,7 @@
   {
     "name":"wmi_bios_info",
     "description":"Lists important information from the system bios.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/wmi_bios_info.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/wmi_bios_info.table",
     "platforms":[
       "windows"
     ],
@@ -26845,7 +26845,7 @@
   {
     "name":"wmi_cli_event_consumers",
     "description":"WMI CommandLineEventConsumer, which can be used for persistence on Windows. See https://www.blackhat.com/docs/us-15/materials/us-15-Graeber-Abusing-Windows-Management-Instrumentation-WMI-To-Build-A-Persistent%20Asynchronous-And-Fileless-Backdoor-wp.pdf for more details.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/wmi_cli_event_consumers.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/wmi_cli_event_consumers.table",
     "platforms":[
       "windows"
     ],
@@ -26906,7 +26906,7 @@
   {
     "name":"wmi_event_filters",
     "description":"Lists WMI event filters.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/wmi_event_filters.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/wmi_event_filters.table",
     "platforms":[
       "windows"
     ],
@@ -26967,7 +26967,7 @@
   {
     "name":"wmi_filter_consumer_binding",
     "description":"Lists the relationship between event consumers and filters.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/wmi_filter_consumer_binding.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/wmi_filter_consumer_binding.table",
     "platforms":[
       "windows"
     ],
@@ -27019,7 +27019,7 @@
   {
     "name":"wmi_script_event_consumers",
     "description":"WMI ActiveScriptEventConsumer, which can be used for persistence on Windows. See https://www.blackhat.com/docs/us-15/materials/us-15-Graeber-Abusing-Windows-Management-Instrumentation-WMI-To-Build-A-Persistent%20Asynchronous-And-Fileless-Backdoor-wp.pdf for more details.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/windows/wmi_script_event_consumers.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/windows/wmi_script_event_consumers.table",
     "platforms":[
       "windows"
     ],
@@ -27089,7 +27089,7 @@
   {
     "name":"xprotect_entries",
     "description":"Database of the machine's XProtect signatures.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/xprotect_entries.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/xprotect_entries.table",
     "platforms":[
       "darwin"
     ],
@@ -27166,7 +27166,7 @@
   {
     "name":"xprotect_meta",
     "description":"Database of the machine's XProtect browser-related signatures.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/xprotect_meta.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/xprotect_meta.table",
     "platforms":[
       "darwin"
     ],
@@ -27216,7 +27216,7 @@
   {
     "name":"xprotect_reports",
     "description":"Database of XProtect matches (if user generated/sent an XProtect report).",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/darwin/xprotect_reports.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/darwin/xprotect_reports.table",
     "platforms":[
       "darwin"
     ],
@@ -27257,7 +27257,7 @@
   {
     "name":"yara",
     "description":"Triggers one-off YARA query for files at the specified path. Requires one of `sig_group`, `sigfile`, or `sigrule`.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/yara.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/yara.table",
     "platforms":[
       "darwin",
       "linux",
@@ -27371,7 +27371,7 @@
   {
     "name":"yara_events",
     "description":"Track YARA matches for files specified in configuration data.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/posix/yara_events.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/posix/yara_events.table",
     "platforms":[
       "darwin",
       "linux"
@@ -27476,7 +27476,7 @@
   {
     "name":"ycloud_instance_metadata",
     "description":"Yandex.Cloud instance metadata.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/ycloud_instance_metadata.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/ycloud_instance_metadata.table",
     "platforms":[
       "darwin",
       "linux",
@@ -27585,7 +27585,7 @@
   {
     "name":"yum_sources",
     "description":"Current list of Yum repositories or software channels.",
-    "url":"https://github.com/osquery/osquery/blob/master/specs/linux/yum_sources.table",
+    "url":"https://github.com/osquery/osquery/blob/5.15.0/specs/linux/yum_sources.table",
     "platforms":[
       "linux"
     ],
